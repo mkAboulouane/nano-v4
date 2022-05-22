@@ -1,0 +1,106 @@
+
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/smoke.jpg');">
+        <div class="filter"></div>
+        <div class="container col-lg-12 col-sm-12">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+
+                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
+                        <div class="text-center ">
+                            <h3>Ajouter un article</h3>
+                            <!--                            <p class="lead"></p>-->
+                        </div>
+                        <form class="register-form col-lg-12" [formGroup]="registerForm">
+
+                            <label>Nom Produit</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
+                                </div>
+
+                                <input type="text" class="form-control" formControlName="email" placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+
+
+
+
+
+
+
+
+
+                            <label>Prix</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
+                                </div>
+
+                                <input type="number" class="form-control" formControlName="email" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+
+
+                            <label>Quantité</label>
+                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                                <div class="input-group-prepend">
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
+                                </div>
+                                <input type="number" class="form-control" formControlName="quantité" placeholder="quantité" (focus)="focus1=true" (blur)="focus1=false" >
+                            </div>
+
+
+                            <label>Description</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                </div>
+                                <textarea class="form-control" aria-label="With textarea" placeholder="Description"></textarea>
+                            </div>
+
+
+                            <label>images</label>
+                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="file" name="filefield" multiple="multiple" class="form-control"  placeholder="file" (focus)="focus1=true" (blur)="focus1=false" >
+                            </div>
+
+
+                            <div class="custom-control custom-switch">
+
+                                <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                <label class="custom-control-label" for="customSwitches">Promotion</label>
+                            </div>
+
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                <label class="custom-control-label" for="customSwitch1">Visible</label>
+                            </div>
+
+
+
+                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter l'article</button>
+
+
+
+
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {RouterModule} from '@angular/router';
+import {AppRoutingModule} from './app.routing';
+
+import {AppComponent} from './app.component';
+import {NavbarComponent} from './module/visiteur/shared/navbar/navbar.component';
+import {FooterComponent} from './module/visiteur/shared/footer/footer.component';
+
+import {ComponentsModule} from './components/components.module';
+import {LoginPageComponent} from './login-page/login-page.component';
+import {RegisterComponent} from './register/register.component';
+import {FormationComponent} from './module/client/view/formation/formation.component';
+import {ProduitBioComponent} from './module/client/view/produit-bio/produit-bio.component';
+import {CongresComponent} from './module/client/view/congres/congres.component';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import {PanierComponent} from "./module/client/view/panier/panier.component";
+import {UtilsComponent} from "./utils/utils.component";
+import {FormationAdminComponent} from "./module/admin/view/formation-admin/formation-admin.component";
+import {FormationAddComponent} from "./module/admin/view/formation-admin/formation-add/formation-add.component";
+import {JwtInterceptor} from "./controller/interceptors/jwt.interceptor";
+import {AdminRoutingModule} from "./module/admin/admin.routing.module";
+import {AdminModule} from "./module/admin/admin.module";
+import { HomeVisiteurComponent } from './module/visiteur/home-visiteur/home-visiteur.component';
+import {AccessDeniedComponent} from "./auth/access-denied/access-denied.component";
+
+
+@NgModule({
+    declarations: [
+        FormationAdminComponent,
+        FormationAddComponent,
+        UtilsComponent,
+        PanierComponent,
+        AppComponent,
+        NavbarComponent,
+        FooterComponent,
+        LoginPageComponent,
+        RegisterComponent,
+        FormationComponent,
+        ProduitBioComponent,
+        CongresComponent,
+        HomeVisiteurComponent,
+        AccessDeniedComponent,
+
+    ],
+    imports: [
+        ReactiveFormsModule,
+        BrowserModule,
+        HttpClientModule,
+        FormsModule,
+        RouterModule,
+        ComponentsModule,
+        AppRoutingModule,
+
+        AdminModule,
+        AdminRoutingModule,
+
+    ],
+    // exports: [],
+    providers: [
+        /*    { provide: LocationStrategy, useClass: HashLocationStrategy }, */
+        {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}

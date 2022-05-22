@@ -1,0 +1,64 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/smoke.jpg');">
+        <div class="filter"></div>
+        <div class="container col-lg-12 col-sm-12">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+
+                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
+                        <div class="text-center ">
+                            <h3>Ajouter un Agent</h3>
+                            <!--                            <p class="lead"></p>-->
+                        </div>
+                        <form class="register-form col-lg-12" [formGroup]="registerForm">
+
+                            <label>Nom d'agent</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+
+                                </div>
+
+                                <input type="text" class="form-control" formControlName="phone" placeholder="Agent" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+
+
+
+                            <label>Numero telephone</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+
+                                </div>
+
+                                <input type="number" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+                            <label>Email</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+
+                                </div>
+
+                                <input type="text" class="form-control" formControlName="email" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+
+
+                            <label>Password</label>
+                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                                <div class="input-group-prepend">
+
+                                </div>
+                                <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+                            </div>
+                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
