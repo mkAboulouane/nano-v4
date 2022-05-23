@@ -36,4 +36,18 @@ export class FormationListComponent implements OnInit {
   add() {
     this.router.navigate(['/admin/formation-add'])
   }
+
+    edit(formation: Formation) {
+        this.formationService.edit().subscribe()
+    }
+
+  delete(formation: Formation) {
+        this.formationService.delete(formation.nom).subscribe(
+            data=>{
+              console.log(data);
+              this.findAll();
+              console.log('deleted successfully');
+            }
+        )
+  }
 }

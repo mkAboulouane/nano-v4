@@ -29,6 +29,10 @@ export class FormationService {
         return this.http.get<Array<Formation>>(this.API + '/');
     }
 
+    public delete(nom: string){
+        return this.http.delete(this.API + '/' + nom);
+    }
+
     public save(): Observable<Formation> {
         return this.http.post<Formation>(this.API + '/', this.selectedformation);
     }
