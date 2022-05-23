@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {FormationService} from "../../../../../controller/service/Formation.service";
+import {Formation} from "../../../../../controller/model/formation.model";
+import {HttpClient} from "@angular/common/http";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-formation-edit',
@@ -7,9 +11,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormationEditComponent implements OnInit {
 
-  constructor() { }
+  constructor(private formationService: FormationService , private  http: HttpClient , private  router: Router) { }
 
   ngOnInit(): void {
+    this.formationService.selectedformation = this.selectedFormation;
   }
 
+  get selectedFormation(): Formation{
+    return this.formationService.selectedformation;
+  }
+
+  set selectedFormation(value: Formation) {
+    this.formationService.selectedformation = value;
+  }
+
+
+  edit() {
+    this.formationService.edit().subscribe(
+        data => {
+            console.log(data);
+            this.selectedFormation = new Formation();
+            this.router.navigate(['admin/formation'])
+        }
+    )
+
+  }
 }

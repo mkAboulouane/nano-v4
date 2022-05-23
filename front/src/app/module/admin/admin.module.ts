@@ -10,11 +10,15 @@ import {UserAdminComponent} from "./view/user-admin/user-admin.component";
 import {HomeAdminComponent} from "./home-admin.component";
 import {FooterAdminComponent} from "./view/footer-admin/footer-admin.component";
 import {NavAdminComponent} from "./view/nav-admin/nav-admin.component";
+import {AdminAcueilComponent} from "./view/admin-acueil/admin-acueil.component";
+import {FormationEditComponent} from "./view/formation-admin/formation-edit/formation-edit.component";
 
 
 @NgModule({
     declarations: [
         CommandeAdminComponent,
+        // FormationEditComponent,
+        AdminAcueilComponent,
         GerantAdminComponent,
         UserAdminComponent,
         HomeAdminComponent,

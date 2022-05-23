@@ -27,12 +27,14 @@ import {AccessDeniedComponent} from "./auth/access-denied/access-denied.componen
 import {UserService} from "./controller/service/User.service";
 import {RoleService} from "./controller/service/role.service";
 import {FormationListComponent} from "./module/admin/view/formation-admin/formation-list/formation-list.component";
+import {FormationEditComponent} from "./module/admin/view/formation-admin/formation-edit/formation-edit.component";
 
 
 @NgModule({
     declarations: [
         FormationAdminComponent,
         FormationAddComponent,
+        FormationEditComponent,
         FormationListComponent,
         UtilsComponent,
         PanierComponent,

@@ -44,7 +44,6 @@ export class AuthService {
                 console.log('you are logged in successfully');
                 // console.log(this.authenticatedUser.password);
                 this.getRole(username);
-                this.router.navigate(['/formation']);
                 }, (error: HttpErrorResponse) => {
                 this.error = error.error;
                 console.log(error);
@@ -58,6 +57,7 @@ export class AuthService {
            data => {
                this.currentUserRole = data;
                console.log(data);
+               this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/']);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;
                console.log(error);
@@ -136,7 +136,7 @@ export class AuthService {
         this.authenticated = false;
         this._loggedIn.next(false);
         this._authenticatedUser = new User();
-        this.router.navigate(['/login']);
+        this.router.navigate(['/']);
     }
 
     get user(): User {

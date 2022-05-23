@@ -1,1 +1,93 @@
-<p>formation-edit works!</p>
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
+        <div class="filter"></div>
+        <div class="container col-lg-12 col-sm-12">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+
+                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
+                        <div class="text-center ">
+                            <h3>Edite une Formation</h3>
+                        </div>
+
+                        <label>Nom De Formation</label>
+                        <div class="input-group form-group-no-border">
+                            <div class="input-group-prepend">
+                            </div>
+                            <input type="text" class="form-control"
+                                   [(ngModel)]="selectedFormation.nom"
+                                   placeholder="Nom Formation">
+                        </div>
+
+
+                        <label>Nombre Des Places</label>
+                        <div class="input-group form-group-no-border justify-content-center"
+                             [ngClass]="{'input-group-focus':focus1===true} ">
+                            <div class="input-group-prepend">
+                            </div>
+                            <input type="number" class="form-control"
+                                   [(ngModel)]="selectedFormation.nombrePlace"
+                                   placeholder="nombre des Places" (focus)="focus1=true" (blur)="focus1=false">
+                        </div>
+                        <label>Encadrent</label>
+                        <div class="input-group form-group-no-border"
+                             [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                            </div>
+
+                            <input type="text" class="form-control"
+                                   [(ngModel)]="selectedFormation.encadrantProf"
+                                   placeholder="Encadrent"
+                                   (focus)="focus=true" (blur)="focus=false">
+                        </div>
+                        <label>Prix</label>
+                        <div class="input-group form-group-no-border"
+                             [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                <!--                                  </span>-->
+                            </div>
+
+                            <input type="number" class="form-control"
+                                   [(ngModel)]="selectedFormation.prix"
+                                   placeholder="Prix"
+                                   (focus)="focus=true" (blur)="focus=false">
+                        </div>
+                        <label>Durée</label>
+                        <div class="input-group form-group-no-border"
+                             [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                            </div>
+                            <input type="text" class="form-control"
+                                   [(ngModel)]="selectedFormation.duree"
+                                   placeholder="Durée"
+                                   (focus)="focus=true" (blur)="focus=false">
+                        </div>
+                        <label>Description</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            </div>
+                            <textarea class="form-control" aria-label="With textarea"
+                                      [(ngModel)]="selectedFormation.description"
+
+                                      placeholder="Description"></textarea>
+                        </div>
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input"
+                                   [(ngModel)]="selectedFormation.visible"
+                                   id="customSwitch1" checked>
+                            <label class="custom-control-label" for="customSwitch1">Visible</label>
+                        </div>
+                        <button type="submit" class="btn  btn-block btn-round" (click)="edit()"
+                                style="background-color: deepskyblue ; color: black">Ajouter
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
