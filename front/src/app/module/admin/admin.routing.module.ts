@@ -16,14 +16,17 @@ import {CongresAdminComponent} from "./view/congres-admin/congres-admin.componen
 import {FormationAdminComponent} from "./view/formation-admin/formation-admin.component";
 import {HomeAdminComponent} from "./home-admin.component";
 import {AdminAcueilComponent} from "./view/admin-acueil/admin-acueil.component";
+import {FormationEditComponent} from "./view/formation-admin/formation-edit/formation-edit.component";
 
 @NgModule({
     imports: [
         RouterModule.forChild(
             [
-                { path: '', component: AdminAcueilComponent, canActivate: [AuthGuard] },
+                // { path: '', component: AdminAcueilComponent, canActivate: [AuthGuard] },
+                { path: '', redirectTo: 'formation', pathMatch: 'full' },
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },
+                { path: 'formation-edit', component: FormationEditComponent, canActivate: [AuthGuard] },
                 { path: 'congres', component: CongresAdminComponent, canActivate: [AuthGuard] },
                 { path: 'produit-bio', component:ProduitBioAdminComponent, canActivate: [AuthGuard] },
                 { path: 'user', component: UserAdminComponent, canActivate: [AuthGuard] },

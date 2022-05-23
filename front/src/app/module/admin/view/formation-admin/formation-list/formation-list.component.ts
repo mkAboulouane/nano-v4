@@ -10,6 +10,7 @@ import {Formation} from "../../../../../controller/model/formation.model";
 })
 export class FormationListComponent implements OnInit {
   private _formations : Array<Formation>;
+  private _selectedFormation: Formation;
 
   constructor(private formationService: FormationService , private router: Router) { }
 
@@ -25,20 +26,17 @@ export class FormationListComponent implements OnInit {
   }
 
 
-  get formations(): Array<Formation> {
-    return this.formationService.formations;
-  }
-
-  set formations(value: Array<Formation>) {
-    this.formationService.formations = value;
-  }
-
   add() {
     this.router.navigate(['/admin/formation-add'])
   }
 
     edit(formation: Formation) {
-        this.formationService.edit().subscribe()
+      this.formationService.selectedformation = formation;
+      this.router.navigate(['/admin/formation-edit'])
+        // this.formationService.edit().subscribe( data => {
+        //     formation = this.selectedFormation;
+        //
+        // })
     }
 
   delete(formation: Formation) {
@@ -50,4 +48,22 @@ export class FormationListComponent implements OnInit {
             }
         )
   }
+
+
+    get formations(): Array<Formation> {
+        return this.formationService.formations;
+    }
+
+    set formations(value: Array<Formation>) {
+        this.formationService.formations = value;
+    }
+
+
+    get selectedFormation(): Formation {
+        return this.formationService.selectedformation;
+    }
+
+    set selectedFormation(value: Formation) {
+        this.formationService.selectedformation = value;
+    }
 }
