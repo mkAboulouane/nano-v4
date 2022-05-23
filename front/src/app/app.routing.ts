@@ -17,6 +17,7 @@ import {FormationAddComponent} from "./module/admin/view/formation-admin/formati
 import {UtilsComponent} from "./utils/utils.component";
 import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visiteur.component";
+import {FormationListComponent} from "./module/admin/view/formation-admin/formation-list/formation-list.component";
 
 @NgModule({
     imports: [
@@ -33,8 +34,9 @@ import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visite
                         {path: '', redirectTo: 'login', pathMatch: 'full'},
                         {path: 'home', redirectTo: 'login', pathMatch: 'full'},
                         // {path: 'home', component: ComponentsComponent},
-                        // {path: 'formation', component: FormationComponent},
-                        {path: 'formation', component: FormationAddComponent},
+                        {path: 'formation', component: FormationComponent},
+                        // {path: 'formation', component: FormationAddComponent},
+                        // {path: 'formation-list', component: FormationListComponent},
                         {path: 'congres', component: CongresComponent},
                         {path: 'produitbio', component: ProduitBioComponent},
                         {path: 'overseaseducation', component: OverseaseducationComponent},

@@ -7,30 +7,35 @@
                     <div class="card card-register" style="background-color: black;opacity: 0.6; ">
                         <form class="register-form" [formGroup]="loginForm">
                             <label>Nom d'utilisateur</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group form-group-no-border"
+                                 [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                      <i class="nc-icon nc-email-85"></i>
+                               <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                                   </span>
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control" formControlName="username"
+                                       placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false">
                             </div>
 
                             <label>Password</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus1===true}">
+                            <div class="input-group form-group-no-border"
+                                 [ngClass]="{'input-group-focus':focus1===true}">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
                                       <i class="nc-icon nc-key-25"></i>
                                   </span>
                                 </div>
-                                <input type="password" class="form-control" formControlName="password" placeholder="Mot de passe" (focus)="focus1=true" (blur)="focus1=false" >
-                            </div>
-                            <button class="btn btn-danger btn-block btn-round" (click)="submit()" >Se Connecter</button>
+                                <input type="password" class="form-control" formControlName="password"
+                                       placeholder="Mot de passe" (focus)="focus1=true" (blur)="focus1=false">
+                            </div><br>
+                            <button class="btn btn-danger btn-block btn-round" (click)="submit()">Se Connecter</button>
                             <div class="forgot">
                                 <a class="btn btn-link btn-danger">vous n'avez pas encore de compte ?</a>
                             </div>
-                            <button  (click)="register()"  class="btn btn-dark btn-block btn-round" >Creer un Compte</button>
+                            <button (click)="register()" class="btn btn-dark btn-block btn-round">Creer un Compte
+                            </button>
                         </form>
                     </div>
                 </div>
