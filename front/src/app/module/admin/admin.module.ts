@@ -12,6 +12,8 @@ import {FooterAdminComponent} from "./view/footer-admin/footer-admin.component";
 import {NavAdminComponent} from "./view/nav-admin/nav-admin.component";
 import {AdminAcueilComponent} from "./view/admin-acueil/admin-acueil.component";
 import {FormationEditComponent} from "./view/formation-admin/formation-edit/formation-edit.component";
+import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
+import {ComponentsModule} from "../../components/components.module";
 
 
 @NgModule({
@@ -32,6 +34,8 @@ import {FormationEditComponent} from "./view/formation-admin/formation-edit/form
         ReactiveFormsModule,
         CommonModule,
         FormsModule,
+        NgbCarouselModule,
+        ComponentsModule,
     ],
     exports: [
         CommandeAdminComponent,
