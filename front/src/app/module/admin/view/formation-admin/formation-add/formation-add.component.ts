@@ -40,7 +40,7 @@ export class FormationAddComponent implements OnInit {
         console.log(data);
         this.formations.push({...data});
         this.selectedFormation = new Formation();
-                this.router.navigate(['/formation-list']);
+        this.router.navigate(['/admin/formation']);
       }, (error: HttpErrorResponse) => {
         this.error = error.error;
         console.log(error);

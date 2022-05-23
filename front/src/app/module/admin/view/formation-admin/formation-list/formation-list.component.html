@@ -35,41 +35,41 @@
 
 
 
-                                        <tr class="fw-normal">
+                                        <tr class="fw-normal" *ngFor="let formation of formations">
                                             <th>
                                                 <!--                                                <img src="assets/img/manm.jpg"-->
                                                 <!--                                                     alt="avatar 1" style="width: 45px; height: auto;">-->
                                                 <!--                                                <span class="ms-2" style="padding-left: 1em;">microscope</span>-->
-                                                <span class="ms-2" >developpement web</span>
+                                                <span class="ms-2" >{{formation.nom}}</span>
                                             </th>
 
 
 
                                             <!-----------------------------------------------Nbreplaces------------------------------------------------------------------------------>
 
-                                            <td class="align-middle">23</td>
+                                            <td class="align-middle">{{formation.nombrePlace}}</td>
 
                                             <!-----------------------------------------------durée------------------------------------------------------------------------------>
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">2 jours</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{formation.duree}}</span></h5>
                                             </td>
 
                                             <!-----------------------------------------------prix--------------------------------------->
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">120 dh</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{formation.prix}}</span></h5>
                                             </td>
 
 
                                             <!-----------------------------------------------Encadrant--------------------------------------->
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">mr.abadi</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{formation.encadrantProf}}</span></h5>
                                             </td>
 
                                             <!-----------------------------------------------description--------------------------------------->
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">5 modules, 1module par jour </span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{formation.description}}</span></h5>
                                             </td>
 
                                             <!------------------------------------------------Modifier-------------------------------------->

@@ -15,12 +15,13 @@ import {ProduitBioAdminComponent} from "./view/produit-bio-admin/produit-bio-adm
 import {CongresAdminComponent} from "./view/congres-admin/congres-admin.component";
 import {FormationAdminComponent} from "./view/formation-admin/formation-admin.component";
 import {HomeAdminComponent} from "./home-admin.component";
+import {AdminAcueilComponent} from "./view/admin-acueil/admin-acueil.component";
 
 @NgModule({
     imports: [
         RouterModule.forChild(
             [
-                { path: '', component: HomeAdminComponent, canActivate: [AuthGuard] },
+                { path: '', component: AdminAcueilComponent, canActivate: [AuthGuard] },
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },
                 { path: 'congres', component: CongresAdminComponent, canActivate: [AuthGuard] },

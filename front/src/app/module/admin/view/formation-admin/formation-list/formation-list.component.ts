@@ -13,7 +13,9 @@ export class FormationListComponent implements OnInit {
 
   constructor(private formationService: FormationService , private router: Router) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.findAll();
+  }
 
   public findAll(){
     this.formationService.findAll().subscribe(data =>{
