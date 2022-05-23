@@ -13,45 +13,12 @@ import {UserService} from "./User.service";
 })
 export class FormationService {
 
-    private _formation: Formation;
-    private _formations: Array<Formation>;
-    private _selectedformation: Formation;
-
-    private _selectedProduitBio: ProduitBio;
+    private API = environment.apiUrl + 'admin/formation';
 
     constructor(private router: Router, private http: HttpClient, private userService: UserService, private authService: AuthService) {
     }
 
-    private API = environment.apiUrl + 'admin/formation';
-
-
-    public findAll() {
-        return this.http.get<Array<Formation>>(this.API + '/');
-    }
-
-
-
-    public delete(nom: string){
-        return this.http.delete(this.API + '/' + nom);
-    }
-
-    public save(): Observable<Formation> {
-        return this.http.post<Formation>(this.API + '/', this.selectedformation);
-    }
-
-    public edit(): Observable<Formation> {
-        return this.http.put<Formation>(this.API + '/', this.selectedformation);
-    }
-
-
-
-
-    public findByName(name: string): Observable<Formation> {
-        return this.http.get<Formation>(this.API + '/' + name);
-    }
-
-
-    /*  Getters and Setters  */
+    private _formation: Formation;
 
     get formation(): Formation {
         if (this._formation == null) {
@@ -63,6 +30,21 @@ export class FormationService {
     set formation(value: Formation) {
         this._formation = value;
     }
+
+    private _formations: Array<Formation>;
+
+    get formations(): Array<Formation> {
+        if (this._formations == null) {
+            this._formations = new Array<Formation>();
+        }
+        return this._formations;
+    }
+
+    set formations(value: Array<Formation>) {
+        this._formations = value;
+    }
+
+    private _selectedformation: Formation;
 
     get selectedformation(): Formation {
         if (this._selectedformation == null) {
@@ -76,17 +58,9 @@ export class FormationService {
     }
 
 
-    get formations(): Array<Formation> {
-        if (this._formations == null) {
-            this._formations = new Array<Formation>();
-        }
-        return this._formations;
-    }
+    /*  Getters and Setters  */
 
-    set formations(value: Array<Formation>) {
-        this._formations = value;
-    }
-
+    private _selectedProduitBio: ProduitBio;
 
     get selectedProduitBio(): ProduitBio {
         if (this._selectedProduitBio == null) {
@@ -97,5 +71,25 @@ export class FormationService {
 
     set selectedProduitBio(value: ProduitBio) {
         this._selectedProduitBio = value;
+    }
+
+    public findAll() {
+        return this.http.get<Array<Formation>>(this.API + '/');
+    }
+
+    public delete(nom: string) {
+        return this.http.delete(this.API + '/' + nom);
+    }
+
+    public save(): Observable<Formation> {
+        return this.http.post<Formation>(this.API + '/', this.selectedformation);
+    }
+
+    public edit(): Observable<Formation> {
+        return this.http.put<Formation>(this.API + '/', this.selectedformation);
+    }
+
+    public findByName(name: string): Observable<Formation> {
+        return this.http.get<Formation>(this.API + '/' + name);
     }
 }

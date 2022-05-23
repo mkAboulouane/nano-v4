@@ -11,81 +11,90 @@
                             <h3>Créer un compte</h3>
                             <!--                            <p class="lead"></p>-->
                         </div>
-                        <form class="register-form col-lg-12" [formGroup]="registerForm">
+                        <form [formGroup]="registerForm" class="register-form col-lg-12">
 
                             <label>Nom d'Utilisateur</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div [ngClass]="{'input-group-focus':focus===true}"
+                                 class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                                  <i aria-hidden="true" class="fa fa-user-circle-o"></i>
 
                                   </span>
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
+                                <input (blur)="focus=false" (focus)="focus=true" class="form-control"
+                                       formControlName="username" placeholder="Nom d'utilisateur" type="text">
                             </div>
 
 
-<!--                            <label>Prenom</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                  <span class="input-group-text">-->
-<!--                                     <i class="fa fa-user" aria-hidden="true"></i>-->
-<!--                                  </span>-->
-<!--                                </div>-->
+                            <!--                            <label>Prenom</label>-->
+                            <!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+                            <!--                                <div class="input-group-prepend">-->
+                            <!--                                  <span class="input-group-text">-->
+                            <!--                                     <i class="fa fa-user" aria-hidden="true"></i>-->
+                            <!--                                  </span>-->
+                            <!--                                </div>-->
 
-<!--                                <input type="text" class="form-control" placeholder="Prénom" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
+                            <!--                                <input type="text" class="form-control" placeholder="Prénom" (focus)="focus=true" (blur)="focus=false" >-->
+                            <!--                            </div>-->
 
                             <label>Numero telephone</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div [ngClass]="{'input-group-focus':focus===true}"
+                                 class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                   <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                   <i aria-hidden="true" class="fa fa-phone-square"></i>
 
                                   </span>
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >
+                                <input (blur)="focus=false" (focus)="focus=true" class="form-control"
+                                       formControlName="phone" placeholder="Numéro telephone" type="text">
                             </div>
 
                             <label>Email</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div [ngClass]="{'input-group-focus':focus===true}"
+                                 class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                                  <i aria-hidden="true" class="fa fa-envelope"></i>
                                   </span>
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="email" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+                                <input (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="email"
+                                       placeholder="Email" type="text">
                             </div>
-
 
 
                             <label>Password</label>
-                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                            <div [ngClass]="{'input-group-focus':focus1===true} "
+                                 class="input-group form-group-no-border justify-content-center">
                                 <div class="input-group-prepend">
                                   <span class="input-group-text">
-                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                     <i aria-hidden="true" class="fa fa-unlock-alt"></i>
                                   </span>
                                 </div>
-                                <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input (blur)="focus1=false" (focus)="focus1=true" class="form-control"
+                                       formControlName="password" placeholder="Password" type="password">
                             </div>
-                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Valider</button>
+                            <button (click)="submit()" class="btn  btn-block btn-round"
+                                    style="background-color: deepskyblue ; color: black">Valider
+                            </button>
 
                         </form>
-<!--                        <div class="forgot">-->
-<!--                            <a class="btn btn-link btn-danger">Forgot password?</a>-->
-<!--                        </div>-->
+                        <!--                        <div class="forgot">-->
+                        <!--                            <a class="btn btn-link btn-danger">Forgot password?</a>-->
+                        <!--                        </div>-->
                     </div>
                 </div>
-<!--            </div>-->
-<!--                        <div class="footer register-footer text-center">-->
-<!--                            <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>-->
-<!--                        </div>-->
+                <!--            </div>-->
+                <!--                        <div class="footer register-footer text-center">-->
+                <!--                            <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>-->
+                <!--                        </div>-->
+            </div>
         </div>
     </div>
-</div>
 
 
 

@@ -11,48 +11,55 @@
                             <h3>Ajouter un Agent</h3>
                             <!--                            <p class="lead"></p>-->
                         </div>
-                        <form class="register-form col-lg-12" [formGroup]="registerForm">
+                        <form [formGroup]="registerForm" class="register-form col-lg-12">
 
                             <label>Nom d'agent</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div [ngClass]="{'input-group-focus':focus===true}"
+                                 class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
 
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="phone" placeholder="Agent" (focus)="focus=true" (blur)="focus=false" >
+                                <input (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="phone"
+                                       placeholder="Agent" type="text">
                             </div>
-
-
 
 
                             <label>Numero telephone</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div [ngClass]="{'input-group-focus':focus===true}"
+                                 class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
 
                                 </div>
 
-                                <input type="number" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >
+                                <input (blur)="focus=false" (focus)="focus=true" class="form-control"
+                                       formControlName="phone" placeholder="Numéro telephone" type="number">
                             </div>
 
                             <label>Email</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div [ngClass]="{'input-group-focus':focus===true}"
+                                 class="input-group form-group-no-border">
                                 <div class="input-group-prepend">
 
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="email" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+                                <input (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="email"
+                                       placeholder="Email" type="text">
                             </div>
-
 
 
                             <label>Password</label>
-                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                            <div [ngClass]="{'input-group-focus':focus1===true} "
+                                 class="input-group form-group-no-border justify-content-center">
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input (blur)="focus1=false" (focus)="focus1=true" class="form-control"
+                                       formControlName="password" placeholder="Password" type="password">
                             </div>
-                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>
+                            <button (click)="submit()" class="btn  btn-block btn-round"
+                                    style="background-color: deepskyblue ; color: black">Ajouter
+                            </button>
 
                         </form>
 

@@ -1,38 +1,38 @@
 <div class="page-header " style="background-image: url('./assets/img/bulb.jpg');">
-<!--<br><br><br><br><br><br><br>-->
+    <!--<br><br><br><br><br><br><br>-->
 
 
-<div class="container my-5 mt-5 mx-4"><br><br>
-    <div class="row">
-        <div *ngFor="let formation of formations" class="col-lg-4">
-            <div class="card card-margin">
-                <div class="card-header no-border">
-                    <h5 class="card-title">{{formation.nom}}</h5>
-                </div>
-                <div class="card-body pt-0">
-                    <div class="widget-49">
-                        <div class="widget-49-title-wrapper">
-                            <div class="widget-49-date-primary">
-                                <span class="widget-49-date-day">{{formation.duree}}</span>
-                                <span class="widget-49-date-month">heurs</span>
+    <div class="container my-5 mt-5 mx-4"><br><br>
+        <div class="row">
+            <div *ngFor="let formation of formations" class="col-lg-6">
+                <div class="card card-margin">
+                    <div class="card-header no-border">
+                        <h5 class="card-title">{{formation.nom}}</h5>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="widget-49">
+                            <div class="widget-49-title-wrapper">
+                                <div class="widget-49-date-primary">
+                                    <span class="widget-49-date-day">{{formation.duree}}</span>
+                                    <span class="widget-49-date-month">heurs</span>
+                                </div>
+                                <div class="widget-49-meeting-info">
+                                    <span class="widget-49-pro-title">{{formation.description}}</span>
+                                    <!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
+                                </div>
                             </div>
-                            <div class="widget-49-meeting-info">
-                                <span class="widget-49-pro-title">{{formation.description}}</span>
-<!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
+                            <ol class="widget-49-meeting-points">
+                                <li class="widget-49-meeting-item"><span>{{formation.nombrePlace}}</span></li>
+                                <li class="widget-49-meeting-item"><span>{{formation.prix}}</span></li>
+                                <li class="widget-49-meeting-item"><span>{{formation.encadrantProf}}</span></li>
+                            </ol>
+                            <div class="widget-49-meeting-action">
+                                <a class="btn btn-sm btn-flash-border-primary">rejoindre</a>
                             </div>
-                        </div>
-                        <ol class="widget-49-meeting-points">
-                            <li class="widget-49-meeting-item"><span>{{formation.nombrePlace}}</span></li>
-                            <li class="widget-49-meeting-item"><span>{{formation.prix}}</span></li>
-                            <li class="widget-49-meeting-item"><span>{{formation.encadrantProf}}</span></li>
-                        </ol>
-                        <div class="widget-49-meeting-action">
-                            <a class="btn btn-sm btn-flash-border-primary">rejoindre</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>

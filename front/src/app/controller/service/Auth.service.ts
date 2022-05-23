@@ -13,17 +13,12 @@ import {RoleService} from "./role.service";
 export class AuthService {
     readonly API = environment.loginUrl;
     readonly API_ADMIN = environment.adminUrl;
-    public _user = new User();
-    private _currentUseRole: string;
-    private _authenticatedUser = new User();
-    private _authenticated = <boolean> JSON.parse(localStorage.getItem('autenticated')) || false;
     public _loggedIn = new BehaviorSubject<boolean>(false);
     public loggedIn$ = this._loggedIn.asObservable();
     public error: string = null;
+    lolo;
     private connectedClient = 'connectedClient';
     private role$: Observable<string>;
-
-
 
     constructor(private http: HttpClient, private tokenService: TokenService,
                 private router: Router, private roleService: RoleService) {
@@ -31,6 +26,52 @@ export class AuthService {
         // this.role$.subscribe(role => {
         //     this.str = environment.apiUrl + role.toLowerCase();
         // });
+    }
+
+    public _user = new User();
+
+    get user(): User {
+        return this._user;
+    }
+
+    set user(value: User) {
+        this._user = value;
+    }
+
+    private _currentUseRole: string;
+
+    get currentUseRole(): string {
+        return this._currentUseRole;
+    }
+
+
+    // public hasRole(role: Role): boolean {
+    //     const index = this._authenticatedUser.roles.findIndex(r => r.authority == role.authority);
+    //     return index > -1 ? true : false;
+    // }
+
+    private _authenticatedUser = new User();
+
+    get authenticatedUser(): User {
+        return this._authenticatedUser;
+    }
+
+    set authenticatedUser(value: User) {
+        this._authenticatedUser = value;
+    }
+
+    private _authenticated = <boolean>JSON.parse(localStorage.getItem('autenticated')) || false;
+
+    get authenticated(): boolean {
+        return this._authenticated;
+    }
+
+    set authenticated(value: boolean) {
+        this._authenticated = value;
+    }
+
+    set currentUserRole(value: string) {
+        this._currentUseRole = value;
     }
 
     /*   login   */
@@ -44,36 +85,28 @@ export class AuthService {
                 console.log('you are logged in successfully');
                 // console.log(this.authenticatedUser.password);
                 this.getRole(username);
-                }, (error: HttpErrorResponse) => {
+            }, (error: HttpErrorResponse) => {
                 this.error = error.error;
                 console.log(error);
             }
         );
     }
 
-    public getRole(username: string){
+    public getRole(username: string) {
         // alert('avant');
-       return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
-           data => {
-               this.currentUserRole = data;
-               console.log(data);
-               this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/']);
-           }, (error: HttpErrorResponse) => {
-               this.error = error.error;
-               console.log(error);
-           }
-       );
+        return this.http.get(this.API + 'register/role/username/' + username, {responseType: 'text'}).subscribe(
+            data => {
+                this.currentUserRole = data;
+                console.log(data);
+                this.router.navigate(['/' + this.currentUseRole.toLowerCase() + '/']);
+            }, (error: HttpErrorResponse) => {
+                this.error = error.error;
+                console.log(error);
+            }
+        );
     }
 
-
-
-    // public hasRole(role: Role): boolean {
-    //     const index = this._authenticatedUser.roles.findIndex(r => r.authority == role.authority);
-    //     return index > -1 ? true : false;
-    // }
-
-    lolo;
-/*   Client   */
+    /*   Client   */
     public register() {
         console.log(this.user);
         this.http.post<any>(this.API + 'register/', this.user, {observe: 'response'}).subscribe(
@@ -96,7 +129,6 @@ export class AuthService {
             }
         );
     }
-
 
     /*   Admin   */
     public registerAgent() {
@@ -137,39 +169,6 @@ export class AuthService {
         this._loggedIn.next(false);
         this._authenticatedUser = new User();
         this.router.navigate(['/']);
-    }
-
-    get user(): User {
-        return this._user;
-    }
-
-    set user(value: User) {
-        this._user = value;
-    }
-
-    get authenticated(): boolean {
-        return this._authenticated;
-    }
-
-    set authenticated(value: boolean) {
-        this._authenticated = value;
-    }
-
-    get authenticatedUser(): User {
-        return this._authenticatedUser;
-    }
-
-    set authenticatedUser(value: User) {
-        this._authenticatedUser = value;
-    }
-
-
-    get currentUseRole(): string {
-        return this._currentUseRole;
-    }
-
-    set  currentUserRole(value: string) {
-        this._currentUseRole = value;
     }
 
     public unregisterConnectedChercheur(): void {

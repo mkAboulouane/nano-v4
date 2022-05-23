@@ -1,6 +1,6 @@
-body{
+body {
     background: #F4F7FD;
-    margin-top:20px;
+    margin-top: 20px;
 }
 
 .card-margin {
@@ -14,6 +14,7 @@ body{
     -moz-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
     -ms-box-shadow: 0px 0px 10px 0px rgba(82, 63, 105, 0.1);
 }
+
 .card {
     position: relative;
     display: flex;
@@ -29,6 +30,7 @@ body{
 .card .card-header.no-border {
     border: 0;
 }
+
 .card .card-header {
     background: none;
     padding: 0 0.9375rem;
@@ -37,6 +39,7 @@ body{
     align-items: center;
     min-height: 50px;
 }
+
 .card-header:first-child {
     border-radius: calc(8px - 1px) calc(8px - 1px) 0 0;
 }

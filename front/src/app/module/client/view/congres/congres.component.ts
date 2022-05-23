@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-congres',
-  templateUrl: './congres.component.html',
-  styleUrls: ['./congres.component.css']
+    selector: 'app-congres',
+    templateUrl: './congres.component.html',
+    styleUrls: ['./congres.component.css']
 })
 export class CongresComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

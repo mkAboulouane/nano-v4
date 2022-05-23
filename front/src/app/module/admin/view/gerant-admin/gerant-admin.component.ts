@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-gerant-admin',
-  templateUrl: './gerant-admin.component.html',
-  styleUrls: ['./gerant-admin.component.css']
+    selector: 'app-gerant-admin',
+    templateUrl: './gerant-admin.component.html',
+    styleUrls: ['./gerant-admin.component.css']
 })
 export class GerantAdminComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

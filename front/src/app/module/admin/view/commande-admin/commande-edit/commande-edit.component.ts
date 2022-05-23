@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-commande-edit',
-  templateUrl: './commande-edit.component.html',
-  styleUrls: ['./commande-edit.component.css']
+    selector: 'app-commande-edit',
+    templateUrl: './commande-edit.component.html',
+    styleUrls: ['./commande-edit.component.css']
 })
 export class CommandeEditComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

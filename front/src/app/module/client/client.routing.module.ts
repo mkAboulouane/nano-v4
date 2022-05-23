@@ -1,12 +1,11 @@
-
 // const root = environment.rootAppUrl;
 
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {AuthGuard} from '../../controller/guards/auth.guard';
-import { PanierComponent } from './view/panier/panier.component';
-import { CheckoutComponent } from './view/checkout/checkout.component';
-import { OverseaseducationComponent } from './view/overseaseducation/overseaseducation.component';
+import {PanierComponent} from './view/panier/panier.component';
+import {CheckoutComponent} from './view/checkout/checkout.component';
+import {OverseaseducationComponent} from './view/overseaseducation/overseaseducation.component';
 import {ProduitBioComponent} from "./view/produit-bio/produit-bio.component";
 
 
@@ -14,7 +13,7 @@ import {ProduitBioComponent} from "./view/produit-bio/produit-bio.component";
     imports: [
         RouterModule.forChild(
             [
-                { path: 'produitbio' , component: ProduitBioComponent},
+                {path: 'produitbio', component: ProduitBioComponent},
                 {
                     path: '',
                     children: [
@@ -46,4 +45,5 @@ import {ProduitBioComponent} from "./view/produit-bio/produit-bio.component";
     exports: [RouterModule],
     declarations: [PanierComponent, CheckoutComponent, OverseaseducationComponent],
 })
-export class ClientRoutingModule { }
+export class ClientRoutingModule {
+}
