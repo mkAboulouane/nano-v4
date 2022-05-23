@@ -5,6 +5,8 @@ import {Formation} from "../model/formation.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
 import {ProduitBio} from "../model/produit-bio.model";
+import {AuthService} from "./Auth.service";
+import {UserService} from "./User.service";
 
 @Injectable({
   providedIn: 'root'
@@ -17,8 +19,8 @@ export class FormationService {
 
   private _selectedProduitBio: ProduitBio;
 
-  constructor(private router: Router, private http: HttpClient) { }
-  private API = environment.adminUrl + 'formation';
+  constructor(private router: Router, private http: HttpClient, private userService: UserService, private authService: AuthService) { }
+  private API = environment.apiUrl + this.userService.user.username + '/formation';
 
 
   // public findAll(){

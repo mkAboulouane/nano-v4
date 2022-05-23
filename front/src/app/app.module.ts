@@ -24,6 +24,8 @@ import {AdminRoutingModule} from "./module/admin/admin.routing.module";
 import {AdminModule} from "./module/admin/admin.module";
 import { HomeVisiteurComponent } from './module/visiteur/home-visiteur/home-visiteur.component';
 import {AccessDeniedComponent} from "./auth/access-denied/access-denied.component";
+import {UserService} from "./controller/service/User.service";
+import {RoleService} from "./controller/service/role.service";
 
 
 @NgModule({
@@ -61,6 +63,9 @@ import {AccessDeniedComponent} from "./auth/access-denied/access-denied.componen
     providers: [
         /*    { provide: LocationStrategy, useClass: HashLocationStrategy }, */
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+        UserService,
+        RoleService,
+
     ],
     bootstrap: [AppComponent]
 })

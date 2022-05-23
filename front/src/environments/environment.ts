@@ -14,7 +14,7 @@ export const environment = {
   emptyForExport: '-----',
 
   adminUrl: 'http://localhost:8036/admin/',
-  apiUrl: 'http://localhost:8036/app',
+  apiUrl: 'http://localhost:8036/',
   loginUrl: 'http://localhost:8036/',
   rootAppUrl:'app',
 };

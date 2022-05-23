@@ -5,6 +5,7 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {User} from '../model/User.model';
 import {TokenService} from './Token.service';
 import {environment} from '../../../environments/environment';
+import {RoleService} from "./role.service";
 
 @Injectable({
     providedIn: 'root'
@@ -13,16 +14,23 @@ export class AuthService {
     readonly API = environment.loginUrl;
     readonly API_ADMIN = environment.adminUrl;
     public _user = new User();
-    private _str: string;
+    private _currentUseRole: string;
     private _authenticatedUser = new User();
     private _authenticated = <boolean> JSON.parse(localStorage.getItem('autenticated')) || false;
     public _loggedIn = new BehaviorSubject<boolean>(false);
     public loggedIn$ = this._loggedIn.asObservable();
     public error: string = null;
     private connectedClient = 'connectedClient';
+    private role$: Observable<string>;
 
 
-    constructor(private http: HttpClient, private tokenService: TokenService, private router: Router) {
+
+    constructor(private http: HttpClient, private tokenService: TokenService,
+                private router: Router, private roleService: RoleService) {
+        // this.role$ = this.roleService.role$;
+        // this.role$.subscribe(role => {
+        //     this.str = environment.apiUrl + role.toLowerCase();
+        // });
     }
 
     /*   login   */
@@ -34,6 +42,7 @@ export class AuthService {
                 jwt != null ? this.tokenService.saveToken(jwt) : false;
                 this.loadInfos();
                 console.log('you are logged in successfully');
+                // console.log(this.authenticatedUser.password);
                 this.getRole(username);
                 this.router.navigate(['/formation']);
                 }, (error: HttpErrorResponse) => {
@@ -47,7 +56,7 @@ export class AuthService {
         // alert('avant');
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
            data => {
-               this.str = data;
+               this.currentUserRole = data;
                console.log(data);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;
@@ -155,12 +164,12 @@ export class AuthService {
     }
 
 
-    get str(): string {
-        return this._str;
+    get currentUseRole(): string {
+        return this._currentUseRole;
     }
 
-    set str(value: string) {
-        this._str = value;
+    set  currentUserRole(value: string) {
+        this._currentUseRole = value;
     }
 
     public unregisterConnectedChercheur(): void {
