@@ -29,6 +29,8 @@ export class FormationService {
         return this.http.get<Array<Formation>>(this.API + '/');
     }
 
+
+
     public delete(nom: string){
         return this.http.delete(this.API + '/' + nom);
     }
@@ -40,6 +42,8 @@ export class FormationService {
     public edit(): Observable<Formation> {
         return this.http.put<Formation>(this.API + '/', this.selectedformation);
     }
+
+
 
 
     public findByName(name: string): Observable<Formation> {

@@ -40,13 +40,16 @@ export class FormationListComponent implements OnInit {
     }
 
   delete(formation: Formation) {
-        this.formationService.delete(formation.nom).subscribe(
-            data=>{
-              console.log(data);
-              this.findAll();
-              console.log('deleted successfully');
-            }
-        )
+      var confirm = window.confirm("vous voulez vraiment suprimer cette formation ?")
+      if(confirm) {
+          this.formationService.delete(formation.nom).subscribe(
+              data => {
+                  console.log(data);
+                  this.findAll();
+                  console.log('deleted successfully');
+              }
+          )
+      }
   }
 
 

@@ -33,7 +33,5 @@ export class FormationEditComponent implements OnInit {
             this.selectedFormation = new Formation();
             this.router.navigate(['admin/formation'])
         }
-    )
-
-  }
+    )}
 }
