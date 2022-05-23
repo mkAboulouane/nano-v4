@@ -20,7 +20,7 @@ export class FormationService {
   private _selectedProduitBio: ProduitBio;
 
   constructor(private router: Router, private http: HttpClient, private userService: UserService, private authService: AuthService) { }
-  private API = environment.apiUrl + this.userService.user.username + '/formation';
+  private API = environment.apiUrl + 'admin/formation';
 
 
   // public findAll(){
