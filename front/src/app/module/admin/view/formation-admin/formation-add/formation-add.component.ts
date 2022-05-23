@@ -30,7 +30,6 @@ export class FormationAddComponent implements OnInit {
   logOut() {
     this.authService.logout();
     console.log("Log Out Succesfully");
-
   }
 
 
@@ -39,16 +38,13 @@ export class FormationAddComponent implements OnInit {
     // if(isPermistted) {
       this.formationService.save().subscribe(data => {
         console.log(data);
-        // this.formations.push({...data});
+        this.formations.push({...data});
         this.selectedFormation = new Formation();
-        // this.router.navigate(['/login']);
+                this.router.navigate(['/formation-list']);
       }, (error: HttpErrorResponse) => {
         this.error = error.error;
         console.log(error);
       });
-    // }else {
-    //   console.log('vous n\' etes pas autorise');
-    // }
   }
 
   /*  Getters and Setters  */
@@ -63,12 +59,11 @@ export class FormationAddComponent implements OnInit {
     return this.formationService.formations;
   }
 
-  get selectedProduitBio(): ProduitBio {
-   return  this.formationService.selectedProduitBio;
+  set formations(value: Array<Formation>){
+    this.formationService.formations = value;
   }
 
-  set selectedProduitBio(value: ProduitBio) {
-    this.formationService.selectedProduitBio = value;
-  }
+
+
 
 }

@@ -14,17 +14,20 @@ import {CommandeAdminComponent} from "./view/commande-admin/commande-admin.compo
 import {ProduitBioAdminComponent} from "./view/produit-bio-admin/produit-bio-admin.component";
 import {CongresAdminComponent} from "./view/congres-admin/congres-admin.component";
 import {FormationAdminComponent} from "./view/formation-admin/formation-admin.component";
+import {HomeAdminComponent} from "./home-admin.component";
 
 @NgModule({
     imports: [
         RouterModule.forChild(
             [
+                { path: '', component: HomeAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
+                { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },
                 { path: 'congres', component: CongresAdminComponent, canActivate: [AuthGuard] },
                 { path: 'produit-bio', component:ProduitBioAdminComponent, canActivate: [AuthGuard] },
                 { path: 'user', component: UserAdminComponent, canActivate: [AuthGuard] },
                 { path: 'gerant', component: GerantAdminComponent, canActivate: [AuthGuard] },
-                { path: 'commande', component: CommandeAdminComponent, canActivate: [AuthGuard] },
+                { path: 'commandes', component: CommandeAdminComponent, canActivate: [AuthGuard] },
 /*
                  Apres pour ajouter un admin
                 { path: 'admin', component: , canActivate: [AuthGuard] },

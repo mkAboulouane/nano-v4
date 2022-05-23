@@ -26,12 +26,14 @@ import { HomeVisiteurComponent } from './module/visiteur/home-visiteur/home-visi
 import {AccessDeniedComponent} from "./auth/access-denied/access-denied.component";
 import {UserService} from "./controller/service/User.service";
 import {RoleService} from "./controller/service/role.service";
+import {FormationListComponent} from "./module/admin/view/formation-admin/formation-list/formation-list.component";
 
 
 @NgModule({
     declarations: [
         FormationAdminComponent,
         FormationAddComponent,
+        FormationListComponent,
         UtilsComponent,
         PanierComponent,
         AppComponent,
