@@ -57,7 +57,7 @@ export class AuthService {
            data => {
                this.currentUserRole = data;
                console.log(data);
-               this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/']);
+               this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/formation']);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;
                console.log(error);

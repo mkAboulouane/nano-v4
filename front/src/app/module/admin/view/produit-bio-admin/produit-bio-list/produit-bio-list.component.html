@@ -16,6 +16,7 @@
 
                                     <h2 class="my-4">Liste des produits</h2>
                                 </div>
+                                <button (click)="add()" class="btn btn-outline-primary">Ajouter un produit</button>
                                 <div style="overflow-x:auto; ">
                                     <table class="table text-white mb-0" >
 
@@ -33,29 +34,29 @@
 
 
 
-                                        <tr class="fw-normal">
+                                        <tr class="fw-normal" *ngFor="let produitBio of produitBios">
                                             <th>
                                                 <img src="assets/img/manm.jpg"
                                                      alt="avatar 1" style="width: 45px; height: auto;">
-                                                <span class="ms-2" style="padding-left: 1em;">microscope</span>
+                                                <span class="ms-2" style="padding-left: 1em;">{{produitBio.nom}}</span>
                                             </th>
 
 
 
                                             <!-----------------------------------------------Quantité------------------------------------------------------------------------------>
 
-                                            <td class="align-middle">125614 pcs</td>
+                                            <td class="align-middle">{{produitBio.quantity}}</td>
 
                                             <!-----------------------------------------------Prix------------------------------------------------------------------------------>
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">120 dh</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{produitBio.prix}}</span></h5>
                                             </td>
 
                                             <!-----------------------------------------------Promo--------------------------------------->
                                             <td class="align-middle">
                                                 <h6 ><div class="custom-control custom-switch mt-2">
-                                                    <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                                    <input type="checkbox"  class="custom-control-input" id="customSwitch1" checked>
                                                     <label class="custom-control-label" for="customSwitch1"></label>
                                                 </div></h6>
                                                 <!--                                    <h6 ><input class="mt-3" type="checkbox"></h6>-->
@@ -75,9 +76,9 @@
                                             <!------------------------------------------------Modifier-------------------------------------->
                                             <td class="align-middle">
                                                 <a data-mdb-toggle="tooltip" title="Modifier">
-                                                    <i  style="font-size: 15px;color: deepskyblue"  class="fa fa-pencil-square" aria-hidden="true"></i>
+                                                    <i (click)="edit(produitBio)" style="font-size: 15px;color: deepskyblue"  class="fa fa-pencil-square" aria-hidden="true"></i>
                                                 </a>
-                                                <a href="#!" data-mdb-toggle="tooltip" title="supprimer" ><i  style="font-size: 15px;color: red ; padding-left: 2em" class="fa fa-trash" aria-hidden="true"></i>
+                                                <a  data-mdb-toggle="tooltip" title="supprimer" ><i (click)="delete(produitBio)" style="font-size: 15px;color: red ; padding-left: 2em" class="fa fa-trash" aria-hidden="true"></i>
                                                 </a>
                                             </td>
                                         </tr>

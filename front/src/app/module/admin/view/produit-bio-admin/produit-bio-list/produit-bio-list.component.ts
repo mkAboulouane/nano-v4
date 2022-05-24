@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import {Formation} from "../../../../../controller/model/formation.model";
+import {FormationService} from "../../../../../controller/service/Formation.service";
+import {Router} from "@angular/router";
+import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
+import {MaterielBioService} from "../../../../../controller/service/Materiel-bio.service";
 
 @Component({
   selector: 'app-produit-bio-list',
@@ -7,9 +12,61 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProduitBioListComponent implements OnInit {
 
-  constructor() { }
+  private _produitBios : Array<ProduitBio>;
+  private _selectedProduitBio: ProduitBio;
+
+  constructor(private materielBioService: MaterielBioService , private router: Router) { }
 
   ngOnInit(): void {
+    this.findAll();
   }
 
+  public findAll(){
+    this.materielBioService.findAll().subscribe(data =>{
+      this._produitBios = data;
+      console.log(data);
+    })
+  }
+
+
+  add() {
+    this.router.navigate(['/admin/produit-bio-add'])
+  }
+
+  edit(produitBio: ProduitBio) {
+    this.materielBioService.selectedproduitBio = produitBio;
+    this.router.navigate(['/admin/produit-bio-edit'])
+    // this.formationService.edit().subscribe( data => {
+    //     formation = this.selectedFormation;
+    //
+    // })
+  }
+
+  delete(produitBio: ProduitBio) {
+    this.materielBioService.delete(produitBio.nom).subscribe(
+        data=>{
+          console.log(data);
+          this.findAll();
+          console.log('deleted successfully');
+        }
+    )
+  }
+
+
+  get produitBios(): Array<ProduitBio> {
+    return this.materielBioService.produitBios;
+  }
+
+  set produitBios(value: Array<ProduitBio>) {
+    this.materielBioService.produitBios = value;
+  }
+
+
+  get selectedProduitBio(): ProduitBio {
+    return this.materielBioService.selectedproduitBio;
+  }
+
+  set selectedProduitBio(value: ProduitBio) {
+    this.materielBioService.selectedproduitBio = value;
+  }
 }

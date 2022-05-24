@@ -17,7 +17,6 @@ export class FormationService {
     private _formations: Array<Formation>;
     private _selectedformation: Formation;
 
-    private _selectedProduitBio: ProduitBio;
 
     constructor(private router: Router, private http: HttpClient, private userService: UserService, private authService: AuthService) {
     }
@@ -83,15 +82,4 @@ export class FormationService {
         this._formations = value;
     }
 
-
-    get selectedProduitBio(): ProduitBio {
-        if (this._selectedProduitBio == null) {
-            this._selectedProduitBio = new ProduitBio();
-        }
-        return this._selectedProduitBio;
-    }
-
-    set selectedProduitBio(value: ProduitBio) {
-        this._selectedProduitBio = value;
-    }
 }

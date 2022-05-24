@@ -12,7 +12,6 @@
                             <h3>Ajouter congrés</h3>
                             <!--                            <p class="lead"></p>-->
                         </div>
-                        <form class="register-form col-lg-12" [formGroup]="registerForm">
 
                             <label>Objectif Congrés</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
@@ -22,7 +21,7 @@
                                     <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="adresse" placeholder="congrés" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.nom"(focus)="focus=true" (blur)="focus=false" >
                             </div>
 
                             <label>Encadrant</label>
@@ -33,13 +32,13 @@
                                     <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="adresse" placeholder="Encadrant" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
 
 
 
-                            <label>date</label>
+                            <label>visible</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
                                     <!--                                  <span class="input-group-text">-->
@@ -48,7 +47,7 @@
                                     <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="phone" placeholder="date" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control"[(ngModel)]="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
                             <label>adresse</label>
@@ -59,24 +58,23 @@
                                     <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="adresse" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
 
 
-                            <label>heur</label>
-                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                            <label>date</label>
+                            <div class="input-group form-group-no-border justify-content-center" >
                                 <div class="input-group-prepend">
                                     <!--                                  <span class="input-group-text">-->
                                     <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
                                     <!--                                  </span>-->
                                 </div>
-                                <input type="datetime-local" class="form-control" formControlName="heur" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input type="datetime-local" class="form-control" [(ngModel)]="selectedCongre.duree" (focus)="focus1=true" (blur)="focus1=false" >
                                 <!--                                <input id="party" type="datetime-local" name="partydate">-->
                             </div>
                             <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>
 
-                        </form>
                         <!--                        <div class="forgot">-->
                         <!--                            <a href="#" class="btn btn-link btn-danger">Forgot password?</a>-->
                         <!--                        </div>-->

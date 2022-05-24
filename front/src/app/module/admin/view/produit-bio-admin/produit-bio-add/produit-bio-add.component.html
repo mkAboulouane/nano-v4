@@ -15,14 +15,14 @@
                         <form class="register-form col-lg-12" [formGroup]="registerForm">
 
                             <label>Nom Produit</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group form-group-no-border" >
                                 <div class="input-group-prepend">
                                     <!--                                  <span class="input-group-text">-->
                                     <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
                                     <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control" formControlName="email" placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="text" class="form-control"  [(ngModel)]="selectedProduitBio.nom" placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
 
@@ -42,19 +42,19 @@
                                     <!--                                  </span>-->
                                 </div>
 
-                                <input type="number" class="form-control" formControlName="email" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.prix" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
 
 
                             <label>Quantité</label>
-                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                            <div class="input-group form-group-no-border justify-content-center" >
                                 <div class="input-group-prepend">
                                     <!--                                  <span class="input-group-text">-->
                                     <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
                                     <!--                                  </span>-->
                                 </div>
-                                <input type="number" class="form-control" formControlName="quantité" placeholder="quantité" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.quantity" placeholder="quantité" (focus)="focus1=true" (blur)="focus1=false" >
                             </div>
 
 
@@ -62,7 +62,7 @@
                             <div class="input-group">
                                 <div class="input-group-prepend">
                                 </div>
-                                <textarea class="form-control" aria-label="With textarea" placeholder="Description"></textarea>
+                                <textarea class="form-control" [(ngModel)]="selectedProduitBio.description" aria-label="With textarea" placeholder="Description"></textarea>
                             </div>
 
 
@@ -71,18 +71,18 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input type="file" name="filefield" multiple="multiple" class="form-control"  placeholder="file" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input type="file" name="filefield" multiple="multiple" [(ngModel)]="selectedProduitBio.photos"  placeholder="file" (focus)="focus1=true" (blur)="focus1=false" >
                             </div>
 
 
                             <div class="custom-control custom-switch">
 
-                                <input type="checkbox" class="custom-control-input" id="customSwitches">
+                                <input type="checkbox" class="custom-control-input" [(ngModel)]="selectedProduitBio.promotion" id="customSwitches">
                                 <label class="custom-control-label" for="customSwitches">Promotion</label>
                             </div>
 
                             <div class="custom-control custom-switch">
-                                <input type="checkbox" class="custom-control-input" id="customSwitch1" checked>
+                                <input type="checkbox" class="custom-control-input" [(ngModel)]="selectedProduitBio.visible" id="customSwitch1" checked>
                                 <label class="custom-control-label" for="customSwitch1">Visible</label>
                             </div>
 

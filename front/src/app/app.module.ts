@@ -28,12 +28,20 @@ import {UserService} from "./controller/service/User.service";
 import {RoleService} from "./controller/service/role.service";
 import {FormationListComponent} from "./module/admin/view/formation-admin/formation-list/formation-list.component";
 import {FormationEditComponent} from "./module/admin/view/formation-admin/formation-edit/formation-edit.component";
+import {CongresAddComponent} from "./module/admin/view/congres-admin/congres-add/congres-add.component";
+import {CongresAdminComponent} from "./module/admin/view/congres-admin/congres-admin.component";
+import {CommandeListComponent} from "./module/admin/view/commande-admin/commande-list/commande-list.component";
+import {CongresListComponent} from "./module/admin/view/congres-admin/congres-list/congres-list.component";
+import {ProduitBioAddComponent} from "./module/admin/view/produit-bio-admin/produit-bio-add/produit-bio-add.component";
+import {ProduitBioListComponent} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
 
 
 @NgModule({
     declarations: [
         FormationAdminComponent,
         FormationAddComponent,
+        CongresAddComponent,
+        CongresAdminComponent,
         FormationEditComponent,
         FormationListComponent,
         UtilsComponent,
@@ -48,6 +56,10 @@ import {FormationEditComponent} from "./module/admin/view/formation-admin/format
         CongresComponent,
         HomeVisiteurComponent,
         AccessDeniedComponent,
+        CommandeListComponent,
+        CongresListComponent,
+        ProduitBioAddComponent,
+        ProduitBioListComponent
 
     ],
     imports: [
@@ -74,4 +86,5 @@ import {FormationEditComponent} from "./module/admin/view/formation-admin/format
     bootstrap: [AppComponent]
 })
 export class AppModule {
+
 }
