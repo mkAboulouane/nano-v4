@@ -23,7 +23,7 @@ export class ProduitBioListComponent implements OnInit {
 
   public findAll(){
     this.materielBioService.findAll().subscribe(data =>{
-      this._produitBios = data;
+      this.produitBios = data;
       console.log(data);
     })
   }
@@ -34,17 +34,13 @@ export class ProduitBioListComponent implements OnInit {
   }
 
   edit(produitBio: ProduitBio) {
-    this.materielBioService.selectedproduitBio = produitBio;
+    this.selectedProduitBio = produitBio;
     this.router.navigate(['/admin/produit-bio-edit'])
-    // this.formationService.edit().subscribe( data => {
-    //     formation = this.selectedFormation;
-    //
-    // })
   }
 
   delete(produitBio: ProduitBio) {
     this.materielBioService.delete(produitBio.nom).subscribe(
-        data=>{
+        data  =>  {
           console.log(data);
           this.findAll();
           console.log('deleted successfully');

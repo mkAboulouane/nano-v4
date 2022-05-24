@@ -34,13 +34,20 @@ import {CommandeListComponent} from "./module/admin/view/commande-admin/commande
 import {CongresListComponent} from "./module/admin/view/congres-admin/congres-list/congres-list.component";
 import {ProduitBioAddComponent} from "./module/admin/view/produit-bio-admin/produit-bio-add/produit-bio-add.component";
 import {ProduitBioListComponent} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
+import {ProduitBioAdminComponent} from "./module/admin/view/produit-bio-admin/produit-bio-admin.component";
+import {
+    ProduitBioEditComponent
+} from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
 
 
 @NgModule({
     declarations: [
         FormationAdminComponent,
+        ProduitBioAdminComponent,
         FormationAddComponent,
         CongresAddComponent,
+        ProduitBioEditComponent,
+        ProduitBioAddComponent,
         CongresAdminComponent,
         FormationEditComponent,
         FormationListComponent,
