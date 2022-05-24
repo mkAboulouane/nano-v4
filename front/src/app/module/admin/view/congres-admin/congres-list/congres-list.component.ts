@@ -11,18 +11,6 @@ import {CongresService} from "../../../../../controller/service/Congres.service"
   styleUrls: ['./congres-list.component.css']
 })
 export class CongresListComponent implements OnInit {
-//   congres: any;
-//
-//   constructor(private router: Router) { }
-//
-//   ngOnInit(): void {
-//   }
-//
-//   add() {
-//     this.router.navigate(['/admin/congres-add'])
-//   }
-// }
-
 
   private _congres : Array<Congres>;
   private _selectedCongre: Congres;
@@ -35,7 +23,7 @@ export class CongresListComponent implements OnInit {
 
   public findAll(){
     this.congresService.findAll().subscribe(data =>{
-      this._congres = data;
+      this.congres = data;
       console.log(data);
     })
   }

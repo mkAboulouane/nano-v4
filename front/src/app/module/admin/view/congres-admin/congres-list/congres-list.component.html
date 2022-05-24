@@ -33,44 +33,44 @@
 
 
 
-                                        <tr class="fw-normal" *ngFor="let congres of congres">
+                                        <tr class="fw-normal" *ngFor="let congre of congres">
                                             <th>
                                                 <!--                                                <img src="assets/img/manm.jpg"-->
                                                 <!--                                                     alt="avatar 1" style="width: 45px; height: auto;">-->
                                                 <!--                                                <span class="ms-2" style="padding-left: 1em;">microscope</span>-->
-                                                <span class="ms-2" >{{congres.nom}}</span>
+                                                <span class="ms-2" >{{congre.nom}}</span>
                                             </th>
 
 
 
                                             <!-----------------------------------------------Date------------------------------------------------------------------------------>
 
-                                            <td class="align-middle">{{congres.duree}}</td>
+                                            <td class="align-middle">{{congre.duree}}</td>
 
                                             <!-----------------------------------------------Adresse------------------------------------------------------------------------------>
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congres.lieu}}</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.lieu}}</span></h5>
                                             </td>
 
                                             <!-----------------------------------------------Heure--------------------------------------->
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congres.visible}}</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.visible}}</span></h5>
                                             </td>
 
 
                                             <!-----------------------------------------------Encadrant--------------------------------------->
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congres.encadrantProf}}</span></h5>
+                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.encadrantProf}}</span></h5>
                                             </td>
 
                                             <!------------------------------------------------Modifier-------------------------------------->
                                             <td class="align-middle">
                                                 <a data-mdb-toggle="tooltip" title="Modifier">
-                                                    <i (click)="edit(congres)" style="font-size: 15px;color: deepskyblue"  class="fa fa-pencil-square" aria-hidden="true"></i>
+                                                    <i (click)="edit(congre)" style="font-size: 15px;color: deepskyblue"  class="fa fa-pencil-square" aria-hidden="true"></i>
                                                 </a>
-                                                <a  data-mdb-toggle="tooltip" title="supprimer" ><i (click)="delete(congres)" style="font-size: 15px;color: red ; padding-left: 2em" class="fa fa-trash" aria-hidden="true"></i>
+                                                <a  data-mdb-toggle="tooltip" title="supprimer" ><i (click)="delete(congre)" style="font-size: 15px;color: red ; padding-left: 2em" class="fa fa-trash" aria-hidden="true"></i>
                                                 </a>
                                             </td>
                                         </tr>
