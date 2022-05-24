@@ -1,1 +1,90 @@
-<p>congres-edit works!</p>
+
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/smoke.jpg');">
+        <div class="filter"></div>
+        <div class="container col-lg-12 col-sm-12">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+
+                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
+                        <div class="text-center ">
+                            <h3>Ajouter congrés</h3>
+                            <!--                            <p class="lead"></p>-->
+                        </div>
+
+                        <label>Objectif Congrés</label>
+                        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                <!--                                  </span>-->
+                            </div>
+
+                            <input type="text" class="form-control" [(ngModel)]="selectedCongre.nom"(focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+                        <label>Encadrant</label>
+                        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                <!--                                  </span>-->
+                            </div>
+
+                            <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" (focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+
+
+
+                        <label>visible</label>
+                        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                   <i class="fa fa-phone-square" aria-hidden="true"></i>&ndash;&gt;-->
+
+                                <!--                                  </span>-->
+                            </div>
+
+                            <input type="text" class="form-control"[(ngModel)]="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+                        <label>adresse</label>
+                        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                <!--                                  </span>-->
+                            </div>
+
+                            <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" (focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+
+
+                        <label>date</label>
+                        <div class="input-group form-group-no-border justify-content-center" >
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
+                                <!--                                  </span>-->
+                            </div>
+                            <input type="datetime-local" class="form-control" [(ngModel)]="selectedCongre.duree" (focus)="focus1=true" (blur)="focus1=false" >
+                            <!--                                <input id="party" type="datetime-local" name="partydate">-->
+                        </div>
+                        <button (click)="edit()" class="btn  btn-block btn-round" style="background-color: deepskyblue ; color: black"
+                                type="submit">Ajouter
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--                        <div class="footer register-footer text-center">-->
+            <!--                            <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>-->
+            <!--                        </div>-->
+        </div>
+    </div>
+</div>
+
+
+

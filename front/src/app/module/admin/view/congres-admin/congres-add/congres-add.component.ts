@@ -32,8 +32,9 @@ export class CongresAddComponent implements OnInit {
 
 
   public async submit() {
-    // const isPermistted = await this.roleService.isPermitted('Formation', 'add');
-    // if(isPermistted) {
+    if (this.selectedCongre.nom == null) {
+      window.alert('veuillez saisir l objectif');
+    }else {
     this.congresService.save().subscribe(data => {
       console.log(data);
       this.congres.push({...data});
@@ -43,6 +44,7 @@ export class CongresAddComponent implements OnInit {
       this.error = error.error;
       console.log(error);
     });
+    }
   }
 
   /*  Getters and Setters  */
