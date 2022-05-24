@@ -1,1 +1,80 @@
-<p>produit-bio-edit works!</p>
+
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
+        <div class="filter"></div>
+        <div class="container col-lg-12 col-sm-12">
+
+            <div class="row">
+                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+
+                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
+                        <div class="text-center ">
+                            <h3>Editer un produit</h3>
+                        </div>
+
+                        <label>Nom Produit</label>
+                        <div class="input-group form-group-no-border" >
+                            <div class="input-group-prepend">
+                            </div>
+
+                            <input type="text" class="form-control"  [(ngModel)]="selectedProduitBio.nom" placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+
+
+                        <label>Prix</label>
+                        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                            </div>
+
+                            <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.prix" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+
+
+                        <label>Quantité</label>
+                        <div class="input-group form-group-no-border justify-content-center" >
+                            <div class="input-group-prepend">
+                            </div>
+                            <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.quantity" placeholder="quantité">
+                        </div>
+
+
+                        <label>Description</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                            </div>
+                            <textarea class="form-control" [(ngModel)]="selectedProduitBio.description" aria-label="With textarea" placeholder="Description"></textarea>
+                        </div>
+
+
+                        <label>images</label>
+                        <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                            <div class="input-group-prepend">
+
+                            </div>
+                            <input type="file" name="filefield" multiple="multiple" [(ngModel)]="selectedProduitBio.photos"  placeholder="file" (focus)="focus1=true" (blur)="focus1=false" >
+                        </div>
+
+
+                        <div class="custom-control custom-switch">
+
+                            <input type="checkbox" class="custom-control-input" [(ngModel)]="selectedProduitBio.promotion" id="customSwitches">
+                            <label class="custom-control-label" for="customSwitches">Promotion</label>
+                        </div>
+
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" [(ngModel)]="selectedProduitBio.visible" id="customSwitch1" checked>
+                            <label class="custom-control-label" for="customSwitch1">Visible</label>
+                        </div>
+
+
+                        <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Valider les changments</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -51,6 +51,7 @@ export class ProduitBioAddComponent implements OnInit {
 
   /*  Getters and Setters  */
   focus: boolean;
+    focus1: boolean;
   get selectedProduitBio(): ProduitBio{
     return this.materielBioService.selectedproduitBio;
   }

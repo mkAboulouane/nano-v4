@@ -1,6 +1,6 @@
 
 <div class="wrapper">
-    <div class="page-header" style="background-image: url('./assets/img/smoke.jpg');">
+    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
         <div class="filter"></div>
         <div class="container col-lg-12 col-sm-12">
 
@@ -12,7 +12,6 @@
                             <h3>Ajouter un article</h3>
                             <!--                            <p class="lead"></p>-->
                         </div>
-                        <form class="register-form col-lg-12" [formGroup]="registerForm">
 
                             <label>Nom Produit</label>
                             <div class="input-group form-group-no-border" >
@@ -54,7 +53,7 @@
                                     <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
                                     <!--                                  </span>-->
                                 </div>
-                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.quantity" placeholder="quantité" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.quantity" placeholder="quantité">
                             </div>
 
 
@@ -89,13 +88,6 @@
 
 
                             <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter l'article</button>
-
-
-
-
-
-
-                        </form>
 
                     </div>
                 </div>
