@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-produit-bio-edit',
-  templateUrl: './produit-bio-edit.component.html',
-  styleUrls: ['./produit-bio-edit.component.css']
+    selector: 'app-produit-bio-edit',
+    templateUrl: './produit-bio-edit.component.html',
+    styleUrls: ['./produit-bio-edit.component.css']
 })
 export class ProduitBioEditComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-panier',
-  templateUrl: './panier.component.html',
-  styleUrls: ['./panier.component.css']
+    selector: 'app-panier',
+    templateUrl: './panier.component.html',
+    styleUrls: ['./panier.component.css']
 })
 export class PanierComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

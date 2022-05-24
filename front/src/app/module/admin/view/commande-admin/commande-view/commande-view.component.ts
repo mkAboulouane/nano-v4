@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-commande-view',
-  templateUrl: './commande-view.component.html',
-  styleUrls: ['./commande-view.component.css']
+    selector: 'app-commande-view',
+    templateUrl: './commande-view.component.html',
+    styleUrls: ['./commande-view.component.css']
 })
 export class CommandeViewComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

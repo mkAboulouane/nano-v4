@@ -22,7 +22,7 @@ import {FormationAddComponent} from "./module/admin/view/formation-admin/formati
 import {JwtInterceptor} from "./controller/interceptors/jwt.interceptor";
 import {AdminRoutingModule} from "./module/admin/admin.routing.module";
 import {AdminModule} from "./module/admin/admin.module";
-import { HomeVisiteurComponent } from './module/visiteur/home-visiteur/home-visiteur.component';
+import {HomeVisiteurComponent} from './module/visiteur/home-visiteur/home-visiteur.component';
 import {AccessDeniedComponent} from "./auth/access-denied/access-denied.component";
 import {UserService} from "./controller/service/User.service";
 import {RoleService} from "./controller/service/role.service";

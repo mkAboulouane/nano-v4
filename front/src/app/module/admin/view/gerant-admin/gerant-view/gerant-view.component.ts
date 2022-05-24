@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-gerant-view',
-  templateUrl: './gerant-view.component.html',
-  styleUrls: ['./gerant-view.component.css']
+    selector: 'app-gerant-view',
+    templateUrl: './gerant-view.component.html',
+    styleUrls: ['./gerant-view.component.css']
 })
 export class GerantViewComponent implements OnInit {
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }

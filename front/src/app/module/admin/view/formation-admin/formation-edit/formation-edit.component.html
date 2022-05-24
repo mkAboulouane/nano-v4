@@ -15,73 +15,73 @@
                         <div class="input-group form-group-no-border">
                             <div class="input-group-prepend">
                             </div>
-                            <input type="text" class="form-control"
-                                   [(ngModel)]="selectedFormation.nom"
-                                   placeholder="Nom Formation">
+                            <input [(ngModel)]="selectedFormation.nom" class="form-control"
+                                   placeholder="Nom Formation"
+                                   type="text">
                         </div>
 
 
                         <label>Nombre Des Places</label>
-                        <div class="input-group form-group-no-border justify-content-center"
-                             [ngClass]="{'input-group-focus':focus1===true} ">
+                        <div [ngClass]="{'input-group-focus':focus1===true} "
+                             class="input-group form-group-no-border justify-content-center">
                             <div class="input-group-prepend">
                             </div>
-                            <input type="number" class="form-control"
+                            <input (blur)="focus1=false" (focus)="focus1=true"
                                    [(ngModel)]="selectedFormation.nombrePlace"
-                                   placeholder="nombre des Places" (focus)="focus1=true" (blur)="focus1=false">
+                                   class="form-control" placeholder="nombre des Places" type="number">
                         </div>
                         <label>Encadrent</label>
-                        <div class="input-group form-group-no-border"
-                             [ngClass]="{'input-group-focus':focus===true}">
+                        <div [ngClass]="{'input-group-focus':focus===true}"
+                             class="input-group form-group-no-border">
                             <div class="input-group-prepend">
                             </div>
 
-                            <input type="text" class="form-control"
+                            <input (blur)="focus=false" (focus)="focus=true"
                                    [(ngModel)]="selectedFormation.encadrantProf"
-                                   placeholder="Encadrent"
-                                   (focus)="focus=true" (blur)="focus=false">
+                                   class="form-control"
+                                   placeholder="Encadrent" type="text">
                         </div>
                         <label>Prix</label>
-                        <div class="input-group form-group-no-border"
-                             [ngClass]="{'input-group-focus':focus===true}">
+                        <div [ngClass]="{'input-group-focus':focus===true}"
+                             class="input-group form-group-no-border">
                             <div class="input-group-prepend">
                                 <!--                                  <span class="input-group-text">-->
                                 <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
                                 <!--                                  </span>-->
                             </div>
 
-                            <input type="number" class="form-control"
+                            <input (blur)="focus=false" (focus)="focus=true"
                                    [(ngModel)]="selectedFormation.prix"
-                                   placeholder="Prix"
-                                   (focus)="focus=true" (blur)="focus=false">
+                                   class="form-control"
+                                   placeholder="Prix" type="number">
                         </div>
                         <label>Durée</label>
-                        <div class="input-group form-group-no-border"
-                             [ngClass]="{'input-group-focus':focus===true}">
+                        <div [ngClass]="{'input-group-focus':focus===true}"
+                             class="input-group form-group-no-border">
                             <div class="input-group-prepend">
                             </div>
-                            <input type="text" class="form-control"
+                            <input (blur)="focus=false" (focus)="focus=true"
                                    [(ngModel)]="selectedFormation.duree"
-                                   placeholder="Durée"
-                                   (focus)="focus=true" (blur)="focus=false">
+                                   class="form-control"
+                                   placeholder="Durée" type="text">
                         </div>
                         <label>Description</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                             </div>
-                            <textarea class="form-control" aria-label="With textarea"
-                                      [(ngModel)]="selectedFormation.description"
+                            <textarea [(ngModel)]="selectedFormation.description" aria-label="With textarea"
+                                      class="form-control"
 
                                       placeholder="Description"></textarea>
                         </div>
                         <div class="custom-control custom-switch">
-                            <input type="checkbox" class="custom-control-input"
-                                   [(ngModel)]="selectedFormation.visible"
-                                   id="customSwitch1" checked>
+                            <input [(ngModel)]="selectedFormation.visible" checked
+                                   class="custom-control-input"
+                                   id="customSwitch1" type="checkbox">
                             <label class="custom-control-label" for="customSwitch1">Visible</label>
                         </div>
-                        <button type="submit" class="btn  btn-block btn-round" (click)="edit()"
-                                style="background-color: deepskyblue ; color: black">Ajouter
+                        <button (click)="edit()" class="btn  btn-block btn-round" style="background-color: deepskyblue ; color: black"
+                                type="submit">Ajouter
                         </button>
 
                     </div>

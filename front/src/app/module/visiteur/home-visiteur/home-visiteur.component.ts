@@ -1,9 +1,8 @@
-import {Component, OnInit, Inject, Renderer2, ElementRef, ViewChild} from '@angular/core';
-import {Router, NavigationEnd} from '@angular/router';
+import {Component, ElementRef, Inject, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {NavigationEnd, Router} from '@angular/router';
 import {Subscription} from 'rxjs/Subscription';
 import 'rxjs/add/operator/filter';
-import {DOCUMENT} from '@angular/common';
-import {LocationStrategy, PlatformLocation, Location} from '@angular/common';
+import {DOCUMENT, Location} from '@angular/common';
 import {NavbarComponent} from "../shared/navbar/navbar.component";
 
 @Component({
@@ -12,8 +11,8 @@ import {NavbarComponent} from "../shared/navbar/navbar.component";
     styleUrls: ['./home-visiteur.component.css']
 })
 export class HomeVisiteurComponent implements OnInit {
-    private _router: Subscription;
     @ViewChild(NavbarComponent) navbar: NavbarComponent;
+    private _router: Subscription;
 
     constructor(private renderer: Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element: ElementRef, public location: Location) {
     }

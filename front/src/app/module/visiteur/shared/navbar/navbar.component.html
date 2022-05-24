@@ -1,8 +1,10 @@
 <nav class="navbar navbar-expand-lg  fixed-top navbar-transparent justify-content-center" color-on-scroll="500">
     <div class="container">
         <div class="navbar-translate col-sm-0">
-            <a class="navbar-brand " >Nano <span style="color: #00bbff">planete</span></a>
-            <button class="navbar-toggler navbar-burger" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" (click)="sidebarToggle()">
+            <a class="navbar-brand ">Nano <span style="color: #00bbff">planete</span></a>
+            <button (click)="sidebarToggle()" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation" class="navbar-toggler navbar-burger" data-target="#navbarToggler"
+                    data-toggle="collapse" type="button">
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
                 <span class="navbar-toggler-bar"></span>
@@ -10,105 +12,109 @@
         </div>
         <div class="navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ml-auto">
-<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
-<!--                    <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" >-->
-<!--                        <i class="fa fa-twitter"></i>-->
-<!--                        <p class="d-lg-none">Twitter</p>-->
-<!--                    </a>-->
-<!--                </li>-->
-<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
-<!--                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" >-->
-<!--                        <i class="fa fa-facebook-square"></i>-->
-<!--                        <p class="d-lg-none">Facebook</p>-->
-<!--                    </a>-->
-<!--                </li>-->
+                <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+                <!--                    <a class="nav-link" rel="tooltip" title="Follow us on Twitter" data-placement="bottom" href="https://twitter.com/CreativeTim" >-->
+                <!--                        <i class="fa fa-twitter"></i>-->
+                <!--                        <p class="d-lg-none">Twitter</p>-->
+                <!--                    </a>-->
+                <!--                </li>-->
+                <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+                <!--                    <a class="nav-link" rel="tooltip" title="Like us on Facebook" data-placement="bottom" href="https://www.facebook.com/CreativeTim" >-->
+                <!--                        <i class="fa fa-facebook-square"></i>-->
+                <!--                        <p class="d-lg-none">Facebook</p>-->
+                <!--                    </a>-->
+                <!--                </li>-->
 
-<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
-<!--                    <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://www.github.com/CreativeTimOfficial/paper-kit-2-angular" >-->
-<!--                        <i class="fa fa-github"></i>-->
-<!--                        <p class="d-lg-none">GitHub</p>-->
-<!--                    </a>-->
-<!--                </li>-->
+                <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+                <!--                    <a class="nav-link" rel="tooltip" title="Star on GitHub" data-placement="bottom" href="https://www.github.com/CreativeTimOfficial/paper-kit-2-angular" >-->
+                <!--                        <i class="fa fa-github"></i>-->
+                <!--                        <p class="d-lg-none">GitHub</p>-->
+                <!--                    </a>-->
+                <!--                </li>-->
 
-                <li class="nav-item " *ngIf="!isindex()">
-                    <a  [routerLink]="['/home']" class="nav-link" style="font-size: 10px">
-                        <i style="font-size: 15px" class="fa fa-home" aria-hidden="true"></i>
+                <li *ngIf="!isindex()" class="nav-item ">
+                    <a [routerLink]="['/home']" class="nav-link" style="font-size: 10px">
+                        <i aria-hidden="true" class="fa fa-home" style="font-size: 15px"></i>
                         Accueil</a>
                 </li>
 
-<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
-<!--                    <a  [routerLink]="['/module']" class="nav-link" style="font-size: 10px"><i class="fa fa-home" aria-hidden="true"></i>-->
-<!--                        add product</a>-->
-<!--                </li>-->
+                <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+                <!--                    <a  [routerLink]="['/module']" class="nav-link" style="font-size: 10px"><i class="fa fa-home" aria-hidden="true"></i>-->
+                <!--                        add product</a>-->
+                <!--                </li>-->
 
 
-                <li class="nav-item " *ngIf="!isFormation()">
-                    <a [routerLink]="['/formation']" class="nav-link"  >
-                        <i style="font-size: 15px" class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <li *ngIf="!isFormation()" class="nav-item ">
+                    <a [routerLink]="['/formation']" class="nav-link">
+                        <i aria-hidden="true" class="fa fa-graduation-cap" style="font-size: 15px"></i>
                         Formation</a>
                 </li>
 
-                <li class="nav-item " *ngIf="!isOverseaeducation()">
-                    <a [routerLink]="['/overseaseducation']" class="nav-link" style="font-size: 10px" >
-<!--                    <a [routerLink]="['/congreslist']" class="nav-link" style="font-size: 10px" >-->
-                        <i style="font-size: 15px" class="fa fa-plane" aria-hidden="true"></i>
+                <li *ngIf="!isOverseaeducation()" class="nav-item ">
+                    <a [routerLink]="['/overseaseducation']" class="nav-link" style="font-size: 10px">
+                        <!--                    <a [routerLink]="['/congreslist']" class="nav-link" style="font-size: 10px" >-->
+                        <i aria-hidden="true" class="fa fa-plane" style="font-size: 15px"></i>
                         Etude a l'étranger</a>
                 </li>
 
 
-                <li class="nav-item " *ngIf="!isCongres()">
-                    <a [routerLink]="['/congres']" class="nav-link"  style="font-size: 10px"><i style="font-size: 15px" class="fa fa-users" aria-hidden="true"></i>
+                <li *ngIf="!isCongres()" class="nav-item ">
+                    <a [routerLink]="['/congres']" class="nav-link" style="font-size: 10px"><i aria-hidden="true"
+                                                                                               class="fa fa-users"
+                                                                                               style="font-size: 15px"></i>
                         Congres & seminaires</a>
                 </li>
 
 
-                <li class="nav-item " *ngIf="!isMateriel()">
-                    <a [routerLink]="['/produitbio']" class="nav-link"  style="font-size: 10px"><i style="font-size: 15px" class="fa fa-handshake-o" aria-hidden="true"></i>
+                <li *ngIf="!isMateriel()" class="nav-item ">
+                    <a [routerLink]="['/produitbio']" class="nav-link" style="font-size: 10px"><i
+                            aria-hidden="true" class="fa fa-handshake-o" style="font-size: 15px"></i>
                         Materiel Biomedical</a>
                 </li>
 
 
-                <li class="nav-item " *ngIf="!isDocumentation()">
-<!--                    <a  class="nav-link" href="https://api.whatsapp.com/send?phone=212632360909&text=welcome%20to%20nano%20planete" style="font-size: 10px"><i style="font-size: 15px" class="fa fa-phone" aria-hidden="true"></i>-->
-                    <a  class="nav-link" style="font-size: 10px"><i style="font-size: 15px" class="fa fa-phone" aria-hidden="true"></i>
+                <li *ngIf="!isDocumentation()" class="nav-item ">
+                    <!--                    <a  class="nav-link" href="https://api.whatsapp.com/send?phone=212632360909&text=welcome%20to%20nano%20planete" style="font-size: 10px"><i style="font-size: 15px" class="fa fa-phone" aria-hidden="true"></i>-->
+                    <a class="nav-link" style="font-size: 10px"><i aria-hidden="true" class="fa fa-phone"
+                                                                   style="font-size: 15px"></i>
                         Contact</a>
                 </li>
 
 
-                <li class="nav-item " *ngIf="!islogin() && !isRegister() ">
+                <li *ngIf="!islogin() && !isRegister() " class="nav-item ">
                     <a [routerLink]="['/login']" class="nav-link" style="font-size: 10px">
-                        <i style="font-size: 15px" class="fa fa-user" aria-hidden="true"></i>
+                        <i aria-hidden="true" class="fa fa-user" style="font-size: 15px"></i>
                         Login</a>
                 </li>
 
 
-                <li class="nav-item " *ngIf="!isCheckout() && !isPanier()">
+                <li *ngIf="!isCheckout() && !isPanier()" class="nav-item ">
                     <a [routerLink]="['/panier']" class="nav-link" style="font-size: 10px">
-                        <i style="font-size: 15px" class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 15px"></i>
                         Panier</a>
                 </li>
 
 
-<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
-<!--                    <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" >-->
-<!--                        <i class="fa fa-instagram"></i>-->
-<!--                        <p class="d-lg-none">Instagram</p>-->
-<!--                    </a>-->
-<!--                </li> -->
+                <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+                <!--                    <a class="nav-link" rel="tooltip" title="Follow us on Instagram" data-placement="bottom" href="https://www.instagram.com/CreativeTimOfficial" >-->
+                <!--                        <i class="fa fa-instagram"></i>-->
+                <!--                        <p class="d-lg-none">Instagram</p>-->
+                <!--                    </a>-->
+                <!--                </li> -->
 
 
-<!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
-<!--                    <a class="nav-link" rel="tooltip" title="contactez nous sur whatsapp" data-placement="bottom" href="https://www.whatsapp.com/CreativeTimOfficial" >-->
-<!--                        <i class="fa fa-whatsapp"></i>-->
-<!--                        <p class="d-lg-none">Whatsapp</p>-->
-<!--                    </a>-->
-<!--                </li>-->
+                <!--                <li class="nav-item" *ngIf="!isDocumentation()">-->
+                <!--                    <a class="nav-link" rel="tooltip" title="contactez nous sur whatsapp" data-placement="bottom" href="https://www.whatsapp.com/CreativeTimOfficial" >-->
+                <!--                        <i class="fa fa-whatsapp"></i>-->
+                <!--                        <p class="d-lg-none">Whatsapp</p>-->
+                <!--                    </a>-->
+                <!--                </li>-->
 
 
-<!--                <li class="nav-item" *ngIf="!isHome()">-->
-<!--                    <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>-->
-<!--                    <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>-->
-<!--                </li>-->
+                <!--                <li class="nav-item" *ngIf="!isHome()">-->
+                <!--                    <a [routerLink]="['/home']" *ngIf="!isDocumentation()" class="nav-link"><i class="nc-icon nc-layout-11"></i>Components</a>-->
+                <!--                    <a [routerLink]="['/home']" *ngIf="isDocumentation()" class="nav-link">Back to Kit</a>-->
+                <!--                </li>-->
 
             </ul>
         </div>

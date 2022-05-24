@@ -1,8 +1,7 @@
-
 // const root = environment.rootAppUrl;
 
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {AuthGuard} from '../../controller/guards/auth.guard';
 
 
@@ -40,4 +39,5 @@ import {AuthGuard} from '../../controller/guards/auth.guard';
     ],
     exports: [RouterModule],
 })
-export class AgentRoutingModule { }
+export class AgentRoutingModule {
+}

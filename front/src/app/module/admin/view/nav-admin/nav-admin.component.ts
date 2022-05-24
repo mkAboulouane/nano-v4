@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from "../../../../controller/service/Auth.service";
 
 @Component({
-  selector: 'app-nav-admin',
-  templateUrl: './nav-admin.component.html',
-  styleUrls: ['./nav-admin.component.css']
+    selector: 'app-nav-admin',
+    templateUrl: './nav-admin.component.html',
+    styleUrls: ['./nav-admin.component.css']
 })
 export class NavAdminComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+    constructor(private authService: AuthService) {
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 
-  logOut() {
-      this.authService.logout();
-      console.log("Log Out Succesfully");
-  }
+    logOut() {
+        this.authService.logout();
+        console.log("Log Out Succesfully");
+    }
 }
