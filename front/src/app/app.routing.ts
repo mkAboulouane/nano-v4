@@ -13,6 +13,7 @@ import {PanierComponent} from "./module/client/view/panier/panier.component";
 import {OverseaseducationComponent} from "./module/client/view/overseaseducation/overseaseducation.component";
 import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visiteur.component";
+import {ComponentsComponent} from "./components/components.component";
 
 @NgModule({
     imports: [
@@ -26,9 +27,9 @@ import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visite
                     component: HomeVisiteurComponent,
                     children: [
 
-                        {path: '', redirectTo: 'login', pathMatch: 'full'},
-                        {path: 'home', redirectTo: 'login', pathMatch: 'full'},
-                        // {path: 'home', component: ComponentsComponent},
+                        // {path: '', redirectTo: 'login', pathMatch: 'full'},
+                        // {path: 'home', redirectTo: 'login', pathMatch: 'full'},
+                        {path: 'home', component: ComponentsComponent},
                         {path: 'formation', component: FormationComponent},
                         // {path: 'formation', component: FormationAddComponent},
                         // {path: 'formation-list', component: FormationListComponent},

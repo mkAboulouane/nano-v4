@@ -7,6 +7,7 @@ import {PanierComponent} from './view/panier/panier.component';
 import {CheckoutComponent} from './view/checkout/checkout.component';
 import {OverseaseducationComponent} from './view/overseaseducation/overseaseducation.component';
 import {ProduitBioComponent} from "./view/produit-bio/produit-bio.component";
+import { NavbarClientComponent } from './view/navbar-client/navbar-client.component';
 
 
 @NgModule({
@@ -43,7 +44,7 @@ import {ProduitBioComponent} from "./view/produit-bio/produit-bio.component";
         ),
     ],
     exports: [RouterModule],
-    declarations: [PanierComponent, CheckoutComponent, OverseaseducationComponent],
+    declarations: [PanierComponent, CheckoutComponent, OverseaseducationComponent, NavbarClientComponent],
 })
 export class ClientRoutingModule {
 }

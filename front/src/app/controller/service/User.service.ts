@@ -9,9 +9,53 @@ import {environment} from '../../../environments/environment';
 export class UserService {
     // declarations
     readonly API = environment.apiUrl;
-
     constructor(private http: HttpClient) {
     }
+
+
+    // methods
+    findAll() {
+        this.http.get<User[]>(this.API).subscribe(users => {
+            this._users = users;
+        }, (error: HttpErrorResponse) => {
+            console.log(error.error)
+        })
+    }
+
+    save(user: User) {
+        this.http.post<User>(this.API + "save", user).subscribe(user => {
+            this._users = [...this._users, user];
+        }, (error: HttpErrorResponse) => {
+            console.log(error.error)
+        })
+    }
+    saveGerant(user: User) {
+        this.http.post<User>(this.API + "/agent/add/", user).subscribe(user => {
+            this._users = [...this._users, user];
+        }, (error: HttpErrorResponse) => {
+            console.log(error.error)
+        })
+    }
+
+    update(user: User) {
+        this.http.put<User>(this.API, user).subscribe(user => {
+            const index = this._users.findIndex(userToBeFound => user.id == userToBeFound.id);
+            index > -1 ? this._users[index] = user : false;
+            console.log("updated User")
+            console.log(user)
+            console.log("hiwa hiwa")
+        }, (error: HttpErrorResponse) => {
+            console.log(error.error)
+        });
+    }
+
+    delete(id: string) {
+        this.http.delete<number>(this.API + "id/" + id).subscribe(res => {
+            res == 1 ? this._users = this._users.filter(user => user.id != id) : false;
+        })
+    }
+
+
 
     private _users: User[] = [];
 
@@ -64,38 +108,5 @@ export class UserService {
         this._submitted = submitted;
     }
 
-    // methods
-    findAll() {
-        this.http.get<User[]>(this.API).subscribe(users => {
-            this._users = users;
-        }, (error: HttpErrorResponse) => {
-            console.log(error.error)
-        })
-    }
 
-    save(user: User) {
-        this.http.post<User>(this.API + "save", user).subscribe(user => {
-            this._users = [...this._users, user];
-        }, (error: HttpErrorResponse) => {
-            console.log(error.error)
-        })
-    }
-
-    update(user: User) {
-        this.http.put<User>(this.API, user).subscribe(user => {
-            const index = this._users.findIndex(userToBeFound => user.id == userToBeFound.id);
-            index > -1 ? this._users[index] = user : false;
-            console.log("updated User")
-            console.log(user)
-            console.log("hiwa hiwa")
-        }, (error: HttpErrorResponse) => {
-            console.log(error.error)
-        });
-    }
-
-    delete(id: string) {
-        this.http.delete<number>(this.API + "id/" + id).subscribe(res => {
-            res == 1 ? this._users = this._users.filter(user => user.id != id) : false;
-        })
-    }
 }

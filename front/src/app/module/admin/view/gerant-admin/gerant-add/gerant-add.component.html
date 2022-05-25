@@ -11,7 +11,6 @@
                             <h3>Ajouter un Agent</h3>
                             <!--                            <p class="lead"></p>-->
                         </div>
-                        <form [formGroup]="registerForm" class="register-form col-lg-12">
 
                             <label>Nom d'agent</label>
                             <div [ngClass]="{'input-group-focus':focus===true}"
@@ -20,7 +19,7 @@
 
                                 </div>
 
-                                <input (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="phone"
+                                <input [(ngModel)]="selectedUser.nom" (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="phone"
                                        placeholder="Agent" type="text">
                             </div>
 
@@ -32,7 +31,7 @@
 
                                 </div>
 
-                                <input (blur)="focus=false" (focus)="focus=true" class="form-control"
+                                <input [(ngModel)]="selectedUser.phone" (blur)="focus=false" (focus)="focus=true" class="form-control"
                                        formControlName="phone" placeholder="Numéro telephone" type="number">
                             </div>
 
@@ -43,7 +42,7 @@
 
                                 </div>
 
-                                <input (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="email"
+                                <input [(ngModel)]="selectedUser.email" (blur)="focus=false" (focus)="focus=true" class="form-control" formControlName="email"
                                        placeholder="Email" type="text">
                             </div>
 
@@ -54,14 +53,12 @@
                                 <div class="input-group-prepend">
 
                                 </div>
-                                <input (blur)="focus1=false" (focus)="focus1=true" class="form-control"
+                                <input [(ngModel)]="selectedUser.password" (blur)="focus1=false" (focus)="focus1=true" class="form-control"
                                        formControlName="password" placeholder="Password" type="password">
                             </div>
                             <button (click)="submit()" class="btn  btn-block btn-round"
                                     style="background-color: deepskyblue ; color: black">Ajouter
                             </button>
-
-                        </form>
 
                     </div>
                 </div>

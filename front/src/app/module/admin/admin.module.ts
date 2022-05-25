@@ -11,6 +11,8 @@ import {NavAdminComponent} from "./view/nav-admin/nav-admin.component";
 import {AdminAcueilComponent} from "./view/admin-acueil/admin-acueil.component";
 import {NgbCarouselModule} from "@ng-bootstrap/ng-bootstrap";
 import {ComponentsModule} from "../../components/components.module";
+import {AppModule} from "../../app.module";
+import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.component";
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import {ComponentsModule} from "../../components/components.module";
         UserAdminComponent,
         HomeAdminComponent,
         FooterAdminComponent,
-        NavAdminComponent
+        NavAdminComponent,
+        GerantListComponent,
         // FormationAdminComponent,
     ],
     imports: [
@@ -33,6 +36,7 @@ import {ComponentsModule} from "../../components/components.module";
         FormsModule,
         NgbCarouselModule,
         ComponentsModule,
+        // AppModule,
     ],
     exports: [
         CommandeAdminComponent,

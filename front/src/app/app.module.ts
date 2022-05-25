@@ -35,6 +35,8 @@ import {CongresListComponent} from "./module/admin/view/congres-admin/congres-li
 import {ProduitBioAddComponent} from "./module/admin/view/produit-bio-admin/produit-bio-add/produit-bio-add.component";
 import {ProduitBioListComponent} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
 import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-edit/congres-edit.component";
+import {ProduitBioAdminComponent} from "./module/admin/view/produit-bio-admin/produit-bio-admin.component";
+import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/gerant-add.component";
 
 
 @NgModule({
@@ -48,6 +50,7 @@ import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-ed
         FormationListComponent,
         UtilsComponent,
         PanierComponent,
+        GerantAddComponent,
         AppComponent,
         NavbarComponent,
         FooterComponent,
@@ -61,7 +64,8 @@ import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-ed
         CommandeListComponent,
         CongresListComponent,
         ProduitBioAddComponent,
-        ProduitBioListComponent
+        ProduitBioListComponent,
+        ProduitBioAdminComponent
 
     ],
     imports: [
@@ -84,6 +88,9 @@ import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-ed
         UserService,
         RoleService,
 
+    ],
+    exports: [
+        GerantAddComponent
     ],
     bootstrap: [AppComponent]
 })

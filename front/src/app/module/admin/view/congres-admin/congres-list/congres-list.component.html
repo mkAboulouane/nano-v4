@@ -25,7 +25,7 @@
                                             <th scope="col">duree</th>
                                             <th scope="col">Adresse</th>
                                             <th scope="col">visible</th>
-<!--                                            <th scope="col">Heure</th>-->
+                                            <th scope="col">Description</th>
                                             <th scope="col">Encadrant</th>
                                             <th scope="col">Modifier</th>
                                         </tr>
@@ -50,14 +50,19 @@
 
                                             <!-----------------------------------------------Adresse------------------------------------------------------------------------------>
 
-                                            <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.lieu}}</span></h5>
+                                            <td class="align-middle">{{congre.lieu}}
+<!--                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.lieu}}</span></h5>-->
                                             </td>
 
                                             <!-----------------------------------------------Heure--------------------------------------->
 
                                             <td class="align-middle">
                                                 <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.visible}}</span></h5>
+                                            </td>
+                                            <!-----------------------------------------------desc--------------------------------------->
+
+                                            <td class="align-middle justify-content-center" >{{congre.description}}
+<!--                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.description}}</span></h5>-->
                                             </td>
 
 

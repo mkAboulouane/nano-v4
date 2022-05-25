@@ -15,6 +15,7 @@
 
                                     <h2 class="my-4">Liste des Gérants</h2>
                                 </div>
+                                <button (click)="add()" class="btn btn-outline-primary">Ajouter un Gérant</button>
                                 <div style="overflow-x:auto; ">
                                     <table class="table text-white mb-0">
 
@@ -29,24 +30,24 @@
                                         <tbody>
 
 
-                                        <tr class="fw-normal">
+                                        <tr class="fw-normal" *ngFor="let user of users">
 
 
                                             <!-----------------------------------------------nom------------------------------------------------------------------------------>
 
-                                            <td class="align-middle">mr.bazzi</td>
+                                            <td class="align-middle">{{user.nom}}</td>
 
                                             <!-----------------------------------------------num tel------------------------------------------------------------------------------>
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge " style="background-color: #00bbff">+212611223366</span>
+                                                <h5 class="mb-0"><span class="badge " style="background-color: #00bbff">{{user.phone}}</span>
                                                 </h5>
                                             </td>
 
                                             <!-----------------------------------------------email--------------------------------------->
 
                                             <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge " style="background-color: #00bbff">achddani12@gmail.com</span>
+                                                <h5 class="mb-0"><span class="badge " style="background-color: #00bbff">{{user.email}}</span>
                                                 </h5>
                                             </td>
 
@@ -54,12 +55,11 @@
                                             <!------------------------------------------------Modifier-------------------------------------->
                                             <td class="align-middle">
                                                 <a data-mdb-toggle="tooltip" title="Modifier">
-                                                    <i aria-hidden="true"
+                                                    <i (click)="edit(user)" aria-hidden="true"
                                                        class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i>
                                                 </a>
-                                                <a data-mdb-toggle="tooltip" href="#!" title="supprimer"><i
-                                                        aria-hidden="true"
-                                                        class="fa fa-trash" style="font-size: 15px;color: red ; padding-left: 2em"></i>
+                                                <a data-mdb-toggle="tooltip" href="#!" title="supprimer">
+                                                    <i (click)="delete(user)" aria-hidden="true" class="fa fa-trash" style="font-size: 15px;color: red ; padding-left: 2em"></i>
                                                 </a>
                                             </td>
                                         </tr>

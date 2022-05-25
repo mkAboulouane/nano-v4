@@ -63,6 +63,19 @@
 
 
 
+                        <label>description</label>
+                        <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group-prepend">
+                                <!--                                  <span class="input-group-text">-->
+                                <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                <!--                                  </span>-->
+                            </div>
+
+                            <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" (focus)="focus=true" (blur)="focus=false" >
+                        </div>
+
+
+
                         <label>date</label>
                         <div class="input-group form-group-no-border justify-content-center" >
                             <div class="input-group-prepend">
