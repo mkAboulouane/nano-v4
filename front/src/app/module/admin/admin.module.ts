@@ -18,15 +18,13 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
 @NgModule({
     declarations: [
         CommandeAdminComponent,
-        // FormationEditComponent,
         AdminAcueilComponent,
-        GerantAdminComponent,
         UserAdminComponent,
+        GerantListComponent,
         HomeAdminComponent,
         FooterAdminComponent,
         NavAdminComponent,
         GerantListComponent,
-        // FormationAdminComponent,
     ],
     imports: [
         CommonModule,
@@ -36,12 +34,11 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
         FormsModule,
         NgbCarouselModule,
         ComponentsModule,
-        // AppModule,
     ],
     exports: [
         CommandeAdminComponent,
-        GerantAdminComponent,
         UserAdminComponent,
+        GerantListComponent,
     ],
     entryComponents: [],
 })

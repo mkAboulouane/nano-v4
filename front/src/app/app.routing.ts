@@ -14,6 +14,7 @@ import {OverseaseducationComponent} from "./module/client/view/overseaseducation
 import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visiteur.component";
 import {ComponentsComponent} from "./components/components.component";
+import {HomeAgentComponent} from "./module/agent/home-agent.component";
 
 @NgModule({
     imports: [
@@ -26,13 +27,8 @@ import {ComponentsComponent} from "./components/components.component";
                     path: '',
                     component: HomeVisiteurComponent,
                     children: [
-
-                        // {path: '', redirectTo: 'login', pathMatch: 'full'},
-                        // {path: 'home', redirectTo: 'login', pathMatch: 'full'},
                         {path: 'home', component: ComponentsComponent},
                         {path: 'formation', component: FormationComponent},
-                        // {path: 'formation', component: FormationAddComponent},
-                        // {path: 'formation-list', component: FormationListComponent},
                         {path: 'congres', component: CongresComponent},
                         {path: 'produitbio', component: ProduitBioComponent},
                         {path: 'overseaseducation', component: OverseaseducationComponent},
@@ -51,7 +47,8 @@ import {ComponentsComponent} from "./components/components.component";
                             loadChildren: './module/admin/admin.routing.module#AdminRoutingModule',
                             canActivate: [AuthGuard],
                         }, {
-                            path: 'gerant',
+                            path: 'agent',
+                            component: HomeAgentComponent,
                             loadChildren: './module/agent/agent.routing.module#AgentRoutingModule',
                             canActivate: [AuthGuard],
                         },

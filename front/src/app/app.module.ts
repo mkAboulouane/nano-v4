@@ -39,6 +39,10 @@ import {ProduitBioAdminComponent} from "./module/admin/view/produit-bio-admin/pr
 import {
     ProduitBioEditComponent
 } from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
+import {GerantAdminComponent} from "./module/admin/view/gerant-admin/gerant-admin.component";
+import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/gerant-add.component";
+import {NavGerantComponent} from "./module/agent/view/nav-gerant/nav-gerant.component";
+import {HomeAgentComponent} from "./module/agent/home-agent.component";
 
 
 @NgModule({
@@ -48,7 +52,10 @@ import {
         ProduitBioEditComponent,
         ProduitBioAdminComponent,
         ProduitBioAddComponent,
-
+        GerantAdminComponent,
+        NavGerantComponent,
+        HomeAgentComponent,
+        GerantAddComponent,
         CongresAddComponent,
         CongresEditComponent,
         CongresAdminComponent,

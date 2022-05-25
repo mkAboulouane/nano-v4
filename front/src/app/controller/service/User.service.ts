@@ -9,6 +9,11 @@ import {environment} from '../../../environments/environment';
 export class UserService {
     // declarations
     readonly API = environment.apiUrl;
+    private _selectedUsers: User[] = [];
+    private _selectedUser: User;
+    private _users: User[] = [];
+
+
     constructor(private http: HttpClient) {
     }
 
@@ -30,8 +35,9 @@ export class UserService {
         })
     }
     saveGerant(user: User) {
-        this.http.post<User>(this.API + "/agent/add/", user).subscribe(user => {
-            this._users = [...this._users, user];
+        this.http.post<User>(environment.adminUrl + "agent/add/", this.selectedUser).subscribe(data => {
+           console.log(data);
+           this.selectedUser = new User();
         }, (error: HttpErrorResponse) => {
             console.log(error.error)
         })
@@ -57,8 +63,6 @@ export class UserService {
 
 
 
-    private _users: User[] = [];
-
     // getters and setters
     get users(): User[] {
         return this._users;
@@ -68,7 +72,6 @@ export class UserService {
         this._users = users;
     }
 
-    private _selectedUsers: User[] = [];
 
     get selectedUsers(): User[] {
         return this._users;
@@ -109,4 +112,14 @@ export class UserService {
     }
 
 
+    get selectedUser(): User {
+        if (this._selectedUser == null) {
+            this._selectedUser = new User();
+        }
+        return this._selectedUser;
+    }
+
+    set selectedUser(value: User) {
+        this._selectedUser = value;
+    }
 }

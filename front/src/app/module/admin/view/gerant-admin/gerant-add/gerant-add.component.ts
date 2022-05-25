@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../../../../controller/service/User.service";
 import {HttpClient} from "@angular/common/http";
 import {User} from "../../../../../controller/model/User.model";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-gerant-add',
@@ -10,7 +11,7 @@ import {User} from "../../../../../controller/model/User.model";
 })
 export class GerantAddComponent implements OnInit {
 
-    constructor(private  userService: UserService, private httpClient: HttpClient) {
+    constructor(private router: Router, private  userService: UserService, private httpClient: HttpClient) {
     }
 
     ngOnInit(): void {
@@ -18,15 +19,16 @@ export class GerantAddComponent implements OnInit {
 
     submit() {
         this.userService.saveGerant(this.selectedUser);
+        this.router.navigate(['/admin/gerant'])
     }
 
 
     get selectedUser(): User {
-     return this.userService.user;
+     return this.userService.selectedUser;
     }
 
     set selectedUser(value: User ) {
-        this.userService.user = value;
+        this.userService.selectedUser = value;
     }
 
 

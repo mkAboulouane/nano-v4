@@ -19,6 +19,7 @@ import {AdminAcueilComponent} from "./view/admin-acueil/admin-acueil.component";
 import {FormationEditComponent} from "./view/formation-admin/formation-edit/formation-edit.component";
 import {CongresEditComponent} from "./view/congres-admin/congres-edit/congres-edit.component";
 import {ProduitBioEditComponent} from "./view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
+import {GerantAddComponent} from "./view/gerant-admin/gerant-add/gerant-add.component";
 
 @NgModule({
     imports: [
@@ -37,11 +38,9 @@ import {ProduitBioEditComponent} from "./view/produit-bio-admin/produit-bio-edit
                 { path: 'congres-edit', component: CongresEditComponent, canActivate: [AuthGuard] },
                 { path: 'user', component: UserAdminComponent, canActivate: [AuthGuard] },
                 { path: 'gerant', component: GerantAdminComponent, canActivate: [AuthGuard] },
+                { path: 'gerant-add', component: GerantAddComponent, canActivate: [AuthGuard] },
                 { path: 'commandes', component: CommandeAdminComponent, canActivate: [AuthGuard] },
-/*
-                 Apres pour ajouter un admin
-                { path: 'admin', component: , canActivate: [AuthGuard] },
-*/
+
             ]
         ),
     ],
