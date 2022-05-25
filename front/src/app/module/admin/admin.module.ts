@@ -19,7 +19,6 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
     declarations: [
         CommandeAdminComponent,
         AdminAcueilComponent,
-        UserAdminComponent,
         GerantListComponent,
         HomeAdminComponent,
         FooterAdminComponent,
@@ -37,7 +36,6 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
     ],
     exports: [
         CommandeAdminComponent,
-        UserAdminComponent,
         GerantListComponent,
     ],
     entryComponents: [],

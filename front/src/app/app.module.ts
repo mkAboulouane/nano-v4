@@ -43,11 +43,15 @@ import {GerantAdminComponent} from "./module/admin/view/gerant-admin/gerant-admi
 import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/gerant-add.component";
 import {NavGerantComponent} from "./module/agent/view/nav-gerant/nav-gerant.component";
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
+import {UserListComponent} from "./module/admin/view/user-admin/user-list/user-list.component";
+import {UserAdminComponent} from "./module/admin/view/user-admin/user-admin.component";
 
 
 @NgModule({
     declarations: [
         FormationAdminComponent,
+        UserListComponent,
+        UserAdminComponent,
         FormationAddComponent,
         ProduitBioEditComponent,
         ProduitBioAdminComponent,

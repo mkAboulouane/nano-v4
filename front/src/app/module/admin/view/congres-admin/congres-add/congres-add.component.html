@@ -10,15 +10,12 @@
                     <div class="card card-register " style="background-color: black; opacity: 0.6;">
                         <div class="text-center ">
                             <h3>Ajouter congrés</h3>
-                            <!--                            <p class="lead"></p>-->
                         </div>
 
                             <label>Objectif Congrés</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
-                                    <!--                                  </span>-->
+
                                 </div>
 
                                 <input type="text" class="form-control" [(ngModel)]="selectedCongre.nom"(focus)="focus=true" (blur)="focus=false">
@@ -27,9 +24,7 @@
                             <label>Encadrant</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
-                                    <!--                                  </span>-->
+
                                 </div>
 
                                 <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" (focus)="focus=true" (blur)="focus=false" required>
@@ -41,21 +36,14 @@
                             <label>visible</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                   <i class="fa fa-phone-square" aria-hidden="true"></i>&ndash;&gt;-->
-
-                                    <!--                                  </span>-->
                                 </div>
 
-                                <input type="text" class="form-control"[(ngModel)]="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >
+                                <input type="number" class="form-control"[(ngModel)]="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
                             <label>adresse</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                            <div class="input-group form-group-no-border" >
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
-                                    <!--                                  </span>-->
                                 </div>
 
                                 <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" (focus)="focus=true" (blur)="focus=false" >
@@ -65,9 +53,6 @@
                          <label>description</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
-                                    <!--                                  </span>-->
                                 </div>
 
                                 <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" (focus)="focus=true" (blur)="focus=false" >
@@ -75,27 +60,16 @@
 
 
 
-                            <label>date</label>
+                            <label>Duree</label>
                             <div class="input-group form-group-no-border justify-content-center" >
                                 <div class="input-group-prepend">
-                                    <!--                                  <span class="input-group-text">-->
-                                    <!--&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;-->
-                                    <!--                                  </span>-->
                                 </div>
-                                <input type="datetime-local" class="form-control" [(ngModel)]="selectedCongre.duree">
-                                <!--                                <input id="party" type="datetime-local" name="partydate">-->
+                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree">
                             </div>
                             <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>
-
-                        <!--                        <div class="forgot">-->
-                        <!--                            <a href="#" class="btn btn-link btn-danger">Forgot password?</a>-->
-                        <!--                        </div>-->
                     </div>
                 </div>
             </div>
-            <!--                        <div class="footer register-footer text-center">-->
-            <!--                            <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>-->
-            <!--                        </div>-->
         </div>
     </div>
 </div>

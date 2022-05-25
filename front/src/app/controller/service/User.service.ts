@@ -11,7 +11,7 @@ export class UserService {
     readonly API = environment.apiUrl;
     private _selectedUsers: User[] = [];
     private _selectedUser: User;
-    private _users: User[] = [];
+    private _users: Array<User>;
 
 
     constructor(private http: HttpClient) {
@@ -20,8 +20,9 @@ export class UserService {
 
     // methods
     findAll() {
-        this.http.get<User[]>(this.API).subscribe(users => {
-            this._users = users;
+        this.http.get<User[]>(this.API + 'admin/').subscribe(users => {
+            this.users = users;
+            console.log(users);
         }, (error: HttpErrorResponse) => {
             console.log(error.error)
         })
@@ -64,11 +65,14 @@ export class UserService {
 
 
     // getters and setters
-    get users(): User[] {
+    get users(): Array<User> {
+        if (this._users == null) {
+            this._users = new Array<User>();
+        }
         return this._users;
     }
 
-    set users(users: User[]) {
+    set users(users: Array<User>) {
         this._users = users;
     }
 

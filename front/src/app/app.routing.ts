@@ -27,6 +27,7 @@ import {HomeAgentComponent} from "./module/agent/home-agent.component";
                     path: '',
                     component: HomeVisiteurComponent,
                     children: [
+                        {path: '', redirectTo: 'login' , pathMatch: 'full'},
                         {path: 'home', component: ComponentsComponent},
                         {path: 'formation', component: FormationComponent},
                         {path: 'congres', component: CongresComponent},
