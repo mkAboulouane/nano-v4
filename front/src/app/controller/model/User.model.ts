@@ -1,3 +1,5 @@
+import {Role} from "./Role.model";
+
 export class User {
     public credentialsNonExpired: boolean;
     public enabled: boolean;
