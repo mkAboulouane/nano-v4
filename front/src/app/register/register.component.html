@@ -60,6 +60,21 @@
                                 </div>
                                 <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
                             </div>
+
+                            <label>Confirmation du password</label>
+                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+<!--                                <span *ngIf="showWarrning"> Password did not match ! </span>-->
+
+                            </div>
+
+
+
                             <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Valider</button>
                         </form>
                         <div class="forgot">
