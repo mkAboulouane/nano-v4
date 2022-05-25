@@ -1,10 +1,10 @@
 <div class="wrapper">
-    <div class="page-header" style="background-image: url('./assets/img/smoke.jpg');">
+    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
         <div class="filter"></div>
         <div class="container col-lg-12 col-sm-12">
 
             <div class="row">
-                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+                <div class="col-lg-7 col-sm-5 mr-auto ml-auto">
 
                     <div class="card card-register " style="background-color: black; opacity: 0.6;">
                         <div class="text-center ">
@@ -25,17 +25,6 @@
                                 <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
                             </div>
 
-
-<!--                            <label>Prenom</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                  <span class="input-group-text">-->
-<!--                                     <i class="fa fa-user" aria-hidden="true"></i>-->
-<!--                                  </span>-->
-<!--                                </div>-->
-
-<!--                                <input type="text" class="form-control" placeholder="Prénom" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
 
                             <label>Numero telephone</label>
                             <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
@@ -71,18 +60,28 @@
                                 </div>
                                 <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
                             </div>
-                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Valider</button>
 
+                            <label>Confirmation du password</label>
+                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+                                  </span>
+                                </div>
+                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
+<!--                                <span *ngIf="showWarrning"> Password did not match ! </span>-->
+
+                            </div>
+
+
+
+                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Valider</button>
                         </form>
-<!--                        <div class="forgot">-->
-<!--                            <a class="btn btn-link btn-danger">Forgot password?</a>-->
-<!--                        </div>-->
+                        <div class="forgot">
+                            <a class="btn btn-link btn-danger" [routerLink]="['/login']">Vous avez deja un Compte ?</a>
+                        </div>
                     </div>
                 </div>
-<!--            </div>-->
-<!--                        <div class="footer register-footer text-center">-->
-<!--                            <h6>&copy;{{test | date: 'yyyy'}}, made with <i class="fa fa-heart heart"></i> by Creative Tim</h6>-->
-<!--                        </div>-->
         </div>
     </div>
 </div>

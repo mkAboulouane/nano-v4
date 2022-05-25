@@ -1,13 +1,12 @@
-<div class="page-link col-lg-12 col-md-12 mb-0 "  style="background-color: black;">
-<!--<div class="page-link col-lg-12 col-md-12 fi"  style="background-image: url('./assets/img/smoke.jpg');">-->
+<div class="page-header " style="background-image: url('./assets/img/team.jpg');">
 <!--<br><br><br><br><br><br><br>-->
 
 
-<div class="container my-5 mt-5 mx-6 mb-1"><br><br>
+<div class="container my-5 mt-5 mx-4"><br><br>
     <div class="row">
-        <div class="  col-lg-4" *ngFor="let formation of formations">
+        <div *ngFor="let formation of formations" class="col-lg-6">
             <div class="card card-margin">
-                <div class="card-header no-border">
+                <div  class="card-header no-border">
                     <h5 class="card-title">{{formation.nom}}</h5>
                 </div>
                 <div class="card-body pt-0">
@@ -15,16 +14,15 @@
                         <div class="widget-49-title-wrapper">
                             <div class="widget-49-date-primary">
                                 <span class="widget-49-date-day">{{formation.duree}}</span>
-                                <span class="widget-49-date-month">heurs</span>
+                                <span class="widget-49-date-month">Heurs</span>
                             </div>
                             <div class="widget-49-meeting-info">
-                                <span class="widget-49-pro-title">{{formation.description}}</span>
-<!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
+                                <span class="widget-49-pro-title">{{formation.description}}s</span>
                             </div>
                         </div>
                         <ol class="widget-49-meeting-points">
-                            <li class="widget-49-meeting-item">Nombre des Places<span style="color: red">{{formation.nombrePlace}}</span></li>
-                            <li class="widget-49-meeting-item">Prix<span>{{formation.prix}}</span></li>
+                            <li class="widget-49-meeting-item"><span>{{formation.nombrePlace}}</span></li>
+                            <li class="widget-49-meeting-item">Prix: <span>{{formation.prix}}</span></li>
                             <li class="widget-49-meeting-item">Encadrant<span>{{formation.encadrantProf}}</span></li>
                         </ol>
                         <div class="widget-49-meeting-action">
@@ -34,120 +32,6 @@
                 </div>
             </div>
         </div>
-<!--        <div class="col-lg-4">-->
-<!--            <div class="card card-margin">-->
-<!--                <div class="card-header no-border">-->
-<!--                    <h5 class="card-title">Formation 2</h5>-->
-<!--                </div>-->
-<!--                <div class="card-body pt-0">-->
-<!--                    <div class="widget-49">-->
-<!--                        <div class="widget-49-title-wrapper">-->
-<!--                            <div class="widget-49-date-danger">-->
-<!--                                <span class="widget-49-date-day">15</span>-->
-<!--                                <span class="widget-49-date-month">heurs</span>-->
-<!--                            </div>-->
-<!--                            <div class="widget-49-meeting-info">-->
-<!--                                <span class="widget-49-pro-title">3 modules . 3 jours</span>-->
-<!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <ol class="widget-49-meeting-points">-->
-<!--                            <li class="widget-49-meeting-item"><span>places:...</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>prix:....</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>professeur:.....</span></li>-->
-<!--                        </ol>-->
-<!--                        <div class="widget-49-meeting-action">-->
-<!--                            <a class="btn btn-sm btn-flash-border-primary">rejoindre</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>     <div class="col-lg-4">-->
-<!--            <div class="card card-margin">-->
-<!--                <div class="card-header no-border">-->
-<!--                    <h5 class="card-title">Formation 2</h5>-->
-<!--                </div>-->
-<!--                <div class="card-body pt-0">-->
-<!--                    <div class="widget-49">-->
-<!--                        <div class="widget-49-title-wrapper">-->
-<!--                            <div class="widget-49-date-danger">-->
-<!--                                <span class="widget-49-date-day">15</span>-->
-<!--                                <span class="widget-49-date-month">heurs</span>-->
-<!--                            </div>-->
-<!--                            <div class="widget-49-meeting-info">-->
-<!--                                <span class="widget-49-pro-title">3 modules . 3 jours</span>-->
-<!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <ol class="widget-49-meeting-points">-->
-<!--                            <li class="widget-49-meeting-item"><span>places:...</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>prix:....</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>professeur:.....</span></li>-->
-<!--                        </ol>-->
-<!--                        <div class="widget-49-meeting-action">-->
-<!--                            <a class="btn btn-sm btn-flash-border-primary">rejoindre</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>     <div class="col-lg-4">-->
-<!--            <div class="card card-margin">-->
-<!--                <div class="card-header no-border">-->
-<!--                    <h5 class="card-title">Formation 2</h5>-->
-<!--                </div>-->
-<!--                <div class="card-body pt-0">-->
-<!--                    <div class="widget-49">-->
-<!--                        <div class="widget-49-title-wrapper">-->
-<!--                            <div class="widget-49-date-danger">-->
-<!--                                <span class="widget-49-date-day">15</span>-->
-<!--                                <span class="widget-49-date-month">heurs</span>-->
-<!--                            </div>-->
-<!--                            <div class="widget-49-meeting-info">-->
-<!--                                <span class="widget-49-pro-title">3 modules . 3 jours</span>-->
-<!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <ol class="widget-49-meeting-points">-->
-<!--                            <li class="widget-49-meeting-item"><span>places:...</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>prix:....</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>professeur:.....</span></li>-->
-<!--                        </ol>-->
-<!--                        <div class="widget-49-meeting-action">-->
-<!--                            <a class="btn btn-sm btn-flash-border-primary">rejoindre</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="col-lg-4">-->
-<!--            <div class="card card-margin">-->
-<!--                <div class="card-header no-border">-->
-<!--                    <h5 class="card-title">Formation 3</h5>-->
-<!--                </div>-->
-<!--                <div class="card-body pt-0">-->
-<!--                    <div class="widget-49">-->
-<!--                        <div class="widget-49-title-wrapper">-->
-<!--                            <div class="widget-49-date-success">-->
-<!--                                <span class="widget-49-date-day">15</span>-->
-<!--                                <span class="widget-49-date-month">heurs</span>-->
-<!--                            </div>-->
-<!--                            <div class="widget-49-meeting-info">-->
-<!--                                <span class="widget-49-pro-title">3 modules . 3 jours</span>-->
-<!--                                <span class="widget-49-meeting-time">18:00 a 23:00 pm</span>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <ol class="widget-49-meeting-points">-->
-<!--                            <li class="widget-49-meeting-item"><span>places:...</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>prix:....</span></li>-->
-<!--                            <li class="widget-49-meeting-item"><span>professeur:.....</span></li>-->
-<!--                        </ol>-->
-<!--                        <div class="widget-49-meeting-action">-->
-<!--                            <a class="btn btn-sm btn-flash-border-primary">rejoindre</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
     </div>
 </div>
 </div>

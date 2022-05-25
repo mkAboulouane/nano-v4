@@ -36,13 +36,19 @@ import {ProduitBioAddComponent} from "./module/admin/view/produit-bio-admin/prod
 import {ProduitBioListComponent} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
 import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-edit/congres-edit.component";
 import {ProduitBioAdminComponent} from "./module/admin/view/produit-bio-admin/produit-bio-admin.component";
-import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/gerant-add.component";
+import {
+    ProduitBioEditComponent
+} from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
 
 
 @NgModule({
     declarations: [
         FormationAdminComponent,
         FormationAddComponent,
+        ProduitBioEditComponent,
+        ProduitBioAdminComponent,
+        ProduitBioAddComponent,
+
         CongresAddComponent,
         CongresEditComponent,
         CongresAdminComponent,
@@ -50,7 +56,6 @@ import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/ge
         FormationListComponent,
         UtilsComponent,
         PanierComponent,
-        GerantAddComponent,
         AppComponent,
         NavbarComponent,
         FooterComponent,
@@ -64,8 +69,7 @@ import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/ge
         CommandeListComponent,
         CongresListComponent,
         ProduitBioAddComponent,
-        ProduitBioListComponent,
-        ProduitBioAdminComponent
+        ProduitBioListComponent
 
     ],
     imports: [
@@ -88,9 +92,6 @@ import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/ge
         UserService,
         RoleService,
 
-    ],
-    exports: [
-        GerantAddComponent
     ],
     bootstrap: [AppComponent]
 })
