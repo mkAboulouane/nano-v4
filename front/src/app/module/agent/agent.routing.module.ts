@@ -16,6 +16,7 @@ import {UserAdminComponent} from "../admin/view/user-admin/user-admin.component"
 import {GerantAdminComponent} from "../admin/view/gerant-admin/gerant-admin.component";
 import {GerantAddComponent} from "../admin/view/gerant-admin/gerant-add/gerant-add.component";
 import {CommandeAdminComponent} from "../admin/view/commande-admin/commande-admin.component";
+import {RegisterComponent} from "../../register/register.component";
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import {CommandeAdminComponent} from "../admin/view/commande-admin/commande-admi
             [
 
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
+                { path: 'add-user', component: RegisterComponent, canActivate: [AuthGuard] },
                 { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },
                 { path: 'formation-edit', component: FormationEditComponent, canActivate: [AuthGuard] },
                 { path: 'produit-bio', component: ProduitBioAdminComponent, canActivate: [AuthGuard] },

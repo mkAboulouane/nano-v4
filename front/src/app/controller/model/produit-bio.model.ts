@@ -9,6 +9,7 @@ export class ProduitBio {
     public description: string;
     public photos: string;
     public prix: number;
+    public prixAncien: number;
     public updatedAt: string;
 
 }

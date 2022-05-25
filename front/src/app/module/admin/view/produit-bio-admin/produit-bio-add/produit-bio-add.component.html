@@ -45,6 +45,18 @@
                             </div>
 
 
+                            <label>Prix Ancien [Optionnal]</label>
+                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
+                                <div class="input-group-prepend">
+                                    <!--                                  <span class="input-group-text">-->
+                                    <!--&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;-->
+                                    <!--                                  </span>-->
+                                </div>
+
+                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.prixAncien" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >
+                            </div>
+
+
 
                             <label>Quantité</label>
                             <div class="input-group form-group-no-border justify-content-center" >
