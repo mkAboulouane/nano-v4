@@ -12,7 +12,7 @@
                     <div class="clearfix visible-sm visible-xs"></div>
 
 
-                    <div *ngFor="let produitBio of produitBios" class="col-md-4 col-xs-6">
+                    <div *ngFor="let produitBio of produitBios" class="col-md-4 col-xs-6"><br><br><br>
                         <div class="product">
                             <div class="product-img">
                                 <img alt="" src="assets/img/microscop.jpeg">
@@ -20,14 +20,15 @@
                             <div class="product-body">
                                 <p class="product-"></p>
                                 <h3 class="product-name"><a>{{produitBio.nom}}</a></h3>
-                                <h4 class="product-price">{{produitBio.prix}}
+                                <h4 class="product-price">{{produitBio.prix}} dh
                                     <del *ngIf="produitBio.prixAncien!=null" class="product-old-price">{{produitBio.prixAncien}} dh</del>
                                 </h4>
                                 <div class="product-rating">
                                 </div>
                                 <div class="product-btns">
-                                    <button class="quick-view"><i class="fa fa-eye"></i><span
-                                            class="tooltipp">{{produitBio.description}}</span></button>
+<!--                                    <button class="quick-view"><i class="fa fa-eye"></i><span-->
+<!--                                            class="tooltipp">{{produitBio.description}}</span></button>-->
+                                    <h6>{{produitBio.description}}</h6>
                                 </div>
                             </div>
                             <div class="add-to-cart">

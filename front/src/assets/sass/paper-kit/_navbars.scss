@@ -435,7 +435,7 @@
 
   .navbar[class*="bg-"] & .navbar-toggler-bar,
   .navbar.navbar-transparent & .navbar-toggler-bar {
-    background: #fff;
+    background: black;
   }
 
   .navbar-toggler-bar {
@@ -445,12 +445,14 @@
     height: 2px;
     border-radius: 1px;
     margin: 0 auto;
+
   }
 }
 
 .navbar-toggler .navbar-toggler-bar + .navbar-toggler-bar,
 .navbar-toggler .navbar-toggler-icon + .navbar-toggler-icon {
   margin-top: 4px;
+
 }
 
 .navbar-toggler-icon {
@@ -460,7 +462,8 @@
   height: 2px;
   border-radius: 1px;
   margin: 0 auto;
-  background: gray;
+  background: white;
+
 }
 
 .no-transition {

@@ -1,49 +1,92 @@
-<div class="wrapper">
-    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
-        <div class="filter"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 col-sm-5 mr-auto ml-auto">
-                    <div class="card card-register" style="background-color: black;opacity: 0.6; ">
-                        <form class="register-form" [formGroup]="loginForm">
-                            <label>Nom d'utilisateur</label>
-                            <div class="input-group form-group-no-border"
-                                 [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                               <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                                  </span>
-                                </div>
+<!--<div class="wrapper">-->
+<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
+<!--        <div class="filter"></div>-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-7 col-sm-5 mr-auto ml-auto">-->
+<!--                    <div class="card card-register" style="background-color: black;opacity: 0.6; ">-->
+<!--                        <form class="register-form" [formGroup]="loginForm">-->
+<!--                            <label>Nom d'utilisateur</label>-->
+<!--                            <div class="input-group form-group-no-border">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                               <i class="fa fa-user-circle-o" aria-hidden="true"></i>-->
+<!--                                  </span>-->
+<!--                                </div>-->
 
-                                <input type="text" class="form-control" formControlName="username"
-                                       placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false">
-                            </div>
+<!--                                <input type="text" class="form-control" formControlName="username"-->
+<!--                                       placeholder="Nom d'utilisateur" >-->
+<!--                            </div>-->
 
-                            <label>Password</label>
-                            <div class="input-group form-group-no-border"
-                                 [ngClass]="{'input-group-focus':focus1===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                      <i class="nc-icon nc-key-25"></i>
-                                  </span>
-                                </div>
-                                <input type="password" class="form-control" formControlName="password"
-                                       placeholder="Mot de passe" (focus)="focus1=true" (blur)="focus1=false">
-                            </div><br>
-                            <button class="btn btn-danger btn-block btn-round" (click)="submit()">Se Connecter</button>
-                            <div class="forgot">
-                                <a class="btn btn-link btn-danger">vous n'avez pas encore de compte ?</a>
-                            </div>
-                            <button (click)="register()" class="btn btn-dark btn-block btn-round">Creer un Compte
-                            </button>
-                        </form>
+<!--                            <label>Password</label>-->
+<!--                            <div class="input-group form-group-no-border">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                      <i class="nc-icon nc-key-25"></i>-->
+<!--                                  </span>-->
+<!--                                </div>-->
+<!--                                <input type="password" class="form-control" formControlName="password"-->
+<!--                                       placeholder="Mot de passe" >-->
+<!--                            </div><br>-->
+<!--                            <button class="btn btn-danger btn-block btn-round" (click)="submit()">Se Connecter</button>-->
+<!--                            <div class="forgot">-->
+<!--                                <a class="btn btn-link btn-danger">vous n'avez pas encore de compte ?</a>-->
+<!--                            </div>-->
+<!--                            <button (click)="register()" class="btn btn-dark btn-block btn-round">Creer un Compte-->
+<!--                            </button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+<div class="d-lg-flex half">
+    <div class="bg order-2 order-md-1" style="background-image: url('assets/img/pc stud.jpg'); "></div>
+    <div class="contents order-1 order-md-2">
+
+        <div class="container" style="background-color: white">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h3 style="text-align: center"> <strong>Nano<span style="color: #00bbff">planete</span> </strong></h3>
+<!--                    <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>-->
+<!--                    <form action="#" method="post">-->
+                    <form class="register-form" [formGroup]="loginForm">
+                        <div class="form-group first"><br>
+                            <label for="username">Nom d'utilisateur</label>
+                            <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" id="username">
+                        </div>
+                        <div class="form-group last mb-3">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" class="form-control" formControlName="password" placeholder="Mot de passe" id="password">
+                        </div>
+
+                        <div class="d-flex mb-5 align-items-center">
+<!--                            <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>-->
+<!--                                <input type="checkbox" checked="checked"/>-->
+<!--                                <div class="control__indicator"></div>-->
+<!--                            </label>-->
+<!--                            <span class="ml-auto"><a href="#" class="forgot-pass">Forgot Password</a></span>-->
+                        </div>
+
+<!--                        <input (click)="submit()" type="submit" value="se connecter" class="btn btn-danger btn-block btn-round">-->
+                        <button class="btn  btn-block btn-round" style="background-color: #00bbff;border: none" (click)="submit()">Se Connecter</button>
+                    <div class="forgot"><br>
+                        <h6 style="color: black;text-align: center">vous n'avez pas encore de compte ?</h6>
                     </div>
+                    <button (click)="register()" class="btn btn-dark btn-block btn-round">Creer un Compte
+                    </button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+
+</div>
 
 
 

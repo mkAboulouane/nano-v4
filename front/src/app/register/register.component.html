@@ -1,91 +1,149 @@
-<div class="wrapper">
-    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
-        <div class="filter"></div>
-        <div class="container col-lg-12 col-sm-12">
+<!--<div class="wrapper">-->
+<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
+<!--        <div class="filter"></div>-->
+<!--        <div class="container col-lg-12 col-sm-12">-->
 
-            <div class="row">
-                <div class="col-lg-7 col-sm-5 mr-auto ml-auto">
+<!--            <div class="row">-->
+<!--                <div class="col-lg-7 col-sm-5 mr-auto ml-auto">-->
 
-                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
-                        <div class="text-center ">
-                            <h3>Créer un compte</h3>
-                            <!--                            <p class="lead"></p>-->
+<!--                    <div class="card card-register " style="background-color: black; opacity: 0.6;">-->
+<!--                        <div class="text-center ">-->
+<!--                            <h3>Créer un compte</h3>-->
+<!--                            &lt;!&ndash;                            <p class="lead"></p>&ndash;&gt;-->
+<!--                        </div>-->
+<!--                        <form class="register-form col-lg-12" [formGroup]="registerForm">-->
+
+<!--                            <label>Nom d'Utilisateur</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>-->
+
+<!--                                  </span>-->
+<!--                                </div>-->
+
+<!--                                <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >-->
+<!--                            </div>-->
+
+
+<!--                            <label>Numero telephone</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                   <i class="fa fa-phone-square" aria-hidden="true"></i>-->
+
+<!--                                  </span>-->
+<!--                                </div>-->
+
+<!--                                <input type="text" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >-->
+<!--                            </div>-->
+
+<!--                            <label>Email</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                  <i class="fa fa-envelope" aria-hidden="true"></i>-->
+<!--                                  </span>-->
+<!--                                </div>-->
+
+<!--                                <input type="text" class="form-control" formControlName="email" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >-->
+<!--                            </div>-->
+
+
+
+<!--                            <label>Password</label>-->
+<!--                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>-->
+<!--                                  </span>-->
+<!--                                </div>-->
+<!--                                <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >-->
+<!--                            </div>-->
+
+<!--                            <label>Confirmation du password</label>-->
+<!--                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>-->
+<!--                                  </span>-->
+<!--                                </div>-->
+<!--                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >-->
+<!--&lt;!&ndash;                                <span *ngIf="showWarrning"> Password did not match ! </span>&ndash;&gt;-->
+
+<!--                            </div>-->
+
+
+
+
+
+
+
+<div class="d-lg-flex half">
+    <div class="bg order-1   order-md-2" style="background-image: url('assets/img/pc stud.jpg'); "></div>
+    <div class="contents order-2 order-md-1">
+
+        <div class="container" style="background-color: white">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-7">
+                    <h3 style="text-align: center"> <strong>Nano<span style="color: #00bbff">planete</span> </strong></h3>
+                    <!--                    <p class="mb-4">Lorem ipsum dolor sit amet elit. Sapiente sit aut eos consectetur adipisicing.</p>-->
+                    <!--                    <form action="#" method="post">-->
+                    <form class="register-form col-lg-12" [formGroup]="registerForm">
+                        <div class="form-group  mb-0"><br>
+<!--                            <label for="username">Nom d'utilisateur</label>-->
+                            <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" id="username">
                         </div>
-                        <form class="register-form col-lg-12" [formGroup]="registerForm">
 
-                            <label>Nom d'Utilisateur</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                  <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                        <div class="form-group  mb-0"><br>
+<!--                            <label for="username">Numéro telephone</label>-->
+                            <input type="text" class="form-control" formControlName="phone" placeholder="Numéro telephone" id="phone">
+                        </div>
 
-                                  </span>
-                                </div>
-
-                                <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" (focus)="focus=true" (blur)="focus=false" >
-                            </div>
+                        <div class="form-group first  mb-3"><br>
+<!--                            <label for="username">Email</label>-->
+                            <input type="text" class="form-control" formControlName="email" placeholder="Email" id="Email">
+                        </div>
 
 
-                            <label>Numero telephone</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                   <i class="fa fa-phone-square" aria-hidden="true"></i>
+                        <div class="form-group last mb-3">
+<!--                            <label for="password">Mot de passe</label>-->
+                            <input type="password" class="form-control" formControlName="password" placeholder="Mot de passe" id="password">
+                        </div>
 
-                                  </span>
-                                </div>
-
-                                <input type="text" class="form-control" formControlName="phone" placeholder="Numéro telephone" (focus)="focus=true" (blur)="focus=false" >
-                            </div>
-
-                            <label>Email</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                  <i class="fa fa-envelope" aria-hidden="true"></i>
-                                  </span>
-                                </div>
-
-                                <input type="text" class="form-control" formControlName="email" placeholder="Email" (focus)="focus=true" (blur)="focus=false" >
-                            </div>
-
-
-
-                            <label>Password</label>
+                        <div class="form-group last mb-3">
+<!--                            <label for="password">Confirmation mot de passe</label>-->
                             <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                                  </span>
-                                </div>
-                                <input type="password" class="form-control" formControlName="password" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
-                            </div>
+<!--                                <div class="input-group-prepend">-->
+<!--                                  <span class="input-group-text">-->
+<!--                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>-->
+<!--                                  </span>-->
+<!--                                </div>-->
+                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirmation mot de passe" (focus)="focus1=true" (blur)="focus1=false" >
+                                <!--                                <span *ngIf="showWarrning"> Password did not match ! </span>-->
 
-                            <label>Confirmation du password</label>
-                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>
-                                  </span>
-                                </div>
-                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Password" (focus)="focus1=true" (blur)="focus1=false" >
-<!--                                <span *ngIf="showWarrning"> Password did not match ! </span>-->
-
-                            </div>
+                            </div>                        </div>
 
 
 
-                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Valider</button>
+
+
+
+
+                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ;border: none" >S'inscrire</button>
                         </form>
-                        <div class="forgot">
-                            <a class="btn btn-link btn-danger" [routerLink]="['/login']">Vous avez deja un Compte ?</a>
-                        </div>
+<!--                        <div class="forgot">-->
+<!--                            <a class=" mx-5 mb-3 "  [routerLink]="['/login']" >Vous avez deja un Compte ?</a>-->
+<!--                        </div>-->
+                    <div class="forgot"><br>
+                        <h6 style="color: black;text-align: center" [routerLink]="['/login']">Vous avez deja un Compte ?</h6>
+                    </div>
                     </div>
                 </div>
         </div>
     </div>
 </div>
-</div>
+
 
 
 
