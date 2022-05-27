@@ -19,4 +19,8 @@ export class NavAdminComponent implements OnInit {
         this.authService.logout();
         console.log("Log Out Succesfully");
     }
+
+    sidebarToggle() {
+
+    }
 }

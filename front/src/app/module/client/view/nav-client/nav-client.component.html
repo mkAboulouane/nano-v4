@@ -15,7 +15,7 @@
             <ul class="navbar-nav ml-auto">
 
                 <li class="nav-item ">
-                    <a [routerLink]="['/home']" class="nav-link" style="font-size: 10px; color: black">
+                    <a [routerLink]="['/client/home']" class="nav-link" style="font-size: 10px; color: black">
                         <i aria-hidden="true" class="fa fa-home" style="font-size: 15px"></i>
                         Accueil</a>
                 </li>
@@ -38,13 +38,13 @@
 
 
                 <li class="nav-item ">
-                    <a [routerLink]="['/client/produitbio']" class="nav-link" style="font-size: 10px ; color: black"><i
+                    <a [routerLink]="['/client/produit-bio']" class="nav-link" style="font-size: 10px ; color: black"><i
                             aria-hidden="true" class="fa fa-handshake-o" style="font-size: 15px"></i>
                         Materiel Biomedical</a>
                 </li>
 
                 <li class="nav-item ">
-                    <a [routerLink]="['/clien/commande']" class="nav-link" style="font-size: 10px ; color: black">
+                    <a [routerLink]="['/client/commande']" class="nav-link" style="font-size: 10px ; color: black">
                         <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 15px"></i>
                         Mes Commandes</a>
                 </li>
@@ -60,6 +60,12 @@
                     <a [routerLink]="['/client/notification']" class="nav-link" style="font-size: 10px ; color: black">
                         <i aria-hidden="true" class="fa-solid fa-bell" style="font-size: 15px"></i>
                         Notification
+                    </a>
+                </li>
+                <li class="nav-item ">
+                    <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">
+                        <i aria-hidden="true" class="fa-solid fa-bell" style="font-size: 15px"></i>
+                        Deconnexion
                     </a>
                 </li>
 
