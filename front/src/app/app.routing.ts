@@ -15,6 +15,7 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visiteur.component";
 import {ComponentsComponent} from "./components/components.component";
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
+import {HomeClientComponent} from "./module/client/view/home-client.component";
 
 @NgModule({
     imports: [
@@ -54,7 +55,8 @@ import {HomeAgentComponent} from "./module/agent/home-agent.component";
                             canActivate: [AuthGuard],
                         },
                         {
-                            path: 'user',
+                            path: 'client',
+                            component: HomeClientComponent,
                             loadChildren: './module/client/client.routing.module#ClientRoutingModule',
                             canActivate: [AuthGuard],
                         },

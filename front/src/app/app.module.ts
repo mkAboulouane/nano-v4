@@ -3,7 +3,6 @@ import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app.routing';
-
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './module/visiteur/shared/navbar/navbar.component';
 import {FooterComponent} from './module/visiteur/shared/footer/footer.component';
@@ -45,6 +44,15 @@ import {NavGerantComponent} from "./module/agent/view/nav-gerant/nav-gerant.comp
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
 import {UserListComponent} from "./module/admin/view/user-admin/user-list/user-list.component";
 import {UserAdminComponent} from "./module/admin/view/user-admin/user-admin.component";
+import {TableModule} from "primeng/table";
+import {ProgressBarModule} from "primeng/progressbar";
+import {MultiSelectModule} from "primeng/multiselect";
+import {CalendarModule} from "primeng/calendar";
+import {DropdownModule} from "primeng/dropdown";
+import {CustomerService} from "./module/admin/view/user-admin/user-list/custumerservice";
+import {InputTextModule} from "primeng/inputtext";
+import {HomeClientComponent} from "./module/client/view/home-client.component";
+import {NavClientComponent} from "./module/client/view/nav-client/nav-client.component";
 
 
 @NgModule({
@@ -71,11 +79,13 @@ import {UserAdminComponent} from "./module/admin/view/user-admin/user-admin.comp
         NavbarComponent,
         FooterComponent,
         LoginPageComponent,
+        NavClientComponent,
         RegisterComponent,
         FormationComponent,
         ProduitBioComponent,
         CongresComponent,
         HomeVisiteurComponent,
+        HomeClientComponent,
         AccessDeniedComponent,
         CommandeListComponent,
         CongresListComponent,
@@ -94,6 +104,12 @@ import {UserAdminComponent} from "./module/admin/view/user-admin/user-admin.comp
 
         AdminModule,
         AdminRoutingModule,
+        TableModule,
+        ProgressBarModule,
+        MultiSelectModule,
+        CalendarModule,
+        DropdownModule,
+        InputTextModule,
 
     ],
     // exports: [],
@@ -102,7 +118,11 @@ import {UserAdminComponent} from "./module/admin/view/user-admin/user-admin.comp
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
         UserService,
         RoleService,
+        CustomerService,
 
+    ],
+    exports: [
+        NavbarComponent
     ],
     bootstrap: [AppComponent]
 })

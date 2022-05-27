@@ -13,6 +13,10 @@ export class User {
     public password: string;
     public passwordChanged: boolean;
     public phone: string;
+    public pays: string;
+    public gender: string;
+    public city: string;
+    public adress: string;
     public newPassword: string;
     public confirmPassword: string;
     public createdAt: Date;
