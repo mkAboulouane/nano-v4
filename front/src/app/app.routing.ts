@@ -23,7 +23,6 @@ import {HomeClientComponent} from "./module/client/view/home-client.component";
         BrowserModule,
         RouterModule.forRoot(
             [
-
                 {
                     path: '',
                     component: HomeVisiteurComponent,
