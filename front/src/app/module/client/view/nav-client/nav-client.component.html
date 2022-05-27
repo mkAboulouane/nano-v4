@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg  fixed-top navbar-transparent justify-content-center" color-on-scroll="500">
+    <div class="container">
+        <div class="navbar-translate col-sm-0">
+            <a class="navbar-brand " style="color: black">Nano <span style="color: #00bbff">planete</span></a>
+            <!--            <a class="navbar-brand " style="color: black">Nano <span style="color: black">planete</span></a>-->
+            <button (click)="sidebarToggle()" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                    aria-label="Toggle navigation" class="navbar-toggler navbar-burger" data-target="#navbarToggler"
+                    data-toggle="collapse" type="button">
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+                <span class="navbar-toggler-bar"></span>
+            </button>
+        </div>
+        <div class="navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/home']" class="nav-link" style="font-size: 10px; color: black">
+                        <i aria-hidden="true" class="fa fa-home" style="font-size: 15px"></i>
+                        Accueil</a>
+                </li>
+
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/client/formation']" class="nav-link" style=" color: black;">
+                        <i aria-hidden="true" class="fa fa-graduation-cap" style="font-size: 15px"></i>
+                        Formation</a>
+                </li>
+
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/client/congres']" class="nav-link" style="font-size: 10px ; color: black"><i
+                            aria-hidden="true"
+                            class="fa fa-users"
+                            style="font-size: 15px"></i>
+                        Congres & seminaires</a>
+                </li>
+
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/client/produitbio']" class="nav-link" style="font-size: 10px ; color: black"><i
+                            aria-hidden="true" class="fa fa-handshake-o" style="font-size: 15px"></i>
+                        Materiel Biomedical</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/clien/commande']" class="nav-link" style="font-size: 10px ; color: black">
+                        <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 15px"></i>
+                        Mes Commandes</a>
+                </li>
+
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/client/panier']" class="nav-link" style="font-size: 10px ; color: black">
+                        <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 15px"></i>
+                        Panier</a>
+                </li>
+
+                <li class="nav-item ">
+                    <a [routerLink]="['/client/notification']" class="nav-link" style="font-size: 10px ; color: black">
+                        <i aria-hidden="true" class="fa-solid fa-bell" style="font-size: 15px"></i>
+                        Notification
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
