@@ -56,7 +56,10 @@ export class AuthService {
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
            data => {
                this.currentUserRole = data;
-               console.log(data);
+               if(this.currentUseRole === 'AGENT') {
+                   this._currentUseRole  = 'GERANT';
+               }
+               console.log(this.currentUseRole);
                this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/formation']);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;

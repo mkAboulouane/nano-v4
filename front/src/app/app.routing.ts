@@ -49,7 +49,7 @@ import {HomeClientComponent} from "./module/client/view/home-client.component";
                             loadChildren: './module/admin/admin.routing.module#AdminRoutingModule',
                             canActivate: [AuthGuard],
                         }, {
-                            path: 'agent',
+                            path: 'gerant',
                             component: HomeAgentComponent,
                             loadChildren: './module/agent/agent.routing.module#AgentRoutingModule',
                             canActivate: [AuthGuard],

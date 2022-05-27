@@ -53,6 +53,8 @@ import {CustomerService} from "./module/admin/view/user-admin/user-list/custumer
 import {InputTextModule} from "primeng/inputtext";
 import {HomeClientComponent} from "./module/client/view/home-client.component";
 import {NavClientComponent} from "./module/client/view/nav-client/nav-client.component";
+import {CommandeAdminComponent} from "./module/admin/view/commande-admin/commande-admin.component";
+import {AgentRoutingModule} from "./module/agent/agent.routing.module";
 
 
 @NgModule({
@@ -90,6 +92,7 @@ import {NavClientComponent} from "./module/client/view/nav-client/nav-client.com
         CommandeListComponent,
         CongresListComponent,
         ProduitBioAddComponent,
+        CommandeAdminComponent,
         ProduitBioListComponent
 
     ],
@@ -101,9 +104,8 @@ import {NavClientComponent} from "./module/client/view/nav-client/nav-client.com
         RouterModule,
         ComponentsModule,
         AppRoutingModule,
-
-        AdminModule,
         AdminRoutingModule,
+        AgentRoutingModule,
         TableModule,
         ProgressBarModule,
         MultiSelectModule,
@@ -122,7 +124,8 @@ import {NavClientComponent} from "./module/client/view/nav-client/nav-client.com
 
     ],
     exports: [
-        NavbarComponent
+        NavbarComponent,
+        CommandeListComponent
     ],
     bootstrap: [AppComponent]
 })

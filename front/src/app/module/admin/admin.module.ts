@@ -33,6 +33,7 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
         FormsModule,
         NgbCarouselModule,
         ComponentsModule,
+        AppModule,
     ],
     exports: [
         CommandeAdminComponent,

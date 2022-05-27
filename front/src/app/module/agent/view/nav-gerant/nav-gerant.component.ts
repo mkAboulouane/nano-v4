@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {AuthService} from "../../../../controller/service/Auth.service";
 
 @Component({
   selector: 'app-nav-gerant',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavGerantComponent implements OnInit {
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit(): void {
   }
@@ -17,6 +18,7 @@ export class NavGerantComponent implements OnInit {
   }
 
   logOut() {
-
+    this.authService.logout();
+    console.log("Log Out Succesfully");
   }
 }

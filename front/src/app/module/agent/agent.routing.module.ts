@@ -23,7 +23,6 @@ import {RegisterComponent} from "../../register/register.component";
     imports: [
         RouterModule.forChild(
             [
-
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
                 { path: 'add-user', component: RegisterComponent, canActivate: [AuthGuard] },
                 { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },
