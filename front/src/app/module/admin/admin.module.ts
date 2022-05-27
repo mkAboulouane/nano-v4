@@ -20,9 +20,7 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
         CommandeAdminComponent,
         AdminAcueilComponent,
         GerantListComponent,
-        HomeAdminComponent,
         FooterAdminComponent,
-        NavAdminComponent,
         GerantListComponent,
     ],
     imports: [

@@ -55,6 +55,8 @@ import {HomeClientComponent} from "./module/client/view/home-client.component";
 import {NavClientComponent} from "./module/client/view/nav-client/nav-client.component";
 import {CommandeAdminComponent} from "./module/admin/view/commande-admin/commande-admin.component";
 import {AgentRoutingModule} from "./module/agent/agent.routing.module";
+import {HomeAdminComponent} from "./module/admin/home-admin.component";
+import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 
 
 @NgModule({
@@ -88,9 +90,11 @@ import {AgentRoutingModule} from "./module/agent/agent.routing.module";
         CongresComponent,
         HomeVisiteurComponent,
         HomeClientComponent,
+        HomeAdminComponent,
         AccessDeniedComponent,
         CommandeListComponent,
         CongresListComponent,
+        NavAdminComponent,
         ProduitBioAddComponent,
         CommandeAdminComponent,
         ProduitBioListComponent
