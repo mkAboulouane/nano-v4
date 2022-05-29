@@ -2,6 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import {ImageService} from "../../../../controller/service/image.service";
 import {Image} from "../../../../controller/model/image.model";
 import {DomSanitizer} from "@angular/platform-browser";
+import {HttpClient, HttpHeaders, HttpRequest} from "@angular/common/http";
+import {environment} from "../../../../../environments/environment";
+import {Observable} from "rxjs";
+import {error} from "protractor";
+import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-image-admin',
@@ -10,16 +15,55 @@ import {DomSanitizer} from "@angular/platform-browser";
 })
 export class ImageAdminComponent implements OnInit {
 
-  private imagesBase64 = new Array<any>();
 
-  constructor(private imageService: ImageService, private sanitizer: DomSanitizer) { }
+  file: File;
+  postResponse: any;
+  successResponse: string;
+
+  private API = environment.adminUrl + 'image/';
+
+  constructor(private imageService: ImageService, private sanitizer: DomSanitizer, private http: HttpClient) { }
 
   ngOnInit(): void {
     // this.findAll();
     this.getOne();
   }
 
-  // var base64String = btoa(String.fromCharCode.apply(null, new Uint8Array(arrayBuffer)));
+
+  public onImageUpload(event) {
+    this.file = event.target.files[0];
+  }
+
+
+  imageUploadAction() {
+    const file = new FormData();
+    file.append('file', this.file, this.file.name);
+
+
+    this.http.post<any>(this.API , file, { observe: 'response' })
+        .subscribe((response) => {
+          console.log(response);
+          if (response.status === 200) {
+                this.postResponse = response;
+                this.successResponse = this.postResponse.body.message;
+              } else {
+                this.successResponse = 'Image not uploaded due to some error!';
+              }
+            }
+        );
+  }
+
+  // viewImage() {
+  //   this.http.get('http://localhost:8080/get/image/info/' + this.image)
+  //       .subscribe(
+  //           res => {
+  //             this.postResponse = res;
+  //             this.dbImage = 'data:image/jpeg;base64,' + this.postResponse.image;
+  //           }
+  //       );
+  // }
+
+
   public getOne(){
     this.imageService.getOne().subscribe( data =>{
       console.log(data);
@@ -30,46 +74,6 @@ export class ImageAdminComponent implements OnInit {
     });
   }
 
-  public findAll(){
-    this.imageService.findAll().subscribe( data => {
-      console.log(data);
-      this.images = data;
-      this.selectedImages;
-    },error => {
-      console.log(error);
-        });
-  }
-
-  get selectedImages(): Array<any>{
-    this.images.forEach(e => {
-      var to64 = btoa(String.fromCharCode.apply(null, new Uint8Array(e.picByte)));
-      this.imagesBase64.push(to64);
-    });
-    console.log(this.imagesBase64);
-    return this.imagesBase64;
-  }
-
-  // createImageFromBlob(image: Blob) {
-  //   let reader = new FileReader();
-  //   reader.addEventListener("load",
-  //       () => {
-  //         this.imageService.photo = reader.result;
-  //       },
-  //       false);
-  //
-  //   if (image) {
-  //     if (image.type !== "application/pdf")
-  //       reader.readAsDataURL(image);
-  //   }
-  // }
-
-  get images(): Array<Image>{
-    return this.imageService.images;
-  }
-
-  set images(value: Array<Image>){
-    this.imageService.images = value;
-  }
 
   get image(): Image {
     return  this.imageService.selectedImage;
