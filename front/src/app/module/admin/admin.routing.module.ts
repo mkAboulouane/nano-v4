@@ -14,11 +14,13 @@ import {FormationEditComponent} from "./view/formation-admin/formation-edit/form
 import {CongresEditComponent} from "./view/congres-admin/congres-edit/congres-edit.component";
 import {ProduitBioEditComponent} from "./view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
 import {GerantAddComponent} from "./view/gerant-admin/gerant-add/gerant-add.component";
+import {ImageAdminComponent} from "./view/image-admin/image-admin.component";
 
 @NgModule({
     imports: [
         RouterModule.forChild(
             [
+                { path: 'image-test', component: ImageAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },
                 { path: 'formation-edit', component: FormationEditComponent, canActivate: [AuthGuard] },

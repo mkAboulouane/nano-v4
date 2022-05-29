@@ -57,10 +57,12 @@ import {CommandeAdminComponent} from "./module/admin/view/commande-admin/command
 import {AgentRoutingModule} from "./module/agent/agent.routing.module";
 import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
+import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 
 
 @NgModule({
     declarations: [
+        ImageAdminComponent,
         FormationAdminComponent,
         UserListComponent,
         UserAdminComponent,
