@@ -81,7 +81,8 @@ export class AuthService {
         console.log(this.user);
         this.http.post<any>(this.API + 'register/', this.user, {observe: 'response'}).subscribe(
             resp => {
-                this.router.navigate(['/home']);
+                this.login(this.user.username,this.user.password);
+                // this.router.navigate(['/home']);
             }, (error: HttpErrorResponse) => {
                 console.log(error.error);
             }
@@ -101,7 +102,7 @@ export class AuthService {
     }
 
 
-    /*   Admin   */
+    /*   Admin  */
     public registerAgent() {
         console.log(this.user);
         this.http.post<any>(this.API_ADMIN + '/agent/add/', this.user, {observe: 'response'}).subscribe(

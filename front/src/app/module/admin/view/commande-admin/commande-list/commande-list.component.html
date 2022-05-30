@@ -1,84 +1,263 @@
-<div class="wrapper" xmlns="http://www.w3.org/1999/html">
-    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
-        <div class="filter"></div>
-        <div class="container ">
-            <div class="row">
-                <div class="col-lg-12 col-sm-12 mr-auto ml-auto">
-                    <div class="col-md-12 col-xl-12">
+<!--<div class="wrapper" xmlns="http://www.w3.org/1999/html">-->
+<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
+<!--        <div class="filter"></div>-->
+<!--        <div class="container ">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-12 col-sm-12 mr-auto ml-auto">-->
+<!--                    <div class="col-md-12 col-xl-12">-->
 
-                        <div class="card mask-custom">
-                            <div class="card-body p-1 text-white">
+<!--                        <div class="card mask-custom">-->
+<!--                            <div class="card-body p-1 text-white">-->
 
-                                <div class="text-center pt-0 pb-2">
+<!--                                <div class="text-center pt-0 pb-2">-->
 
-                                    <h2 class="my-4">Liste des Commandes </h2>
-                                </div>
-                                <div style="overflow-x:auto; ">
-                                    <table class="table text-white mb-0">
+<!--                                    <h2 class="my-4">Liste des Commandes </h2>-->
+<!--                                </div>-->
+<!--                                <div style="overflow-x:auto; ">-->
+<!--                                    <table class="table text-white mb-0">-->
 
-                                        <thead>
-                                        <tr>
-                                            <th scope="col">Nom</th>
-                                            <th scope="col">Nombre des places</th>
-                                            <th scope="col">Durée</th>
-                                            <th scope="col">Prix</th>
-                                            <th scope="col">Encadrant</th>
-                                            <th scope="col">Description</th>
-                                            <th scope="col">Modifier</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
+<!--                                        <thead>-->
+<!--                                        <tr>-->
+<!--                                            <th scope="col">Nom</th>-->
+<!--                                            <th scope="col">Nombre des places</th>-->
+<!--                                            <th scope="col">Durée</th>-->
+<!--                                            <th scope="col">Prix</th>-->
+<!--                                            <th scope="col">Encadrant</th>-->
+<!--                                            <th scope="col">Description</th>-->
+<!--                                            <th scope="col">Modifier</th>-->
+<!--                                        </tr>-->
+<!--                                        </thead>-->
+<!--                                        <tbody>-->
 
-<!--                                        <tr *ngFor="let formation of formations" class="fw-normal">-->
-                                        <tr class="fw-normal">
-                                            <th>
-                                                <span class="ms-2"></span>
-                                            </th>
+<!--&lt;!&ndash;                                        <tr *ngFor="let formation of formations" class="fw-normal">&ndash;&gt;-->
+<!--                                        <tr class="fw-normal">-->
+<!--                                            <th>-->
+<!--                                                <span class="ms-2"></span>-->
+<!--                                            </th>-->
 
-                                            <td class="align-middle"></td>
-                                            <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge" style="background-color: #00bbff"></span>
-                                                </h5>
-                                            </td>
-                                            <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "
-                                                                       style="background-color: #00bbff"></span>
-                                                </h5>
-                                            </td>
-                                            <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge "
-                                                                       style="background-color: #00bbff"></span>
-                                                </h5>
-                                            </td>
-                                            <td class="align-middle">
-                                                <h5 class="mb-0"><span class="badge " style="background-color: #00bbff"></span>
-                                                </h5>
-                                            </td>
-                                            <td class="align-middle">
-                                                <a data-mdb-toggle="tooltip" title="Modifier">
-<!--                                                    <i (click)="edit(formation)" aria-hidden="true" class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i>-->
-                                                    <i  aria-hidden="true" class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i>
-                                                </a>
-                                                <a data-mdb-toggle="tooltip" title="supprimer">
-<!--                                                    <i (click)="delete(formation)" aria-hidden="true" class="fa fa-trash" style="font-size: 15px;color: red ; padding-left: 2em">-->
-                                                    <i aria-hidden="true" class="fa fa-trash" style="font-size: 15px;color: red ; padding-left: 2em">
-                                                    </i>
-                                                </a>
-                                            </td>
-                                        </tr>
+<!--                                            <td class="align-middle"></td>-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <h5 class="mb-0"><span class="badge" style="background-color: #00bbff"></span>-->
+<!--                                                </h5>-->
+<!--                                            </td>-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <h5 class="mb-0"><span class="badge "-->
+<!--                                                                       style="background-color: #00bbff"></span>-->
+<!--                                                </h5>-->
+<!--                                            </td>-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <h5 class="mb-0"><span class="badge "-->
+<!--                                                                       style="background-color: #00bbff"></span>-->
+<!--                                                </h5>-->
+<!--                                            </td>-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <h5 class="mb-0"><span class="badge " style="background-color: #00bbff"></span>-->
+<!--                                                </h5>-->
+<!--                                            </td>-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <a data-mdb-toggle="tooltip" title="Modifier">-->
+<!--&lt;!&ndash;                                                    <i (click)="edit(formation)" aria-hidden="true" class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i>&ndash;&gt;-->
+<!--                                                    <i  aria-hidden="true" class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i>-->
+<!--                                                </a>-->
+<!--                                                <a data-mdb-toggle="tooltip" title="supprimer">-->
+<!--&lt;!&ndash;                                                    <i (click)="delete(formation)" aria-hidden="true" class="fa fa-trash" style="font-size: 15px;color: red ; padding-left: 2em">&ndash;&gt;-->
+<!--                                                    <i aria-hidden="true" class="fa fa-trash" style="font-size: 15px;color: red ; padding-left: 2em">-->
+<!--                                                    </i>-->
+<!--                                                </a>-->
+<!--                                            </td>-->
+<!--                                        </tr>-->
 
-                                        </tbody>
-                                    </table>
+<!--                                        </tbody>-->
+<!--                                    </table>-->
 
-                                </div>
-                            </div>
+<!--                                </div>-->
+<!--                            </div>-->
 
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<!--<div class="wrapper" xmlns="http://www.w3.org/1999/html">-->
+<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
+<!--        <div class="filter"></div>-->
+<!--        <div class="container ">-->
+<!--            <div class="row">-->
+<!--                <div class="col-lg-12 col-sm-12 mr-auto ml-auto">-->
+
+
+<!--                    <div class="col-md-12 col-xl-12">-->
+
+<!--                        <div class="card mask-custom">-->
+<!--                            <div class="card-body p-1 text-white">-->
+
+<!--                                <div class="text-center pt-0 pb-2">-->
+
+<!--                                    <h2 class="my-4">Liste des congrés</h2>-->
+<!--                                </div>-->
+<!--                                <button class="btn btn-outline-primary" (click)="add()">Ajouter un congres</button>-->
+<!--                                <div style="overflow-x:auto; ">-->
+<!--                                    <table class="table text-white mb-0" >-->
+
+<!--                                        <thead>-->
+<!--                                        <tr>-->
+<!--                                            <th scope="col">Objectif </th>-->
+<!--                                            <th scope="col">duree</th>-->
+<!--                                            <th scope="col">Adresse</th>-->
+<!--                                            <th scope="col">visible</th>-->
+<!--                                            <th scope="col">Description</th>-->
+<!--                                            <th scope="col">Encadrant</th>-->
+<!--                                            <th scope="col">Modifier</th>-->
+<!--                                        </tr>-->
+<!--                                        </thead>-->
+<!--                                        <tbody>-->
+
+
+
+<!--                                        <tr class="fw-normal" *ngFor="let congre of congres">-->
+<!--                                            <th>-->
+<!--                                                &lt;!&ndash;                                                <img src="assets/img/manm.jpg"&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                     alt="avatar 1" style="width: 45px; height: auto;">&ndash;&gt;-->
+<!--                                                &lt;!&ndash;                                                <span class="ms-2" style="padding-left: 1em;">microscope</span>&ndash;&gt;-->
+<!--                                                <span class="ms-2" >{{congre.nom}}</span>-->
+<!--                                            </th>-->
+
+
+
+<!--                                            &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Date&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--                                            <td class="align-middle">{{congre.duree}}</td>-->
+
+<!--                                            &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Adresse&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--                                            <td class="align-middle">{{congre.lieu}}-->
+<!--&lt;!&ndash;                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.lieu}}</span></h5>&ndash;&gt;-->
+<!--                                            </td>-->
+
+<!--                                            &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Heure-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--                                            <td class="align-middle">-->
+<!--                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.visible}}</span></h5>-->
+<!--                                            </td>-->
+<!--                                            &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;desc-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+
+<!--                                            <td class="align-middle justify-content-center" >{{congre.description}}-->
+<!--&lt;!&ndash;                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.description}}</span></h5>&ndash;&gt;-->
+<!--                                            </td>-->
+
+
+<!--                                            &lt;!&ndash;-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Encadrant-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <h5 class="mb-0"><span class="badge "style="background-color: #00bbff">{{congre.encadrantProf}}</span></h5>-->
+<!--                                            </td>-->
+
+<!--                                            &lt;!&ndash;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;Modifier&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&ndash;&gt;-->
+<!--                                            <td class="align-middle">-->
+<!--                                                <a data-mdb-toggle="tooltip" title="Modifier">-->
+<!--                                                    <i (click)="edit(congre)" style="font-size: 15px;color: deepskyblue"  class="fa fa-pencil-square" aria-hidden="true"></i>-->
+<!--                                                </a>-->
+<!--                                                <a  data-mdb-toggle="tooltip" title="supprimer" ><i (click)="delete(congre)" style="font-size: 15px;color: red ; padding-left: 2em" class="fa fa-trash" aria-hidden="true"></i>-->
+<!--                                                </a>-->
+<!--                                            </td>-->
+<!--                                        </tr>-->
+
+<!--                                        </tbody>-->
+<!--                                    </table>-->
+
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+
+
+<div class="container">
+    <div class="table-responsive " style="margin-top:7rem ">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-8" ><h2>Liste <b>Des commandes</b></h2> </div><br>
+                    <div class="col-sm-4">
+
+                        <div class="search-box">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                            <input type="text" class="form-control" placeholder="Search&hellip;">
                         </div>
                     </div>
                 </div>
             </div>
+
+            <table class="table table-striped table-hover table-bordered  ">
+                <thead style="position: sticky;top: 0;" class="thead-dark">
+                <tr>
+                    <!--                    <th>Nom</th>-->
+                    <th>Nom <i class="fa fa-sort"></i></th>
+                    <th>Lieu <i class="fa fa-sort"></i></th>
+                    <th>Date<i class="fa fa-sort"></i></th>
+                    <th>Encadrant</th>
+                    <th>visible</th>
+                    <th>Description</th>
+                    <!--                    <th>Country <i class="fa fa-sort"></i></th>-->
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let commande of commandes ">
+                    <!--                    <td>1</td>-->
+                    <td>{{commande.date}}</td>
+                    <td>{{congre.lieu}}</td>
+                    <td>{{congre.duree}}</td>
+                    <td>{{congre.encadrantProf}} </td>
+                    <td >{{congre.visible}}</td>
+                    <div class="scroll-page" id="page-1" style="overflow: scroll; width:250px;height: 80px" >{{congre.description}}</div>
+
+                    <td>
+                        <!--                        <button type="button" title="supprimer" class="btn btn-danger " style="padding-bottom: 0px;padding-top: 0px; "> <i (click)="delete(formation)"-->
+                        <!--                                                                                                                                             aria-hidden="true"-->
+                        <!--                                                                                                                                             class="fa fa-trash" style="font-size: 15px;color: white ; padding-left: 2em"></i></button>-->
+                        <!--  <button type="button" title="supprimer" class="btn btn-danger " style="padding-bottom: 0px;padding-top: 0px; ">  <i (click)="edit(formation)"-->
+                        <!--                                                                                                                      aria-hidden="true"-->
+                        <!--                                                                                                                      class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i></button>-->
+
+
+                        <a data-mdb-toggle="tooltip" title="Modifier">
+                            <i (click)="edit(congre)"
+                               aria-hidden="true"
+                               class="fa fa-pencil-square" style="font-size: 18px;color: deepskyblue"></i>
+                        </a>
+                        <a data-mdb-toggle="tooltip" title="supprimer">
+                            <i (click)="delete(congre)"
+                               aria-hidden="true"
+                               class="fa fa-trash" style="font-size: 18px;color: red ; padding-left: 2em;padding-top: 1em"></i>
+                        </a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="clearfix">
+                <!--                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>-->
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#"><i class="fa fa-angle-double-left"></i></a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+                    <li class="page-item"><a href="#" class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>
-
-
