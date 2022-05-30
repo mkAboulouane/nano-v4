@@ -10,6 +10,7 @@ import {AuthService} from "../../../../controller/service/Auth.service";
 export class NavClientComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    item = 5;
 
     constructor(public location: Location, private element: ElementRef, private authService: AuthService) {
         this.sidebarVisible = false;
