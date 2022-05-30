@@ -202,34 +202,30 @@
                 <thead style="position: sticky;top: 0;" class="thead-dark">
                 <tr>
                     <!--                    <th>Nom</th>-->
-                    <th>Nom <i class="fa fa-sort"></i></th>
+                    <th>Client <i class="fa fa-sort"></i></th>
                     <th>Lieu <i class="fa fa-sort"></i></th>
-                    <th>Date<i class="fa fa-sort"></i></th>
-                    <th>Encadrant</th>
-                    <th>visible</th>
-                    <th>Description</th>
-                    <!--                    <th>Country <i class="fa fa-sort"></i></th>-->
-                    <th>Actions</th>
+                    <th>Ville <i class="fa fa-sort"></i></th>
+                    <th>Pays <i class="fa fa-sort"></i></th>
+                    <th>Tele<i class="fa fa-sort"></i></th>
+                    <th>Date</th>
+                    <th>Articles</th>
+                    <th>prix Total</th>
+                    <th>Etat</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr *ngFor="let commande of commandes ">
+                <tr *ngFor="let commande of commandes">
                     <!--                    <td>1</td>-->
                     <td>{{commande.date}}</td>
                     <td>{{congre.lieu}}</td>
                     <td>{{congre.duree}}</td>
                     <td>{{congre.encadrantProf}} </td>
                     <td >{{congre.visible}}</td>
+                    <td >{{congre.visible}}</td>
+                    <td >{{congre.visible}}</td>
                     <div class="scroll-page" id="page-1" style="overflow: scroll; width:250px;height: 80px" >{{congre.description}}</div>
 
                     <td>
-                        <!--                        <button type="button" title="supprimer" class="btn btn-danger " style="padding-bottom: 0px;padding-top: 0px; "> <i (click)="delete(formation)"-->
-                        <!--                                                                                                                                             aria-hidden="true"-->
-                        <!--                                                                                                                                             class="fa fa-trash" style="font-size: 15px;color: white ; padding-left: 2em"></i></button>-->
-                        <!--  <button type="button" title="supprimer" class="btn btn-danger " style="padding-bottom: 0px;padding-top: 0px; ">  <i (click)="edit(formation)"-->
-                        <!--                                                                                                                      aria-hidden="true"-->
-                        <!--                                                                                                                      class="fa fa-pencil-square" style="font-size: 15px;color: deepskyblue"></i></button>-->
-
 
                         <a data-mdb-toggle="tooltip" title="Modifier">
                             <i (click)="edit(congre)"
@@ -250,9 +246,9 @@
                 <!--                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>-->
                 <ul class="pagination">
                     <li class="page-item disabled"><a><i class="fa fa-angle-double-left"></i></a></li>
-                    <li class="page-item"><a class="page-link">1</a></li>
+                    <li class="page-item active"><a class="page-link">1</a></li>
                     <li class="page-item"><a class="page-link">2</a></li>
-                    <li class="page-item active"><a class="page-link">3</a></li>
+                    <li class="page-item "><a class="page-link">3</a></li>
                     <li class="page-item"><a class="page-link">4</a></li>
                     <li class="page-item"><a class="page-link">5</a></li>
                     <li class="page-item"><a class="page-link"><i class="fa fa-angle-double-right"></i></a></li>
