@@ -1,78 +1,142 @@
 
-<div class="wrapper">
-    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">
-        <div class="filter"></div>
-        <div class="container col-lg-12 col-sm-12">
+<!--<div class="wrapper">-->
+<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
+<!--        <div class="filter"></div>-->
+<!--        <div class="container col-lg-12 col-sm-12">-->
 
-            <div class="row">
-                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">
+<!--            <div class="row">-->
+<!--                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">-->
 
-                    <div class="card card-register " style="background-color: black; opacity: 0.6;">
-                        <div class="text-center ">
-                            <h3>Ajouter congrés</h3>
-                        </div>
+<!--                    <div class="card card-register " style="background-color: black; opacity: 0.6;">-->
+<!--                        <div class="text-center ">-->
+<!--                            <h3>Ajouter congrés</h3>-->
+<!--                        </div>-->
 
-                            <label>Objectif Congrés</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
+<!--                            <label>Objectif Congrés</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
 
-                                </div>
+<!--                                </div>-->
 
-                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.nom"(focus)="focus=true" (blur)="focus=false">
-                            </div>
+<!--                                <input type="text" class="form-control" ngModel="selectedCongre.nom"(focus)="focus=true" (blur)="focus=false">-->
+<!--                            </div>-->
 
-                            <label>Encadrant</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
+<!--                            <label>Encadrant</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
 
-                                </div>
+<!--                                </div>-->
 
-                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" (focus)="focus=true" (blur)="focus=false" required>
-                            </div>
-
-
-
-
-                            <label>visible</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                </div>
-
-                                <input type="number" class="form-control"[(ngModel)]="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >
-                            </div>
-
-                            <label>adresse</label>
-                            <div class="input-group form-group-no-border" >
-                                <div class="input-group-prepend">
-                                </div>
-
-                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" (focus)="focus=true" (blur)="focus=false" >
-                            </div>
-
-
-                         <label>description</label>
-                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">
-                                <div class="input-group-prepend">
-                                </div>
-
-                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" (focus)="focus=true" (blur)="focus=false" >
-                            </div>
+<!--                                <input type="text" class="form-control" ngModel="selectedCongre.encadrantProf" (focus)="focus=true" (blur)="focus=false" required>-->
+<!--                            </div>-->
 
 
 
-                            <label>Duree</label>
-                            <div class="input-group form-group-no-border justify-content-center" >
-                                <div class="input-group-prepend">
-                                </div>
-                                <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree">
-                            </div>
-                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>
+
+<!--                            <label>visible</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                </div>-->
+
+<!--                                <input type="number" class="form-control"ngModel="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >-->
+<!--                            </div>-->
+
+<!--                            <label>adresse</label>-->
+<!--                            <div class="input-group form-group-no-border" >-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                </div>-->
+
+<!--                                <input type="text" class="form-control" ngModel="selectedCongre.lieu" (focus)="focus=true" (blur)="focus=false" >-->
+<!--                            </div>-->
+
+
+<!--                         <label>description</label>-->
+<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                </div>-->
+
+<!--                                <input type="text" class="form-control" ngModel="selectedCongre.description" (focus)="focus=true" (blur)="focus=false" >-->
+<!--                            </div>-->
+
+
+
+<!--                            <label>Duree</label>-->
+<!--                            <div class="input-group form-group-no-border justify-content-center" >-->
+<!--                                <div class="input-group-prepend">-->
+<!--                                </div>-->
+<!--                                <input type="text" class="form-control" ngModel="selectedCongre.duree">-->
+<!--                            </div>-->
+<!--                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<br><br><br><br>
+<div class="container">
+
+    <header>Ajouter congrés</header>
+
+    <form action="#">
+        <div class="form first">
+            <div class="details personal">
+<!--                <span class="title">Personal Details</span>-->
+<!--[ngModelOptions]="{standalone: true}"-->
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Objectif Congrés</label>
+                        <input type="text" class="form-control" placeholder="Objectif Congrés" [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Encadrant</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" [ngModelOptions]="{standalone: true}" placeholder="Encadrant" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Visible</label>
+                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Adresse</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" [ngModelOptions]="{standalone: true}" placeholder="Adresse" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Date</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >
+                    </div>
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Gender</label>-->
+<!--                        <select required>-->
+<!--                            <option disabled selected>Select gender</option>-->
+<!--                            <option>Male</option>-->
+<!--                            <option>Female</option>-->
+<!--                            <option>Others</option>-->
+<!--                        </select>-->
+<!--                    </div>-->
+
+                    <div class="input-field">
+                        <label>Description</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >
                     </div>
                 </div>
             </div>
+
+
+
+
+                <button class="nextBtn" (click)="submit()">
+                    <span class="btnText" >Valider</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+
         </div>
-    </div>
+
+
+    </form>
 </div>
-
-
-

@@ -5,7 +5,7 @@ import {AuthService} from "../../../../controller/service/Auth.service";
 @Component({
     selector: 'app-nav-client',
     templateUrl: './nav-client.component.html',
-    styleUrls: ['./nav-client.component.css']
+    styleUrls: ['./nav-client.component.scss']
 })
 export class NavClientComponent implements OnInit {
     private toggleButton: any;
