@@ -3,9 +3,9 @@
 import {Permission} from "./permission.model";
 
 export class Role {
-    public authority: string;
-    public id: string;
-    public permissions: Permission[];
+     authority: string;
+     id: string;
+     permissions: Permission[];
 
     constructor() {
         this.authority = "ROLE_ANONYMOUS";

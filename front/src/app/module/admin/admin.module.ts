@@ -19,9 +19,7 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
     declarations: [
         CommandeAdminComponent,
         AdminAcueilComponent,
-        GerantListComponent,
         FooterAdminComponent,
-        GerantListComponent,
     ],
     imports: [
         CommonModule,

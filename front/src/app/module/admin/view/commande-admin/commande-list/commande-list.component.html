@@ -203,27 +203,29 @@
                 <tr>
                     <!--                    <th>Nom</th>-->
                     <th>Client <i class="fa fa-sort"></i></th>
-                    <th>Lieu <i class="fa fa-sort"></i></th>
-                    <th>Ville <i class="fa fa-sort"></i></th>
+                    <th>Adress <i class="fa fa-sort"></i></th>
+<!--                    <th>Ville <i class="fa fa-sort"></i></th>-->
                     <th>Pays <i class="fa fa-sort"></i></th>
                     <th>Tele<i class="fa fa-sort"></i></th>
                     <th>Date</th>
                     <th>Articles</th>
                     <th>prix Total</th>
                     <th>Etat</th>
+                    <th>Edit</th>
                 </tr>
                 </thead>
+
                 <tbody>
-                <tr *ngFor="let commande of commandes">
-                    <!--                    <td>1</td>-->
-                    <td>{{commande.date}}</td>
-                    <td>{{congre.lieu}}</td>
-                    <td>{{congre.duree}}</td>
-                    <td>{{congre.encadrantProf}} </td>
-                    <td >{{congre.visible}}</td>
-                    <td >{{congre.visible}}</td>
-                    <td >{{congre.visible}}</td>
-                    <div class="scroll-page" id="page-1" style="overflow: scroll; width:250px;height: 80px" >{{congre.description}}</div>
+                <tr *ngFor="let panier of paniers">
+                    <td>{{panier.user.username}}</td>
+                    <td><div class="scroll-page" style="overflow: scroll; width:200px;height: 40px" >  {{panier.lieu}} </div></td>
+<!--                    <td>{{panier.ville}}</td>/-->
+                    <td>{{panier.pays}} </td>
+                    <td >{{panier.phone}}</td>
+                    <td >{{panier.dateAjout}}</td>
+                    <td><div class="scroll-page" style="overflow: scroll; width:200px;height: 20px" >  {{panier.formation?.nom}} <span *ngFor="let produitPanierItems of panier.produitPanierItems"> {{produitPanierItems?.produitBio.nom}} * {{produitPanierItems?.quantite}} </span> </div></td>
+                    <td >{{panier.prixTotal}}</td>
+                    <td >{{panier.etatCommande}}</td>
 
                     <td>
 

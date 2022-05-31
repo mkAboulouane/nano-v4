@@ -10,10 +10,12 @@ import {FormationService} from "../../../../../controller/service/Formation.serv
     styleUrls: ['./gerant-list.component.css']
 })
 export class GerantListComponent implements OnInit {
-    constructor(private userService: UserService, private router: Router) {
+    users: User[];
+    constructor(private userService: UserService,private router: Router) {
     }
 
     ngOnInit(): void {
+        this.findAll();
     }
 
     delete(user: User) {
@@ -39,11 +41,15 @@ export class GerantListComponent implements OnInit {
     }
     add() {
         this.router.navigate(['/admin/gerant-add'])
-
     }
 
     public findAll(){
-
+        this.userService.findAllGerant().subscribe(data => {
+            this.users = data;
+            console.log(data);
+        },error => {
+            console.log(error);
+            });
     }
 }
 
