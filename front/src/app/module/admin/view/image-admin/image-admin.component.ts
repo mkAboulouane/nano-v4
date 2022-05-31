@@ -64,7 +64,7 @@ export class ImageAdminComponent implements OnInit {
   // }
 
 
-  public getOne(){
+  public getOne() {
     this.imageService.getOne().subscribe( data =>{
       console.log(data);
       let objectURL = 'data:image/jpeg;base64,' + data.picByte;

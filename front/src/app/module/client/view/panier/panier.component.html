@@ -1,15 +1,14 @@
-<div class="page-header" style="background-color:white;"><br><br>
-<!--<div class="page-header" style="background-image: url('./assets/img/smoke.jpg');"><br><br>-->
+<div class="page-header" style="background-color:white;">
     <div class="container mt-5 p-3 rounded cart" style="background-color:white; opacity: 0.9;">
         <div class="row no-gutters">
             <div class="col-md-12 col-sm-12 ">
                 <div class="product-details mr-2">
                     <div class="d-flex flex-row align-items-center"><i class="fa fa-long-arrow-left"></i><span
-                            [routerLink]="['/produitbio']" class="ml-2" style="">ajouter des autres produits</span>
+                            class="ml-2" style=""><a  [routerLink]="['/produitbio']">ajouter des autres produits</a></span>
                     </div>
                     <hr>
                     <h6 class="mb-0">panier</h6>
-                    <div class="d-flex justify-content-between"><span>Vous aver x produits dans votre panier</span>
+                    <div class="d-flex justify-content-between"><span>Vous aver {{item}} produits dans votre panier</span>
                         <div class="d-flex flex-row align-items-center"><span class="text-black-50">trier par:</span>
                             <div class="price ml-2"><span class="mr-1">prix</span><i class="fa fa-angle-down"></i></div>
                         </div>
@@ -23,39 +22,14 @@
                                 class="d-block ml-5 font-weight-bold">00.00dh</span><i
                                 class="fa fa-trash-o ml-3 text-black-50"></i></div>
                     </div>
-                    <!--                    <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">-->
-                    <!--                        <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/GQnIUfs.jpg" width="40">-->
-                    <!--                            <div class="ml-2"><span class="font-weight-bold d-block">One pro 7T</span><span class="spec">256GB, Navy Blue</span></div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="d-flex flex-row align-items-center"><span class="d-block">2</span><span class="d-block ml-5 font-weight-bold">$900</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">-->
-                    <!--                        <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/o2fKskJ.jpg" width="40">-->
-                    <!--                            <div class="ml-2"><span class="font-weight-bold d-block">Google pixel 4 XL</span><span class="spec">256GB, Axe black</span></div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$800</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>-->
-                    <!--                    </div>-->
-                    <!--                    <div class="d-flex justify-content-between align-items-center mt-3 p-2 items rounded">-->
-                    <!--                        <div class="d-flex flex-row"><img class="rounded" src="https://i.imgur.com/Tja5H1c.jpg" width="40">-->
-                    <!--                            <div class="ml-2"><span class="font-weight-bold d-block">Samsung galaxy Note 10&nbsp;</span><span class="spec">256GB, Navy Blue</span></div>-->
-                    <!--                        </div>-->
-                    <!--                        <div class="d-flex flex-row align-items-center"><span class="d-block">1</span><span class="d-block ml-5 font-weight-bold">$999</span><i class="fa fa-trash-o ml-3 text-black-50"></i></div>-->
-                    <!--                    </div>-->
                 </div>
             </div>
 
             <hr class="line">
-            <!--                <div class="d-flex justify-content-between information"><span>Subtotal</span><span>$3000.00</span></div>-->
-            <!--                <div class="d-flex justify-content-between information"><span>Shipping</span><span>$20.00</span></div>-->
-            <!--                <div class="d-flex justify-content-between information"><span>Total(Incl. taxes)</span><span>$3020.00</span></div>-->
-            <!--        <button routerLink="/checkout" class="btn btn-primary btn-block d-flex justify-content-between mt-3" type="button"><span>$3020.00</span><span>Checkout<i class="fa fa-long-arrow-right ml-1"></i></span></button></div>-->
             <div class="d-flex justify-content-center information "></div>
             <button class="btn  btn-block d-flex justify-content-center mt-4 mx-4 " routerLink="/checkout"
                     style="background-color: #00bbff ; justify-content: center ; border: white" type="button"><span>Payer<i
                     class="fa fa-long-arrow-right ml-1"></i></span></button>
         </div>
-
-        <!--        </div>-->
-        <!--    </div>-->
     </div>
 </div>

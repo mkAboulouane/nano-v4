@@ -182,19 +182,19 @@
                         Contact</a>
                 </li>
 
-
-                <li *ngIf="!islogin()  && !isRegister() " class="nav-item ">
-                    <a [routerLink]="['/login']" class="nav-link" style="font-size: 10px ; color: black">
-                        <i aria-hidden="true" class="fa fa-user" style="font-size: 15px"></i>
-                        Login</a>
-                </li>
-
-
                 <li *ngIf="!isCheckout() && !isPanier() && !islogin() && !isRegister()" class="nav-item ">
                     <a [routerLink]="['/panier']" class="nav-link" style="font-size: 10px ; color: black">
                         <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 15px"></i>
                         Panier</a>
                 </li>
+
+                <li *ngIf="!islogin()  && !isRegister() " class="nav-item ">
+                <a [routerLink]="['/login']" class="nav-link" style="font-size: 10px ; color: black">
+                <i aria-hidden="true" class="fa fa-user" style="font-size: 15px"></i>
+                Login</a>
+                </li>
+
+
 
 
             </ul>
