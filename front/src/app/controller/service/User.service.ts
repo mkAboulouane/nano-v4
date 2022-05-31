@@ -2,6 +2,7 @@ import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Injectable} from '@angular/core';
 import {User} from '../model/User.model';
 import {environment} from '../../../environments/environment';
+import {Observable} from "rxjs";
 
 @Injectable({
     providedIn: 'root'
@@ -26,6 +27,10 @@ export class UserService {
         }, (error: HttpErrorResponse) => {
             console.log(error.error)
         })
+    }
+
+    findAllGerant(): Observable<Array<User>>{
+       return this.http.get<User[]>(this.API + 'admin/agent/')
     }
 
     save(user: User) {
