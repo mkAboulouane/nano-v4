@@ -44,6 +44,7 @@ import { ProfileComponent } from './view/profile/profile.component';
                 {path: 'commande', component: ClientCommandeComponent, canActivate: [AuthGuard]},
                 {path: 'panier', component: ClientPanierComponent, canActivate: [AuthGuard]},
                 {path: 'notification', component: ClientNotificationComponent, canActivate: [AuthGuard]},
+                {path: 'chekout', component: CheckoutComponent, canActivate: [AuthGuard]},
             ]
         ),
     ],

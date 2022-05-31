@@ -51,6 +51,21 @@ export class AuthService {
         );
     }
 
+
+    /*
+        test: any;
+    *   paiment(){
+    * this.paimentService.calculePaiment().subscibe(
+    *   data => {
+    *       this.test = data;
+    *       console.log(data);
+    * });
+    * }
+    *
+    *
+    *
+    *
+    * */
     public getRole(username: string){
         // alert('avant');
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
