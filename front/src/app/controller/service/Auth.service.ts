@@ -61,10 +61,6 @@ export class AuthService {
     *       console.log(data);
     * });
     * }
-    *
-    *
-    *
-    *
     * */
     public getRole(username: string){
         // alert('avant');
