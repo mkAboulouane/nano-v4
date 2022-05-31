@@ -1,1 +1,77 @@
-<p>gerant-edit works!</p>
+<br><br><br><br>
+<div class="container">
+
+    <header>L'ajout des Gérants</header>
+
+    <gerant>
+        <div class="form first">
+            <div class="details personal">
+                <!--                <span class="title">Personal Details</span>-->
+                <!--[ngModelOptions]="{standalone: true}"-->
+                <div class="fields">
+                    <div class="input-field">
+                        <label>Nom d'utilisateur</label>
+                        <input type="text" class="form-control" placeholder="nom d'utilisateurs" [(ngModel)]="selectedUser.username " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Nom </label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedUser.nom" [ngModelOptions]="{standalone: true}" placeholder="Nom" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Prénom</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedUser.prenom" [ngModelOptions]="{standalone: true}" placeholder="Prénom " >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Email</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedUser.email" [ngModelOptions]="{standalone: true}" placeholder="Email" >
+                    </div>
+
+                    <div class="input-field">
+                        <label>Téléphone</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedUser.phone" [ngModelOptions]="{standalone: true}" placeholder="télephone" >
+                    </div>
+
+                    <!--                    <div class="input-field">-->
+                    <!--                        <label>Gender</label>-->
+                    <!--                        <select required>-->
+                    <!--                            <option disabled selected>Select gender</option>-->
+                    <!--                            <option>Male</option>-->
+                    <!--                            <option>Female</option>-->
+                    <!--                            <option>Others</option>-->
+                    <!--                        </select>-->
+                    <!--                    </div>-->
+
+                    <div class="input-field">
+                        <label>Date De Création</label>
+                        <input type="date" class="form-control" [(ngModel)]="selectedUser.createdAt" [ngModelOptions]="{standalone: true}" placeholder="Date de Création" >
+                    </div>
+
+
+
+
+
+                    <!--                    <div class="input-field">-->
+                    <!--                        <label>Modifié le</label>-->
+                    <!--                        <input type="text" class="form-control" [(ngModel)]="selectedProduitBio.updatedAt" [ngModelOptions]="{standalone: true}" placeholder="promotion?" >-->
+                    <!--                    </div>-->
+
+
+                </div>
+            </div>
+
+
+
+
+            <button class="nextBtn" (click)="edit()">
+                <span class="btnText" >Valider</span>
+                <i class="uil uil-navigator"></i>
+            </button>
+
+        </div>
+
+
+    </gerant>
+</div>
