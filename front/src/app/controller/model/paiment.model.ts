@@ -1,10 +1,10 @@
 import {Panier} from "./panier.model";
 
 export class Paiment {
-    public id: number;
-    public reference: string;
-    public prix: number;
-    public payedAt: number;
-    public panier: Panier;
-    public typePaiment: string;
+     id: number;
+     reference: string;
+     prix: number;
+     payedAt: number;
+     panier: Panier;
+     typePaiment: string;
 }

@@ -1,11 +1,11 @@
 export class Formation {
-    public id: number;
-    public nom: string;
-    public encadrantProf: string;
-    public description: string;
-    public duree: string;
-    public visible: null | boolean;
-    public nombrePlace: number;
-    public prix: number;
+     id: number;
+     nom: string;
+     encadrantProf: string;
+     description: string;
+     duree: string;
+     visible: null | boolean;
+     nombrePlace: number;
+     prix: number;
 
 }

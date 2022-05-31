@@ -2,13 +2,13 @@ import {ProduitBio} from "./produit-bio.model";
 import {Panier} from "./panier.model";
 
 export class ProduitPanierItem {
-    public id: number;
+     id: number;
 
-    public prix: number;
+     prix: number;
 
-    public produitBio: ProduitBio;
+     produitBio: ProduitBio;
 
-    public quantite: number;
+     quantite: number;
 
-    public panier: Panier;
+     panier: Panier;
 }

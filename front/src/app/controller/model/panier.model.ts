@@ -3,20 +3,26 @@ import {Formation} from "./formation.model";
 import {ProduitPanierItem} from "./produit-panier-item.model";
 
 export class Panier {
-    public id: number;
+    id: number;
 
-    public reference: string;
+    reference: string;
 
-    public prixTotal: number;
+    lieu: string;
+    ville: string;
+    pays: string;
 
-    public etatCommande: string;
+    phone: string;
 
-    public dateAjout: string;
+    prixTotal: number;
 
-    public user: User;
+    etatCommande: string;
 
-    public formation: Formation;
+    dateAjout: string;
 
-    public produitPanierItems: Array<ProduitPanierItem>;
+    user: User;
+
+    formation: Formation;
+
+    produitPanierItems: Array<ProduitPanierItem>;
 
 }
