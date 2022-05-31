@@ -29,6 +29,7 @@ import { ClientCommandeComponent } from './view/client-commande/client-commande.
 import { ClientPanierComponent } from './view/client-panier/client-panier.component';
 import {ComponentsComponent} from "../../components/components.component";
 import { ClientNotificationComponent } from './view/client-notification/client-notification.component';
+import { ProfileComponent } from './view/profile/profile.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { ClientNotificationComponent } from './view/client-notification/client-n
         RouterModule.forChild(
             [
                 {path: 'home', component: ComponentsComponent, canActivate: [AuthGuard]},
+                {path: 'portrait', component: ProfileComponent, canActivate: [AuthGuard]},
                 {path: 'formation', component: FormationComponent, canActivate: [AuthGuard]},
                 {path: 'produit-bio', component: ProduitBioComponent, canActivate: [AuthGuard]},
                 {path: 'congres', component: CongresComponent, canActivate: [AuthGuard]},
@@ -46,7 +48,7 @@ import { ClientNotificationComponent } from './view/client-notification/client-n
         ),
     ],
     exports: [RouterModule],
-    declarations: [ClientCommandeComponent, ClientPanierComponent, ClientNotificationComponent],
+    declarations: [ClientCommandeComponent, ClientPanierComponent, ClientNotificationComponent, ProfileComponent],
 })
 export class ClientRoutingModule {
 }
