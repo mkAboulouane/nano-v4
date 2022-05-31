@@ -150,8 +150,10 @@ export class NavClientComponent implements OnInit {
     }
 
     logOut() {
+        let confirm = window.confirm('Vous voulez Vraiment se deconecter')
+    if(confirm) {
         this.authService.logout();
         console.log("Log Out Succesfully");
-
+    }
     }
 }
