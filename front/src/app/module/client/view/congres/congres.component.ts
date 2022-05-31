@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {FormationService} from "../../../../controller/service/Formation.service";
-import {Formation} from "../../../../controller/model/formation.model";
 import {CongresService} from "../../../../controller/service/Congres.service";
 import {Congres} from "../../../../controller/model/congres.model";
 
@@ -25,6 +23,7 @@ export class CongresComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        // this.test();
         this.findAll();
     }
 
@@ -34,6 +33,5 @@ export class CongresComponent implements OnInit {
                 this.congres = data;
             }
         )
-
     }
 }
