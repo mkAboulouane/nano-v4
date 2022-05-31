@@ -1,84 +1,9 @@
 
-<!--<div class="wrapper">-->
-<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
-<!--        <div class="filter"></div>-->
-<!--        <div class="container col-lg-12 col-sm-12">-->
-
-<!--            <div class="row">-->
-<!--                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">-->
-
-<!--                    <div class="card card-register " style="background-color: black; opacity: 0.6;">-->
-<!--                        <div class="text-center ">-->
-<!--                            <h3>Ajouter congrés</h3>-->
-<!--                        </div>-->
-
-<!--                            <label>Objectif Congrés</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-
-<!--                                </div>-->
-
-<!--                                <input type="text" class="form-control" ngModel="selectedCongre.nom"(focus)="focus=true" (blur)="focus=false">-->
-<!--                            </div>-->
-
-<!--                            <label>Encadrant</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-
-<!--                                </div>-->
-
-<!--                                <input type="text" class="form-control" ngModel="selectedCongre.encadrantProf" (focus)="focus=true" (blur)="focus=false" required>-->
-<!--                            </div>-->
-
-
-
-
-<!--                            <label>visible</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                </div>-->
-
-<!--                                <input type="number" class="form-control"ngModel="selectedCongre.visible" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
-
-<!--                            <label>adresse</label>-->
-<!--                            <div class="input-group form-group-no-border" >-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                </div>-->
-
-<!--                                <input type="text" class="form-control" ngModel="selectedCongre.lieu" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
-
-
-<!--                         <label>description</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                </div>-->
-
-<!--                                <input type="text" class="form-control" ngModel="selectedCongre.description" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
-
-
-
-<!--                            <label>Duree</label>-->
-<!--                            <div class="input-group form-group-no-border justify-content-center" >-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                </div>-->
-<!--                                <input type="text" class="form-control" ngModel="selectedCongre.duree">-->
-<!--                            </div>-->
-<!--                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
-
 <br><br><br><br>
 <div class="container">
 
-    <header>Ajouter congrés</header>
-
+    <header>Ajouter un Congré</header>
+    <br>
     <Badr>
         <div class="form first">
             <div class="details personal">
@@ -86,7 +11,7 @@
 <!--[ngModelOptions]="{standalone: true}"-->
                 <div class="fields">
                     <div class="input-field">
-                        <label>Objectif Congrés</label>
+                        <label>Objectif/Titre Congrés</label>
                         <input type="text" class="form-control" placeholder="Objectif Congrés" [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >
                     </div>
 
@@ -107,32 +32,51 @@
 
                     <div class="input-field">
                         <label>Date</label>
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.date" [ngModelOptions]="{standalone: true}" placeholder="date" >
+                    </div>
+
+                     <div class="input-field">
+                        <label>Duree</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >
                     </div>
 
-<!--                    <div class="input-field">-->
-<!--                        <label>Gender</label>-->
-<!--                        <select required>-->
-<!--                            <option disabled selected>Select gender</option>-->
-<!--                            <option>Male</option>-->
-<!--                            <option>Female</option>-->
-<!--                            <option>Others</option>-->
-<!--                        </select>-->
-<!--                    </div>-->
-
                     <div class="input-field">
                         <label>Description</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >
+<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >-->
+                        <textarea class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" rows="3"></textarea>
                     </div>
+
+<!--                    <div class="form-check form-switch">-->
+<!--                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">-->
+<!--                        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>-->
+<!--                    </div>-->
+
+
+
+
+
+                    <!--                    <div class="mb-3">-->
+<!--                        <label for="exampleInputEmail1" class="form-label">Email address</label>-->
+<!--                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+<!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+<!--                    </div>-->
+<!--                    <div class="mb-3">-->
+<!--                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>-->
+<!--                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+<!--                    </div>-->
+
+
+
                 </div>
             </div>
 
 
 
 
-                <button class="nextBtn" (click)="submit()">
-                    <span class="btnText" >Valider</span>
-                    <i class="uil uil-navigator"></i>
+                <button class="btn-outline-primary"  (click)="submit()">
+<!--                    <span class="btnText" >Valider</span>-->
+<!--                    <i class="uil uil-navigator"></i>-->
+                    Valider
                 </button>
 
         </div>
