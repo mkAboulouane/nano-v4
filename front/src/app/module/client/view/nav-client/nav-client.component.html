@@ -58,26 +58,37 @@
                         Panier </a>
                 </li>
 
-                <li class="nav-item ">
-                    <a [routerLink]="['/client/notification']" class="nav-link" style="font-size: 10px ; color: black">
-                        <i class="fa fa-bell" aria-hidden="true" style="font-size: 14px"></i>
+<!--                <li class="nav-item ">-->
+<!--                    <a [routerLink]="['/client/notification']" class="nav-link" style="font-size: 10px ; color: black">-->
+<!--                        <i class="fa fa-bell" aria-hidden="true" style="font-size: 14px"></i>-->
 
-                    </a>
-                </li>
-                <li class="nav-item ">
-                    <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">
-                        <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 14px"></i>
-<!---->
-                    </a>
-
-
-<!--                <li class="nav__listitem">About-->
-<!--                    <ul class="nav__listitemdrop">-->
-<!--                        <li>Our Team</li>-->
-<!--                        <li>Our Process</li>-->
-<!--                        <li>History</li>-->
-<!--                    </ul>-->
+<!--                    </a>-->
 <!--                </li>-->
+<!--                <li class="nav-item ">-->
+<!--                    <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">-->
+<!--                        <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 14px"></i>-->
+<!--&lt;!&ndash;&ndash;&gt;-->
+<!--                    </a>-->
+
+
+                    <!-- Example single danger button -->
+
+                <div class="dropdown">
+<!--                    <button class="dropbtn">Dropdown</button>-->
+                    <img class="img-circle" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" style="width: 40px;
+    height: 40px; margin-top: 1rem">
+                    <div class="dropdown-content">
+                        <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">
+                           <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 14px"></i>Se Deconnecter
+                            <!---->
+                        </a>
+                        <a [routerLink]="['/client/notification']" class="nav-link" style="font-size: 10px ; color: black">
+                            <i class="fa fa-bell" aria-hidden="true" style="font-size: 14px"></i>Notification
+
+                        </a>
+                        <a href="#">Profile</a>
+                    </div>
+                </div>
 
 
 <!--                </li>-->
