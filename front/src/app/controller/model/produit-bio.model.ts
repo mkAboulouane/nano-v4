@@ -13,6 +13,7 @@ export class ProduitBio {
      prix: number;
      prixAncien: number;
      updatedAt: string;
+     search: string;
 
      imagePrincipal: Image;
 

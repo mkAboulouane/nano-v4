@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import {Formation} from "../../../../../controller/model/formation.model";
-import {FormationService} from "../../../../../controller/service/Formation.service";
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 import {MaterielBioService} from "../../../../../controller/service/Materiel-bio.service";
@@ -12,18 +10,40 @@ import {MaterielBioService} from "../../../../../controller/service/Materiel-bio
 })
 export class ProduitBioListComponent implements OnInit {
 
-  private _produitBios : Array<ProduitBio>;
-  private _selectedProduitBio: ProduitBio;
+  _produitBios: Array<ProduitBio>;
+  _selectedProduitBio: ProduitBio;
+  crud: ProduitBio[];
+  searchInput: string;
 
-  constructor(private materielBioService: MaterielBioService , private router: Router) { }
+  constructor(private materielBioService: MaterielBioService, private router: Router) {
+  }
 
   ngOnInit(): void {
     this.findAll();
   }
 
-  public findAll(){
-    this.materielBioService.findAll().subscribe(data =>{
+  search(index: string) {
+    this.produitBios = this.crud;
+    let serchProduitBio: ProduitBio[] = [];
+    if (index && index != '') {
+      for (let produit of this.produitBios) {
+        if (produit.nom.toLowerCase().search(index.toLowerCase()) != -1
+            || produit.description.toLowerCase().search(index.toLowerCase()) != -1
+            || produit.addedAt.toLowerCase().search(index.toLowerCase()) != -1
+        ) {
+          serchProduitBio.push(produit);
+        }
+      }
+      console.log(serchProduitBio);
+      this.produitBios = serchProduitBio.slice();
+    }
+  }
+
+
+  public findAll() {
+    this.materielBioService.findAll().subscribe(data => {
       this.produitBios = data;
+      this.crud = data;
       console.log(data);
     })
   }
@@ -40,7 +60,7 @@ export class ProduitBioListComponent implements OnInit {
 
   delete(produitBio: ProduitBio) {
     this.materielBioService.delete(produitBio.nom).subscribe(
-        data  =>  {
+        data => {
           console.log(data);
           this.findAll();
           console.log('deleted successfully');
