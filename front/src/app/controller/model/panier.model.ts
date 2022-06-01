@@ -6,6 +6,7 @@ export class Panier {
     id: number;
 
     reference: string;
+    search: string;
 
     lieu: string;
     ville: string;
