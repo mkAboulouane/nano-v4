@@ -121,7 +121,6 @@ import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/
         CalendarModule,
         DropdownModule,
         InputTextModule,
-
     ],
     // exports: [],
     providers: [
@@ -130,7 +129,6 @@ import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/
         UserService,
         RoleService,
         CustomerService,
-
     ],
     exports: [
         NavbarComponent,
