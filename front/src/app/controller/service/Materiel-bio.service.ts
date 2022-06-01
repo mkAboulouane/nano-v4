@@ -36,6 +36,13 @@ export class MaterielBioService {
     return this.http.post<ProduitBio>(this.API + '/', this._selectedproduitBio);
   }
 
+  /*  Appellez cette methode apres l'enregistrement de l'image !!  */
+  public saveDepanage(imageName: string): Observable<ProduitBio> {
+    return this.http.post<ProduitBio>(this.API + '/save/' + encodeURIComponent(imageName) , this._selectedproduitBio);
+  }
+
+
+
   public edit(): Observable<ProduitBio> {
     return this.http.put<ProduitBio>(this.API + '/', this._selectedproduitBio);
   }

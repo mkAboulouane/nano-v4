@@ -30,7 +30,7 @@ export class ImageAdminComponent implements OnInit {
   }
 
 
-  public onImageUpload(event) {
+   onImageUpload(event) {
     this.file = event.target.files[0];
   }
 
@@ -38,8 +38,6 @@ export class ImageAdminComponent implements OnInit {
   imageUploadAction() {
     const file = new FormData();
     file.append('file', this.file, this.file.name);
-
-
     this.http.post<any>(this.API , file, { observe: 'response' })
         .subscribe((response) => {
           console.log(response);

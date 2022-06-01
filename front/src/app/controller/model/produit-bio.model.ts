@@ -1,3 +1,5 @@
+import {Image} from "./image.model";
+
 export class ProduitBio {
      id: number;
      nom: string;
@@ -11,5 +13,7 @@ export class ProduitBio {
      prix: number;
      prixAncien: number;
      updatedAt: string;
+
+     imagePrincipal: Image;
 
 }
