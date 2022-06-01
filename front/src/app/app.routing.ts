@@ -17,6 +17,7 @@ import {ComponentsComponent} from "./components/components.component";
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
 import {HomeClientComponent} from "./module/client/view/home-client.component";
 import {ViewFormationComponent} from "./module/client/view/view-formation/view-formation.component";
+import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
 
 @NgModule({
     imports: [
@@ -34,6 +35,7 @@ import {ViewFormationComponent} from "./module/client/view/view-formation/view-f
                         {path: 'formation/:id', component: ViewFormationComponent},
                         {path: 'congres', component: CongresComponent},
                         {path: 'produitbio', component: ProduitBioComponent},
+                        {path: 'produitbio/:id', component: ViewProduitBioComponent},
                         {path: 'overseaseducation', component: OverseaseducationComponent},
                         {path: 'panier', component: PanierComponent},
                         {path: 'login', component: LoginPageComponent},

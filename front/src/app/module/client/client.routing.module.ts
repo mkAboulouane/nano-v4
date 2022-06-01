@@ -31,6 +31,7 @@ import {ComponentsComponent} from "../../components/components.component";
 import { ClientNotificationComponent } from './view/client-notification/client-notification.component';
 import { ProfileComponent } from './view/profile/profile.component';
 import { ViewFormationComponent } from './view/view-formation/view-formation.component';
+import { ViewProduitBioComponent } from './view/view-produit-bio/view-produit-bio.component';
 
 
 @NgModule({
@@ -50,7 +51,7 @@ import { ViewFormationComponent } from './view/view-formation/view-formation.com
         ),
     ],
     exports: [RouterModule],
-    declarations: [ClientCommandeComponent, ClientPanierComponent, ClientNotificationComponent, ProfileComponent, ViewFormationComponent],
+    declarations: [ClientCommandeComponent, ClientPanierComponent, ClientNotificationComponent, ProfileComponent, ViewFormationComponent, ViewProduitBioComponent],
 })
 export class ClientRoutingModule {
 }
