@@ -20,6 +20,7 @@ import {ImageAdminComponent} from "./view/image-admin/image-admin.component";
     imports: [
         RouterModule.forChild(
             [
+                { path: 'home',  redirectTo:'commande', pathMatch: 'full'},
                 { path: 'image-test', component: ImageAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation', component: FormationAdminComponent, canActivate: [AuthGuard] },
                 { path: 'formation-add', component: FormationAddComponent, canActivate: [AuthGuard] },

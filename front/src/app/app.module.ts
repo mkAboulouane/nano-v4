@@ -55,10 +55,12 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/gerant-list.component";
+import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
 
 
 @NgModule({
     declarations: [
+        // ViewProduitBioComponent,
         GerantListComponent,
         CommandeListComponent,
         ImageAdminComponent,
@@ -128,7 +130,7 @@ import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/
     ],
     exports: [
         NavbarComponent,
-        CommandeListComponent
+        CommandeListComponent,
     ],
     bootstrap: [AppComponent]
 })
