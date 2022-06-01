@@ -4,7 +4,7 @@
 
 <div class="container my-5 mt-5 mx-6"><br><br>
     <div class="row">
-        <div *ngFor="let formation of formations" class="col-lg-6">
+        <div *ngFor="let formation of formations" class="col-lg-6" routerLink="/formation/{{formation.id}}" >
             <div class="card card-margin">
                 <div  class="card-header no-border">
                     <h5 class="card-title">{{formation.nom}}</h5>

@@ -16,6 +16,7 @@ import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visite
 import {ComponentsComponent} from "./components/components.component";
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
 import {HomeClientComponent} from "./module/client/view/home-client.component";
+import {ViewFormationComponent} from "./module/client/view/view-formation/view-formation.component";
 
 @NgModule({
     imports: [
@@ -30,6 +31,7 @@ import {HomeClientComponent} from "./module/client/view/home-client.component";
                         {path: '', redirectTo: 'login' , pathMatch: 'full'},
                         {path: 'home', component: ComponentsComponent},
                         {path: 'formation', component: FormationComponent},
+                        {path: 'formation/:id', component: ViewFormationComponent},
                         {path: 'congres', component: CongresComponent},
                         {path: 'produitbio', component: ProduitBioComponent},
                         {path: 'overseaseducation', component: OverseaseducationComponent},

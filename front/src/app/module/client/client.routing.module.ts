@@ -30,6 +30,7 @@ import { ClientPanierComponent } from './view/client-panier/client-panier.compon
 import {ComponentsComponent} from "../../components/components.component";
 import { ClientNotificationComponent } from './view/client-notification/client-notification.component';
 import { ProfileComponent } from './view/profile/profile.component';
+import { ViewFormationComponent } from './view/view-formation/view-formation.component';
 
 
 @NgModule({
@@ -49,7 +50,7 @@ import { ProfileComponent } from './view/profile/profile.component';
         ),
     ],
     exports: [RouterModule],
-    declarations: [ClientCommandeComponent, ClientPanierComponent, ClientNotificationComponent, ProfileComponent],
+    declarations: [ClientCommandeComponent, ClientPanierComponent, ClientNotificationComponent, ProfileComponent, ViewFormationComponent],
 })
 export class ClientRoutingModule {
 }
