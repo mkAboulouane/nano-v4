@@ -6,7 +6,6 @@ import {AppRoutingModule} from './app.routing';
 import {AppComponent} from './app.component';
 import {NavbarComponent} from './module/visiteur/shared/navbar/navbar.component';
 import {FooterComponent} from './module/visiteur/shared/footer/footer.component';
-
 import {ComponentsModule} from './components/components.module';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {RegisterComponent} from './register/register.component';
@@ -20,7 +19,6 @@ import {FormationAdminComponent} from "./module/admin/view/formation-admin/forma
 import {FormationAddComponent} from "./module/admin/view/formation-admin/formation-add/formation-add.component";
 import {JwtInterceptor} from "./controller/interceptors/jwt.interceptor";
 import {AdminRoutingModule} from "./module/admin/admin.routing.module";
-import {AdminModule} from "./module/admin/admin.module";
 import {HomeVisiteurComponent} from './module/visiteur/home-visiteur/home-visiteur.component';
 import {AccessDeniedComponent} from "./auth/access-denied/access-denied.component";
 import {UserService} from "./controller/service/User.service";
@@ -35,9 +33,7 @@ import {ProduitBioAddComponent} from "./module/admin/view/produit-bio-admin/prod
 import {ProduitBioListComponent} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
 import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-edit/congres-edit.component";
 import {ProduitBioAdminComponent} from "./module/admin/view/produit-bio-admin/produit-bio-admin.component";
-import {
-    ProduitBioEditComponent
-} from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
+import {ProduitBioEditComponent} from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
 import {GerantAdminComponent} from "./module/admin/view/gerant-admin/gerant-admin.component";
 import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/gerant-add.component";
 import {NavGerantComponent} from "./module/agent/view/nav-gerant/nav-gerant.component";
@@ -59,10 +55,12 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/gerant-list.component";
+import {JwPaginationComponent} from "jw-angular-pagination";
 
 
 @NgModule({
     declarations: [
+        JwPaginationComponent,
         GerantListComponent,
         CommandeListComponent,
         ImageAdminComponent,
