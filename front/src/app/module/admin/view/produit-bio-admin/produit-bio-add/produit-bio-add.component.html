@@ -115,7 +115,7 @@
 
     <header>L'ajout des produits</header>
 
-    <Khalil>
+    <form>
         <div class="form first">
             <div class="details personal">
                 <!--                <span class="title">Personal Details</span>-->
@@ -128,7 +128,7 @@
 
                     <div class="input-field">
                         <label>Prix</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedProduitBio.prix" [ngModelOptions]="{standalone: true}" placeholder="prix" >
+                        <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.prix" [ngModelOptions]="{standalone: true}" placeholder="prix" >
                     </div>
 
                     <div class="input-field">
@@ -138,7 +138,7 @@
 
                     <div class="input-field">
                         <label>Quantité</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedProduitBio.quantity" [ngModelOptions]="{standalone: true}" placeholder="Quantité" >
+                        <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.quantity" [ngModelOptions]="{standalone: true}" placeholder="Quantité" >
                     </div>
 
                     <div class="input-field">
@@ -158,7 +158,7 @@
 
                     <div class="input-field">
                         <label>Image</label>
-                        <input type="file" class="form-control" [(ngModel)]="selectedProduitBio.photos" [ngModelOptions]="{standalone: true}" placeholder="image de produit" >
+                        <input type="file" class="form-control" (change)="onImageUpload($event)" placeholder="image de produit" >
                     </div>
 
 
@@ -183,7 +183,7 @@
 
 
 
-            <button class="nextBtn" (click)="submit()">
+            <button type="submit" class="nextBtn" (click)="imageUploadAction()">
                 <span class="btnText" >Valider</span>
                 <i class="uil uil-navigator"></i>
             </button>
@@ -191,5 +191,5 @@
         </div>
 
 
-    </Khalil>
+    </form>
 </div>

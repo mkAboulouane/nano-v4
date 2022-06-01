@@ -4,9 +4,12 @@ import {Router} from "@angular/router";
 import {AuthService} from "../../../../../controller/service/Auth.service";
 import {RoleService} from "../../../../../controller/service/role.service";
 import {Formation} from "../../../../../controller/model/formation.model";
-import {HttpErrorResponse} from "@angular/common/http";
+import {HttpClient, HttpErrorResponse} from "@angular/common/http";
 import {MaterielBioService} from "../../../../../controller/service/Materiel-bio.service";
 import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
+import {ImageService} from "../../../../../controller/service/image.service";
+import {DomSanitizer} from "@angular/platform-browser";
+import {environment} from "../../../../../../environments/environment";
 
 
 
@@ -16,24 +19,48 @@ import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
   styleUrls: ['./produit-bio-add.component.css']
 })
 export class ProduitBioAddComponent implements OnInit {
-
+  private API = environment.adminUrl + 'image/';
   test: any;
-
-
   title : any;
+  file: File;
+  imageName: string;
+
   public error: string = null;
 
   constructor(private materielBioService: MaterielBioService, private router: Router
-      , private authService :AuthService , private roleService: RoleService) { }
+      , private authService :AuthService , private imageService: ImageService
+              ,private sanitizer: DomSanitizer , private http: HttpClient) { }
 
   ngOnInit(): void {
   }
 
-  logOut() {
-    this.authService.logout();
-    console.log("Log Out Succesfully");
-  }
+    onImageUpload(event) {
+      this.file = event.target.files[0];
+    }
 
+  imageUploadAction() {
+      const file = new FormData();
+      file.append('file', this.file, this.file.name);
+      this.http.post(this.API , file , {responseType: 'text'} )
+          .subscribe(data => {
+            this.imageName = data;
+            console.log(this.imageName);
+          });
+      if(this.imageName !== "le Nom de ce fichier deja exist"){
+        this.saveAfterUpload(this.imageName);
+      }else {
+        console.log('error lors de test if/else');
+      }
+  }
+  saveAfterUpload(name: string){
+      this.materielBioService.saveDepanage(name).subscribe(
+          data => {
+            console.log(data);
+          }, error1 => {
+            console.log(error1);
+          }
+      )
+  }
 
   public async submit() {
     // const isPermistted = await this.roleService.isPermitted('Formation', 'add');
@@ -49,9 +76,10 @@ export class ProduitBioAddComponent implements OnInit {
     });
   }
 
+
+
   /*  Getters and Setters  */
   focus: boolean;
-    focus1: boolean;
   get selectedProduitBio(): ProduitBio{
     return this.materielBioService.selectedproduitBio;
   }
