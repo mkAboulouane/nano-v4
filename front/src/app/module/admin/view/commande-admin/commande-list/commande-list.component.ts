@@ -34,7 +34,7 @@ export class CommandeListComponent implements OnInit {
     }
 
 
-    searchAll(searchVal: string) {
+    search(searchVal: string) {
         this.paniers = this.crud;
         let searchPaniers: Panier[] = [];
         if(searchVal && searchVal != '') {
@@ -42,6 +42,8 @@ export class CommandeListComponent implements OnInit {
                 if (panier.dateAjout.toLowerCase().search(searchVal.toLowerCase()) != -1
                     || panier.phone.toLowerCase().search(searchVal.toLowerCase()) != -1
                     || panier.user.username.toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.etatCommande.toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.lieu.toLowerCase().search(searchVal.toLowerCase()) != -1
                 ){
                         searchPaniers.push(panier);
                 }
