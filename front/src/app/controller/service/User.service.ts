@@ -44,6 +44,7 @@ export class UserService {
         this.http.post<User>(environment.adminUrl + "agent/add/", this.selectedUser).subscribe(data => {
            console.log(data);
            this.selectedUser = new User();
+           this.findAllGerant();
         }, (error: HttpErrorResponse) => {
             console.log(error.error)
         })

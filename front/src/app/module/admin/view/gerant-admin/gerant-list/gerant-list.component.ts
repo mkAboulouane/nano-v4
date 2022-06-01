@@ -41,6 +41,7 @@ export class GerantListComponent implements OnInit {
     }
     add() {
         this.router.navigate(['/admin/gerant-add'])
+        this.findAll();
     }
 
     public findAll(){
