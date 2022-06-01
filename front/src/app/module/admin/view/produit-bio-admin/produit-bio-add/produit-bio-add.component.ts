@@ -12,7 +12,6 @@ import {DomSanitizer} from "@angular/platform-browser";
 import {environment} from "../../../../../../environments/environment";
 
 
-
 @Component({
   selector: 'app-produit-bio-add',
   templateUrl: './produit-bio-add.component.html',
