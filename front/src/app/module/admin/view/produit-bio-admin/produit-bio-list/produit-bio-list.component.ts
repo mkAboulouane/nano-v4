@@ -15,12 +15,16 @@ export class ProduitBioListComponent implements OnInit {
   crud: ProduitBio[];
   searchInput: string;
 
+
+
   constructor(private materielBioService: MaterielBioService, private router: Router) {
   }
 
   ngOnInit(): void {
     this.findAll();
   }
+
+
 
   search(index: string) {
     this.produitBios = this.crud;

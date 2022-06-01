@@ -55,12 +55,10 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/gerant-list.component";
-import {JwPaginationComponent} from "jw-angular-pagination";
 
 
 @NgModule({
     declarations: [
-        JwPaginationComponent,
         GerantListComponent,
         CommandeListComponent,
         ImageAdminComponent,
