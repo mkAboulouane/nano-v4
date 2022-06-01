@@ -41,32 +41,32 @@
 
 
 <div class="container  ">
-    <div class="container-fluid" style="margin-top: 1rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white" ><h1>DECOUVRIR NOS PRODUITS</h1></div><br>
+    <div class="container-fluid" style="margin-top: 1rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white" >
+        <h1>DECOUVRIR NOS PRODUITS</h1>
+        <div><h5>nos produits sont d'excellente qualité</h5> </div>
+    </div>
 
 
 
 
-    <div class="card-4 card-div">
+    <div *ngFor="let produitBio of produitBios" routerLink="/produitbio/{{produitBio.id}}" class="card-4 card-div">
         <div class="like-icon-div">
-            <label for="card-4-like" class="like-icon-div-child">
-                <input type="checkbox" id="card-4-like">
-                <i class="far fa-heart heart-empty"></i>
-                <i class="fas fa-heart heart-fill"></i>
-            </label>
+
         </div>
         <div class="u4-img-div img-div">
-            <img src="assets/img/team.jpg" alt="u4-figurine">
+            <img src="assets/img/team.jpg" style="border-radius: 5%">
         </div>
         <div class="text-container">
-            <h2 class="item-name">Nathan Drake Statue - Uncharted 4: A Thief's End</h2>
-            <p class="date"> Departure date: 31/03/2021 </p>
-            <div class="pricing-and-cart">
+            <h2 class="item-name">{{produitBio.nom}}</h2>
+            <p class="date">  </p>
+            <div class="pricing-and-cart ">
                 <div class="pricing ">
-                    <p class="previous-price" style="color: red">$759</p>
-                    <h4 class="current-price">$499</h4>
-                </div>
-                <i class="fas fa-shopping-cart"></i>
+                    <p class="previous-price" style="color: red">{{produitBio.prixAncien}} DH</p>
+                    <h4 class="current-price">{{produitBio.prix}} DH</h4>
+
+        </div>
             </div>
+            <button type="button" class="btn " style="background-color: black;padding:1rem; color:white;border: none"> Ajouter au panier </button>
         </div>
     </div>
 </div>

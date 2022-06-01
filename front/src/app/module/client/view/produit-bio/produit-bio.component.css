@@ -321,7 +321,7 @@ body{
 .img-div img{
     transform-origin: bottom;
     transform: translateY(7.5%);
-    transition: transform 0.3s ease-in-out
+    transition: transform 0.2s ease-in;
 }
 
 /* === Styling the like Icon ==== */
@@ -499,11 +499,11 @@ body{
 
 /* ====== Hover effects ======= */
 .card-div:hover .img-div img{
-    transform: translateY(7.5%) scale(1.2);
+    /*transform: translateY(7.5%) scale(1.2);*/
 }
 
 .card-div:hover{
-    transform: translate(0, -10px);
+    /*transform: translate(0, -10px);*/
 }
 
 .like-icon-div-child:hover .heart-fill{
