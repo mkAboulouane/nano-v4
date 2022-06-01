@@ -1,39 +1,71 @@
-<div class="container col-lg-12 col-sm-12" style="background-color: white ; opacity: 0.9; "></div>
+<!--<div class="container col-lg-12 col-sm-12" style="background-color: white ; opacity: 0.9; "></div>-->
 
 
-<div class="section">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12" id="store">
-                <div class="row">
-                    <div class="clearfix visible-sm visible-xs"></div>
+<!--<div class="section">-->
+<!--    <div class="container">-->
+<!--        <div class="row">-->
+<!--            <div class="col-md-12" id="store">-->
+<!--                <div class="row">-->
+<!--                    <div class="clearfix visible-sm visible-xs"></div>-->
 
-                    <div *ngFor="let produitBio of produitBios" routerLink="/produitbio/{{produitBio.id}}" class="col-md-4 col-xs-6"><br><br>
-                        <div class="product">
-                            <div class="product-img">
-                                <img alt="" src="assets/img/microscop.jpeg">
-                            </div>
-                            <div class="product-body">
-                                <p class="product-"></p>
-                                <h3 class="product-name"><a>{{produitBio.nom}}</a></h3>
-                                <h4 class="product-price">{{produitBio.prix}} dh
-                                    <del *ngIf="produitBio.prixAncien!=null" class="product-old-price">{{produitBio.prixAncien}} dh</del>
-                                </h4>
-                                <div class="product-rating">
-                                </div>
-                                <div class="product-btns">
-<!--                                    <button class="quick-view"><i class="fa fa-eye"></i><span-->
-<!--                                            class="tooltipp">{{produitBio.description}}</span></button>-->
-                                    <h6>{{produitBio.description}}</h6>
-                                </div>
-                            </div>
-                            <div class="add-to-cart">
-                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ajouter au panier  </button>
-                            </div>
-                        </div>
-                    </div>
+<!--                    <div *ngFor="let produitBio of produitBios" routerLink="/produitbio/{{produitBio.id}}" class="col-md-4 col-xs-6"><br><br>-->
+<!--                        <div class="product">-->
+<!--                            <div class="product-img">-->
+<!--                                <img alt="" src="assets/img/microscop.jpeg">-->
+<!--                            </div>-->
+<!--                            <div class="product-body">-->
+<!--                                <p class="product-"></p>-->
+<!--                                <h3 class="product-name"><a>{{produitBio.nom}}</a></h3>-->
+<!--                                <h4 class="product-price">{{produitBio.prix}} dh-->
+<!--                                    <del *ngIf="produitBio.prixAncien!=null" class="product-old-price">{{produitBio.prixAncien}} dh</del>-->
+<!--                                </h4>-->
+<!--                                <div class="product-rating">-->
+<!--                                </div>-->
+<!--                                <div class="product-btns">-->
+<!--&lt;!&ndash;                                    <button class="quick-view"><i class="fa fa-eye"></i><span&ndash;&gt;-->
+<!--&lt;!&ndash;                                            class="tooltipp">{{produitBio.description}}</span></button>&ndash;&gt;-->
+<!--                                    <h6>{{produitBio.description}}</h6>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="add-to-cart">-->
+<!--                                <button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> ajouter au panier  </button>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+<div class="container  ">
+    <div class="container-fluid" style="margin-top: 1rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white" ><h1>DECOUVRIR NOS PRODUITS</h1></div><br>
+
+
+
+
+    <div class="card-4 card-div">
+        <div class="like-icon-div">
+            <label for="card-4-like" class="like-icon-div-child">
+                <input type="checkbox" id="card-4-like">
+                <i class="far fa-heart heart-empty"></i>
+                <i class="fas fa-heart heart-fill"></i>
+            </label>
+        </div>
+        <div class="u4-img-div img-div">
+            <img src="assets/img/team.jpg" alt="u4-figurine">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">Nathan Drake Statue - Uncharted 4: A Thief's End</h2>
+            <p class="date"> Departure date: 31/03/2021 </p>
+            <div class="pricing-and-cart">
+                <div class="pricing ">
+                    <p class="previous-price" style="color: red">$759</p>
+                    <h4 class="current-price">$499</h4>
                 </div>
-
+                <i class="fas fa-shopping-cart"></i>
             </div>
         </div>
     </div>
