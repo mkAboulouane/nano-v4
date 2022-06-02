@@ -25,6 +25,7 @@ import {
     VisiteurViewProduiBioComponent
 } from "./module/visiteur/visiteur-view-produi-bio/visiteur-view-produi-bio.component";
 import {VisiteurProduiBioComponent} from "./module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component";
+import {VisiteurFormationComponent} from "./module/visiteur/visiteur-formation/visiteur-formation.component";
 
 @NgModule({
     imports: [
@@ -38,7 +39,7 @@ import {VisiteurProduiBioComponent} from "./module/visiteur/visiteur-produi-bio/
                     children: [
                         {path: '', redirectTo: 'login' , pathMatch: 'full'},
                         {path: 'home', component: ComponentsComponent},
-                        {path: 'formation', component: ViewFormationComponent},
+                        {path: 'formation', component: VisiteurFormationComponent},
                         {path: 'formation/:id', component: VisiteurViewFormationComponent},
                         {path: 'congres', component: CongresComponent},
                         {path: 'produit-bio', component: VisiteurProduiBioComponent},
