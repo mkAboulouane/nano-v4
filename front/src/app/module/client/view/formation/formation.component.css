@@ -55,9 +55,9 @@ body {
     justify-content: center;
     flex-direction: column;
     background-color: #edf1fc;
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
+    width: 6rem;
+    height: 5rem;
+    border-radius: 10%;
 }
 
 .widget-49 .widget-49-title-wrapper .widget-49-date-primary .widget-49-date-day {
