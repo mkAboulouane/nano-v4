@@ -37,21 +37,30 @@
 
 <div  style="background-color: white " >
     <br> <br> <br> <br> <br>
+    <div class="container">
+        <div class="container-fluid" style="margin-top: -3rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white;border-bottom-right-radius: 15%;border-top-left-radius: 15%" >
+            <h1>DECOUVRIR NOS CONGRÈS</h1>
+            <div><h5>des objectifs très intéressants </h5> </div>
+        </div>
+
 
     <div class="container">
 
         <div class="row">
-            <div class="col-md-4" *ngFor="let congre of congres">
+            <div class="col-md-6" *ngFor="let congre of congres">
                 <div class="card text-white card-has-bg click-col" style="background-color: gray;">
                     <img class="card-img d-none"  >
                     <div class="card-img-overlay d-flex flex-column">
                         <div class="card-body">
-                            <h5 class="card-meta mb-2">{{congre.nom}}</h5>
-                            <h6 class="card-title mt-0 "><a class="text-white justify-content-center" >{{congre.description}}</a></h6>
+                            <big class="card-meta mb-2" style="text-transform: uppercase;"><h5>{{congre.nom}}</h5></big>
+                            <div class="scroll-page " style="overflow-x: auto;overflow-y: auto ; width:340px;height: 80px;"><h6 class="text-white justify-content-center" >{{congre.description}}</h6></div>
                             <h6><i class="far fa-clock"></i><span style="color: orange">Le: </span>{{congre.duree}}</h6>
                             <h6 class="my-0 text-white d-block"><span style="color: orange">A: </span>{{congre.lieu}}</h6>
                             <h6><span style="color: orange">Encadrant: </span>{{congre.encadrantProf}}</h6>
                         </div>
+
+<!--                        <div class="scroll-page" id="page-1" style="overflow: scroll; width:250px;height: 80px" >-->
+
                         <!--                        <div class="card-footer">-->
                         <!--                            <div class="media">-->
                         <!--                                <div class="media-body">-->

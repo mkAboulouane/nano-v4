@@ -150,4 +150,7 @@ table.table td i {
     font-size: 95%;
 }
 
-
+/*::-webkit-scrollbar{*/
+/*   display: none;*/
+/*    background: #00bbff;*/
+/*}*/
