@@ -138,7 +138,7 @@
             <ul class="navbar-nav ml-auto">
 
 
-                <li *ngIf="!isindex() " class="nav-item ">
+                <li *ngIf="!isindex() && !isRegister() && !islogin() " class="nav-item ">
                     <a [routerLink]="['/home']" class="nav-link" style="font-size: 10px; color: black">
                         <i aria-hidden="true" class="fa fa-home" style="font-size: 15px"></i>
                         Accueil</a>
@@ -168,7 +168,7 @@
                 </li>
 
 
-                <li *ngIf="!isMateriel() && !islogin() && !isRegister()" class="nav-item ">
+                <li *ngIf="!isMateriel() && !islogin() && !isRegister() && !isVisitorproducts()" class="nav-item ">
                     <a [routerLink]="['/produit-bio']" class="nav-link" style="font-size: 10px ; color: black"><i
                             aria-hidden="true" class="fa fa-handshake-o" style="font-size: 15px"></i>
                         Materiel Biomedical</a>

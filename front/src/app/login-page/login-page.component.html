@@ -67,13 +67,27 @@
                             <input type="password" class="form-control" formControlName="password" placeholder="Mot de passe" id="password">
                         </div>
 
-                        <div class="d-flex mb-5 align-items-center">
-<!--                            <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>-->
-<!--                                <input type="checkbox" checked="checked"/>-->
-<!--                                <div class="control__indicator"></div>-->
-<!--                            </label>-->
-<!--                            <span class="ml-auto"><a class="forgot-pass">Forgot Password</a></span>-->
+<!--                        <div class="d-flex mb-5 align-items-center">-->
+<!--&lt;!&ndash;                            <label class="control control&#45;&#45;checkbox mb-0"><span class="caption">Remember me</span>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <input type="checkbox" checked="checked"/>&ndash;&gt;-->
+<!--&lt;!&ndash;                                <div class="control__indicator"></div>&ndash;&gt;-->
+<!--&lt;!&ndash;                            </label>&ndash;&gt;-->
+<!--&lt;!&ndash;                            <span class="ml-auto"><a class="forgot-pass">Forgot Password</a></span>&ndash;&gt;-->
+<!--                        </div>-->
+
+
+                        <div class="custom-control custom-switch mb-1" style="text-align: center;">
+                            <input checked class="custom-control-input" id="customSwitch1" type="checkbox">
+                            <label class="custom-control-label" for="customSwitch1">Se connecter en tant que <span style="color: #00bbff">admin</span></label>
                         </div>
+
+                        <div class="custom-control custom-switch mb-1" style="text-align: center;">
+                            <input checked class="custom-control-input" id="customSwitch" type="checkbox">
+                            <label class="custom-control-label" for="customSwitch">Se connecter en tant que <span style="color: #00bbff">gérant</span></label>
+                        </div>
+
+
+
 
 <!--                        <input (click)="submit()" type="submit" value="se connecter" class="btn btn-danger btn-block btn-round">-->
                         <button class="btn  btn-block btn-round" style="background-color: #00bbff;border: none" (click)="submit()">Se Connecter</button>
