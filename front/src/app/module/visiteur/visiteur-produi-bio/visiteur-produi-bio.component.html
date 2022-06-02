@@ -1,1 +1,28 @@
-<p>visiteur-produi-bio works!</p>
+<div class="container">
+    <div class="container-fluid" style="margin-top: 1rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white" >
+        <h1>DECOUVRIR NOS PRODUITS</h1>
+        <div><h5>nos produits sont d'excellente qualité</h5> </div>
+    </div>
+
+
+    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/produit-bio/{{produitBio.id}}">
+        <div class="like-icon-div">
+
+        </div>
+        <div class="u4-img-div img-div">
+            <img src="assets/img/team.jpg" style="border-radius: 5%">
+        </div>
+        <div class="text-container">
+            <h2 class="item-name">{{produitBio.nom}} + id: {{produitBio.id}}</h2>
+            <p class="date">  </p>
+            <div class="pricing-and-cart ">
+                <div class="pricing ">
+                    <p class="previous-price" style="color: red">{{produitBio.prixAncien}} DH</p>
+                    <h4 class="current-price">{{produitBio.prix}} DH</h4>
+
+                </div>
+            </div>
+            <button type="button" class="btn" style="background-color: black;padding:1rem; color:white;border: none"> Ajouter au panier </button>
+        </div>
+    </div>
+</div>

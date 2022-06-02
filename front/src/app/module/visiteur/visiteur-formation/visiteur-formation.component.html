@@ -1,1 +1,44 @@
-<p>visiteur-formation works!</p>
+<div class="page-link " style="background-color: white;">
+    <!--<br><br><br><br><br><br><br>-->
+
+    <div class="container-fluid" style="margin-top: 6rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white" >
+        <h1>DECOUVRIR NOS FFORMATIONS</h1>
+        <div><h5>nous avons les meilleurs professeurs</h5> </div>
+    </div>
+
+    <div class="container my-5 mt-5 mx-6"><br><br>
+        <div class="row">
+            <div *ngFor="let formation of formations" class="col-lg-6" routerLink="/formation/{{formation.id}}" >
+                <!--        <div *ngFor="let formation of formations" class="col-lg-6">-->
+                <div class="card card-margin">
+                    <div  class="card-header no-border">
+                        <h6> <big class="card-title">{{formation.nom}}</big></h6>
+                    </div>
+                    <div class="card-body pt-0">
+                        <div class="widget-49">
+                            <div class="widget-49-title-wrapper">
+                                <div class="widget-49-date-primary">
+                                    <small class="widget-49-date-day">{{formation.duree}}</small>
+                                    <small class="widget-49-date-month" >Heurs</small>
+                                </div>
+                                <div class="widget-49-meeting-info">
+                                    <span class="widget-49-pro-title">{{formation.description}}</span>
+                                </div>
+                            </div>
+                            <ol class="widget-49-meeting-points"><br>
+                                <big class="widget-49-meeting-item">Prix: <span style="color: red">{{formation.prix}} DH</span></big><br>
+                                <big class="widget-49-meeting-item">Encadrant: <span style="color: red">{{formation.encadrantProf}}</span></big><br>
+
+                                <big class="widget-49-meeting-item">Places disponibles: <span style="color: red">{{formation.nombrePlace}}</span></big>
+
+                            </ol>
+                            <div class="widget-49-meeting-action">
+                                <a class="btn btn-sm "style="background-color: black">Ajouter au panier</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
