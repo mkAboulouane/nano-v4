@@ -34,14 +34,19 @@ export class UserService {
     }
 
     save(user: User) {
-        this.http.post<User>(this.API + "save", user).subscribe(user => {
+        this.http.post<User>(this.API + 'save', user).subscribe(user => {
             this._users = [...this._users, user];
         }, (error: HttpErrorResponse) => {
             console.log(error.error)
         })
     }
+
+    currentUser(): Observable<User>{
+       return this.http.get<User>(this.API + 'register/online');
+    }
+
     saveGerant(user: User) {
-        this.http.post<User>(environment.adminUrl + "agent/add/", this.selectedUser).subscribe(data => {
+        this.http.post<User>(environment.adminUrl + 'agent/add/', this.selectedUser).subscribe(data => {
            console.log(data);
            this.selectedUser = new User();
            this.findAllGerant();
@@ -63,7 +68,7 @@ export class UserService {
     }
 
     delete(id: string) {
-        this.http.delete<number>(this.API + "id/" + id).subscribe(res => {
+        this.http.delete<number>(this.API + 'id/' + id).subscribe(res => {
             res == 1 ? this._users = this._users.filter(user => user.id != id) : false;
         })
     }

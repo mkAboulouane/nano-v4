@@ -33,7 +33,6 @@ import {GerantListComponent} from "./view/gerant-admin/gerant-list/gerant-list.c
     ],
     exports: [
         CommandeAdminComponent,
-        GerantListComponent,
     ],
     entryComponents: [],
 })
