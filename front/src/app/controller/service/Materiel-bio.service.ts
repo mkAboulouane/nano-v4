@@ -52,6 +52,10 @@ export class MaterielBioService {
     return this.http.get<ProduitBio>(this.API + '/' + name);
   }
 
+  public findById(id: number): Observable<ProduitBio> {
+    return this.http.get<ProduitBio>(this.API + '/id/' + id);
+  }
+
 
   /*  Getters and Setters  */
 
