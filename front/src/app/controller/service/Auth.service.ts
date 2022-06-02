@@ -71,7 +71,7 @@ export class AuthService {
                    this._currentUseRole  = 'GERANT';
                }
                console.log(this.currentUseRole);
-               this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/formation']);
+               this.router.navigate(['/'+ this.currentUseRole.toLowerCase() + '/home']);
            }, (error: HttpErrorResponse) => {
                this.error = error.error;
                console.log(error);

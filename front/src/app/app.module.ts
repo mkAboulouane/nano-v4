@@ -40,13 +40,13 @@ import {NavGerantComponent} from "./module/agent/view/nav-gerant/nav-gerant.comp
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
 import {UserListComponent} from "./module/admin/view/user-admin/user-list/user-list.component";
 import {UserAdminComponent} from "./module/admin/view/user-admin/user-admin.component";
-import {TableModule} from "primeng/table";
-import {ProgressBarModule} from "primeng/progressbar";
-import {MultiSelectModule} from "primeng/multiselect";
-import {CalendarModule} from "primeng/calendar";
-import {DropdownModule} from "primeng/dropdown";
+// import {TableModule} from "primeng/table";
+// import {ProgressBarModule} from "primeng/progressbar";
+// import {MultiSelectModule} from "primeng/multiselect";
+// import {CalendarModule} from "primeng/calendar";
+// import {DropdownModule} from "primeng/dropdown";
 import {CustomerService} from "./module/admin/view/user-admin/user-list/custumerservice";
-import {InputTextModule} from "primeng/inputtext";
+// import {InputTextModule} from "primeng/inputtext";
 import {HomeClientComponent} from "./module/client/view/home-client.component";
 import {NavClientComponent} from "./module/client/view/nav-client/nav-client.component";
 import {CommandeAdminComponent} from "./module/admin/view/commande-admin/commande-admin.component";
@@ -55,10 +55,12 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/gerant-list.component";
+import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
 
 
 @NgModule({
     declarations: [
+        // ViewProduitBioComponent,
         GerantListComponent,
         CommandeListComponent,
         ImageAdminComponent,
@@ -111,12 +113,12 @@ import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/
         AppRoutingModule,
         AdminRoutingModule,
         AgentRoutingModule,
-        TableModule,
-        ProgressBarModule,
-        MultiSelectModule,
-        CalendarModule,
-        DropdownModule,
-        InputTextModule,
+        // TableModule,
+        // ProgressBarModule,
+        // MultiSelectModule,
+        // CalendarModule,
+        // DropdownModule,
+        // InputTextModule,
     ],
     // exports: [],
     providers: [
@@ -128,7 +130,7 @@ import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/
     ],
     exports: [
         NavbarComponent,
-        CommandeListComponent
+        CommandeListComponent,
     ],
     bootstrap: [AppComponent]
 })

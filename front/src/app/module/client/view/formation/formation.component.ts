@@ -8,17 +8,10 @@ import {Formation} from "../../../../controller/model/formation.model";
     styleUrls: ['./formation.component.css']
 })
 export class FormationComponent implements OnInit {
+     formations: Formation[] = [];
+
+
     constructor(private formationService: FormationService) {
-    }
-
-    private _formations: Array<Formation>;
-
-    get formations(): Array<Formation> {
-        return this.formationService.formations;
-    }
-
-    set formations(value: Array<Formation>) {
-        this.formationService.formations = value;
     }
 
     ngOnInit(): void {
@@ -29,8 +22,17 @@ export class FormationComponent implements OnInit {
         this.formationService.findAll().subscribe(
             data => {
                 this.formations = data;
-            }
-        )
-
+            },error => console.log(error)
+        );
     }
+
+    //
+    // get formations(): Array<Formation> {
+    //     return this.formationService.formations;
+    // }
+    //
+    // set formations(value: Array<Formation>) {
+    //     this.formationService.formations = value;
+    // }
+
 }

@@ -8,7 +8,8 @@
 
 <div class="container my-5 mt-5 mx-6"><br><br>
     <div class="row">
-        <div *ngFor="let formation of formations" class="col-lg-6" routerLink="/formation/{{formation.id}}" >
+        <div *ngFor="let formation of formations" class="col-lg-6" routerLink="/client/formation/{{formation.id}}" >
+<!--        <div *ngFor="let formation of formations" class="col-lg-6">-->
             <div class="card card-margin">
                 <div  class="card-header no-border">
                    <h6> <big class="card-title">{{formation.nom}}</big></h6>
