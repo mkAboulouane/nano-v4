@@ -5,7 +5,7 @@
     </div>
 
 
-    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/client/produit-bio/{{produitBio.id}}">
+    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/produit-bio/{{produitBio.id}}">
         <div class="like-icon-div">
 
         </div>
@@ -20,7 +20,7 @@
                     <p class="previous-price" style="color: red">{{produitBio.prixAncien}} DH</p>
                     <h4 class="current-price">{{produitBio.prix}} DH</h4>
 
-        </div>
+                </div>
             </div>
             <button type="button" class="btn" style="background-color: black;padding:1rem; color:white;border: none"> Ajouter au panier </button>
         </div>

@@ -55,12 +55,21 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/gerant-list.component";
+import { VisiteurFormationComponent } from './module/visiteur/visiteur-formation/visiteur-formation.component';
+import { VisiteurViewFormationComponent } from './module/visiteur/visiteur-view-formation/visiteur-view-formation.component';
+import { VisiteurViewProduiBioComponent } from './module/visiteur/visiteur-view-produi-bio/visiteur-view-produi-bio.component';
+import { VisiteurProduiBioComponent } from './module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component';
 import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
+import {ProfileComponent} from "./module/client/view/profile/profile.component";
+import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
     declarations: [
         // ViewProduitBioComponent,
+        // ViewProduitComponent,
+        ProfileComponent,
         GerantListComponent,
         CommandeListComponent,
         ImageAdminComponent,
@@ -100,12 +109,17 @@ import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/vie
         NavAdminComponent,
         ProduitBioAddComponent,
         CommandeAdminComponent,
-        ProduitBioListComponent
+        ProduitBioListComponent,
+        VisiteurFormationComponent,
+        VisiteurViewFormationComponent,
+        VisiteurViewProduiBioComponent,
+        VisiteurProduiBioComponent
 
     ],
     imports: [
         ReactiveFormsModule,
         BrowserModule,
+        CommonModule,
         HttpClientModule,
         FormsModule,
         RouterModule,
@@ -120,7 +134,6 @@ import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/vie
         // DropdownModule,
         // InputTextModule,
     ],
-    // exports: [],
     providers: [
         /*    { provide: LocationStrategy, useClass: HashLocationStrategy }, */
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
@@ -130,7 +143,7 @@ import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/vie
     ],
     exports: [
         NavbarComponent,
-        CommandeListComponent,
+        CommandeListComponent
     ],
     bootstrap: [AppComponent]
 })

@@ -18,11 +18,19 @@ import {HomeAgentComponent} from "./module/agent/home-agent.component";
 import {HomeClientComponent} from "./module/client/view/home-client.component";
 import {ViewFormationComponent} from "./module/client/view/view-formation/view-formation.component";
 import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
+import {
+    VisiteurViewFormationComponent
+} from "./module/visiteur/visiteur-view-formation/visiteur-view-formation.component";
+import {
+    VisiteurViewProduiBioComponent
+} from "./module/visiteur/visiteur-view-produi-bio/visiteur-view-produi-bio.component";
+import {VisiteurProduiBioComponent} from "./module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component";
+import {VisiteurFormationComponent} from "./module/visiteur/visiteur-formation/visiteur-formation.component";
 
 @NgModule({
     imports: [
-        CommonModule,
-        BrowserModule,
+        // CommonModule,
+        // BrowserModule,
         RouterModule.forRoot(
             [
                 {
@@ -31,11 +39,11 @@ import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/vie
                     children: [
                         {path: '', redirectTo: 'login' , pathMatch: 'full'},
                         {path: 'home', component: ComponentsComponent},
-                        {path: 'formation', component: FormationComponent},
-                        {path: 'formation/:id', component: ViewFormationComponent},
+                        {path: 'formation', component: VisiteurFormationComponent},
+                        {path: 'formation/:id', component: VisiteurViewFormationComponent},
                         {path: 'congres', component: CongresComponent},
-                        {path: 'produit-bio', component: ProduitBioComponent},
-                        {path: 'produit-bio/:id', component: ViewProduitBioComponent},
+                        {path: 'produit-bio', component: VisiteurProduiBioComponent},
+                        {path: 'produit-bio/:id', component: VisiteurViewProduiBioComponent},
                         {path: 'overseaseducation', component: OverseaseducationComponent},
                         {path: 'panier', component: PanierComponent},
                         {path: 'login', component: LoginPageComponent},

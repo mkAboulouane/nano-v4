@@ -32,6 +32,7 @@ import { ClientNotificationComponent } from './view/client-notification/client-n
 import { ProfileComponent } from './view/profile/profile.component';
 import { ViewFormationComponent } from './view/view-formation/view-formation.component';
 import { ViewProduitBioComponent } from './view/view-produit-bio/view-produit-bio.component';
+import { ViewProduitComponent } from './view/view-produit/view-produit.component';
 
 
 @NgModule({
@@ -40,10 +41,11 @@ import { ViewProduitBioComponent } from './view/view-produit-bio/view-produit-bi
             [
                 {path: 'home', component: ComponentsComponent, canActivate: [AuthGuard]},
                 {path: 'portrait', component: ProfileComponent, canActivate: [AuthGuard]},
+                {path: 'produit-bio', component: ProduitBioComponent, canActivate: [AuthGuard]},
+                {path: 'produit-bio/:id', component: ViewProduitComponent, canActivate: [AuthGuard]},
+
                 {path: 'formation', component: FormationComponent, canActivate: [AuthGuard]},
                 {path: 'formation/:id', component: ViewFormationComponent, canActivate: [AuthGuard]},
-                {path: 'produit-bio', component: ProduitBioComponent, canActivate: [AuthGuard]},
-                {path: 'produit-bio/:id', component: ViewProduitBioComponent, canActivate: [AuthGuard]},
                 {path: 'congres', component: CongresComponent, canActivate: [AuthGuard]},
                 {path: 'commande', component: ClientCommandeComponent, canActivate: [AuthGuard]},
                 {path: 'panier', component: ClientPanierComponent, canActivate: [AuthGuard]},
@@ -53,6 +55,7 @@ import { ViewProduitBioComponent } from './view/view-produit-bio/view-produit-bi
         ),
     ],
     exports: [RouterModule],
+    // declarations: [],
 })
 export class ClientRoutingModule {
 }
