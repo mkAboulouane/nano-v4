@@ -61,11 +61,14 @@ import { VisiteurViewProduiBioComponent } from './module/visiteur/visiteur-view-
 import { VisiteurProduiBioComponent } from './module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component';
 import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
 import {ProfileComponent} from "./module/client/view/profile/profile.component";
+import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
+import {CommonModule} from "@angular/common";
 
 
 @NgModule({
     declarations: [
         // ViewProduitBioComponent,
+        // ViewProduitComponent,
         ProfileComponent,
         GerantListComponent,
         CommandeListComponent,
@@ -116,6 +119,7 @@ import {ProfileComponent} from "./module/client/view/profile/profile.component";
     imports: [
         ReactiveFormsModule,
         BrowserModule,
+        CommonModule,
         HttpClientModule,
         FormsModule,
         RouterModule,
@@ -130,7 +134,6 @@ import {ProfileComponent} from "./module/client/view/profile/profile.component";
         // DropdownModule,
         // InputTextModule,
     ],
-    // exports: [],
     providers: [
         /*    { provide: LocationStrategy, useClass: HashLocationStrategy }, */
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},

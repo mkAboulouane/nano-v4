@@ -55,7 +55,7 @@ import { ViewProduitComponent } from './view/view-produit/view-produit.component
         ),
     ],
     exports: [RouterModule],
-    declarations: [ViewProduitComponent],
+    // declarations: [],
 })
 export class ClientRoutingModule {
 }
