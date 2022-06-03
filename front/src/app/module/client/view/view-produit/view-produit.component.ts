@@ -11,7 +11,8 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class ViewProduitComponent implements OnInit {
 
   constructor(private materielBioService: MaterielBioService
-              , private router: Router, private activatedRoute: ActivatedRoute) { }
+              , private router: Router
+              , private activatedRoute: ActivatedRoute) { }
 
   produit: ProduitBio;
   linkId: number;
