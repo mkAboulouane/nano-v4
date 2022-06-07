@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MaterielBioService} from "../../../controller/service/Materiel-bio.service";
 import {ProduitBio} from "../../../controller/model/produit-bio.model";
+import {DomSanitizer} from "@angular/platform-browser";
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-visiteur-produi-bio',
@@ -10,7 +12,8 @@ import {ProduitBio} from "../../../controller/model/produit-bio.model";
 export class VisiteurProduiBioComponent implements OnInit {
   // produitBios: ProduitBio[];
 
-  constructor(private materielBioService: MaterielBioService) {
+  constructor(private materielBioService: MaterielBioService,
+              private sanitizer: DomSanitizer, private http: HttpClient) {
   }
 
   ngOnInit(): void {
@@ -19,10 +22,14 @@ export class VisiteurProduiBioComponent implements OnInit {
 
   findAll(){
     this.materielBioService.findAll().subscribe(  data => {
+      data.forEach(e=>{
+        let objectURL = 'data:image/jpeg;base64,' + e.imagePrincipal.picByte;
+        e.imagePrincipal.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+      });
       this.produitBios = data;
-      console.log(data);
+      console.log('success: '+data);
     },error => {
-      console.log(error);
+      console.log('error: '+error);
     });
   }
 

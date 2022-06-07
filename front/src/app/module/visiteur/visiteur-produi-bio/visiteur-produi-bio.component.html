@@ -10,15 +10,16 @@
 
         </div>
         <div class="u4-img-div img-div">
-            <img src="assets/img/team.jpg" style="border-radius: 5%">
+            <img style="border-radius: 5%" [src]="produitBio?.imagePrincipal?.picByte" alt="Hola ;)">
+<!--            <img [src]="produitBio.imagePrincipal.picByte" style="border-radius: 5%">-->
         </div>
         <div class="text-container">
-            <h2 class="item-name">{{produitBio.nom}} + id: {{produitBio.id}}</h2>
+            <h2 class="item-name">{{produitBio?.nom}} + id: {{produitBio?.id}}</h2>
             <p class="date">  </p>
             <div class="pricing-and-cart ">
                 <div class="pricing ">
-                    <p class="previous-price" style="color: red">{{produitBio.prixAncien}} DH</p>
-                    <h4 class="current-price">{{produitBio.prix}} DH</h4>
+                    <p class="previous-price" style="color: red">{{produitBio?.prixAncien}} DH</p>
+                    <h4 class="current-price">{{produitBio?.prix}} DH</h4>
 
                 </div>
             </div>

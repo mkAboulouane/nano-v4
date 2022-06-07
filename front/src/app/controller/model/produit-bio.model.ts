@@ -14,7 +14,5 @@ export class ProduitBio {
      prixAncien: number;
      updatedAt: string;
      search: string;
-
      imagePrincipal: Image;
-
 }

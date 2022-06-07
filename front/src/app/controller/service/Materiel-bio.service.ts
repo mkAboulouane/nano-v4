@@ -7,6 +7,7 @@ import {AuthService} from "./Auth.service";
 import {environment} from "../../../environments/environment";
 import {Observable} from "rxjs";
 import {ProduitBio} from "../model/produit-bio.model";
+import {Produit} from "../model/produit.model";
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class MaterielBioService {
   private API = environment.apiUrl + 'admin/produit-bio';
 
 
-  public findAll() {
+  public findAll(): Observable<Array<ProduitBio>> {
     return this.http.get<Array<ProduitBio>>(this.API + '/');
   }
 
@@ -32,13 +33,13 @@ export class MaterielBioService {
     return this.http.delete(this.API + '/' + nom);
   }
 
-  public save(): Observable<ProduitBio> {
-    return this.http.post<ProduitBio>(this.API + '/', this._selectedproduitBio);
+  public save(): Observable<number> {
+    return this.http.post<number>(this.API + '/save/' , this.selectedproduitBio);
   }
 
   /*  Appellez cette methode apres l'enregistrement de l'image !!  */
-  public saveDepanage(imageName: string): Observable<ProduitBio> {
-    return this.http.post<ProduitBio>(this.API + '/save/' + encodeURIComponent(imageName) , this._selectedproduitBio);
+  public saveDepanage(imageName: string): Observable<number> {
+    return this.http.post<number>(this.API + '/save/' + imageName , this._selectedproduitBio);
   }
 
 
