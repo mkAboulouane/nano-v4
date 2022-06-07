@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 import {MaterielBioService} from "../../../../../controller/service/Materiel-bio.service";
+import {DomSanitizer} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-produit-bio-list',
@@ -17,7 +18,7 @@ export class ProduitBioListComponent implements OnInit {
 
 
 
-  constructor(private materielBioService: MaterielBioService, private router: Router) {
+  constructor(private sanitizer: DomSanitizer,private materielBioService: MaterielBioService, private router: Router) {
   }
 
   ngOnInit(): void {
@@ -46,6 +47,10 @@ export class ProduitBioListComponent implements OnInit {
 
   public findAll() {
     this.materielBioService.findAll().subscribe(data => {
+      data.forEach(e=>{
+        let objectURL = 'data:image/jpeg;base64,' + e.imagePrincipal.picByte;
+        e.imagePrincipal.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+      });
       this.produitBios = data;
       this.crud = data;
       console.log(data);

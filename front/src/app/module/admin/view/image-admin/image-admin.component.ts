@@ -26,7 +26,7 @@ export class ImageAdminComponent implements OnInit {
 
   ngOnInit(): void {
     // this.findAll();
-    this.getOne();
+    // this.getOne();
   }
 
 
@@ -62,15 +62,15 @@ export class ImageAdminComponent implements OnInit {
   // }
 
 
-  public getOne() {
-    this.imageService.getOne().subscribe( data =>{
-      console.log(data);
-      let objectURL = 'data:image/jpeg;base64,' + data.picByte;
-      this.image.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
-      },error => {
-      console.log(error);
-    });
-  }
+  // public getOne() {
+  //   this.imageService.getOne().subscribe( data =>{
+  //     console.log(data);
+  //     let objectURL = 'data:image/jpeg;base64,' + data.picByte;
+  //     this.image.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+  //     },error => {
+  //     console.log(error);
+  //   });
+  // }
 
 
   get image(): Image {

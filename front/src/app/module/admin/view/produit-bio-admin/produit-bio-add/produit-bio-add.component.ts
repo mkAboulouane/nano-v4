@@ -10,6 +10,7 @@ import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 import {ImageService} from "../../../../../controller/service/image.service";
 import {DomSanitizer} from "@angular/platform-browser";
 import {environment} from "../../../../../../environments/environment";
+import {Produit} from "../../../../../controller/model/produit.model";
 
 
 @Component({
@@ -23,6 +24,7 @@ export class ProduitBioAddComponent implements OnInit {
   title : any;
   file: File;
   imageName: string;
+  produit = new Produit();
 
   public error: string = null;
 
@@ -37,43 +39,60 @@ export class ProduitBioAddComponent implements OnInit {
       this.file = event.target.files[0];
     }
 
-  imageUploadAction() {
-      const file = new FormData();
-      file.append('file', this.file, this.file.name);
-      this.http.post(this.API , file , {responseType: 'text'} )
-          .subscribe(data => {
-            this.imageName = data;
-            console.log(this.imageName);
-          });
-      if(this.imageName !== "le Nom de ce fichier deja exist"){
-        this.saveAfterUpload(this.imageName);
-      }else {
-        console.log('error lors de test if/else');
-      }
-  }
-  saveAfterUpload(name: string){
-      this.materielBioService.saveDepanage(name).subscribe(
-          data => {
-            console.log(data);
-          }, error1 => {
-            console.log(error1);
-          }
-      )
-  }
+   async upload() {
+        const file = new FormData();
+        file.append('file', this.file, this.file.name);
+        await this.http.post<number>(this.API , file)
+            .subscribe(data => {
+                console.log(data);
+                if (data > 0) {
+                    console.log('image saved');
+                    this.selectedProduitBio.id = data;
+                    this.save();
+                }
+                else {
+                    console.log('already exist')
+                }
+                // this.prepare(this.id);
+            });
+    }
 
-  public async submit() {
-    // const isPermistted = await this.roleService.isPermitted('Formation', 'add');
-    // if(isPermistted) {
-    this.materielBioService.save().subscribe(data => {
-      console.log(data);
-      this.produitBios.push({...data});
-      this.selectedProduitBio = new ProduitBio();
-      this.router.navigate(['/admin/produit-bio']);
-    }, (error: HttpErrorResponse) => {
-      this.error = error.error;
-      console.log(error);
-    });
-  }
+   async save(){
+      this.materielBioService.save().subscribe(
+          data => {
+              if(data == -1){
+                  console.log('product deja exist');
+              }else if( data == -2){
+                  console.log('image does not exist');
+              }else if( data > 0 ){
+                  console.log('saved');
+              }else {
+                  console.log('error out of range');
+              }
+          },error1 => console.log(error1));
+    }
+
+
+    // save(){
+    //   this.materielBioService.save( data => {
+    //     const file = new FormData();
+    //     file.append('file', this.file, this.file.name);
+    //
+    //   })
+    // }
+
+
+
+  // saveAfterUpload(name: string){
+  //     this.materielBioService.saveDepanage(name).subscribe(
+  //         data => {
+  //           console.log('on succes : '+data);
+  //         }, error1 => {
+  //           console.log('on error : '+error1);
+  //         }
+  //     )
+  // }
+
 
 
 
