@@ -20,13 +20,8 @@
                 <tr>
                     <!--                    <th>Nom</th>-->
                     <th>Client</th>
-<!--                    <th>Client <i class="fa fa-sort"></i></th>-->
                     <th style="text-align: center;">Adress</th>
-<!--                    <th>Adress <i class="fa fa-sort"></i></th>-->
-<!--                    <th>Ville <i class="fa fa-sort"></i></th>-->
                     <th>Pays</th>
-<!--                    <th>Pays <i class="fa fa-sort"></i></th>-->
-<!--                    <th>Tele<i class="fa fa-sort"></i></th>-->
                     <th>Tele</th>
                     <th>Date</th>
                     <th style="text-align: center;">Articles</th>
@@ -44,7 +39,7 @@
                     <td>{{panier.pays}} </td>
                     <td >{{panier.phone}}</td>
                     <td >{{panier.dateAjout}}</td>
-                    <td><div class="scroll-page" style="overflow: scroll; width:200px;height: 20px" >  {{panier.formation?.nom}} <span *ngFor="let produitPanierItems of panier.produitPanierItems"> {{produitPanierItems?.produitBio.nom}} * {{produitPanierItems?.quantite}} </span> </div></td>
+                    <td><div class="scroll-page" style="overflow: scroll; width:200px;height: 20px" >  {{panier.formation?.nom}} <span *ngFor="let produitPanierItems of panier.produitPanierItems"> {{produitPanierItems.produitBio?.nom}} * {{produitPanierItems?.quantite}} </span> </div></td>
                     <td >{{panier.prixTotal}}</td>
                     <td >{{panier.etatCommande}}</td>
 
