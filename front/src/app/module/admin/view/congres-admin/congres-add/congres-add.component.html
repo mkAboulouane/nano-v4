@@ -10,41 +10,49 @@
 <!--                <span class="title">Personal Details</span>-->
 <!--[ngModelOptions]="{standalone: true}"-->
                 <div class="fields">
-                    <div class="input-field">
+                    <div class="input-field col-lg-6 ">
                         <label>Objectif/Titre Congrés</label>
                         <input type="text" class="form-control" placeholder="Objectif Congrés" [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field col-lg-6">
                         <label>Encadrant</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" [ngModelOptions]="{standalone: true}" placeholder="Encadrant" >
                     </div>
 
-                    <div class="input-field">
-                        <label>Visible</label>
-                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >
-                    </div>
+<!--                    <div class="input-field">-->
+<!--                        <label>Visible</label>-->
+<!--                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >-->
+<!--                    </div>-->
 
-                    <div class="input-field">
+                    <div class="input-field col-lg-6">
                         <label>Adresse</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" [ngModelOptions]="{standalone: true}" placeholder="Adresse" >
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field col-lg-6">
                         <label>Date</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.date" [ngModelOptions]="{standalone: true}" placeholder="date" >
-                    </div>
-
-                     <div class="input-field">
-                        <label>Duree</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >
                     </div>
 
-                    <div class="input-field">
+<!--                     <div class="input-field">-->
+<!--                        <label>Duree</label>-->
+<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >-->
+<!--                    </div>-->
+
+
+                    <div class="input-field col-lg-12">
                         <label>Description</label>
 <!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >-->
                         <textarea class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" rows="3"></textarea>
                     </div>
+
+
+                    <div class="custom-control custom-switch mb-1 col-lg-5 mx-5" >
+                        <input checked class="custom-control-input"  id="customSwitch2" type="checkbox" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}">
+                        <label class="custom-control-label" for="customSwitch2">Visible <span style="color: #00bbff">?</span></label>
+                    </div>
+
 
 <!--                    <div class="form-check form-switch">-->
 <!--                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">-->

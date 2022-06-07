@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormationService} from "../../../../../controller/service/Formation.service";
 import {Router} from "@angular/router";
 import {Formation} from "../../../../../controller/model/formation.model";
+import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 
 @Component({
     selector: 'app-formation-list',
@@ -11,7 +12,8 @@ import {Formation} from "../../../../../controller/model/formation.model";
 export class FormationListComponent implements OnInit {
     constructor(private formationService: FormationService, private router: Router) {
     }
-
+    crud: Formation[];
+    searchInput: string;
     private _formations: Array<Formation>;
 
     get formations(): Array<Formation> {
@@ -39,6 +41,7 @@ export class FormationListComponent implements OnInit {
     public findAll() {
         this.formationService.findAll().subscribe(data => {
             this.formations = data;
+            this.crud = data;
             console.log(data);
         })
     }
@@ -56,6 +59,27 @@ export class FormationListComponent implements OnInit {
         // })
     }
 
+
+    search(index: string) {
+        this.formations = this.crud;
+        let serchFormation: Formation[] = [];
+        if (index && index != '') {
+            for (let formation of this.formations) {
+                if (formation.nom.toLowerCase().search(index.toLowerCase()) != -1
+                    || formation.description.toLowerCase().search(index.toLowerCase()) != -1
+                    || formation.encadrantProf.toLowerCase().search(index.toLowerCase()) != -1
+                    || formation.prix.toString().search(index.toLowerCase()) != -1
+                    || formation.nombrePlace.toString().search(index.toLowerCase()) != -1
+                ) {
+                    serchFormation.push(formation);
+                }
+            }
+            console.log('index hahwa = '+index);
+            console.log('formations : '+this.formations)
+            console.log('search formation : '+ serchFormation)
+            this.formations = serchFormation.slice();
+        }
+    }
     delete(formation: Formation) {
         var confirm = window.confirm("vous voulez vraiment suprimer cette formation ?")
         if (confirm) {

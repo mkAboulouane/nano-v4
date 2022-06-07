@@ -120,7 +120,7 @@
                         <div class="search-box">
                             <i class="fa fa-search" aria-hidden="true"></i>
 
-                            <input type="text" class="form-control" placeholder="Search&hellip;">
+                            <input type="text" [(ngModel)]="searchInput" (ngModelChange)="search(searchInput)" class="form-control" placeholder="Search&hellip;">
                         </div>
                     </div>
                 </div>

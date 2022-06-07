@@ -4,6 +4,7 @@ import {UserService} from "../../../../../controller/service/User.service";
 import {Router} from "@angular/router";
 import {Customer, Representative} from "./custumer";
 import {CustomerService} from "./custumerservice";
+import {Congres} from "../../../../../controller/model/congres.model";
 
 @Component({
     selector: 'app-user-list',
@@ -12,6 +13,8 @@ import {CustomerService} from "./custumerservice";
 })
 export class UserListComponent implements OnInit {
 
+    crud: User[];
+    searchInput: string;
     cols: any[];
 
     constructor(private router: Router, private userService: UserService) {
@@ -42,7 +45,33 @@ export class UserListComponent implements OnInit {
         this.router.navigate(['/add-user'])
     }
 
-
+    //
+    // search(index: string) {
+    //     this.users = this.crud;
+    //     let serchuser: User[] = [];
+    //     if (index && index != '') {
+    //         for (let user of this.users) {
+    //             if (user.nom.toLowerCase().search(index.toLowerCase()) != -1
+    //                 || user.email.toLowerCase().search(index.toLowerCase()) != -1
+    //                 || user.phone.toLowerCase().search(index.toLowerCase()) != -1
+    //                 // || congre.addedAt.toLowerCase().search(index.toLowerCase()) != -1
+    //                 // || congre.prix.toString().search(index.toLowerCase()) != -1
+    //             ) {
+    //                 serchuser.push(user);
+    //             }
+    //         }
+    //         console.log(serchuser);
+    //
+    //         this.users = serchuser.slice();
+    //     }
+    // }
+    // public findAll(){
+    //     this.userService.findAll().subscribe(data =>{
+    //         this.users = data;
+    //         this.crud = data;
+    //         console.log(data);
+    //     })
+    // }
 //     customers: Customer[];
 //
 //     selectedCustomers: Customer[];

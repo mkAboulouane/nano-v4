@@ -242,24 +242,43 @@
                         <label>Image</label>
                         <input type="file" class="form-control" [(ngModel)]="selectedProduitBio.photos" [ngModelOptions]="{standalone: true}" placeholder="image de produit" >
                     </div>
-
-
-
                     <!--                    <div class="input-field">-->
                     <!--                        <label>Modifié le</label>-->
                     <!--                        <input type="text" class="form-control" [(ngModel)]="selectedProduitBio.updatedAt" [ngModelOptions]="{standalone: true}" placeholder="promotion?" >-->
                     <!--                    </div>-->
 
-                    <div class="input-field">
-                        <label>Visible</label>
-                        <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.visible" [ngModelOptions]="{standalone: true}" placeholder="Visible?" >
-                    </div>
 
-                    <div class="input-field">
-                        <label>Promotion</label>
-                        <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.promotion" [ngModelOptions]="{standalone: true}" placeholder="promotion?" >
+
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Visible</label>-->
+<!--                        <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.visible" [ngModelOptions]="{standalone: true}" placeholder="Visible?" >-->
+<!--                    </div>-->
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Promotion</label>-->
+<!--                        <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.promotion" [ngModelOptions]="{standalone: true}" placeholder="promotion?" >-->
+<!--                    </div>-->
+
+
+
+
+                    <div class="row">
+                        <div class="custom-control custom-switch mb-1  " style="text-align: center;">
+                            <input checked class="custom-control-input"  id="customSwitch2" type="checkbox" [(ngModel)]="selectedProduitBio.visible" [ngModelOptions]="{standalone: true}">
+                            <label class="custom-control-label" for="customSwitch2">Visible <span style="color: #00bbff">?</span></label>
+                        </div>
+                    <div class="custom-control custom-switch mb-1   " style="text-align: center;margin-left: 0.7rem">
+                        <input checked class="custom-control-input"  id="customSwitch1" type="checkbox" [(ngModel)]="selectedProduitBio.promotion" [ngModelOptions]="{standalone: true}">
+                        <label class="custom-control-label" for="customSwitch1">Promotion<span style="color: #00bbff">?</span></label>
                     </div>
                 </div>
+
+
+
+
+
+            </div>
             </div>
 
 

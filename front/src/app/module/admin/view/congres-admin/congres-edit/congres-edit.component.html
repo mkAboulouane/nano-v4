@@ -101,65 +101,162 @@
 
 
 
+<!--<br><br><br><br>-->
+<!--<div class="container">-->
+
+<!--    <header>Ajouter congrés</header>-->
+
+<!--    <Badr>-->
+<!--        <div class="form first">-->
+<!--            <div class="details personal">-->
+<!--                &lt;!&ndash;                <span class="title">Personal Details</span>&ndash;&gt;-->
+<!--                &lt;!&ndash;[ngModelOptions]="{standalone: true}"&ndash;&gt;-->
+<!--                <div class="fields">-->
+<!--                    <div class="input-field">-->
+<!--                        <label>Objectif Congrés</label>-->
+<!--                        <input type="text" class="form-control" placeholder="Objectif Congrés" [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >-->
+<!--                    </div>-->
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Encadrant</label>-->
+<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" [ngModelOptions]="{standalone: true}" placeholder="Encadrant" >-->
+<!--                    </div>-->
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Visible</label>-->
+<!--                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >-->
+<!--                    </div>-->
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Adresse</label>-->
+<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" [ngModelOptions]="{standalone: true}" placeholder="Adresse" >-->
+<!--                    </div>-->
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Date</label>-->
+<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >-->
+<!--                    </div>-->
+
+<!--                    &lt;!&ndash;                    <div class="input-field">&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        <label>Gender</label>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        <select required>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <option disabled selected>Select gender</option>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <option>Male</option>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <option>Female</option>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                            <option>Others</option>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                        </select>&ndash;&gt;-->
+<!--                    &lt;!&ndash;                    </div>&ndash;&gt;-->
+
+<!--                    <div class="input-field">-->
+<!--                        <label>Description</label>-->
+<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+
+
+<!--            <button class="nextBtn" (click)="edit()">-->
+<!--                <span class="btnText" >Valider</span>-->
+<!--                <i class="uil uil-navigator"></i>-->
+<!--            </button>-->
+
+<!--        </div>-->
+
+
+<!--    </Badr>-->
+<!--</div>-->
+
+
+
+
 <br><br><br><br>
 <div class="container">
 
-    <header>Ajouter congrés</header>
-
+    <header>Ajouter un Congré</header>
+    <br>
     <Badr>
         <div class="form first">
             <div class="details personal">
                 <!--                <span class="title">Personal Details</span>-->
                 <!--[ngModelOptions]="{standalone: true}"-->
                 <div class="fields">
-                    <div class="input-field">
-                        <label>Objectif Congrés</label>
+                    <div class="input-field col-lg-6 ">
+                        <label>Objectif/Titre Congrés</label>
                         <input type="text" class="form-control" placeholder="Objectif Congrés" [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field col-lg-6">
                         <label>Encadrant</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" [ngModelOptions]="{standalone: true}" placeholder="Encadrant" >
                     </div>
 
-                    <div class="input-field">
-                        <label>Visible</label>
-                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >
-                    </div>
+                    <!--                    <div class="input-field">-->
+                    <!--                        <label>Visible</label>-->
+                    <!--                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >-->
+                    <!--                    </div>-->
 
-                    <div class="input-field">
+                    <div class="input-field col-lg-6">
                         <label>Adresse</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" [ngModelOptions]="{standalone: true}" placeholder="Adresse" >
                     </div>
 
-                    <div class="input-field">
+                    <div class="input-field col-lg-6">
                         <label>Date</label>
                         <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >
                     </div>
 
-                    <!--                    <div class="input-field">-->
-                    <!--                        <label>Gender</label>-->
-                    <!--                        <select required>-->
-                    <!--                            <option disabled selected>Select gender</option>-->
-                    <!--                            <option>Male</option>-->
-                    <!--                            <option>Female</option>-->
-                    <!--                            <option>Others</option>-->
-                    <!--                        </select>-->
+                    <!--                     <div class="input-field">-->
+                    <!--                        <label>Duree</label>-->
+                    <!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >-->
                     <!--                    </div>-->
 
-                    <div class="input-field">
+
+                    <div class="input-field col-lg-12">
                         <label>Description</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >
+                        <!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >-->
+                        <textarea class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" rows="3"></textarea>
                     </div>
+
+
+                    <div class="custom-control custom-switch mb-1 col-lg-5 mx-5" >
+                        <input checked class="custom-control-input"  id="customSwitch2" type="checkbox" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}">
+                        <label class="custom-control-label" for="customSwitch2">Visible <span style="color: #00bbff">?</span></label>
+                    </div>
+
+
+                    <!--                    <div class="form-check form-switch">-->
+                    <!--                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">-->
+                    <!--                        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>-->
+                    <!--                    </div>-->
+
+
+
+
+
+                    <!--                    <div class="mb-3">-->
+                    <!--                        <label for="exampleInputEmail1" class="form-label">Email address</label>-->
+                    <!--                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
+                    <!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="mb-3">-->
+                    <!--                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>-->
+                    <!--                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
+                    <!--                    </div>-->
+
+
+
                 </div>
             </div>
 
 
 
 
-            <button class="nextBtn" (click)="edit()">
-                <span class="btnText" >Valider</span>
-                <i class="uil uil-navigator"></i>
+            <button class="btn-outline-primary"  (click)="edit()">
+                <!--                    <span class="btnText" >Valider</span>-->
+                <!--                    <i class="uil uil-navigator"></i>-->
+                Valider
             </button>
 
         </div>

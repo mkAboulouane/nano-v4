@@ -4,6 +4,8 @@ import {Formation} from "../../../../../controller/model/formation.model";
 import {FormationService} from "../../../../../controller/service/Formation.service";
 import {Congres} from "../../../../../controller/model/congres.model";
 import {CongresService} from "../../../../../controller/service/Congres.service";
+// import {congreBio} from "../../../../../controller/model/congre-bio.model";
+import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 
 @Component({
   selector: 'app-congres-list',
@@ -12,6 +14,8 @@ import {CongresService} from "../../../../../controller/service/Congres.service"
 })
 export class CongresListComponent implements OnInit {
 
+  crud: Congres[];
+  searchInput: string;
   private _congres : Array<Congres>;
   private _selectedCongre: Congres;
 
@@ -21,9 +25,28 @@ export class CongresListComponent implements OnInit {
     this.findAll();
   }
 
+  search(index: string) {
+    this.congres = this.crud;
+    let serchcongre: Congres[] = [];
+    if (index && index != '') {
+      for (let congre of this.congres) {
+        if (congre.nom.toLowerCase().search(index.toLowerCase()) != -1
+            || congre.description.toLowerCase().search(index.toLowerCase()) != -1
+            || congre.duree.toLowerCase().search(index.toLowerCase()) != -1
+            // || congre.addedAt.toLowerCase().search(index.toLowerCase()) != -1
+            // || congre.prix.toString().search(index.toLowerCase()) != -1
+        ) {
+          serchcongre.push(congre);
+        }
+      }
+      console.log(serchcongre);
+      this.congres = serchcongre.slice();
+    }
+  }
   public findAll(){
     this.congresService.findAll().subscribe(data =>{
       this.congres = data;
+      this.crud = data;
       console.log(data);
     })
   }

@@ -35,6 +35,7 @@ export class ProduitBioListComponent implements OnInit {
         if (produit.nom.toLowerCase().search(index.toLowerCase()) != -1
             || produit.description.toLowerCase().search(index.toLowerCase()) != -1
             || produit.addedAt.toLowerCase().search(index.toLowerCase()) != -1
+            || produit.prix.toString().search(index.toLowerCase()) != -1
         ) {
           serchProduitBio.push(produit);
         }
