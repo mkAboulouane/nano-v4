@@ -5,12 +5,13 @@
     </div>
 
 
-    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/produit-bio/{{produitBio.id}}">
+<!--    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/produit-bio/{{produitBio.id}}">-->
+    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" >
         <div class="like-icon-div">
 
         </div>
-        <div class="u4-img-div img-div">
-            <img src="assets/img/team.jpg" style="border-radius: 5%">
+        <div class="u4-img-div img-div" routerLink="/produit-bio/{{produitBio.id}}" >
+            <img src="assets/img/team.jpg" style="border-radius: 5% ;">
         </div>
         <div class="text-container">
             <h2 class="item-name">{{produitBio.nom}} + id: {{produitBio.id}}</h2>

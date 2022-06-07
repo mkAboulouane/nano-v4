@@ -154,4 +154,12 @@ export class NavbarComponent implements OnInit {
         }
         return titlee === '/produit-bio';
     }
+
+    isvisitorProductView() {
+        var titlee = this.location.prepareExternalUrl(this.location.path());
+        if (titlee.charAt(0) === '#') {
+            titlee = titlee.slice(1);
+        }
+        return titlee === '/produit-bio/8';
+    }
 }

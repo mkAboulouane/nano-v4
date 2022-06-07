@@ -6,7 +6,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 @Component({
   selector: 'app-view-produit',
   templateUrl: './view-produit.component.html',
-  styleUrls: ['./view-produit.component.css']
+  styleUrls: ['./view-produit.component.scss']
 })
 export class ViewProduitComponent implements OnInit {
 
