@@ -29,8 +29,8 @@ export class MaterielBioService {
     return this.http.get<Array<ProduitBio>>(this.API + '/');
   }
 
-  public delete(nom: string){
-    return this.http.delete(this.API + '/' + nom);
+  public delete(id: number){
+    return this.http.delete(this.API + '/' + id);
   }
 
   public save(): Observable<number> {

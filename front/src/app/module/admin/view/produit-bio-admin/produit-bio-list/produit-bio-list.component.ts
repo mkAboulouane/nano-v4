@@ -68,13 +68,13 @@ export class ProduitBioListComponent implements OnInit {
   }
 
   delete(produitBio: ProduitBio) {
-    this.materielBioService.delete(produitBio.nom).subscribe(
+    this.materielBioService.delete(produitBio.id).subscribe(
         data => {
           console.log(data);
           this.findAll();
           console.log('deleted successfully');
         }
-    )
+    );
   }
 
 
