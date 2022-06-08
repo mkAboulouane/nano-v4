@@ -40,6 +40,7 @@ export class ProduitBioAddComponent implements OnInit {
     }
 
    async upload() {
+      // debugger;
         const file = new FormData();
         file.append('file', this.file, this.file.name);
         await this.http.post<number>(this.API , file)

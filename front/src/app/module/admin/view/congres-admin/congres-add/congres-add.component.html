@@ -1,94 +1,76 @@
-
 <br><br><br><br>
-<div class="container">
 
+<div class="container">
     <header>Ajouter un Congré</header>
     <br>
-    <Badr>
+    <form>
         <div class="form first">
             <div class="details personal">
-<!--                <span class="title">Personal Details</span>-->
-<!--[ngModelOptions]="{standalone: true}"-->
+
+
                 <div class="fields">
                     <div class="input-field col-lg-6 ">
                         <label>Objectif/Titre Congrés</label>
-                        <input type="text" class="form-control" placeholder="Objectif Congrés" [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}" [ngClass]="{'input-group-focus':focus===true}" >
+                        <input type="text" class="form-control" placeholder="Objectif Congrés"
+                               [(ngModel)]="selectedCongre.nom " [ngModelOptions]="{standalone: true}"
+                               [ngClass]="{'input-group-focus':focus===true}">
                     </div>
 
-                    <div class="input-field col-lg-6">
+                    <div class="input-field col-lg-5">
                         <label>Encadrant</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf" [ngModelOptions]="{standalone: true}" placeholder="Encadrant" >
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.encadrantProf"
+                               [ngModelOptions]="{standalone: true}" placeholder="Encadrant">
                     </div>
-
-<!--                    <div class="input-field">-->
-<!--                        <label>Visible</label>-->
-<!--                        <input type="number" class="form-control" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}" placeholder="visible" >-->
-<!--                    </div>-->
 
                     <div class="input-field col-lg-6">
                         <label>Adresse</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu" [ngModelOptions]="{standalone: true}" placeholder="Adresse" >
+                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.lieu"
+                               [ngModelOptions]="{standalone: true}" placeholder="Adresse">
                     </div>
 
-                    <div class="input-field col-lg-6">
+
+                    <div class="input-field col-lg-3">
                         <label>Date</label>
-                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >
+                        <input class="form-control" placeholder="yyyy-mm-dd"
+                               name="dp" [(ngModel)]="selectedCongre.date" [ngModelOptions]="{standalone: true}"
+                               ngbDatepicker
+                               #d="ngbDatepicker">
+                    </div>
+                    <div class="col-lg-1">
+                        <button class="btn btn-outline-primary calendar" (click)="d.toggle()" type="button"></button>
                     </div>
 
-<!--                     <div class="input-field">-->
-<!--                        <label>Duree</label>-->
-<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.duree" [ngModelOptions]="{standalone: true}" placeholder="date" >-->
-<!--                    </div>-->
-
-
-                    <div class="input-field col-lg-12">
+                    <div class="input-field col-lg-8">
                         <label>Description</label>
-<!--                        <input type="text" class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" placeholder="description" >-->
-                        <textarea class="form-control" [(ngModel)]="selectedCongre.description" [ngModelOptions]="{standalone: true}" rows="3"></textarea>
+                        <textarea class="form-control" [(ngModel)]="selectedCongre.description"
+                                  [ngModelOptions]="{standalone: true}" rows="3"></textarea>
+                    </div>
+
+                    <div class="input-field col-lg-2">
+                    <ngb-timepicker [(ngModel)]="time" [ngModelOptions]="{standalone: true}"></ngb-timepicker>
+<!--                    <hr>-->
+<!--                    <pre>Selected time: {{time | json}}</pre>-->
                     </div>
 
 
-                    <div class="custom-control custom-switch mb-1 col-lg-5 mx-5" >
-                        <input checked class="custom-control-input"  id="customSwitch2" type="checkbox" [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}">
-                        <label class="custom-control-label" for="customSwitch2">Visible <span style="color: #00bbff">?</span></label>
+                    <div class="custom-control custom-switch mb-1 col-lg-5 mx-5">
+                        <input checked class="custom-control-input" id="customSwitch2" type="checkbox"
+                               [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}">
+                        <label class="custom-control-label" for="customSwitch2">Visible <span
+                                style="color: #00bbff">?</span></label>
                     </div>
-
-
-<!--                    <div class="form-check form-switch">-->
-<!--                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">-->
-<!--                        <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>-->
-<!--                    </div>-->
-
-
-
-
-
-                    <!--                    <div class="mb-3">-->
-<!--                        <label for="exampleInputEmail1" class="form-label">Email address</label>-->
-<!--                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">-->
-<!--                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
-<!--                    </div>-->
-<!--                    <div class="mb-3">-->
-<!--                        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>-->
-<!--                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>-->
-<!--                    </div>-->
-
 
 
                 </div>
             </div>
 
 
-
-
-                <button class="btn-outline-primary"  (click)="submit()">
-<!--                    <span class="btnText" >Valider</span>-->
-<!--                    <i class="uil uil-navigator"></i>-->
-                    Valider
-                </button>
+            <button class="btn-outline-primary" (click)="submit()">
+                Valider
+            </button>
 
         </div>
 
 
-    </Badr>
+    </form>
 </div>

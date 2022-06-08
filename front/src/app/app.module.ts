@@ -63,6 +63,9 @@ import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/vie
 import {ProfileComponent} from "./module/client/view/profile/profile.component";
 import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
 import {CommonModule} from "@angular/common";
+import {NgbAlertModule, NgbDatepickerModule, NgbTimepickerModule} from "@ng-bootstrap/ng-bootstrap";
+
+
 
 
 @NgModule({
@@ -127,6 +130,9 @@ import {CommonModule} from "@angular/common";
         AppRoutingModule,
         AdminRoutingModule,
         AgentRoutingModule,
+        NgbDatepickerModule,
+        NgbAlertModule,
+        NgbTimepickerModule,
         // TableModule,
         // ProgressBarModule,
         // MultiSelectModule,

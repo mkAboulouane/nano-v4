@@ -6,6 +6,7 @@ import {Formation} from "../../../../../controller/model/formation.model";
 import {HttpErrorResponse} from "@angular/common/http";
 import {CongresService} from "../../../../../controller/service/Congres.service";
 import {Congres} from "../../../../../controller/model/congres.model";
+import {NgbDateStruct} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-congres-add',
@@ -14,6 +15,8 @@ import {Congres} from "../../../../../controller/model/congres.model";
 })
 export class CongresAddComponent implements OnInit {
   test: any;
+  model: NgbDateStruct;
+  time = {hour: 13, minute: 30};
 
 
   title : any;
