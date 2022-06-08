@@ -25,7 +25,7 @@ export class UserListComponent implements OnInit {
         // const modalRef = this.modalService.open(AddNotificationComponent);
         const modalRef = this.modalService.open(AddNotificationComponent, { size: 'lg' });
         modalRef.componentInstance.name = 'khalil';
-        modalRef.componentInstance.user = 'user';
+        modalRef.componentInstance.user = user;
     }
 
     ngOnInit(): void {

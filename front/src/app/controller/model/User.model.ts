@@ -4,7 +4,7 @@ export class User {
      email: string;
      accountNonExpired: boolean;
      accountNonLocked: boolean;
-     id: string;
+     id: number;
      prenom: string;
      nom: string;
      username: string;
