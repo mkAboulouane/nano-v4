@@ -1,10 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {FormationService} from "../../../../../controller/service/Formation.service";
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../../../../../controller/service/Auth.service";
-import {RoleService} from "../../../../../controller/service/role.service";
-import {Formation} from "../../../../../controller/model/formation.model";
-import {HttpClient, HttpErrorResponse} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {MaterielBioService} from "../../../../../controller/service/Materiel-bio.service";
 import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 import {ImageService} from "../../../../../controller/service/image.service";

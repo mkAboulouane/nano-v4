@@ -1,5 +1,4 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {Component} from '@angular/core';
 import {MaterielBioService} from "../../../../../controller/service/Materiel-bio.service";
 import {Router} from "@angular/router";
 import {ProduitBio} from "../../../../../controller/model/produit-bio.model";

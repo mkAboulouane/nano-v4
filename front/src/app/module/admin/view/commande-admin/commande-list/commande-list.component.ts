@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Panier} from "../../../../../controller/model/panier.model";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../../../../environments/environment.prod";
 import {CommandeService} from "../../../../../controller/service/Commande.service";
 
 @Component({

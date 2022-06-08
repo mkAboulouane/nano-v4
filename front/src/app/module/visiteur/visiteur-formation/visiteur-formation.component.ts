@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormationService} from "../../../controller/service/Formation.service";
 import {Formation} from "../../../controller/model/formation.model";
 

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 import {AuthGuard} from "../../controller/guards/auth.guard";
 import {FormationAddComponent} from "./view/formation-admin/formation-add/formation-add.component";
 import {CongresAddComponent} from "./view/congres-admin/congres-add/congres-add.component";

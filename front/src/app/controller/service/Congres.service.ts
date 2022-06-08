@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import {ProduitBio} from "../model/produit-bio.model";
+import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {UserService} from "./User.service";

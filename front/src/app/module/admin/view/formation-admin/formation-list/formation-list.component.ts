@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {FormationService} from "../../../../../controller/service/Formation.service";
 import {Router} from "@angular/router";
 import {Formation} from "../../../../../controller/model/formation.model";
-import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 
 @Component({
     selector: 'app-formation-list',

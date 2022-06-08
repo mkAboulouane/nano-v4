@@ -1,12 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ImageService} from "../../../../controller/service/image.service";
 import {Image} from "../../../../controller/model/image.model";
 import {DomSanitizer} from "@angular/platform-browser";
-import {HttpClient, HttpHeaders, HttpRequest} from "@angular/common/http";
+import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../../../environments/environment";
-import {Observable} from "rxjs";
-import {error} from "protractor";
-import {map} from "rxjs/operators";
 
 @Component({
   selector: 'app-image-admin',

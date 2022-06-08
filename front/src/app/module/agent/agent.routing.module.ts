@@ -13,8 +13,6 @@ import {CongresAdminComponent} from "../admin/view/congres-admin/congres-admin.c
 import {CongresAddComponent} from "../admin/view/congres-admin/congres-add/congres-add.component";
 import {CongresEditComponent} from "../admin/view/congres-admin/congres-edit/congres-edit.component";
 import {UserAdminComponent} from "../admin/view/user-admin/user-admin.component";
-import {GerantAdminComponent} from "../admin/view/gerant-admin/gerant-admin.component";
-import {GerantAddComponent} from "../admin/view/gerant-admin/gerant-add/gerant-add.component";
 import {CommandeAdminComponent} from "../admin/view/commande-admin/commande-admin.component";
 import {RegisterComponent} from "../../register/register.component";
 

@@ -30,10 +30,14 @@ import {CongresAdminComponent} from "./module/admin/view/congres-admin/congres-a
 import {CommandeListComponent} from "./module/admin/view/commande-admin/commande-list/commande-list.component";
 import {CongresListComponent} from "./module/admin/view/congres-admin/congres-list/congres-list.component";
 import {ProduitBioAddComponent} from "./module/admin/view/produit-bio-admin/produit-bio-add/produit-bio-add.component";
-import {ProduitBioListComponent} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
+import {
+    ProduitBioListComponent
+} from "./module/admin/view/produit-bio-admin/produit-bio-list/produit-bio-list.component";
 import {CongresEditComponent} from "./module/admin/view/congres-admin/congres-edit/congres-edit.component";
 import {ProduitBioAdminComponent} from "./module/admin/view/produit-bio-admin/produit-bio-admin.component";
-import {ProduitBioEditComponent} from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
+import {
+    ProduitBioEditComponent
+} from "./module/admin/view/produit-bio-admin/produit-bio-edit/produit-bio-edit.component";
 import {GerantAdminComponent} from "./module/admin/view/gerant-admin/gerant-admin.component";
 import {GerantAddComponent} from "./module/admin/view/gerant-admin/gerant-add/gerant-add.component";
 import {NavGerantComponent} from "./module/agent/view/nav-gerant/nav-gerant.component";
@@ -55,23 +59,23 @@ import {HomeAdminComponent} from "./module/admin/home-admin.component";
 import {NavAdminComponent} from "./module/admin/view/nav-admin/nav-admin.component";
 import {ImageAdminComponent} from "./module/admin/view/image-admin/image-admin.component";
 import {GerantListComponent} from "./module/admin/view/gerant-admin/gerant-list/gerant-list.component";
-import { VisiteurFormationComponent } from './module/visiteur/visiteur-formation/visiteur-formation.component';
-import { VisiteurViewFormationComponent } from './module/visiteur/visiteur-view-formation/visiteur-view-formation.component';
-import { VisiteurViewProduiBioComponent } from './module/visiteur/visiteur-view-produi-bio/visiteur-view-produi-bio.component';
-import { VisiteurProduiBioComponent } from './module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component';
-import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
+import {VisiteurFormationComponent} from './module/visiteur/visiteur-formation/visiteur-formation.component';
+import {
+    VisiteurViewFormationComponent
+} from './module/visiteur/visiteur-view-formation/visiteur-view-formation.component';
+import {
+    VisiteurViewProduiBioComponent
+} from './module/visiteur/visiteur-view-produi-bio/visiteur-view-produi-bio.component';
+import {VisiteurProduiBioComponent} from './module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component';
 import {ProfileComponent} from "./module/client/view/profile/profile.component";
-import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
 import {CommonModule} from "@angular/common";
 import {NgbAlertModule, NgbDatepickerModule, NgbTimepickerModule} from "@ng-bootstrap/ng-bootstrap";
-
-
+import {AddNotificationComponent} from "./module/admin/view/user-admin/add-notification/add-notification.component";
 
 
 @NgModule({
     declarations: [
-        // ViewProduitBioComponent,
-        // ViewProduitComponent,
+        AddNotificationComponent,
         ProfileComponent,
         GerantListComponent,
         CommandeListComponent,
@@ -133,12 +137,6 @@ import {NgbAlertModule, NgbDatepickerModule, NgbTimepickerModule} from "@ng-boot
         NgbDatepickerModule,
         NgbAlertModule,
         NgbTimepickerModule,
-        // TableModule,
-        // ProgressBarModule,
-        // MultiSelectModule,
-        // CalendarModule,
-        // DropdownModule,
-        // InputTextModule,
     ],
     providers: [
         /*    { provide: LocationStrategy, useClass: HashLocationStrategy }, */

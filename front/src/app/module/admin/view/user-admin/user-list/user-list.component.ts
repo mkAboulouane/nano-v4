@@ -2,9 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {User} from "../../../../../controller/model/User.model";
 import {UserService} from "../../../../../controller/service/User.service";
 import {Router} from "@angular/router";
-import {Customer, Representative} from "./custumer";
-import {CustomerService} from "./custumerservice";
-import {Congres} from "../../../../../controller/model/congres.model";
+import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {NgbdModalContent} from "../../../../../components/modal/modal.component";
+import {AddNotificationComponent} from "../add-notification/add-notification.component";
 
 @Component({
     selector: 'app-user-list',
@@ -17,7 +17,15 @@ export class UserListComponent implements OnInit {
     searchInput: string;
     cols: any[];
 
-    constructor(private router: Router, private userService: UserService) {
+    constructor(private router: Router, private userService: UserService
+            ,private modalService: NgbModal    ) {
+    }
+
+    open(user: User) {
+        // const modalRef = this.modalService.open(AddNotificationComponent);
+        const modalRef = this.modalService.open(AddNotificationComponent, { size: 'lg' });
+        modalRef.componentInstance.name = 'khalil';
+        modalRef.componentInstance.user = 'user';
     }
 
     ngOnInit(): void {
@@ -43,6 +51,10 @@ export class UserListComponent implements OnInit {
 
     add() {
         this.router.navigate(['/add-user'])
+    }
+
+    search(searchInput: string) {
+
     }
 
     //
@@ -118,4 +130,5 @@ export class UserListComponent implements OnInit {
 //         ]
 //     }
 //
+
 }

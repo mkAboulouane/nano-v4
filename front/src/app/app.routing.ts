@@ -1,11 +1,7 @@
 import {NgModule} from '@angular/core';
-import {CommonModule,} from '@angular/common';
-import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {RegisterComponent} from './register/register.component';
-import {ProduitBioComponent} from './module/client/view/produit-bio/produit-bio.component';
-import {FormationComponent} from "./module/client/view/formation/formation.component";
 import {CongresComponent} from "./module/client/view/congres/congres.component";
 import {AuthGuard} from './controller/guards/auth.guard';
 import {AccessDeniedComponent} from './auth/access-denied/access-denied.component';
@@ -16,8 +12,6 @@ import {HomeVisiteurComponent} from "./module/visiteur/home-visiteur/home-visite
 import {ComponentsComponent} from "./components/components.component";
 import {HomeAgentComponent} from "./module/agent/home-agent.component";
 import {HomeClientComponent} from "./module/client/view/home-client.component";
-import {ViewFormationComponent} from "./module/client/view/view-formation/view-formation.component";
-import {ViewProduitBioComponent} from "./module/client/view/view-produit-bio/view-produit-bio.component";
 import {
     VisiteurViewFormationComponent
 } from "./module/visiteur/visiteur-view-formation/visiteur-view-formation.component";

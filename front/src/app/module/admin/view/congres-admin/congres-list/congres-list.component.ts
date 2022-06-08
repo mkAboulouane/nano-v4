@@ -1,11 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
-import {Formation} from "../../../../../controller/model/formation.model";
-import {FormationService} from "../../../../../controller/service/Formation.service";
 import {Congres} from "../../../../../controller/model/congres.model";
 import {CongresService} from "../../../../../controller/service/Congres.service";
+
 // import {congreBio} from "../../../../../controller/model/congre-bio.model";
-import {ProduitBio} from "../../../../../controller/model/produit-bio.model";
 
 @Component({
   selector: 'app-congres-list',

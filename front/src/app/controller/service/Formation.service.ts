@@ -4,7 +4,6 @@ import {Observable} from "rxjs";
 import {Formation} from "../model/formation.model";
 import {HttpClient} from "@angular/common/http";
 import {environment} from "../../../environments/environment";
-import {ProduitBio} from "../model/produit-bio.model";
 import {AuthService} from "./Auth.service";
 import {UserService} from "./User.service";
 

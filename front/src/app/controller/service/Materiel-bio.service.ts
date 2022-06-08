@@ -1,5 +1,4 @@
-import { Injectable } from '@angular/core';
-import {Formation} from "../model/formation.model";
+import {Injectable} from '@angular/core';
 import {Router} from "@angular/router";
 import {HttpClient} from "@angular/common/http";
 import {UserService} from "./User.service";
@@ -7,7 +6,6 @@ import {AuthService} from "./Auth.service";
 import {environment} from "../../../environments/environment";
 import {Observable} from "rxjs";
 import {ProduitBio} from "../model/produit-bio.model";
-import {Produit} from "../model/produit.model";
 
 @Injectable({
   providedIn: 'root'

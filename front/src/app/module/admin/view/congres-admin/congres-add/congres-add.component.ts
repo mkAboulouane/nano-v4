@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "../../../../../controller/service/Auth.service";
 import {RoleService} from "../../../../../controller/service/role.service";
-import {Formation} from "../../../../../controller/model/formation.model";
 import {HttpErrorResponse} from "@angular/common/http";
 import {CongresService} from "../../../../../controller/service/Congres.service";
 import {Congres} from "../../../../../controller/model/congres.model";

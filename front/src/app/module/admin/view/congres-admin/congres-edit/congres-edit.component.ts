@@ -1,6 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {FormationService} from "../../../../../controller/service/Formation.service";
-import {Formation} from "../../../../../controller/model/formation.model";
 import {CongresService} from "../../../../../controller/service/Congres.service";
 import {Congres} from "../../../../../controller/model/congres.model";
 import {HttpClient} from "@angular/common/http";

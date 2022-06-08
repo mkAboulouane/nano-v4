@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../../../../controller/service/User.service";
 import {Router} from "@angular/router";
 import {User} from "../../../../../controller/model/User.model";
-import {FormationService} from "../../../../../controller/service/Formation.service";
 
 @Component({
     selector: 'app-gerant-list',
