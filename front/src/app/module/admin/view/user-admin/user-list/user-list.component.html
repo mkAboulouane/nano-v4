@@ -18,12 +18,9 @@
                 <tr>
 <!--                    <th>Nom</th>-->
                     <th>Utilisateurs <i class="fa fa-sort"></i></th>
-                    <th>Nom <i class="fa fa-sort"></i></th>
-                    <th>Prénom <i class="fa fa-sort"></i></th>
                     <th>Numéro telephone</th>
                     <th>Email <i class="fa fa-sort"></i></th>
-                    <th>Ville</th>
-<!--                    <th>Country <i class="fa fa-sort"></i></th>-->
+                    <th>Detail <i class="fa fa-sort"></i></th>
                     <th>Notification</th>
                     <th>Bloquer</th>
                 </tr>
@@ -32,13 +29,14 @@
                 <tr *ngFor="let user of users">
 <!--                    <td>1</td>-->
                     <td>{{user.username}}</td>
-                    <td>{{user.nom}}</td>
-                    <td>{{user.prenom}}</td>
                     <td>{{user.phone}}</td>
                     <td>{{user.email}}</td>
-                    <td>{{user.city}}</td>
                     <td>
                         &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img src="assets/info-solid.svg" (click)="view(user)"  alt="add">
+                    </td>
+                    <td>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <img src="assets/send-plus.svg" (click)="open(user)"  alt="add">
                     </td>
                     <td>

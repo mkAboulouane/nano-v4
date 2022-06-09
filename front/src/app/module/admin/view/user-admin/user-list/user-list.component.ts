@@ -53,6 +53,10 @@ export class UserListComponent implements OnInit {
         this.router.navigate(['/add-user'])
     }
 
+    view(user: User) {
+
+    }
+
     search(searchInput: string) {
 
     }
@@ -130,5 +134,6 @@ export class UserListComponent implements OnInit {
 //         ]
 //     }
 //
+
 
 }
