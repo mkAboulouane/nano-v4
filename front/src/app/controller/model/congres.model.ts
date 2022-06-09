@@ -6,6 +6,6 @@ export class Congres {
      duree: string;
      visible: null | boolean;
      lieu: string;
-     date: Date;
+     date: string;
 
 }

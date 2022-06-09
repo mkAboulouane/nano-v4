@@ -15,8 +15,9 @@ export class VisiteurFormationComponent implements OnInit {
     this.findAll();
   }
 
-  findAll(){
-  this.formationService.findAll().subscribe(data => this.formations = data);
+  findAll() {
+    this.formationService.findAll().subscribe(data => this.formations = data);
   }
+
 
 }

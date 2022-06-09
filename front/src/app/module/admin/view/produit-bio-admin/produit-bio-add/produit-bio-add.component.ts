@@ -64,6 +64,8 @@ export class ProduitBioAddComponent implements OnInit {
                   console.log('image does not exist');
               }else if( data > 0 ){
                   console.log('saved');
+                  this.selectedProduitBio = new ProduitBio();
+                  this.router.navigate(['/admin/produit-bio'])
               }else {
                   console.log('error out of range');
               }

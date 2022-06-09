@@ -3,11 +3,11 @@
 <div class="container px-4 px-lg-12 my-5" style="background-color: white; border-radius: 1%">
     <div class="row gx-4 gx-lg-5 align-items-center">
 
-        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="assets/img/team.jpg" style="border-radius: 2%"></div>
+        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" [src]="produit.imagePrincipal?.picByte" style="border-radius: 2%"></div>
         <div class="col-md-4">
 <!--            <div class="small mb-1">Marque: </div>-->
             <div class="display-6 fw-bolder pt-5"><h6>{{produit.nom}}</h6></div>
-            <h6 class="small mb-1">Quantité: {{produit.quantity}} PCS</h6>
+            <h6 class="small mb-1">Reste:  {{produit.quantity}}</h6>
             <div class="fs-5 mb-5">
                 <span class="text-decoration-line-through" style="color: red">{{produit.prixAncien}} DH</span>
                 <br>
@@ -18,11 +18,11 @@
             <div class="d-flex mb-5" >
 <!--                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />-->
 
-                <button  class="btn btn-outline-dark flex-shrink-0" type="button" style="background-color: #00bbff;border: none">
+                <button  class="btn btn-outline-dark flex-shrink-0" type="button" (click)="back()" style="background-color: #00bbff;border: none">
 
                     Retourne
                 </button>
-                <button class="btn btn-outline-dark flex-shrink-0 ml-5" type="button" style="background-color: black">
+                <button class="btn btn-outline-dark flex-shrink-0 ml-5" type="button" (click)="check()" style="background-color: black">
 
                     Ajouter au panier
                 </button>

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormationService} from "../../../../controller/service/Formation.service";
 import {Formation} from "../../../../controller/model/formation.model";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-formation',
@@ -11,7 +12,8 @@ export class FormationComponent implements OnInit {
      formations: Formation[] = [];
 
 
-    constructor(private formationService: FormationService) {
+    constructor(private formationService: FormationService,
+                private router: Router) {
     }
 
     ngOnInit(): void {
@@ -35,4 +37,7 @@ export class FormationComponent implements OnInit {
     //     this.formationService.formations = value;
     // }
 
+    check() {
+        this.router.navigate(['/client/chekout']);
+    }
 }
