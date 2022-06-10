@@ -6,8 +6,7 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
   selector: 'app-view-user-detailt',
   template: `
         <div class="modal-header">
-            <h4 class="modal-title">Details de 
-                 : <strong>{{user.username}}</strong></h4>
+            <h4 class="modal-title">Details de : <strong>{{user.username}}</strong></h4>
         </div>
 
         <div class="modal-body">
@@ -55,8 +54,6 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
                 <label class="form-check-label" for="flexSwitchCheckDefault">MDP change ?</label>
               </div>
               
-              
-
             </div>
         </div>
         <br>
@@ -74,5 +71,4 @@ export class ViewUserDetailtComponent implements OnInit {
   ngOnInit(): void {
     this.user.createdAt = this.user.createdAt.toString().substring(0,16);
   }
-
 }
