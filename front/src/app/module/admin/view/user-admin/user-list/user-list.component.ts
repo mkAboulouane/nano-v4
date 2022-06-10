@@ -5,6 +5,7 @@ import {Router} from "@angular/router";
 import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {NgbdModalContent} from "../../../../../components/modal/modal.component";
 import {AddNotificationComponent} from "../add-notification/add-notification.component";
+import {ViewUserDetailtComponent} from "../view-user-detailt/view-user-detailt.component";
 
 @Component({
     selector: 'app-user-list',
@@ -22,9 +23,13 @@ export class UserListComponent implements OnInit {
     }
 
     open(user: User) {
-        // const modalRef = this.modalService.open(AddNotificationComponent);
         const modalRef = this.modalService.open(AddNotificationComponent, { size: 'lg' });
         modalRef.componentInstance.name = 'khalil';
+        modalRef.componentInstance.user = user;
+    }
+
+    view(user: User) {
+        const modalRef = this.modalService.open(ViewUserDetailtComponent,{size: 'lg'});
         modalRef.componentInstance.user = user;
     }
 
@@ -51,10 +56,6 @@ export class UserListComponent implements OnInit {
 
     add() {
         this.router.navigate(['/add-user'])
-    }
-
-    view(user: User) {
-
     }
 
     search(searchInput: string) {

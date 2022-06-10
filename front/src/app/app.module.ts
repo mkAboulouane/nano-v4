@@ -71,10 +71,12 @@ import {ProfileComponent} from "./module/client/view/profile/profile.component";
 import {CommonModule} from "@angular/common";
 import {NgbAlertModule, NgbDatepickerModule, NgbTimepickerModule} from "@ng-bootstrap/ng-bootstrap";
 import {AddNotificationComponent} from "./module/admin/view/user-admin/add-notification/add-notification.component";
+import {ViewUserDetailtComponent} from "./module/admin/view/user-admin/view-user-detailt/view-user-detailt.component";
 
 
 @NgModule({
     declarations: [
+        ViewUserDetailtComponent,
         AddNotificationComponent,
         ProfileComponent,
         GerantListComponent,

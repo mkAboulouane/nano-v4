@@ -17,7 +17,7 @@ export class User {
      adress: string;
      newPassword: string;
      confirmPassword: string;
-     createdAt: Date;
+     createdAt: string;
      updatedAt: Date;
      roles: any = [];
 }
