@@ -46,7 +46,10 @@ export class FormationListComponent implements OnInit {
     }
 
     add() {
-        this.router.navigate(['/admin/formation-add'])
+        if(this.router.url.search('admin') > -1)
+            this.router.navigate(['/admin/formation-add'])
+        else
+            this.router.navigate(['/gerant/formation-add'])
     }
 
     edit(formation: Formation) {

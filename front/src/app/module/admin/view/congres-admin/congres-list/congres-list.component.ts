@@ -51,7 +51,10 @@ export class CongresListComponent implements OnInit {
 
 
   add() {
+    if(this.router.url.search('admin') > -1)
     this.router.navigate(['/admin/congres-add'])
+    else
+      this.router.navigate(['/gerant/congres-add'])
   }
 
   edit(congres: Congres) {

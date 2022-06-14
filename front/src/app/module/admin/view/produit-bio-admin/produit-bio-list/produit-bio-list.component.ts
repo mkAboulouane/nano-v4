@@ -60,7 +60,10 @@ export class ProduitBioListComponent implements OnInit {
 
 
   add() {
-    this.router.navigate(['/admin/produit-bio-add'])
+    if(this.router.url.search('admin') > -1)
+      this.router.navigate(['/admin/produit-bio-add'])
+    else
+      this.router.navigate(['/gerant/produit-bio-add'])
   }
 
   edit(produitBio: ProduitBio) {
