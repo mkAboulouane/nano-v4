@@ -6,37 +6,57 @@ import {DomSanitizer} from "@angular/platform-browser";
 import {Location} from "@angular/common";
 
 @Component({
-  selector: 'app-view-produit',
-  templateUrl: './view-produit.component.html',
-  styleUrls: ['./view-produit.component.scss']
+    selector: 'app-view-produit',
+    templateUrl: './view-produit.component.html',
+    styleUrls: ['./view-produit.component.scss']
 })
 export class ViewProduitComponent implements OnInit {
 
-  constructor(private materielBioService: MaterielBioService
-              , private router: Router
-              , private sanitizer: DomSanitizer
-              , private location: Location
-              , private activatedRoute: ActivatedRoute) { }
+    constructor(private materielBioService: MaterielBioService
+        , private router: Router
+        , private sanitizer: DomSanitizer
+        , private location: Location
+        , private activatedRoute: ActivatedRoute) {
+    }
 
-  produit: ProduitBio;
-  linkId: number;
+    produit: ProduitBio;
+    produitBios: ProduitBio[] = [];
+    linkId: number;
 
 
+    ngOnInit(): void {
+        this.findById();
+        this.voirAussi();
+    }
 
-  ngOnInit(): void {
-    this.findById();
-  }
+    findById() {
+        this.linkId = +this.activatedRoute.snapshot.paramMap.get('id');
+        this.materielBioService.findById(this.linkId).subscribe(
+            data => {
+                this.produit = data;
+                let objectURL = 'data:image/jpeg;base64,' + this.produit.imagePrincipal.picByte;
+                this.produit.imagePrincipal.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+            }, error => console.log(error));
+    }
 
-  findById(){
-    this.linkId = + this.activatedRoute.snapshot.paramMap.get('id');
-    this.materielBioService.findById(this.linkId).subscribe(
-        data=> {
-          this.produit = data;
-          let objectURL = 'data:image/jpeg;base64,' + this.produit.imagePrincipal.picByte;
-          this.produit.imagePrincipal.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
-          console.log(data);
-        },error => console.log(error));
-  }
+
+    voirAussi() {
+        console.log('this link : '+this.linkId)
+        // this.materielBioService.voirAussi(this.linkId).subscribe(
+        this.materielBioService.findAll().subscribe(
+            data => {
+                data.forEach(e=>{
+                    let objectURL = 'data:image/jpeg;base64,' + e.imagePrincipal.picByte;
+                    e.imagePrincipal.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
+                    console.log(e.imagePrincipal.picByte);
+                });
+                this.produitBios = data;
+                console.log('produit bio : '+this.produitBios);
+
+            }, error => console.log(error))
+
+    }
+
 
     back() {
         this.location.back();
@@ -45,4 +65,12 @@ export class ViewProduitComponent implements OnInit {
     check() {
         this.router.navigate(['/client/chekout']);
     }
+
+    // get produitBios(): Array<ProduitBio> {
+    //     return this.materielBioService.produitBios;
+    // }
+    //
+    // set produitBios(value: Array<ProduitBio>) {
+    //     this.materielBioService.produitBios = value;
+    // }
 }

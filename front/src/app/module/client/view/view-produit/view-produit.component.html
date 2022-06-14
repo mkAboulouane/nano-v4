@@ -1,11 +1,12 @@
-
-
 <div class="container px-4 px-lg-12 my-5" style="background-color: white; border-radius: 1%">
     <div class="row gx-4 gx-lg-5 align-items-center">
 
-        <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" [src]="produit.imagePrincipal?.picByte" style="border-radius: 2%"></div>
+        <div class="col-md-6">
+            <img class="card-img-top mb-5 mb-md-0" [src]="produit.imagePrincipal?.picByte" style="border-radius: 2%"
+                 alt="..."/>
+        </div>
         <div class="col-md-4">
-<!--            <div class="small mb-1">Marque: </div>-->
+            <!--            <div class="small mb-1">Marque: </div>-->
             <div class="display-6 fw-bolder pt-5"><h6>{{produit.nom}}</h6></div>
             <h6 class="small mb-1">Reste:  {{produit.quantity}}</h6>
             <div class="fs-5 mb-5">
@@ -15,14 +16,16 @@
                 <p class="lead">{{produit.description}}</p>
             </div>
 
-            <div class="d-flex mb-5" >
-<!--                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />-->
+            <div class="d-flex mb-5">
+                <!--                <input class="form-control text-center me-3" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />-->
 
-                <button  class="btn btn-outline-dark flex-shrink-0" type="button" (click)="back()" style="background-color: #00bbff;border: none">
+                <button class="btn btn-outline-dark flex-shrink-0" type="button" (click)="back()"
+                        style="background-color: #00bbff;border: none">
 
                     Retourne
                 </button>
-                <button class="btn btn-outline-dark flex-shrink-0 ml-5" type="button" (click)="check()" style="background-color: black">
+                <button class="btn btn-outline-dark flex-shrink-0 ml-5" type="button" (click)="check()"
+                        style="background-color: black">
 
                     Ajouter au panier
                 </button>
@@ -40,23 +43,92 @@
     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
         <div class="col mb-5">
             <div class="card h-100">
+                <!-- produitBios[1]duct image-->
+                <img [src]="produitBios[1].imagePrincipal.picByte" alt="..." class="card-img-top"/>
+                <!-- produitBios[1]duct details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- produitBios[1]duct name-->
+                        <h5 class="fw-bolder">{{produitBios[1].nom}}</h5>
+                        <!-- produitBios[1]duct price-->
+                        {{produitBios[1].prix}}
+                    </div>
+                </div>
+                <!-- produitBios[1]duct actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                                routerLink="/client/produitBios[1]duit-bio/{{produitBios[1].id}}">View
+                        options</a></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col mb-5">
+            <div class="card h-100">
                 <!-- Product image-->
-                <img class="card-img-top" src="https://dummyimage.com/450x300/dee2e6/6c757d.jpg" alt="..." />
+                <img [src]="produitBios[2].imagePrincipal.picByte" alt="..." class="card-img-top"/>
                 <!-- Product details-->
                 <div class="card-body p-4">
                     <div class="text-center">
                         <!-- Product name-->
-                        <h5 class="fw-bolder">Fancy Product</h5>
+                        <h5 class="fw-bolder">{{produitBios[2].nom}}</h5>
                         <!-- Product price-->
-                        $40.00 - $80.00
+                        {{produitBios[2].prix}}
                     </div>
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" >View options</a></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                                routerLink="/client/produit-bio/{{produitBios[2].id}}">View options</a>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img [src]="produitBios[0].imagePrincipal.picByte" alt="..." class="card-img-top"/>
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">{{produitBios[0].nom}}</h5>
+                        <!-- Product price-->
+                        {{produitBios[0].prix}}
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                                routerLink="/client/produit-bio/{{produitBios[0].id}}">View options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col mb-5">
+            <div class="card h-100">
+                <!-- Product image-->
+                <img [src]="produitBios[3].imagePrincipal.picByte" alt="..." class="card-img-top"/>
+                <!-- Product details-->
+                <div class="card-body p-4">
+                    <div class="text-center">
+                        <!-- Product name-->
+                        <h5 class="fw-bolder">{{produitBios[3].nom}}</h5>
+                        <!-- Product price-->
+                        {{produitBios[3].prix}}
+                    </div>
+                </div>
+                <!-- Product actions-->
+                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto"
+                                                routerLink="/client/produit-bio/{{produitBios[3].id}}">View options</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 </div>
 <!--</section>-->

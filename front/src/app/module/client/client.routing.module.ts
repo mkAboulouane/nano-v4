@@ -14,6 +14,8 @@ import {ClientNotificationComponent} from './view/client-notification/client-not
 import {ProfileComponent} from './view/profile/profile.component';
 import {ViewFormationComponent} from './view/view-formation/view-formation.component';
 import {ViewProduitComponent} from './view/view-produit/view-produit.component';
+import {CommonModule} from "@angular/common";
+import {BrowserModule} from "@angular/platform-browser";
 
 
 @NgModule({
@@ -34,6 +36,8 @@ import {ViewProduitComponent} from './view/view-produit/view-produit.component';
                 {path: 'chekout', component: CheckoutComponent, canActivate: [AuthGuard]},
             ]
         ),
+
+        CommonModule
     ],
     exports: [RouterModule],
     // declarations: [],

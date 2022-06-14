@@ -27,6 +27,10 @@ export class MaterielBioService {
     return this.http.get<Array<ProduitBio>>(this.API + '/');
   }
 
+  public voirAussi(id: number): Observable<Array<ProduitBio>> {
+    return this.http.get<Array<ProduitBio>>(this.API + '/voir-aussi/'+id);
+  }
+
   public delete(id: number){
     return this.http.delete(this.API + '/' + id);
   }
