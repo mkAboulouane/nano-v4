@@ -42,7 +42,7 @@ export class UserService {
     }
 
     currentUser(): Observable<User>{
-       return this.http.get<User>(this.API + 'register/online');
+       return this.http.get<User>(this.API + 'admin/current-user/');
     }
 
     saveGerant(user: User) {

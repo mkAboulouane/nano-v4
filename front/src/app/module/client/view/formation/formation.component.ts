@@ -2,6 +2,9 @@ import {Component, OnInit} from '@angular/core';
 import {FormationService} from "../../../../controller/service/Formation.service";
 import {Formation} from "../../../../controller/model/formation.model";
 import {Router} from "@angular/router";
+import {UserService} from "../../../../controller/service/User.service";
+import {User} from "../../../../controller/model/User.model";
+import {AuthService} from "../../../../controller/service/Auth.service";
 
 @Component({
     selector: 'app-formation',
@@ -10,14 +13,16 @@ import {Router} from "@angular/router";
 })
 export class FormationComponent implements OnInit {
      formations: Formation[] = [];
+     user = new User();
 
 
-    constructor(private formationService: FormationService,
-                private router: Router) {
+    constructor(private formationService: FormationService, private userService: UserService,
+                private router: Router , private authService: AuthService) {
     }
 
     ngOnInit(): void {
         this.findAll();
+        this.online();
     }
 
     public findAll() {
@@ -27,6 +32,15 @@ export class FormationComponent implements OnInit {
             },error => console.log(error)
         );
     }
+
+    online(){
+        // this.authService.authenticatedUser = this.user; mafhemtch had lhza9
+        console.log('auth user : '+this.authService.authenticatedUser)
+        // console.log(' ser : '+this.user)
+
+    }
+
+
 
     //
     // get formations(): Array<Formation> {
