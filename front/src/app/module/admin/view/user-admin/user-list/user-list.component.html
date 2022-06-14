@@ -40,7 +40,7 @@
                         <img src="assets/send-plus.svg" (click)="open(user)"  alt="add">
                     </td>
                     <td>
-                        <button type="button" title="bloquer" class="btn btn-danger " style="padding-bottom: 0px;padding-top: 0px; "><i class="fa fa-user-times" aria-hidden="true"></i></button>
+                        <button type="button" (click)="bloquer(user)" [disabled]="!isAdmin" title="bloquer" class="btn btn-danger " style="padding-bottom: 0px;padding-top: 0px; "><i class="fa fa-user-times" aria-hidden="true"></i></button>
                     </td>
                 </tr>
 

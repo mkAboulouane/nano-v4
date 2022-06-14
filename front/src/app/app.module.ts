@@ -72,10 +72,12 @@ import {CommonModule} from "@angular/common";
 import {NgbAlertModule, NgbDatepickerModule, NgbTimepickerModule} from "@ng-bootstrap/ng-bootstrap";
 import {AddNotificationComponent} from "./module/admin/view/user-admin/add-notification/add-notification.component";
 import {ViewUserDetailtComponent} from "./module/admin/view/user-admin/view-user-detailt/view-user-detailt.component";
+import {BlockUserComponent} from "./module/admin/view/user-admin/block-user/block-user.component";
 
 
 @NgModule({
     declarations: [
+        BlockUserComponent,
         ViewUserDetailtComponent,
         AddNotificationComponent,
         ProfileComponent,

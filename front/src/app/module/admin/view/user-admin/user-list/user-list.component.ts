@@ -6,6 +6,7 @@ import {NgbActiveModal, NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {NgbdModalContent} from "../../../../../components/modal/modal.component";
 import {AddNotificationComponent} from "../add-notification/add-notification.component";
 import {ViewUserDetailtComponent} from "../view-user-detailt/view-user-detailt.component";
+import {BlockUserComponent} from "../block-user/block-user.component";
 
 @Component({
     selector: 'app-user-list',
@@ -13,7 +14,6 @@ import {ViewUserDetailtComponent} from "../view-user-detailt/view-user-detailt.c
     styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-
     crud: User[];
     searchInput: string;
     cols: any[];
@@ -36,6 +36,7 @@ export class UserListComponent implements OnInit {
     ngOnInit(): void {
         this.userService.findAll();
         this.users;
+        this.isAdmin;
 
         this.cols = [
             { field: 'vin', header: 'Vin' },
@@ -54,9 +55,9 @@ export class UserListComponent implements OnInit {
         return this.userService.users;
     }
 
-    add() {
-        this.router.navigate(['/add-user'])
-    }
+    // add() {
+    //     this.router.navigate(['/add-user'])
+    // }
 
     search(searchInput: string) {
 
@@ -136,5 +137,17 @@ export class UserListComponent implements OnInit {
 //     }
 //
 
+    get isAdmin(): boolean{
+        if(this.router.url.search('admin') > -1) {
+            return true;
+        }
+        else
+            return false;
+    }
 
+
+    bloquer(user: User) {
+        const modalRef = this.modalService.open(BlockUserComponent,{size: 'lg'});
+        modalRef.componentInstance.user = user;
+    }
 }
