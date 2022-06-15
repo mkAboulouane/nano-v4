@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MaterielBioService} from "../../../../controller/service/Materiel-bio.service";
 import {ProduitBio} from "../../../../controller/model/produit-bio.model";
 import {ActivatedRoute, Router} from "@angular/router";
@@ -17,6 +17,14 @@ export class ViewProduitComponent implements OnInit {
         , private sanitizer: DomSanitizer
         , private location: Location
         , private activatedRoute: ActivatedRoute) {
+        this.router.routeReuseStrategy.shouldReuseRoute = function() {
+            return false;
+        };
+        // activatedRoute.params.subscribe(val => {
+        //     this.findById();
+        //     this.voirAussi();
+        //     // put the code from `ngOnInit` here
+        // });
     }
 
     produit: ProduitBio;
@@ -28,6 +36,7 @@ export class ViewProduitComponent implements OnInit {
         this.findById();
         this.voirAussi();
     }
+
 
     findById() {
         this.linkId = +this.activatedRoute.snapshot.paramMap.get('id');
@@ -42,17 +51,14 @@ export class ViewProduitComponent implements OnInit {
 
     voirAussi() {
         console.log('this link : '+this.linkId)
-        // this.materielBioService.voirAussi(this.linkId).subscribe(
-        this.materielBioService.findAll().subscribe(
+        this.materielBioService.voirAussi(this.linkId).subscribe(
             data => {
                 data.forEach(e=>{
                     let objectURL = 'data:image/jpeg;base64,' + e.imagePrincipal.picByte;
                     e.imagePrincipal.picByte = this.sanitizer.bypassSecurityTrustUrl(objectURL);
-                    console.log(e.imagePrincipal.picByte);
+                    console.log('e = '+e);
                 });
                 this.produitBios = data;
-                console.log('produit bio : '+this.produitBios);
-
             }, error => console.log(error))
 
     }
@@ -66,11 +72,7 @@ export class ViewProduitComponent implements OnInit {
         this.router.navigate(['/client/chekout']);
     }
 
-    // get produitBios(): Array<ProduitBio> {
-    //     return this.materielBioService.produitBios;
-    // }
-    //
-    // set produitBios(value: Array<ProduitBio>) {
-    //     this.materielBioService.produitBios = value;
-    // }
+    redirect(id: number) {
+        this.router.navigate(['/client/produit-bio/'+id]);
+    }
 }

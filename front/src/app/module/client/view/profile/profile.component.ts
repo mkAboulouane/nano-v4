@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../../../controller/service/User.service";
 import {User} from "../../../../controller/model/User.model";
+import {AuthService} from "../../../../controller/service/Auth.service";
 
 @Component({
   selector: 'app-profile',
@@ -10,17 +11,15 @@ import {User} from "../../../../controller/model/User.model";
 export class ProfileComponent implements OnInit {
   user: User;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService, private authServicer: AuthService) { }
 
   ngOnInit(): void {
     this.online();
   }
 
   online(){
-    this.userService.currentUser().subscribe( data => {
-      this.user = data;
-      console.log(data);
-    },error => console.log(error));
+    console.log('service auth : '+this.authServicer.user);
+     this.user = this.authServicer.user;
   }
 
 }

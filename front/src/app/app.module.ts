@@ -68,15 +68,17 @@ import {
 } from './module/visiteur/visiteur-view-produi-bio/visiteur-view-produi-bio.component';
 import {VisiteurProduiBioComponent} from './module/visiteur/visiteur-produi-bio/visiteur-produi-bio.component';
 import {ProfileComponent} from "./module/client/view/profile/profile.component";
-import {CommonModule} from "@angular/common";
+import {CommonModule, HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {NgbAlertModule, NgbDatepickerModule, NgbTimepickerModule} from "@ng-bootstrap/ng-bootstrap";
 import {AddNotificationComponent} from "./module/admin/view/user-admin/add-notification/add-notification.component";
 import {ViewUserDetailtComponent} from "./module/admin/view/user-admin/view-user-detailt/view-user-detailt.component";
 import {BlockUserComponent} from "./module/admin/view/user-admin/block-user/block-user.component";
+import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
 
 
 @NgModule({
     declarations: [
+        ViewProduitComponent,
         BlockUserComponent,
         ViewUserDetailtComponent,
         AddNotificationComponent,
@@ -143,16 +145,14 @@ import {BlockUserComponent} from "./module/admin/view/user-admin/block-user/bloc
         NgbTimepickerModule,
     ],
     providers: [
-        /*    { provide: LocationStrategy, useClass: HashLocationStrategy }, */
+        {provide: LocationStrategy, useClass: HashLocationStrategy},
         {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true},
+
         UserService,
         RoleService,
         CustomerService,
     ],
-    exports: [
-        NavbarComponent,
-        CommandeListComponent
-    ],
+    exports: [],
     bootstrap: [AppComponent]
 })
 export class AppModule {

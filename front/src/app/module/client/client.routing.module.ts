@@ -35,7 +35,8 @@ import {BrowserModule} from "@angular/platform-browser";
                 {path: 'notification', component: ClientNotificationComponent, canActivate: [AuthGuard]},
                 {path: 'chekout', component: CheckoutComponent, canActivate: [AuthGuard]},
             ]
-        ),
+            ),
+
 
         CommonModule
     ],

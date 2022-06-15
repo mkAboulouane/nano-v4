@@ -71,7 +71,7 @@ import {VisiteurFormationComponent} from "./module/visiteur/visiteur-formation/v
                 },
 
             ],
-            {scrollPositionRestoration: 'enabled'}
+                { onSameUrlNavigation: 'reload', scrollPositionRestoration: 'enabled', }
         )
     ],
     exports: [RouterModule],
