@@ -29,15 +29,10 @@
                     </div>
 
 
-                    <div class="input-field col-lg-3">
+                    <div class="input-field col-lg-5">
                         <label>Date</label>
-<!--                        <input class="form-control" placeholder="yyyy-mm-dd"-->
-<!--                               name="dp" [(ngModel)]="selectedCongre.date" [ngModelOptions]="{standalone: true}"-->
-<!--                               ngbDatepicker-->
-<!--                               #d="ngbDatepicker">-->
-                    </div>
-                    <div class="col-lg-1">
-                        <button class="btn btn-outline-primary calendar" (click)="d.toggle()" type="button"></button>
+                        <input class="form-control" placeholder="yyyy-mm-dd"
+                               name="dp" [(ngModel)]="selectedCongre.date" [ngModelOptions]="{standalone: true}">
                     </div>
 
                     <div class="input-field col-lg-8">
@@ -46,18 +41,12 @@
                                   [ngModelOptions]="{standalone: true}" rows="3"></textarea>
                     </div>
 
-<!--                    <div class="input-field col-lg-2">-->
-<!--                    <ngb-timepicker [(ngModel)]="time" [ngModelOptions]="{standalone: true}"></ngb-timepicker>-->
-<!--                    <hr>-->
-<!--                    <pre>Selected time: {{time | json}}</pre>-->
-<!--                    </div>-->
 
 
                     <div class="custom-control custom-switch mb-1 col-lg-5 mx-5">
                         <input checked class="custom-control-input" id="customSwitch2" type="checkbox"
                                [(ngModel)]="selectedCongre.visible" [ngModelOptions]="{standalone: true}">
-                        <label class="custom-control-label" for="customSwitch2">Visible <span
-                                style="color: #00bbff">?</span></label>
+                        <label class="custom-control-label" for="customSwitch2">Visible </label>
                     </div>
 
 
