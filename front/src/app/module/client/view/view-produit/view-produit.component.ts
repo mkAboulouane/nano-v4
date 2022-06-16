@@ -5,6 +5,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
 import {Location} from "@angular/common";
 
+
 @Component({
     selector: 'app-view-produit',
     templateUrl: './view-produit.component.html',

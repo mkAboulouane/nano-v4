@@ -75,7 +75,6 @@ import {ViewUserDetailtComponent} from "./module/admin/view/user-admin/view-user
 import {BlockUserComponent} from "./module/admin/view/user-admin/block-user/block-user.component";
 import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
 
-
 @NgModule({
     declarations: [
         ViewProduitComponent,
@@ -126,10 +125,11 @@ import {ViewProduitComponent} from "./module/client/view/view-produit/view-produ
         VisiteurFormationComponent,
         VisiteurViewFormationComponent,
         VisiteurViewProduiBioComponent,
-        VisiteurProduiBioComponent
+        VisiteurProduiBioComponent,
 
     ],
     imports: [
+
         ReactiveFormsModule,
         BrowserModule,
         CommonModule,
