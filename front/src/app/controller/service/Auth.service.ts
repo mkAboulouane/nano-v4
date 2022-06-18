@@ -128,7 +128,7 @@ export class AuthService {
         this._authenticatedUser.email = email;
         this._authenticatedUser.roles = roles;
         localStorage.setItem('autenticated', JSON.stringify(true));
-        localStorage.setItem('username', JSON.stringify(username));
+        // localStorage.setItem('username', JSON.stringify(username));
         localStorage.setItem('roles', JSON.stringify(roles));
         this.authenticated = true;
         this._loggedIn.next(true);
@@ -138,7 +138,7 @@ export class AuthService {
         this.tokenService.removeToken();
         this.unregisterConnectedChercheur();
         localStorage.setItem('autenticated', JSON.stringify(false));
-        localStorage.removeItem('username');
+        // localStorage.removeItem('username');
         localStorage.removeItem('roles');
         this.authenticated = false;
         this._loggedIn.next(false);
