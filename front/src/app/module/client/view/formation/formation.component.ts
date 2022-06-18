@@ -34,18 +34,13 @@ export class FormationComponent implements OnInit {
     }
 
         online(){
+            this.userService.currentUser().subscribe(
+                data => {
+                    this.user = data;
+                    console.log('current user: '+data);
+                },error => console.log(error)
 
-            console.log('authenticatedUser: '+this.authService.authenticatedUser);
-            this.user = this.authService.authenticatedUser
-            console.log('user: '+this.user);
-
-            // this.userService.currentUser().subscribe(
-            //     data => {
-            //         this.user = data;
-            //         console.log('current user: '+data);
-            //     },error => console.log(error)
-            //
-            // )
+            )
         }
 
 

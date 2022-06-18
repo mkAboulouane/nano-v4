@@ -42,7 +42,6 @@ export class AuthService {
                 jwt != null ? this.tokenService.saveToken(jwt) : false;
                 this.loadInfos();
                 console.log('you are logged in successfully');
-                // console.log(this.authenticatedUser.password);
                 this.getRole(username);
                 }, (error: HttpErrorResponse) => {
                 this.error = error.error;
@@ -51,17 +50,6 @@ export class AuthService {
         );
     }
 
-
-    /*
-        test: any;
-    *   paiment(){
-    * this.paimentService.calculePaiment().subscibe(
-    *   data => {
-    *       this.test = data;
-    *       console.log(data);
-    * });
-    * }
-    * */
     public getRole(username: string){
         // alert('avant');
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
