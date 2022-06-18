@@ -33,12 +33,22 @@ export class FormationComponent implements OnInit {
         );
     }
 
-    online(){
-        // this.authService.authenticatedUser = this.user; mafhemtch had lhza9
-        console.log('auth user : '+this.authService.authenticatedUser)
-        // console.log(' ser : '+this.user)
+        online(){
 
-    }
+            console.log('authenticatedUser: '+this.authService.authenticatedUser);
+            this.user = this.authService.authenticatedUser
+            console.log('user: '+this.user);
+
+            // this.userService.currentUser().subscribe(
+            //     data => {
+            //         this.user = data;
+            //         console.log('current user: '+data);
+            //     },error => console.log(error)
+            //
+            // )
+        }
+
+
 
 
 

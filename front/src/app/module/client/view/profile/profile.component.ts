@@ -19,7 +19,13 @@ export class ProfileComponent implements OnInit {
 
   online(){
     console.log('service auth : '+this.authServicer.user);
-     this.user = this.authServicer.user;
+     this.userService.currentUser().subscribe(
+         data => {
+           this.user = data;
+           console.log('current user'+data);
+         },error => console.log(error)
+
+     )
   }
 
 }

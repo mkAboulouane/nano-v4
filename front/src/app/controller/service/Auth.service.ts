@@ -127,7 +127,7 @@ export class AuthService {
 
     public loadInfos() {
         const tokenDecoded = this.tokenService.decode();
-        const username = tokenDecoded.sub;
+        const username = tokenDecoded.username;
         const roles = tokenDecoded.roles;
         const email = tokenDecoded.email;
         const prenom = tokenDecoded.prenom;
@@ -140,6 +140,8 @@ export class AuthService {
         this._authenticatedUser.email = email;
         this._authenticatedUser.roles = roles;
         localStorage.setItem('autenticated', JSON.stringify(true));
+        localStorage.setItem('username', JSON.stringify(username));
+        localStorage.setItem('roles', JSON.stringify(roles));
         this.authenticated = true;
         this._loggedIn.next(true);
     }
@@ -148,6 +150,8 @@ export class AuthService {
         this.tokenService.removeToken();
         this.unregisterConnectedChercheur();
         localStorage.setItem('autenticated', JSON.stringify(false));
+        localStorage.removeItem('username');
+        localStorage.removeItem('roles');
         this.authenticated = false;
         this._loggedIn.next(false);
         this._authenticatedUser = new User();
