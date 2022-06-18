@@ -1,5 +1,5 @@
 {
-  "name": "paper-kit-2-angular",
+  "name": "stage",
   "version": "1.4.0",
   "license": "MIT",
   "repository": {
@@ -7,8 +7,8 @@
     "url": ""
   },
   "engines": {
-    "node": "12.x",
-    "npm": "8.x"
+    "node": "12.22.9",
+    "npm": "8.5.1"
   },
   "scripts": {
     "ng": "ng",
