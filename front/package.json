@@ -1,10 +1,14 @@
 {
-  "name": "paper-kit-2-angular",
+  "name": "stage",
   "version": "1.4.0",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": ""
+  },
+  "engines": {
+    "node": "12.22.9",
+    "npm": "8.5.1"
   },
   "scripts": {
     "ng": "ng",
@@ -15,6 +19,7 @@
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
+
   "dependencies": {
     "@angular/animations": "11.0.4",
     "@angular/common": "11.0.4",
@@ -38,8 +43,7 @@
     "nouislider": "14.6.3",
     "popper.js": "1.16.1",
     "rxjs": "6.6.3",
-    "rxjs-compat": "6.6.3",
-    "zone.js": "0.11.3"
+    "rxjs-compat": "6.6.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^13.3.7",

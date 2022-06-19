@@ -75,9 +75,11 @@ import {ViewUserDetailtComponent} from "./module/admin/view/user-admin/view-user
 import {BlockUserComponent} from "./module/admin/view/user-admin/block-user/block-user.component";
 import {ViewProduitComponent} from "./module/client/view/view-produit/view-produit.component";
 import {CheckoutComponent} from "./module/client/view/checkout/checkout.component";
+import {ClientNotificationComponent} from "./module/client/view/client-notification/client-notification.component";
 
 @NgModule({
     declarations: [
+        ClientNotificationComponent,
         CheckoutComponent,
         ViewProduitComponent,
         BlockUserComponent,

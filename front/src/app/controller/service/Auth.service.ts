@@ -42,7 +42,6 @@ export class AuthService {
                 jwt != null ? this.tokenService.saveToken(jwt) : false;
                 this.loadInfos();
                 console.log('you are logged in successfully');
-                // console.log(this.authenticatedUser.password);
                 this.getRole(username);
                 }, (error: HttpErrorResponse) => {
                 this.error = error.error;
@@ -51,17 +50,6 @@ export class AuthService {
         );
     }
 
-
-    /*
-        test: any;
-    *   paiment(){
-    * this.paimentService.calculePaiment().subscibe(
-    *   data => {
-    *       this.test = data;
-    *       console.log(data);
-    * });
-    * }
-    * */
     public getRole(username: string){
         // alert('avant');
        return this.http.get(this.API + 'register/role/username/' + username,{ responseType: 'text'}).subscribe(
@@ -127,7 +115,7 @@ export class AuthService {
 
     public loadInfos() {
         const tokenDecoded = this.tokenService.decode();
-        const username = tokenDecoded.sub;
+        const username = tokenDecoded.username;
         const roles = tokenDecoded.roles;
         const email = tokenDecoded.email;
         const prenom = tokenDecoded.prenom;
@@ -140,6 +128,8 @@ export class AuthService {
         this._authenticatedUser.email = email;
         this._authenticatedUser.roles = roles;
         localStorage.setItem('autenticated', JSON.stringify(true));
+        // localStorage.setItem('username', JSON.stringify(username));
+        localStorage.setItem('roles', JSON.stringify(roles));
         this.authenticated = true;
         this._loggedIn.next(true);
     }
@@ -148,6 +138,8 @@ export class AuthService {
         this.tokenService.removeToken();
         this.unregisterConnectedChercheur();
         localStorage.setItem('autenticated', JSON.stringify(false));
+        // localStorage.removeItem('username');
+        localStorage.removeItem('roles');
         this.authenticated = false;
         this._loggedIn.next(false);
         this._authenticatedUser = new User();
