@@ -46,15 +46,17 @@
                 <div class="card-body p-4">
                     <div class="text-center">
                         <!-- prodduct name-->
-                        <h5 class="fw-bolder">{{prod.nom}}</h5>
+                        <h5 class="fw-bolder">{{prod.nom}}</h5><br>
                         <!-- prodduct price-->
-                        {{prod.prix}}
+                        <span class="text-decoration-line-through" style="color: red">{{prod.prixAncien}} DH</span><br><br>
+                        <span style="margin-top: 20px;color: green">{{prod.prix}} DH</span>
                     </div>
                 </div>
                 <!-- prodduct actions-->
-                <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" (click)="redirect(prod.id)">
+                <div class="card-footer p-4 pt-0 border-top-0 " (click)="redirect(prod.id)">
                     <div class="text-center">
-                        <a class="btn btn-outline-dark mt-auto" >View options</a></div>
+                        <a class="btn " style="background-color: black">Ajouter au panier</a></div>
+
                 </div>
             </div>
         </div>
