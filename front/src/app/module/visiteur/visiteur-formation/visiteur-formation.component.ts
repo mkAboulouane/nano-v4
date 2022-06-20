@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormationService} from "../../../controller/service/Formation.service";
 import {Formation} from "../../../controller/model/formation.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-visiteur-formation',
@@ -9,7 +10,7 @@ import {Formation} from "../../../controller/model/formation.model";
 })
 export class VisiteurFormationComponent implements OnInit {
   formations: Formation[];
-  constructor(private formationService: FormationService) { }
+  constructor(private formationService: FormationService,private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -20,4 +21,7 @@ export class VisiteurFormationComponent implements OnInit {
   }
 
 
+  check(formation: Formation) {
+    this.router.navigate(['/login']);
+  }
 }

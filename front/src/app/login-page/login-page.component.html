@@ -13,7 +13,7 @@
 <!--                    <form action="#" method="post">-->
                     <form class="register-form" [formGroup]="loginForm">
                         <div class="form-group first"><br>
-                            <label for="username">Nom d'utilisateur</label>
+                            <label for="username">Nom d'utilisateur ou Adresse Email</label>
                             <input type="text" class="form-control" formControlName="username" placeholder="Nom d'utilisateur" id="username">
                         </div>
                         <div class="form-group last mb-3">
@@ -31,12 +31,12 @@
 
 
                         <div class="custom-control custom-switch mb-1" style="text-align: center;">
-                            <input checked class="custom-control-input" id="customSwitch1" type="checkbox" [value]="false">
+                            <input class="custom-control-input" id="customSwitch1" type="checkbox" [(ngModel)]="admin">
                             <label class="custom-control-label" for="customSwitch1">Se connecter en tant que <span style="color: #00bbff">admin</span></label>
                         </div>
 
                         <div class="custom-control custom-switch mb-1" style="text-align: center;">
-                            <input checked class="custom-control-input" id="customSwitch" type="checkbox">
+                            <input class="custom-control-input" id="customSwitch" type="checkbox" [(ngModel)]="gerant">
                             <label class="custom-control-label" for="customSwitch">Se connecter en tant que <span style="color: #00bbff">gérant</span></label>
                         </div>
 
