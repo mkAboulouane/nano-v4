@@ -5,18 +5,18 @@
     <div class="row" style="height: 500px;">
         <div class="col-lg-3 left">
             <div class="box shadow-sm mb-3 rounded bg-white ads-box text-center">
-                <img src="assets/profile.jpeg" class="img-fluid" alt="Responsive image"/>
+                <img src="assets/img/account.png" class="img-fluid" alt="Responsive image"/>
                 <div class="p-3 border-bottom">
                     <h6 class="font-weight-bold text-dark">Notifications</h6>
-                    <p class="mb-0 text-muted">You’re all caught up! Check back later for new notifications</p>
+                    <p class="mb-0 text-muted"></p>
                 </div>
                 <div class="p-3">
-                    <button type="button" class="btn btn-outline-success btn-sm pl-4 pr-4">View settings</button>
+                    <button type="button" class="btn btn-outline-success btn-sm pl-4 pr-4">voir parametre</button>
                 </div>
             </div>
             <div class="box mb-3 shadow-sm rounded bg-white profile-box text-center">
                 <div class="p-5">
-                    <img src="assets/profile.jpeg" class="img-fluid" alt="Responsive image"/>
+                    <img src="assets/img/account.png" class="img-fluid" alt="Responsive image"/>
                 </div>
                 <div class="p-3 border-top border-bottom">
                     <h5 class="font-weight-bold text-dark mb-1 mt-0">{{user.username}}</h5>
@@ -42,12 +42,12 @@
                 <div class="box-body p-0" *ngFor="let not of notifications">
                     <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="dropdown-list-image mr-3">
-                            <img *ngIf="not.status === 'Urgent'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
-                            <img *ngIf="not.status === 'Promotion'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
-                            <img *ngIf="not.status === 'Evenement'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
-                            <img *ngIf="not.status === 'Ads'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
-                            <img *ngIf="not.status === 'Notification'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
-                            <img *ngIf="not.status === 'Info'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Urgent'" class="rounded-circle" src="assets/img/alarm.png" alt=""/>
+                            <img *ngIf="not.status === 'Promotion'" class="rounded-circle" src="assets/img/discount.png" alt=""/>
+                            <img *ngIf="not.status === 'Evenement'" class="rounded-circle" src="assets/img/event.png" alt=""/>
+                            <img *ngIf="not.status === 'Ads'" class="rounded-circle" src="assets/img/advertisement.png" alt=""/>
+                            <img *ngIf="not.status === 'Notification'" class="rounded-circle" src="assets/img/notification.png" alt=""/>
+                            <img *ngIf="not.status === 'Info'" class="rounded-circle" src="assets/img/file.png" alt=""/>
                         </div>
                         <div class="font-weight-bold mr-3">
                             <div class="text-truncate">{{not.status}}</div>
@@ -64,7 +64,7 @@
 
                         <div class="p-3 d-flex align-items-center osahan-post-header">
                             <div class="dropdown-list-image mr-3">
-                                <img class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                                <img class="rounded-circle" src="assets/img/account.png" alt=""/>
                             </div>
                             <div class="font-weight-bold mr-3">
                                 <div>
