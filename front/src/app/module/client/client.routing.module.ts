@@ -16,6 +16,7 @@ import {ViewFormationComponent} from './view/view-formation/view-formation.compo
 import {ViewProduitComponent} from './view/view-produit/view-produit.component';
 import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
+import { CommandeConfirmeComponent } from './view/commande-confirme/commande-confirme.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import {BrowserModule} from "@angular/platform-browser";
         CommonModule
     ],
     exports: [RouterModule],
+    declarations: [CommandeConfirmeComponent],
     // declarations: [],
 })
 export class ClientRoutingModule {
