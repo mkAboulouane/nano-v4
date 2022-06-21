@@ -3,7 +3,6 @@
     <div class="container">
         <div class="navbar-translate col-sm-0">
             <a class="navbar-brand " style="color: black">Nano <span style="color: #00bbff">planete</span></a>
-            <!--            <a class="navbar-brand " style="color: black">Nano <span style="color: black">planete</span></a>-->
             <button (click)="sidebarToggle()" aria-controls="navbarTogglerDemo02" aria-expanded="false"
                     aria-label="Toggle navigation" class="navbar-toggler navbar-burger" data-target="#navbarToggler"
                     data-toggle="collapse" type="button">
@@ -52,48 +51,31 @@
 
 
                 <li class="nav-item ">
-<!--                    <a [routerLink]="['/client/panier']" class="nav-link" style="font-size: 10px ; color: black">-->
                     <a [routerLink]="['/client/chekout']" class="nav-link" style="font-size: 10px ; color: black">
                         <i aria-hidden="true" class="fa fa-shopping-cart" style="font-size: 15px"></i>
-                        <small class="mb-5" style="color: red">{{item}}</small>
                         Panier </a>
                 </li>
 
                 <li class="nav-item ">
                     <a [routerLink]="['/client/notification']" class="nav-link" style="font-size: 10px ; color: black">
                         <i class="fa fa-bell" aria-hidden="true" style="font-size: 14px"></i>
-
+                        <small *ngIf="notSeen > 0" class="mt-lg-4 " style="color: red; font-size: 10px;">{{key}}</small>
                     </a>
+
                 </li>
-<!--                <li class="nav-item ">-->
-<!--                    <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">-->
-<!--                        <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 14px"></i>-->
-<!--&lt;!&ndash;&ndash;&gt;-->
-<!--                    </a>-->
-
-
-                    <!-- Example single danger button -->
 
                 <div class="dropdown" style="display: flex">
-<!--                    <button class="dropbtn">Dropdown</button>-->
                     <img class="img-circle" src="assets/profile.jpeg" style="width: 40px;cursor: pointer;
     height: 40px; margin-top: 1rem">
                     <div class="dropdown-content" >
-                        <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">
-                           <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 14px"></i>Se Deconnecter
-                            <!---->
-                        </a>
-
                         <a [routerLink]="['/client/portrait']" class="nav-link" style="font-size: 10px ; color: black">
                             <i class="fa fa-user" aria-hidden="true" style="font-size: 14px" ></i>Profile
-
+                        </a>
+                        <a (click)="logOut()" class="nav-link" style="font-size: 10px ; color: black">
+                            <i class="fa fa-sign-out" aria-hidden="true" style="font-size: 14px"></i>Se Deconnecter
                         </a>
                     </div>
                 </div>
-
-
-<!--                </li>-->
-
             </ul>
         </div>
     </div>

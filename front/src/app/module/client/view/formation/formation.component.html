@@ -14,7 +14,8 @@
                 <div  class="card-header no-border">
                    <h6> <big class="card-title">{{formation.nom}}</big></h6>
                 </div>
-                <div class="card-body pt-0" routerLink="/client/formation/{{formation.id}}" >
+<!--                <div class="card-body pt-0" routerLink="/client/formation/{{formation.id}}" >-->
+                <div class="card-body pt-0">
                     <div class="widget-49">
                         <div class="widget-49-title-wrapper">
                             <div class="widget-49-date-primary">
@@ -33,7 +34,7 @@
 
                         </ol>
                         <div class="widget-49-meeting-action">
-                            <a class="btn btn-sm" (click)="check()" style="background-color: black">Ajouter au panier</a>
+                            <a class="btn btn-sm" (click)="add(formation)" style="background-color: black">Ajouter au panier</a>
                         </div>
                     </div>
                 </div>

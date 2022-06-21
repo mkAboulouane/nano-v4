@@ -11,6 +11,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 export class LoginPageComponent {
     focus1: boolean;
     focus: boolean;
+    admin: any;
+    gerant = false;
 
 
     loginForm = new FormGroup({

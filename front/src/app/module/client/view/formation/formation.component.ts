@@ -5,6 +5,8 @@ import {Router} from "@angular/router";
 import {UserService} from "../../../../controller/service/User.service";
 import {User} from "../../../../controller/model/User.model";
 import {AuthService} from "../../../../controller/service/Auth.service";
+import {CommandeService} from "../../../../controller/service/Commande.service";
+import {Panier} from "../../../../controller/model/panier.model";
 
 @Component({
     selector: 'app-formation',
@@ -17,12 +19,12 @@ export class FormationComponent implements OnInit {
 
 
     constructor(private formationService: FormationService, private userService: UserService,
-                private router: Router , private authService: AuthService) {
+                private router: Router , private authService: AuthService,
+                private commandeService: CommandeService) {
     }
 
     ngOnInit(): void {
         this.findAll();
-        this.online();
     }
 
     public findAll() {
@@ -32,22 +34,32 @@ export class FormationComponent implements OnInit {
             },error => console.log(error)
         );
     }
+    
 
-        online(){
-            this.userService.currentUser().subscribe(
-                data => {
-                    this.user = data;
-                    console.log('current user: '+data);
-                },error => console.log(error)
+    check() {
+        this.router.navigate(['/client/chekout']);
+    }
 
-            )
-        }
+    add(formation: Formation) {
+         this.panier.produitPanierItems = null;
+         this.panier.formation = formation;
+         this.commandeService.save().subscribe(
+            data =>{
+                console.log(data);
+                this.check();
+            },error => console.log(error)
+        )
+
+    }
+
+    get panier(): Panier{
+        return this.commandeService.panier;
+    }
+    set panier(value :Panier){
+        this.commandeService.panier = value;
+    }
 
 
-
-
-
-    //
     // get formations(): Array<Formation> {
     //     return this.formationService.formations;
     // }
@@ -56,7 +68,4 @@ export class FormationComponent implements OnInit {
     //     this.formationService.formations = value;
     // }
 
-    check() {
-        this.router.navigate(['/client/chekout']);
-    }
 }

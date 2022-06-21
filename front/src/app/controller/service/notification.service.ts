@@ -42,6 +42,10 @@ export class NotificationService {
     return this.http.get<Array<Notification>>(this.API + '/seen/id/' + id + '/seen/' + seen);
   }
 
+  findByUserId(id: number){
+    return this.http.get<Array<Notification>>(this.API + '/user-id/' + id );
+  }
+
   saveOrigin(message: string, id: number, status: string){
     return this.http.post(this.API + '/save/'+ message + '/user-id/' + id + '/status/' + status,null);
   }

@@ -8,7 +8,7 @@
 
     <div class="container my-5 mt-5 mx-6"><br><br>
         <div class="row">
-            <div *ngFor="let formation of formations" class="col-lg-6" routerLink="/formation/{{formation.id}}" >
+            <div *ngFor="let formation of formations" class="col-lg-6">
                 <!--        <div *ngFor="let formation of formations" class="col-lg-6">-->
                 <div class="card card-margin">
                     <div  class="card-header no-border">
@@ -33,7 +33,7 @@
 
                             </ol>
                             <div class="widget-49-meeting-action">
-                                <a class="btn btn-sm "style="background-color: black">Ajouter au panier</a>
+                                <a class="btn btn-sm "style="background-color: black" (click)="check(formation)">Ajouter au panier</a>
                             </div>
                         </div>
                     </div>

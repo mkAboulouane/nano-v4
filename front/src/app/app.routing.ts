@@ -34,7 +34,6 @@ import {VisiteurFormationComponent} from "./module/visiteur/visiteur-formation/v
                         {path: '', redirectTo: 'login' , pathMatch: 'full'},
                         {path: 'home', component: ComponentsComponent},
                         {path: 'formation', component: VisiteurFormationComponent},
-                        {path: 'formation/:id', component: VisiteurViewFormationComponent},
                         {path: 'congres', component: CongresComponent},
                         {path: 'produit-bio', component: VisiteurProduiBioComponent},
                         {path: 'produit-bio/:id', component: VisiteurViewProduiBioComponent},
