@@ -52,7 +52,7 @@ export class UserListComponent implements OnInit {
     }
 
     get users(): Array<User>{
-        return this.userService.users;
+        return this.userService.users.reverse();
     }
 
     set users(value: User[]){

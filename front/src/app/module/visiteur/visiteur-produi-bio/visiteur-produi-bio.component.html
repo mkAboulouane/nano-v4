@@ -1,11 +1,11 @@
-<div class="container ml-5">
+<div class="container">
     <div class="container-fluid" style="margin-top: 1rem;margin-bottom: 3rem;padding-top: 1rem;padding-bottom: 1rem;padding-right: 5rem;padding-left: 5rem; background-color: black;text-align: center;color: white" >
         <h1>DECOUVRIR NOS PRODUITS</h1>
         <div><h5>nos produits sont d'excellente qualité</h5> </div>
     </div>
 
 
-    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/produit-bio/{{produitBio.id}}" style="margin-left:2rem;margin-top: 2rem">
+    <div *ngFor="let produitBio of produitBios"  class="card-4 card-div" routerLink="/produit-bio/{{produitBio.id}}">
         <div class="like-icon-div">
 
         </div>

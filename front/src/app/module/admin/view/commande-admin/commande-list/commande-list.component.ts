@@ -25,7 +25,7 @@ export class CommandeListComponent implements OnInit {
 
     findAll(){
         this.commandeService.findAll().subscribe( data => {
-            this.paniers = data;
+            this.paniers = data.reverse();
             this.crud = data;
             console.log(data);
         },error => {
