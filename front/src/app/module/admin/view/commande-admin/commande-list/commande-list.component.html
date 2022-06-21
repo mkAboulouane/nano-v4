@@ -20,13 +20,11 @@
                 <tr>
                     <!--                    <th>Nom</th>-->
                     <th>Client</th>
-                    <th style="text-align: center;">Adress</th>
-                    <th>Pays</th>
-                    <th>Tele</th>
+                    <th>Reference</th>
                     <th>Date</th>
-                    <th style="text-align: center;">Articles</th>
-                    <th>prix Total</th>
-                    <th>Etat</th>
+                    <th>Item</th>
+                    <th>Total</th>
+                    <th>Paye</th>
                     <th>Edit</th>
                 </tr>
                 </thead>
@@ -34,14 +32,15 @@
                 <tbody>
                 <tr *ngFor="let panier of paniers">
                     <td>{{panier.user.username}}</td>
-                    <td><div class="scroll-page" style="overflow: scroll; width:100px;height: 40px; text-align: center;" >  {{panier?.lieu}} </div></td>
+                    <td>  {{panier?.reference}} </td>
 <!--                    <td>{{panier.ville}}</td>/-->
-                    <td>{{panier.pays}} </td>
-                    <td >{{panier.phone}}</td>
-                    <td >{{panier.dateAjout}}</td>
-                    <td><div class="scroll-page" style="overflow: scroll; width:200px;height: 20px" >  {{panier.formation?.nom}} <span *ngFor="let produitPanierItems of panier.produitPanierItems"> {{produitPanierItems.produitBio?.nom}} * {{produitPanierItems?.quantite}} </span> </div></td>
-                    <td >{{panier.prixTotal}}</td>
-                    <td >{{panier.etatCommande}}</td>
+                    <td>{{panier.addedAt.toString().substring(0,10)+' '+panier.addedAt.toString().substring(12,19) }} </td>
+                    <td *ngIf="panier.formation!=null">{{panier.formation.nom}}</td>
+                    <td *ngIf="panier.produitBio!=null">{{panier.produitBio.nom}}</td>
+                    <td >{{panier.total}}</td>
+                    <td *ngIf="panier.paye">Oui</td>
+                    <td *ngIf="!panier.paye">Non</td>
+<!--                    <td >{{panier.}}</td>-->
 
                     <td>
 
@@ -50,11 +49,7 @@
                                aria-hidden="true"
                                class="fa fa-pencil-square" style="font-size: 18px;color: deepskyblue"></i>
                         </a>
-<!--                        <a data-mdb-toggle="tooltip" title="supprimer">-->
-<!--                            <i (click)="delete(congre)"-->
-<!--                               aria-hidden="true"-->
-<!--                               class="fa fa-trash" style="font-size: 18px;color: red ; padding-left: 2em;padding-top: 1em"></i>-->
-<!--                        </a>-->
+
                     </td>
                 </tr>
 

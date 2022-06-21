@@ -10,8 +10,8 @@ import {Commande} from "../../../../../controller/model/commande.model";
     styleUrls: ['./commande-list.component.css']
 })
 export class CommandeListComponent implements OnInit {
-    paniers: Commande[];
-    crud: Commande[];
+    paniers: Commande[] = [];
+    crud: Commande[] = [];
     searchBar: string;
 
 
@@ -40,7 +40,8 @@ export class CommandeListComponent implements OnInit {
         if(searchVal && searchVal != '') {
             for (let panier of this.paniers) {
                 if (panier.reference.toLowerCase().search(searchVal.toLowerCase()) != -1
-                    || panier.formation.nom.toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.formation?.nom.toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.produitBio?.nom.toLowerCase().search(searchVal.toLowerCase()) != -1
                     || panier.user.username.toLowerCase().search(searchVal.toLowerCase()) != -1
                     || panier.addedAt.toString().toLowerCase().search(searchVal.toLowerCase()) != -1
                     || panier.total.toString().toLowerCase().search(searchVal.toLowerCase()) != -1

@@ -4,6 +4,7 @@ import {ProduitBio} from "../../../../controller/model/produit-bio.model";
 import {DomSanitizer} from "@angular/platform-browser";
 import {CommandeService} from "../../../../controller/service/Commande.service";
 import {Commande} from "../../../../controller/model/commande.model";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-checkout',
@@ -14,14 +15,28 @@ export class CheckoutComponent implements OnInit {
     amount: number;
     quantity: number = 1;
 
-    constructor(private materielBioService: MaterielBioService
+    constructor(private materielBioService: MaterielBioService, private router: Router
                 , private sanitizer: DomSanitizer , private commandeService: CommandeService) {
+        this.router.routeReuseStrategy.shouldReuseRoute = function() {
+            return false;
+        };
     }
 
     ngOnInit(): void {
         this.findAll();
     }
 
+    reLoad(){
+        this.router.navigate([this.router.url])
+    }
+
+    delete(commande: Commande) {
+        this.commandeService.delete(commande.id).subscribe(
+            data => console.log(data)
+            ,error => console.log(error)
+        )
+        this.reLoad();
+    }
 
     findAll(){
         this.commandeService.findByUser().subscribe(

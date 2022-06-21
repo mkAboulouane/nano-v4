@@ -14,7 +14,7 @@ import {BlockUserComponent} from "../block-user/block-user.component";
     styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
-    crud: User[];
+    crud = new Array<User>();
     searchInput: string;
     cols: any[];
 
@@ -55,34 +55,30 @@ export class UserListComponent implements OnInit {
         return this.userService.users;
     }
 
-    // add() {
-    //     this.router.navigate(['/add-user'])
-    // }
-
-    search(searchInput: string) {
-
+    set users(value: User[]){
+     this.userService.users = value;
     }
 
-    //
-    // search(index: string) {
-    //     this.users = this.crud;
-    //     let serchuser: User[] = [];
-    //     if (index && index != '') {
-    //         for (let user of this.users) {
-    //             if (user.nom.toLowerCase().search(index.toLowerCase()) != -1
-    //                 || user.email.toLowerCase().search(index.toLowerCase()) != -1
-    //                 || user.phone.toLowerCase().search(index.toLowerCase()) != -1
-    //                 // || congre.addedAt.toLowerCase().search(index.toLowerCase()) != -1
-    //                 // || congre.prix.toString().search(index.toLowerCase()) != -1
-    //             ) {
-    //                 serchuser.push(user);
-    //             }
-    //         }
-    //         console.log(serchuser);
-    //
-    //         this.users = serchuser.slice();
-    //     }
-    // }
+
+    search(index: string) {
+        this.crud = this.users;
+        let serchuser: User[] = [];
+        if (index && index != '') {
+            for (let user of this.users) {
+                if (user.nom?.toLowerCase().search(index.toLowerCase()) != -1
+                    || user.email.toLowerCase().search(index.toLowerCase()) != -1
+                    || user.phone.toLowerCase().search(index.toLowerCase()) != -1
+                    || user.username?.toLowerCase().search(index.toLowerCase()) != -1
+                    || user.createdAt?.toString().search(index.toLowerCase()) != -1
+                ) {
+                    serchuser.push(user);
+                }
+            }
+            console.log(serchuser);
+
+            this.users = serchuser.slice();
+        }
+    }
     // public findAll(){
     //     this.userService.findAll().subscribe(data =>{
     //         this.users = data;
