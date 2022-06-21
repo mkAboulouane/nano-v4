@@ -22,17 +22,33 @@
                                                                     <h6 *ngIf="commande.produitBio == null"class="text-primary">{{commande.formation?.nom}}</h6>
                                                                     <h7 *ngIf="commande.produitBio != null" style="color: #9e9e9e;">Couleur: Blanc</h7>
                                                                     <div class="d-flex align-items-center">
-                                                                        <p *ngIf="commande.produitBio != null" class="fw-bold mb-0 me-5 pe-3">{{commande.produitBio.prix}} $</p>
-                                                                        <p *ngIf="commande.produitBio == null" class="fw-bold mb-0 me-5 pe-3">{{commande.formation.prix}} $</p>
+                                                                        <p *ngIf="commande.produitBio != null" class="fw-bold mb-0 me-5 pe-3">{{commande.produitBio.prix}} dh</p>
+                                                                        <p *ngIf="commande.produitBio == null" class="fw-bold mb-0 me-5 pe-3">{{commande.formation.prix}} dh</p>
 
                                                                         <div class="def-number-input number-input safari_only">
-                                                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+
+                                                                            <button style="margin-left: 2rem;" onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                                                                                     class="minus"></button>
+
                                                                             <input class="quantity fw-bold text-black" min="1" name="quantity" value="1"
                                                                                    type="number">
-                                                                            <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+
+                                                                            <button style="margin-left: 0.5rem;"onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                                                                     class="plus"></button>
+
+
                                                                         </div>
+
+
+
+
+                                                                        <div> <a data-mdb-toggle="tooltip" title="supprimer">
+                                                                            <i aria-hidden="true" class="fa fa-trash" style="font-size: 25px;color: red ; padding-left: 0em;padding-top: 0em;cursor: pointer"></i>
+                                                                             </a>
+                                                                        </div>
+
+
+
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -42,7 +58,7 @@
 
                             <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e1f5fe;">
                                 <h5 class="fw-bold mb-0">Total a Paye:</h5>
-                                <h5 class="fw-bold mb-0">{{amount}}</h5>
+                                <h5 class="fw-bold mb-0">{{amount}} dh</h5>
                                 <!--                                    <h5 class="fw-bold mb-0">{{total}}</h5>-->
                             </div>
 
