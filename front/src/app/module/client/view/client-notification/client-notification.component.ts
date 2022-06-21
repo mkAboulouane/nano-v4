@@ -17,9 +17,6 @@ export class ClientNotificationComponent implements OnInit {
 
   ngOnInit(): void {
       this.online();
-      setInterval(e=>{
-            this.notification(this.user.id)
-      },5000)
   }
 
   update(){
@@ -29,13 +26,6 @@ export class ClientNotificationComponent implements OnInit {
       );
   }
 
-   notSeen() {
-      this.key = 0;
-      this.notifications.forEach(e=>{
-          if(!e.seen) this.key++;
-      }) 
-  }
-    
 
   online(){
     this.userService.currentUser().subscribe(
@@ -54,10 +44,12 @@ export class ClientNotificationComponent implements OnInit {
                 this.notifications = data;
                 this.notifications = this.notifications.reverse();
                 this.notifications.forEach(e=>{
-                   this.selectedNotification = e;
-                   this.update();
+                    if(!e.seen) {
+                        this.selectedNotification = e;
+                        this.update();
+                    }
                 });
-                this.notSeen();
+                this.notSeen = 0;
                 console.log(data);
             },error => console.log(error)
         )
@@ -69,6 +61,11 @@ export class ClientNotificationComponent implements OnInit {
 
     set selectedNotification(value: Notification){
       this.notificationService.selectedNotification = value;
+    }
+
+
+    set notSeen(value: number) {
+      this.userService.notSeen = value;
     }
 
 

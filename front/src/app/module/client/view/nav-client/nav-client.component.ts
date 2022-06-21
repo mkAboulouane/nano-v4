@@ -1,6 +1,10 @@
 import {Component, ElementRef, OnInit} from '@angular/core';
 import {Location} from "@angular/common";
 import {AuthService} from "../../../../controller/service/Auth.service";
+import {NotificationService} from "../../../../controller/service/notification.service";
+import {Notification} from "../../../../controller/model/notification.model";
+import {UserService} from "../../../../controller/service/User.service";
+import {User} from "../../../../controller/model/User.model";
 
 @Component({
     selector: 'app-nav-client',
@@ -9,16 +13,47 @@ import {AuthService} from "../../../../controller/service/Auth.service";
 })
 export class NavClientComponent implements OnInit {
     private toggleButton: any;
+    key = 0;
+    notifications: Notification[] = [];
+    user = new User();
     private sidebarVisible: boolean;
-    item = 5;
 
-    constructor(public location: Location, private element: ElementRef, private authService: AuthService) {
+    constructor(public location: Location, private element: ElementRef, private userService: UserService
+                , private authService: AuthService , private notificationService: NotificationService) {
         this.sidebarVisible = false;
     }
 
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
         this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
+        this.online();
+    }
+
+
+    online(){
+        this.userService.currentUser().subscribe(
+            data => {
+                this.user = data;
+                this.notification(this.user.id);
+            },error => console.log(error)
+
+        )
+    }
+
+    notification(id: number){
+        this.notificationService.findByUserId(id).subscribe(
+            data => {
+                this.notifications = data;
+                this.notSeen = 0;
+                this.notifications.forEach(e=>{
+                    if (!e.seen) {
+                        this.notSeen++;
+                    }
+                });
+                this.key = this.notSeen;
+                console.log(data);
+            },error => console.log(error)
+        )
     }
 
     sidebarOpen() {
@@ -156,4 +191,15 @@ export class NavClientComponent implements OnInit {
         console.log("Log Out Succesfully");
     }
     }
+
+    get notSeen(): number   {
+        return this.userService.notSeen;
+    }
+
+    set notSeen(value: number){
+        this.userService.notSeen = value;
+    }
+
+
+
 }

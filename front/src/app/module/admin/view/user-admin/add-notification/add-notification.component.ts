@@ -34,7 +34,7 @@ import {Notification} from "../../../../../controller/model/notification.model";
         </div>
         <br>
         <div class="modal-footer">
-            <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Close
+            <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Annuler
             </button>
             <button type="button" class="btn btn-outline-primary" (click)="send(selectedNotification.message,selectedNotification.status,user.id)">Envoyer</button>
         </div>
@@ -50,12 +50,14 @@ export class AddNotificationComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.selectedNotification = new Notification();
     }
 
     send(message: string, status: string, id: number) {
       this.notificationService.saveOrigin(message,id,status).subscribe(
           data => {
             console.log(data);
+            this.selectedNotification = new Notification();
           },error => console.log(error)
       );
       this.activeModal.close('Close click')
@@ -63,5 +65,9 @@ export class AddNotificationComponent implements OnInit {
 
     get selectedNotification(): Notification {
       return this.notificationService.selectedNotification;
+    }
+
+    set selectedNotification(value: Notification)  {
+        this.notificationService.selectedNotification = value;
     }
 }

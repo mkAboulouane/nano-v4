@@ -13,6 +13,7 @@ export class UserService {
     private _selectedUsers: User[] = [];
     private _selectedUser: User;
     private _users: Array<User>;
+    private _notSeen = 0;
 
 
     constructor(private http: HttpClient) {
@@ -136,5 +137,13 @@ export class UserService {
 
     set selectedUser(value: User) {
         this._selectedUser = value;
+    }
+
+    get notSeen(): number {
+        return this._notSeen;
+    }
+
+    set notSeen(value: number) {
+        this._notSeen = value;
     }
 }
