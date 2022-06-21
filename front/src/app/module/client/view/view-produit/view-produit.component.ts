@@ -4,6 +4,8 @@ import {ProduitBio} from "../../../../controller/model/produit-bio.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {DomSanitizer} from "@angular/platform-browser";
 import {Location} from "@angular/common";
+import {CommandeService} from "../../../../controller/service/Commande.service";
+import {Commande} from "../../../../controller/model/commande.model";
 
 
 @Component({
@@ -14,6 +16,7 @@ import {Location} from "@angular/common";
 export class ViewProduitComponent implements OnInit {
 
     constructor(private materielBioService: MaterielBioService
+                ,private commandeService: CommandeService
         , private router: Router
         , private sanitizer: DomSanitizer
         , private location: Location
@@ -28,7 +31,7 @@ export class ViewProduitComponent implements OnInit {
         // });
     }
 
-    produit: ProduitBio;
+    produit = new ProduitBio();
     produitBios: ProduitBio[] = [];
     linkId: number;
 
@@ -69,11 +72,27 @@ export class ViewProduitComponent implements OnInit {
         this.location.back();
     }
 
-    check() {
-        this.router.navigate(['/client/chekout']);
+    check(produit: ProduitBio) {
+        // let nom = this.produit.nom;
+        this.commande.produitBio.nom = produit.nom;
+        this.commandeService.save().subscribe(
+            data => {
+                console.log(data);
+                this.router.navigate(['/client/chekout']);
+            }
+            ,error => console.log(error)
+        )
     }
 
     redirect(id: number) {
         this.router.navigate(['/client/produit-bio/'+id]);
+    }
+
+    get commande(): Commande {
+        return this.commandeService.commande;
+    }
+
+    set commande(value: Commande) {
+        this.commandeService.commande = value;
     }
 }

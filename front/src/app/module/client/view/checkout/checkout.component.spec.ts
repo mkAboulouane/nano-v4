@@ -1,6 +1,16 @@
-import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {CheckoutComponent} from './checkout.component';
+import {NO_ERRORS_SCHEMA} from "@angular/core";
+
+// beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//         declarations: [ CheckoutComponent ],
+//         schemas: [NO_ERRORS_SCHEMA]
+//     })
+//         .compileComponents();
+// }));
+
 
 describe('CheckoutComponent', () => {
     let component: CheckoutComponent;

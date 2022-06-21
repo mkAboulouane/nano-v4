@@ -9,21 +9,26 @@
 
                             <h3 class="mb-5 pt-2 text-center fw-bold text-uppercase">vos produits</h3>
 
-                                                            <div *ngFor="let pro of produitBios" class="d-flex align-items-center mb-4">
+                                                            <div *ngFor="let commande of commandes" class="d-flex align-items-center mb-4">
                                                                 <div class="flex-shrink-0">
-                                                                    <img [src]="pro.imagePrincipal.picByte"
-                                                                         class="img-fluid" style="width: 100px;" alt="Generic placeholder image">
+                                                                    <img *ngIf="commande.produitBio != null" [src]="commande.produitBio.imagePrincipal?.picByte"
+                                                                         class="img-fluid" style="width: 100px;" alt="...">
+                                                                    <img *ngIf="commande.produitBio == null" src="assets/formation.jpeg" class="img-fluid" style="width: 100px;" alt="...">
+
                                                                 </div>
                                                                 <div class="flex-grow-1 ms-3">
                                                                     <a class="float-end text-black"></a>
-                                                                    <h6 class="text-primary">{{pro.nom}}</h6>
-                                                                    <h7 style="color: #9e9e9e;">Color: white</h7>
+                                                                    <h6 *ngIf="commande.produitBio != null" class="text-primary">{{commande.produitBio?.nom}}</h6>
+                                                                    <h6 *ngIf="commande.produitBio == null"class="text-primary">{{commande.formation?.nom}}</h6>
+                                                                    <h7 *ngIf="commande.produitBio != null" style="color: #9e9e9e;">Couleur: Blanc</h7>
                                                                     <div class="d-flex align-items-center">
-                                                                        <p class="fw-bold mb-0 me-5 pe-3">{{pro.prix}} dh</p>
+                                                                        <p *ngIf="commande.produitBio != null" class="fw-bold mb-0 me-5 pe-3">{{commande.produitBio.prix}} $</p>
+                                                                        <p *ngIf="commande.produitBio == null" class="fw-bold mb-0 me-5 pe-3">{{commande.formation.prix}} $</p>
+
                                                                         <div class="def-number-input number-input safari_only">
                                                                             <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
                                                                                     class="minus"></button>
-                                                                            <input class="quantity fw-bold text-black" min="0" name="quantity" value="1"
+                                                                            <input class="quantity fw-bold text-black" min="1" name="quantity" value="1"
                                                                                    type="number">
                                                                             <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
                                                                                     class="plus"></button>
@@ -37,7 +42,7 @@
 
                             <div class="d-flex justify-content-between p-2 mb-2" style="background-color: #e1f5fe;">
                                 <h5 class="fw-bold mb-0">Total a Paye:</h5>
-                                <h5 class="fw-bold mb-0">7,274 dh</h5>
+                                <h5 class="fw-bold mb-0">{{amount}}</h5>
                                 <!--                                    <h5 class="fw-bold mb-0">{{total}}</h5>-->
                             </div>
 

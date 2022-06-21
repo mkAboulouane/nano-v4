@@ -51,7 +51,6 @@ export class NavClientComponent implements OnInit {
                     }
                 });
                 this.key = this.notSeen;
-                console.log(data);
             },error => console.log(error)
         )
     }

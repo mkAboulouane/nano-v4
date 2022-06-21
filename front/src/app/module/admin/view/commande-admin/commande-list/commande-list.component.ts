@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Panier} from "../../../../../controller/model/panier.model";
 import {HttpClient} from "@angular/common/http";
 import {CommandeService} from "../../../../../controller/service/Commande.service";
+import {Commande} from "../../../../../controller/model/commande.model";
 
 @Component({
     selector: 'app-commande-list',
@@ -9,8 +10,8 @@ import {CommandeService} from "../../../../../controller/service/Commande.servic
     styleUrls: ['./commande-list.component.css']
 })
 export class CommandeListComponent implements OnInit {
-    paniers: Panier[];
-    crud: Panier[];
+    paniers: Commande[];
+    crud: Commande[];
     searchBar: string;
 
 
@@ -35,14 +36,14 @@ export class CommandeListComponent implements OnInit {
 
     search(searchVal: string) {
         this.paniers = this.crud;
-        let searchPaniers: Panier[] = [];
+        let searchPaniers: Commande[] = [];
         if(searchVal && searchVal != '') {
             for (let panier of this.paniers) {
-                if (panier.dateAjout.toLowerCase().search(searchVal.toLowerCase()) != -1
-                    || panier.phone.toLowerCase().search(searchVal.toLowerCase()) != -1
+                if (panier.reference.toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.formation.nom.toLowerCase().search(searchVal.toLowerCase()) != -1
                     || panier.user.username.toLowerCase().search(searchVal.toLowerCase()) != -1
-                    || panier.etatCommande.toLowerCase().search(searchVal.toLowerCase()) != -1
-                    || panier.lieu.toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.addedAt.toString().toLowerCase().search(searchVal.toLowerCase()) != -1
+                    || panier.total.toString().toLowerCase().search(searchVal.toLowerCase()) != -1
                 ){
                         searchPaniers.push(panier);
                 }

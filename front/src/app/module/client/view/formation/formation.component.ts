@@ -7,6 +7,7 @@ import {User} from "../../../../controller/model/User.model";
 import {AuthService} from "../../../../controller/service/Auth.service";
 import {CommandeService} from "../../../../controller/service/Commande.service";
 import {Panier} from "../../../../controller/model/panier.model";
+import {Commande} from "../../../../controller/model/commande.model";
 
 @Component({
     selector: 'app-formation',
@@ -41,8 +42,7 @@ export class FormationComponent implements OnInit {
     }
 
     add(formation: Formation) {
-         this.panier.produitPanierItems = null;
-         this.panier.formation = formation;
+         this.commande.formation.nom = formation.nom;
          this.commandeService.save().subscribe(
             data =>{
                 console.log(data);
@@ -52,11 +52,11 @@ export class FormationComponent implements OnInit {
 
     }
 
-    get panier(): Panier{
-        return this.commandeService.panier;
+    get commande(): Commande{
+        return this.commandeService.commande;
     }
-    set panier(value :Panier){
-        this.commandeService.panier = value;
+    set commande(value :Commande){
+        this.commandeService.commande = value;
     }
 
 
