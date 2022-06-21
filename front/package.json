@@ -7,7 +7,7 @@
     "url": ""
   },
   "engines": {
-    "node": "12.22.9"
+    "node": "16.10.x"
   },
   "scripts": {
     "ng": "ng",
