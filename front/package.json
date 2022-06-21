@@ -7,7 +7,7 @@
     "url": ""
   },
   "engines": {
-    "node": "12.x",
+    "node": "14.14.12",
     "npm": "8.x"
   },
   "scripts": {
