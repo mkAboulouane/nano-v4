@@ -21,6 +21,8 @@ export class ProfileComponent implements OnInit {
       this.userService.update(user);
   }
 
+
+
   online(){
     console.log('service auth : '+this.authServicer.user);
      this.userService.currentUser().subscribe(
