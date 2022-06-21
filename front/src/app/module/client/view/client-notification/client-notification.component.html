@@ -1,7 +1,6 @@
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css"
       integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous"/>
-
 <div class="container">
     <div class="row" style="height: 500px;">
         <div class="col-lg-3 left">
@@ -38,16 +37,16 @@
         <div class="col-lg-9 right">
             <div class="box shadow-sm rounded bg-white mb-3">
                 <div class="box-title border-bottom p-3">
-                    <h6 class="m-0">Recent</h6>
+                    <h6 class="m-0">Recent key = {{key}}</h6>
                 </div>
-                <div class="box-body p-0">
+                <div class="box-body p-0" *ngFor="let not of notifications">
                     <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="dropdown-list-image mr-3">
                             <img class="rounded-circle" src="assets/profile.jpeg" alt=""/>
                         </div>
                         <div class="font-weight-bold mr-3">
-                            <div class="text-truncate">Les Nouveaute: JEUDI</div>
-                            <div class="small">Voir la nouvelles Collection de Lentilles</div>
+                            <div class="text-truncate">{{not.status}}</div>
+                            <div class="small">{{not.message}}</div>
                         </div>
 
                     </div>
@@ -57,52 +56,39 @@
                         <h6 class="m-0">PLUS TÔT</h6>
                     </div>
                     <div class="box-body p-0">
-                        <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">
-                            <!--                        <img class="rounded-circle" src="assets/java.png" alt="" />-->
-                            <div class="dropdown-list-image mr-3 d-flex align-items-center bg-info justify-content-center rounded-circle text-white">
-                                JAVA
-                            </div>
-                            <div class="font-weight-bold mr-3">
-                                <div class="text-truncate">Nouveau : LUNDI</div>
-                                <div class="small">Decouvrez notre formation Professionel en Java 8 avec l'enseingant de
-                                    Mr Ali TAHIR
-                                </div>
-                            </div>
-                            <span class="ml-auto mb-auto">
-                            <div class="btn-group">
-
-<!--                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                                <!--                                    <i class="mdi mdi-dots-vertical"></i>-->
-                                <!--                                </button>-->
-
-                                <div class="dropdown-menu dropdown-menu-right" style="">
-<!--                                    <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>-->
-                                    <!--                                    <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>-->
-                                </div>
-                            </div>
-                            <br/>
-                            <div class="text-right text-muted pt-1">3d</div>
-                        </span>
-                        </div>
+<!--                        <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">-->
+<!--                            <div class="dropdown-list-image mr-3 d-flex align-items-center bg-info justify-content-center rounded-circle text-white">-->
+<!--                                JAVA-->
+<!--                            </div>-->
+<!--                            <div class="font-weight-bold mr-3">-->
+<!--                                <div class="text-truncate">Nouveau : LUNDI</div>-->
+<!--                                <div class="small">Decouvrez notre formation Professionel en Java 8 avec l'enseingant de-->
+<!--                                    Mr Ali TAHIR-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <span class="ml-auto mb-auto">-->
+<!--                            <div class="btn-group">-->
+<!--                                <div class="dropdown-menu dropdown-menu-right" style="">-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <br/>-->
+<!--                            <div class="text-right text-muted pt-1">3d</div>-->
+<!--                        </span>-->
+<!--                        </div>-->
                         <div class="p-3 d-flex align-items-center osahan-post-header">
                             <div class="dropdown-list-image mr-3">
                                 <img class="rounded-circle" src="assets/profile.jpeg" alt=""/>
                             </div>
                             <div class="font-weight-bold mr-3">
                                 <div>
-                                    <span class="font-weight-normal">Bonjour {{user.username}} a Nano planete</span> Decouvrez nos
+                                    <span class="font-weight-normal">Bonjour {{user.username}} a Nano planete</span>
+                                    Decouvrez nos
                                     formations et nouveautes.
-                                    <!--                                <div class="small text-success"><i class="fa fa-check-circle"></i> You sent Mandeep a message</div>-->
                                 </div>
                             </div>
                             <span class="ml-auto mb-auto">
                             <div class="btn-group">
-<!--                                <button type="button" class="btn btn-light btn-sm rounded" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
-                                <!--                                    <i class="mdi mdi-dots-vertical"></i>-->
-                                <!--                                </button>-->
                                 <div class="dropdown-menu dropdown-menu-right">
-<!--                                    <button class="dropdown-item" type="button"><i class="mdi mdi-delete"></i> Delete</button>-->
-                                    <!--                                    <button class="dropdown-item" type="button"><i class="mdi mdi-close"></i> Turn Off</button>-->
                                 </div>
                             </div>
                             <br/>
