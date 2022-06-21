@@ -57,7 +57,7 @@ export class UserService {
     }
 
     update(user: User) {
-        this.http.put<User>(this.API, user).subscribe(user => {
+        this.http.put<User>(this.API+'admin/', user).subscribe(user => {
             const index = this._users.findIndex(userToBeFound => user.id == userToBeFound.id);
             index > -1 ? this._users[index] = user : false;
             console.log("updated User")

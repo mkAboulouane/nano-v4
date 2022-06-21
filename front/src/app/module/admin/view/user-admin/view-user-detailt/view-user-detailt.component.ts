@@ -58,7 +58,7 @@ import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
         </div>
         <br>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Close
+          <button type="button" class="btn btn-outline-danger" (click)="activeModal.close('Close click')">Annuler
           </button>
                   </div>
     `,  styleUrls: ['./view-user-detailt.component.css']

@@ -42,7 +42,12 @@
                 <div class="box-body p-0" *ngFor="let not of notifications">
                     <div class="p-3 d-flex align-items-center bg-light border-bottom osahan-post-header">
                         <div class="dropdown-list-image mr-3">
-                            <img class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Urgent'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Promotion'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Evenement'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Ads'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Notification'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
+                            <img *ngIf="not.status === 'Info'" class="rounded-circle" src="assets/profile.jpeg" alt=""/>
                         </div>
                         <div class="font-weight-bold mr-3">
                             <div class="text-truncate">{{not.status}}</div>
@@ -56,25 +61,7 @@
                         <h6 class="m-0">PLUS TÔT</h6>
                     </div>
                     <div class="box-body p-0">
-<!--                        <div class="p-3 d-flex align-items-center border-bottom osahan-post-header">-->
-<!--                            <div class="dropdown-list-image mr-3 d-flex align-items-center bg-info justify-content-center rounded-circle text-white">-->
-<!--                                JAVA-->
-<!--                            </div>-->
-<!--                            <div class="font-weight-bold mr-3">-->
-<!--                                <div class="text-truncate">Nouveau : LUNDI</div>-->
-<!--                                <div class="small">Decouvrez notre formation Professionel en Java 8 avec l'enseingant de-->
-<!--                                    Mr Ali TAHIR-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <span class="ml-auto mb-auto">-->
-<!--                            <div class="btn-group">-->
-<!--                                <div class="dropdown-menu dropdown-menu-right" style="">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                            <br/>-->
-<!--                            <div class="text-right text-muted pt-1">3d</div>-->
-<!--                        </span>-->
-<!--                        </div>-->
+
                         <div class="p-3 d-flex align-items-center osahan-post-header">
                             <div class="dropdown-list-image mr-3">
                                 <img class="rounded-circle" src="assets/profile.jpeg" alt=""/>
