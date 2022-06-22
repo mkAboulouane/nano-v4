@@ -19,39 +19,38 @@ export class NavClientComponent implements OnInit {
     private sidebarVisible: boolean;
 
     constructor(public location: Location, private element: ElementRef, private userService: UserService
-                , private authService: AuthService , private notificationService: NotificationService) {
+        , private authService: AuthService, private notificationService: NotificationService) {
         this.sidebarVisible = false;
     }
 
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
-       this.online();
+        setInterval(e => (this.online()), 1000);
     }
 
 
-    online(){
+    online() {
         this.userService.currentUser().subscribe(
             data => {
                 this.user = data;
                 this.notification(this.user.id);
-            },error => console.log(error)
-
+            }, error => console.log(error)
         )
     }
 
-    notification(id: number){
+    notification(id: number) {
 
         this.notificationService.findByUserId(id).subscribe(
             data => {
                 this.notifications = data;
                 this.notSeen = 0;
-                this.notifications.forEach(e=>{
+                this.notifications.forEach(e => {
                     if (!e.seen) {
                         this.notSeen++;
                     }
                 });
                 this.key = this.notSeen;
-            },error => console.log(error)
+            }, error => console.log(error)
         )
     }
 
@@ -185,20 +184,19 @@ export class NavClientComponent implements OnInit {
 
     logOut() {
         let confirm = window.confirm('Vous voulez Vraiment se deconecter')
-    if(confirm) {
-        this.authService.logout();
-        console.log("Log Out Succesfully");
-    }
+        if (confirm) {
+            this.authService.logout();
+            console.log("Log Out Succesfully");
+        }
     }
 
-    get notSeen(): number   {
+    get notSeen(): number {
         return this.userService.notSeen;
     }
 
-    set notSeen(value: number){
+    set notSeen(value: number) {
         this.userService.notSeen = value;
     }
-
 
 
 }
