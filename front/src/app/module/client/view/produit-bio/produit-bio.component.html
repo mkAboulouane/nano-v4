@@ -5,7 +5,7 @@
         <div><h5>Nos produits sont d'excellente qualité</h5></div>
     </div>
 
-    <div class="container pt-0 pb-0">
+    <div class="container pt-0 pb-0 ml-5">
     <div *ngFor="let produitBio of produitBios" class="pt-0 card-4 card-div"
          routerLink="/client/produit-bio/{{produitBio.id}}">
         <div class="like-icon-div">
@@ -15,7 +15,7 @@
             <img [src]="produitBio.imagePrincipal?.picByte" style="border-radius: 5%; width: 70%;margin-top:5rem" alt="...">
         </div>
         <div class="text-container">
-            <h2 class="item-name">{{produitBio.nom}}</h2>
+            <h2 class="item-name" style="font-size: 250%">{{produitBio.nom}}</h2>
             <p class="date"></p>
             <div class="pricing-and-cart ">
                 <div class="pricing ">
