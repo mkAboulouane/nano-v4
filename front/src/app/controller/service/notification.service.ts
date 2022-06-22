@@ -50,6 +50,10 @@ export class NotificationService {
     return this.http.post(this.API + '/save/'+ message + '/user-id/' + id + '/status/' + status,null);
   }
 
+  saveToEveryOne(message: string, status: string) {
+    return this.http.post(this.API + '/to-all/message/'+ message + '/status/' + status,null);
+  }
+
   findBySeen(status: string){
     return this.http.get<Array<Notification>>(this.API + '/status/' + status);
   }
@@ -97,4 +101,6 @@ export class NotificationService {
   set notifications(value: Array<Notification>) {
     this._notifications = value;
   }
+
+
 }

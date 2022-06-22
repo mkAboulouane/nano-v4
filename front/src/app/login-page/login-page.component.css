@@ -1,38 +1,38 @@
 /*.gradient-custom-2 {*/
-/*    !* fallback for old browsers *!*/
-/*    background: #7e40f6;*/
+    /*    !* fallback for old browsers *!*/
+    /*    background: #7e40f6;*/
 
-/*    !* Chrome 10-25, Safari 5.1-6 *!*/
-/*    background: -webkit-linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1));*/
+    /*    !* Chrome 10-25, Safari 5.1-6 *!*/
+    /*    background: -webkit-linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1));*/
 
-/*    !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
-/*    background: linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1))*/
-/*}*/
+    /*    !* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *!*/
+    /*    background: linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1))*/
+    /*}*/
 
-/*.mask-custom {*/
-/*    background: rgba(24, 24, 16, .2);*/
-/*    border-radius: 2em;*/
-/*    backdrop-filter: blur(25px);*/
-/*    border: 2px solid rgba(255, 255, 255, 0.05);*/
-/*    background-clip: padding-box;*/
-/*    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);*/
-/*}*/
+    /*.mask-custom {*/
+    /*    background: rgba(24, 24, 16, .2);*/
+    /*    border-radius: 2em;*/
+    /*    backdrop-filter: blur(25px);*/
+    /*    border: 2px solid rgba(255, 255, 255, 0.05);*/
+    /*    background-clip: padding-box;*/
+    /*    box-shadow: 10px 10px 10px rgba(46, 54, 68, 0.03);*/
+    /*}*/
 
-/*.divider:after,*/
-/*.divider:before {*/
-/*    content: "";*/
-/*    flex: 1;*/
-/*    height: 1px;*/
-/*    background: #eee;*/
-/*}*/
-/*.h-custom {*/
-/*    height: calc(100% - 73px);*/
-/*}*/
-/*@media (max-width: 450px) {*/
-/*    .h-custom {*/
-/*        height: 100%;*/
-/*    }*/
-/*}*/
+    /*.divider:after,*/
+    /*.divider:before {*/
+    /*    content: "";*/
+    /*    flex: 1;*/
+    /*    height: 1px;*/
+    /*    background: #eee;*/
+    /*}*/
+    /*.h-custom {*/
+    /*    height: calc(100% - 73px);*/
+    /*}*/
+    /*@media (max-width: 450px) {*/
+    /*    .h-custom {*/
+    /*        height: 100%;*/
+    /*    }*/
+    /*}*/
 
 
 body {
@@ -61,8 +61,8 @@ h2 {
     font-size: 20px; }
 
 .half, .half .container > .row {
-    height: 100%;
-    min-height: 640px; }
+    height: 100vh;
+    min-height: 700px; }
 
 @media (max-width: 991.98px) {
     .half .bg {
@@ -179,4 +179,3 @@ h2 {
 .control--checkbox input:disabled:checked ~ .control__indicator {
     background-color: #7e0cf5;
     opacity: .2; }
-

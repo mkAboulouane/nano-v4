@@ -25,8 +25,7 @@ export class NavClientComponent implements OnInit {
 
     ngOnInit() {
         const navbar: HTMLElement = this.element.nativeElement;
-        this.toggleButton = navbar.getElementsByClassName('navbar-toggler')[0];
-        this.online();
+       this.online();
     }
 
 
@@ -41,6 +40,7 @@ export class NavClientComponent implements OnInit {
     }
 
     notification(id: number){
+
         this.notificationService.findByUserId(id).subscribe(
             data => {
                 this.notifications = data;

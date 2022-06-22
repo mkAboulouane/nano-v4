@@ -69,39 +69,45 @@
 
 
                             <div class="form-outline mb-2">
+                                <label class="form-label" for="typeText">Numéro de telephone </label>
+
                                 <input type="text" id="typeTet" class="form-control form-control-lg" siez="17"
-                                       minlength="19" maxlength="19"/>
-                                <label class="form-label" for="typeText">Numéro de carte </label>
+                                       minlength="19" placeholder="Numéro de telephone" maxlength="19"/>
                             </div>
 
                             <div class="form-outline mb-2">
-                                <input type="text" id="typeName" class="form-control form-control-lg" size="17"/>
-                                <label class="form-label" for="typeName">titulaire de la carte</label>
+                                <label class="form-label" for="typeName">adresse de livraison</label>
+
+                                <input type="text" id="typeName" class="form-control form-control-lg" placeholder="adresse de livraison" size="17"/>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6 mb-2">
                                     <div class="form-outline">
-                                        <input type="text" id="typeExp" class="form-control form-control-lg"
+                                        <label class="form-label" for="typeExp">Nom</label>
+                                        <input type="text" id="typeExp" placeholder="Nom" class="form-control form-control-lg"
                                                size="7" minlength="7" maxlength="7"/>
-                                        <label class="form-label" for="typeExp">Date Expiration</label>
+
                                     </div>
                                 </div>
                                 <div class="col-md-6 mb-2">
                                     <div class="form-outline">
-                                        <input type="password" id="typeText" class="form-control form-control-lg"
+                                        <label class="form-label" for="typeText">Prénom</label>
+                                        <input type="text" id="typeText" placeholder="Prénom" class="form-control form-control-lg"
                                                size="1" minlength="3" maxlength="3"/>
-                                        <label class="form-label" for="typeText">Cvv</label>
+
                                     </div>
                                 </div>
                             </div>
-                            <p class="mb-5">Paiement a la livraison ?
-                                <br>
-                                <br>
-                                <input type="checkbox">
-                                <a style="color: black;cursor: pointer;font-size:20px"> &nbsp;&nbsp;&nbsp; paiement a livraison</a>.</p>
-                            <button type="button" class="btn btn-primary btn-block btn-lg" (click)="buy()">Passer la Commande
-                            </button>
+<!--                            <p class="mb-5">Paiement a la livraison ?-->
+<!--                                <br>-->
+<!--                                <br>-->
+<!--                                <input type="checkbox">-->
+<!--                                <a style="color: black;cursor: pointer;font-size:20px"> &nbsp;&nbsp;&nbsp; paiement a livraison</a>.</p>-->
+<!--                            <a href="https://www.paypal.com/us/signin"><button  (click)="buy()" style="border: none;background-color:lightblue"> <span ><img   src="assets/img/paypal%20(1).png" style="width: 15%;text-align: center"></span>-->
+<!--                            </button></a>-->
+                            <a href="https://www.paypal.com/us/signin"><button   style="border: none;background-color:lightblue"> <span ><img   src="assets/img/paypal%20(1).png" style="width: 15%;text-align: center"></span>
+                            </button></a>
                         </div>
                     </div>
                 </div>

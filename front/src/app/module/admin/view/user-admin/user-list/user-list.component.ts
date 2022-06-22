@@ -7,6 +7,7 @@ import {NgbdModalContent} from "../../../../../components/modal/modal.component"
 import {AddNotificationComponent} from "../add-notification/add-notification.component";
 import {ViewUserDetailtComponent} from "../view-user-detailt/view-user-detailt.component";
 import {BlockUserComponent} from "../block-user/block-user.component";
+import {NotificationGlobalComponent} from "../notification-global/notification-global.component";
 
 @Component({
     selector: 'app-user-list',
@@ -145,5 +146,9 @@ export class UserListComponent implements OnInit {
     bloquer(user: User) {
         const modalRef = this.modalService.open(BlockUserComponent,{size: 'lg'});
         modalRef.componentInstance.user = user;
+    }
+
+    openPopUp() {
+        const modalRef = this.modalService.open(NotificationGlobalComponent,{size: 'lg'});
     }
 }
