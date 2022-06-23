@@ -9,7 +9,14 @@ import {User} from '../controller/model/User.model';
     styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-    // private _showWarrning: boolean;
+    active: boolean;
+    active2: boolean;
+
+    mail: string = '';
+    phone: string = '';
+    ngOnInit(): void {
+    }
+
     registerForm = new FormGroup({
         username: new FormControl('', Validators.required),
         phone: new FormControl('', Validators.required),
@@ -18,8 +25,42 @@ export class RegisterComponent implements OnInit {
         confirmPassword: new FormControl('', Validators.required)
     });
 
+
     constructor(private authService: AuthService) {
     }
+
+    submit() {
+        const formValues = this.registerForm.value;
+        const {phone, username, password, email, confirmPassword} = formValues;
+        this.user.username = username;
+        this.user.phone = phone;
+        this.user.password = password;
+        this.user.email = email;
+        if(password === confirmPassword) {
+            this.authService.register();
+        }else {
+            window.alert('password did not match');
+        }
+
+    }
+
+
+    verifyEmail(email: string) {
+        var regex = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]/
+        console.log('email: '+!regex.test(email));
+        this.active = !regex.test(email);
+    }
+
+    verifyPhone(phone: string) {
+        var regex = /\+?\d{9,20}/
+        console.log('phone: '+!regex.test(phone));
+        this.active2 = !regex.test(phone);
+    }
+
+    // var regex = /\+?[0-9]{10,20}/
+
+
+
 
     // checkPasswords: ValidatorFn = (group: AbstractControl):  ValidationErrors | null => {
     //     let pass = password.value;
@@ -35,24 +76,14 @@ export class RegisterComponent implements OnInit {
         this.authService.user = value;
     }
 
-    ngOnInit(): void {
-    }
-
-    submit() {
-        const formValues = this.registerForm.value;
-        const {phone, username, password, email, confirmPassword} = formValues;
-        this.user.username = username;
-        this.user.phone = phone;
-        this.user.password = password;
-        this.user.email = email;
-        if(password === confirmPassword) {
-            this.authService.register();
-        }else {
-            // this.showWarrning = true;
-            window.alert('password did not match');
-        }
-
-    }
 
 
+    /*
+    var regex = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]/
+    * */
+
+
+    // result() : boolean {
+    //     return !(!this.active && !this.active2);
+    // }
 }

@@ -27,12 +27,12 @@
 
                         <div class="form-group  mb-0"><br>
 <!--                            <label for="username">Numéro telephone</label>-->
-                            <input type="text" class="form-control" formControlName="phone" placeholder="Numéro telephone" id="phone">
+                            <input type="text" class="form-control" (ngModelChange)="verifyPhone(phone)" [(ngModel)]="phone" formControlName="phone" placeholder="Numéro telephone" id="phone">
                         </div>
 
                         <div class="form-group first  mb-3"><br>
 <!--                            <label for="username">Email</label>-->
-                            <input type="text" class="form-control" formControlName="email" placeholder="Email" id="Email">
+                            <input type="text" class="form-control" (ngModelChange)="verifyEmail(mail)"  [(ngModel)]="mail" formControlName="email" placeholder="Email" id="Email">
                         </div>
 
 
@@ -43,24 +43,18 @@
 
                         <div class="form-group last mb-3">
 <!--                            <label for="password">Confirmation mot de passe</label>-->
-                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">
+                            <div class="input-group form-group-no-border justify-content-center" >
 <!--                                <div class="input-group-prepend">-->
 <!--                                  <span class="input-group-text">-->
 <!--                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>-->
 <!--                                  </span>-->
 <!--                                </div>-->
-                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirmation mot de passe" (focus)="focus1=true" (blur)="focus1=false" >
+                                <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirmation mot de passe">
                                 <!--                                <span *ngIf="showWarrning"> Password did not match ! </span>-->
 
                             </div>                        </div>
 
-
-
-
-
-
-
-                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ;border: none" >S'inscrire</button>
+                            <button class="btn  btn-block btn-round" [disabled]="!(!this.active && !this.active2)" (click)="submit()" style="background-color: deepskyblue ;border: none" >S'inscrire</button>
                         </form>
 <!--                        <div class="forgot">-->
 <!--                            <a class=" mx-5 mb-3 "  [routerLink]="['/login']" >Vous avez deja un Compte ?</a>-->
