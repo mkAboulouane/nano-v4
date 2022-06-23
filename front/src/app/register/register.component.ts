@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {AuthService} from '../controller/service/Auth.service';
 import {User} from '../controller/model/User.model';
@@ -9,13 +9,32 @@ import {User} from '../controller/model/User.model';
     styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-    active: boolean;
-    active2: boolean;
+    active: boolean = true;
+    active2: boolean = true;
 
     mail: string = '';
     phone: string = '';
+
     ngOnInit(): void {
+        // this.time();
+        // this.timeout();
     }
+
+    // this.selectedInput = ana ; 
+    // this.selectedHya = ana ; 
+    // this.selectedDate = ana ;
+    
+    time() {
+        setInterval(e => {
+        console.log('inter');
+    }, 1000);
+    }
+    //
+    // timeout() {
+    //    let timeoutI = setTimeout(e => (
+
+    //     ), 500);
+    // }
 
     registerForm = new FormGroup({
         username: new FormControl('', Validators.required),
@@ -31,11 +50,11 @@ export class RegisterComponent implements OnInit {
 
     submit() {
         const formValues = this.registerForm.value;
-        const {phone, username, password, email, confirmPassword} = formValues;
+        const { username, password, confirmPassword } = formValues;
         this.user.username = username;
-        this.user.phone = phone;
+        this.user.phone = this.phone;
         this.user.password = password;
-        this.user.email = email;
+        this.user.email = this.mail;
         if(password === confirmPassword) {
             this.authService.register();
         }else {
@@ -47,13 +66,13 @@ export class RegisterComponent implements OnInit {
 
     verifyEmail(email: string) {
         var regex = /[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]/
-        console.log('email: '+!regex.test(email));
+
         this.active = !regex.test(email);
     }
 
     verifyPhone(phone: string) {
         var regex = /\+?\d{9,20}/
-        console.log('phone: '+!regex.test(phone));
+
         this.active2 = !regex.test(phone);
     }
 
