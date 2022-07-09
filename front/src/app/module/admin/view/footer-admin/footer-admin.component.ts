@@ -6,6 +6,7 @@ import {Component, OnInit} from '@angular/core';
     styleUrls: ['./footer-admin.component.css']
 })
 export class FooterAdminComponent implements OnInit {
+    tkhrbia: string = '';
 
     constructor() {
     }
@@ -13,4 +14,7 @@ export class FooterAdminComponent implements OnInit {
     ngOnInit(): void {
     }
 
+    send() {
+        this.tkhrbia = null;
+    }
 }

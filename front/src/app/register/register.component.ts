@@ -50,11 +50,11 @@ export class RegisterComponent implements OnInit {
 
     submit() {
         const formValues = this.registerForm.value;
-        const { username, password, confirmPassword } = formValues;
+        const { username, password, confirmPassword,email,phone } = formValues;
         this.user.username = username;
-        this.user.phone = this.phone;
+        this.user.phone = phone;
         this.user.password = password;
-        this.user.email = this.mail;
+        this.user.email = email;
         if(password === confirmPassword) {
             this.authService.register();
         }else {

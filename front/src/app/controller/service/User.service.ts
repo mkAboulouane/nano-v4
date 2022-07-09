@@ -56,6 +56,13 @@ export class UserService {
         })
     }
 
+
+    blockUnblock(username: string) {
+        this.http.get<number>(this.API+'admin/block-unblock/' + username).subscribe(data => console.log(data)
+        ,error => console.log(error)
+        );
+    }
+
     update(user: User) {
         this.http.put<User>(this.API+'admin/', user).subscribe(user => {
             const index = this._users.findIndex(userToBeFound => user.id == userToBeFound.id);
@@ -68,15 +75,15 @@ export class UserService {
         });
     }
 
+
+
     delete(id: number) {
         this.http.delete<number>(this.API + 'id/' + id).subscribe(res => {
             res == 1 ? this._users = this._users.filter(user => user.id != id) : false;
         })
     }
-
-
-
     // getters and setters
+
     get users(): Array<User> {
         if (this._users == null) {
             this._users = new Array<User>();
@@ -84,10 +91,10 @@ export class UserService {
         return this._users;
     }
 
+
     set users(users: Array<User>) {
         this._users = users;
     }
-
 
     get selectedUsers(): User[] {
         return this._users;
@@ -123,10 +130,10 @@ export class UserService {
         return this._submitted;
     }
 
+
     set submitted(submitted: boolean) {
         this._submitted = submitted;
     }
-
 
     get selectedUser(): User {
         if (this._selectedUser == null) {
@@ -142,7 +149,6 @@ export class UserService {
     get notSeen(): number {
         return this._notSeen;
     }
-
     set notSeen(value: number) {
         this._notSeen = value;
     }

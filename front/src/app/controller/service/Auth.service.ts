@@ -44,8 +44,10 @@ export class AuthService {
                 console.log('you are logged in successfully');
                 this.getRole(username);
                 }, (error: HttpErrorResponse) => {
-                this.error = error.error;
-                console.log(error);
+                    alert('vérifier vos coordonnées');
+                    this.error = error.error;
+                    console.log(error);
+
             }
         );
     }

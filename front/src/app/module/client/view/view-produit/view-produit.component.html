@@ -6,7 +6,7 @@
                  alt="..."/>
         </div>
         <div class="col-md-4">
-            <!--            <div class="small mb-1">Marque: </div>-->
+
             <div class="display-6 fw-bolder pt-5"><h6>{{produit.nom}}</h6></div>
             <h6 class="small mb-1">Reste:  {{produit.quantity}}</h6>
             <div class="fs-5 mb-5">
@@ -38,21 +38,21 @@
     <h2 class="fw-bolder mb-4">Voir aussi</h2>
     <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
         <div class="col mb-5" *ngFor="let prod of produitBios">
-<!--        <div class="col mb-5">-->
+
             <div class="card h-100">
-                <!-- prodduct image-->
+
                 <img [src]="prod.imagePrincipal.picByte" alt="..." class="card-img-top"/>
-                <!-- prodduct details-->
+
                 <div class="card-body p-4">
                     <div class="text-center">
-                        <!-- prodduct name-->
+
                         <h5 class="fw-bolder">{{prod.nom}}</h5><br>
-                        <!-- prodduct price-->
+
                         <span class="text-decoration-line-through" style="color: red">{{prod.prixAncien}} DH</span><br><br>
                         <span style="margin-top: 20px;color: green">{{prod.prix}} DH</span>
                     </div>
                 </div>
-                <!-- prodduct actions-->
+
                 <div class="card-footer p-4 pt-0 border-top-0 " (click)="redirect(prod.id)">
                     <div class="text-center">
                         <a class="btn " style="background-color: black">Ajouter au panier</a></div>
@@ -62,6 +62,6 @@
         </div>
     </div>
 </div>
-<!--</section>-->
+
 
 

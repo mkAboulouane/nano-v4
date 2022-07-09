@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../../../../controller/service/User.service";
 import {Router} from "@angular/router";
 import {User} from "../../../../../controller/model/User.model";
+import {BlockUserComponent} from "../../user-admin/block-user/block-user.component";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
     selector: 'app-gerant-list',
@@ -10,7 +12,7 @@ import {User} from "../../../../../controller/model/User.model";
 })
 export class GerantListComponent implements OnInit {
     users: User[];
-    constructor(private userService: UserService,private router: Router) {
+    constructor(private userService: UserService,private router: Router, private modalService: NgbModal ) {
     }
 
     ngOnInit(): void {
@@ -51,5 +53,11 @@ export class GerantListComponent implements OnInit {
             console.log(error);
             });
     }
+
+    blockUnblock(user: User) {
+        const modalRef = this.modalService.open(BlockUserComponent,{size: 'lg'});
+        modalRef.componentInstance.user = user;
+    }
+
 }
 

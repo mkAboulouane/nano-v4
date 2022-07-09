@@ -38,7 +38,7 @@
                 <div class="col-xl-4 col-lg-4 mb-50">
                     <div class="footer-widget">
                         <div class="footer-logo">
-                            <!--                            <a href="index.html"><img src="https://i.ibb.co/QDy827D/ak-logo.png" class="img-fluid" alt="logo"></a>-->
+
                         </div>
                         <div class="footer-text">
                             <p>Restez au courant de nos dernières formations, nos congrès et séminaires, des études à
@@ -48,7 +48,7 @@
                             <span>Nos réseaux sociaux</span>
                             <a href="/" style="color: lightgreen;font-size: 50px;"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                             <a href="#"><i style="color:rgb(228, 64, 95) ;font-size: 50px;"  class="fa fa-instagram" aria-hidden="true"></i></a>
-                            <!--                                                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>-->
+
                         </div>
                     </div>
                 </div>
@@ -72,15 +72,17 @@
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                     <div class="footer-widget">
                         <div class="footer-widget-heading">
-                            <h3>Abonnez vous à notre Newsletter</h3>
+                            <h3>Abonnez vous à notre Newsletter </h3>
+
                         </div>
 
                         <div class="subscribe-form">
-                            <form action="#">
-                                <input type="text" placeholder="Email Address">
-                                <button><i class="fa fa-paper-plane" aria-hidden="true"></i>
+<!--                            <div action="#">-->
+                            <div >
+                                <input type="text" id="22" class="ddd" [ngModelOptions]="{standalone: true}" [(ngModel)]="tkhrbia" placeholder="Email Address">
+                                <button type="submit" (click)="send()"><i class="fa fa-paper-plane" aria-hidden="true"></i>
                                 </button>
-                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>

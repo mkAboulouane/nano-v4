@@ -21,14 +21,14 @@
 
                         <div class="form-group  mb-0"><br>
 
-                            <input type="text" class="form-control" (ngModelChange)="verifyPhone($event)"
+                            <input type="text" class="form-control" formControlName="phone" (ngModelChange)="verifyPhone($event)"
                                    [ngModel]="phone" [ngModelOptions]="{standalone: true}"
                                    placeholder="Numéro telephone" id="phone">
                         </div>
 
                         <div class="form-group first  mb-3"><br>
 
-                            <input type="text" class="form-control" (ngModelChange)="verifyEmail($event)"
+                            <input type="text" class="form-control" (ngModelChange)="verifyEmail($event)" formControlName="email"
                                    [ngModel]="mail" [ngModelOptions]="{standalone: true}" placeholder="Email"
                                    id="Email">
                         </div>
