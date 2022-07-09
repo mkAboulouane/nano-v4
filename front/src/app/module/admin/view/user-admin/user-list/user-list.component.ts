@@ -143,7 +143,7 @@ export class UserListComponent implements OnInit {
     }
 
 
-    bloquer(user: User) {
+    blockUnblock(user: User) {
         const modalRef = this.modalService.open(BlockUserComponent,{size: 'lg'});
         modalRef.componentInstance.user = user;
     }

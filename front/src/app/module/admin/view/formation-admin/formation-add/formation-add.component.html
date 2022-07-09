@@ -1,123 +1,3 @@
-<!--<div class="wrapper">-->
-<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
-<!--        <div class="filter"></div>-->
-<!--        <div class="container col-lg-12 col-sm-12">-->
-
-<!--            <div class="row">-->
-<!--                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">-->
-
-<!--                    <div class="card card-register " style="background-color: black; opacity: 0.6;">-->
-<!--                        <div class="text-center ">-->
-<!--                            <h3>Ajouter une Formation</h3>-->
-<!--                        </div>-->
-
-<!--                        <label>Nom De Formation</label>-->
-<!--                        <div class="input-group form-group-no-border">-->
-<!--                            <div class="input-group-prepend">-->
-<!--                            </div>-->
-<!--                            <input [(ngModel)]="selectedFormation.nom" class="form-control"-->
-<!--                                   placeholder="Nom Formation"-->
-<!--                                   type="text">-->
-<!--                        </div>-->
-
-
-<!--                        <label>Nombre Des Places</label>-->
-<!--                        <div [ngClass]="{'input-group-focus':focus1===true} "-->
-<!--                             class="input-group form-group-no-border justify-content-center">-->
-<!--                            <div class="input-group-prepend">-->
-<!--                            </div>-->
-<!--                            <input (blur)="focus1=false" (focus)="focus1=true"-->
-<!--                                   [(ngModel)]="selectedFormation.nombrePlace"-->
-<!--                                   class="form-control" placeholder="nombre des Places" type="number">-->
-<!--                        </div>-->
-<!--                        <label>Encadrent</label>-->
-<!--                        <div [ngClass]="{'input-group-focus':focus===true}"-->
-<!--                             class="input-group form-group-no-border">-->
-<!--                            <div class="input-group-prepend">-->
-<!--                            </div>-->
-
-<!--                            <input (blur)="focus=false" (focus)="focus=true"-->
-<!--                                   [(ngModel)]="selectedFormation.encadrantProf"-->
-<!--                                   class="form-control"-->
-<!--                                   placeholder="Encadrent" type="text">-->
-<!--                        </div>-->
-<!--                        <label>Prix</label>-->
-<!--                        <div [ngClass]="{'input-group-focus':focus===true}"-->
-<!--                             class="input-group form-group-no-border">-->
-<!--                            <div class="input-group-prepend">-->
-<!--                                &lt;!&ndash;                                  <span class="input-group-text">&ndash;&gt;-->
-<!--                                &lt;!&ndash;&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;-->
-<!--                                &lt;!&ndash;                                  </span>&ndash;&gt;-->
-<!--                            </div>-->
-
-<!--                            <input (blur)="focus=false" (focus)="focus=true"-->
-<!--                                   [(ngModel)]="selectedFormation.prix"-->
-<!--                                   class="form-control"-->
-<!--                                   placeholder="Prix" type="number">-->
-<!--                        </div>-->
-<!--                        <label>Durée</label>-->
-<!--                        <div [ngClass]="{'input-group-focus':focus===true}"-->
-<!--                             class="input-group form-group-no-border">-->
-<!--                            <div class="input-group-prepend">-->
-<!--                            </div>-->
-<!--                            <input (blur)="focus=false" (focus)="focus=true"-->
-<!--                                   [(ngModel)]="selectedFormation.duree"-->
-<!--                                   class="form-control"-->
-<!--                                   placeholder="Durée" type="text">-->
-<!--                        </div>-->
-<!--                        <label>Description</label>-->
-<!--                        <div class="input-group">-->
-<!--                            <div class="input-group-prepend">-->
-<!--                            </div>-->
-<!--                            <textarea [(ngModel)]="selectedFormation.description" aria-label="With textarea"-->
-<!--                                      class="form-control"-->
-
-<!--                                      placeholder="Description"></textarea>-->
-<!--                        </div>-->
-<!--                        <div class="custom-control custom-switch">-->
-<!--                            <input [(ngModel)]="selectedFormation.visible" checked-->
-<!--                                   class="custom-control-input"-->
-<!--                                   id="customSwitch1" type="checkbox">-->
-<!--                            <label class="custom-control-label" for="customSwitch1">Visible</label>-->
-<!--                        </div>-->
-<!--                        <button (click)="submit()" class="btn  btn-block btn-round" style="background-color: deepskyblue ; color: black"-->
-<!--                                type="submit">Ajouter-->
-<!--                        </button>-->
-
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
-<!--    </div>-->
-
-
-
-
-<!--<div class="wrapper">-->
-<!--    <div class="page-header" style="background-image: url('./assets/img/team.jpg');">-->
-<!--        <div class="filter"></div>-->
-<!--        <div class="container col-lg-12 col-sm-12">-->
-
-<!--            <div class="row">-->
-<!--                <div class="col-lg-8 col-sm-6 mr-auto ml-auto">-->
-
-<!--                    <div class="card card-register " style="background-color: black; opacity: 0.6;">-->
-<!--                        <div class="text-center ">-->
-<!--                            <h3>Ajouter un article</h3>-->
-<!--                            &lt;!&ndash;                            <p class="lead"></p>&ndash;&gt;-->
-<!--                        </div>-->
-
-<!--                            <label>Nom Produit</label>-->
-<!--                            <div class="input-group form-group-no-border" >-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    &lt;!&ndash;                                  <span class="input-group-text">&ndash;&gt;-->
-<!--                                    &lt;!&ndash;&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                  </span>&ndash;&gt;-->
-<!--                                </div>-->
-
-<!--                                <input type="text" class="form-control"  [(ngModel)]="selectedProduitBio.nom" placeholder="Nom produit" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
 
 
 
@@ -128,81 +8,201 @@
 
 
 
-<!--                            <label>Prix</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    &lt;!&ndash;                                  <span class="input-group-text">&ndash;&gt;-->
-<!--                                    &lt;!&ndash;&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                  </span>&ndash;&gt;-->
-<!--                                </div>-->
-
-<!--                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.prix" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
-
-
-<!--                            <label>Prix Ancien [Optionnal]</label>-->
-<!--                            <div class="input-group form-group-no-border" [ngClass]="{'input-group-focus':focus===true}">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    &lt;!&ndash;                                  <span class="input-group-text">&ndash;&gt;-->
-<!--                                    &lt;!&ndash;&lt;!&ndash;                                  <i class="fa fa-envelope" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                  </span>&ndash;&gt;-->
-<!--                                </div>-->
-
-<!--                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.prixAncien" placeholder="Prix" (focus)="focus=true" (blur)="focus=false" >-->
-<!--                            </div>-->
 
 
 
-<!--                            <label>Quantité</label>-->
-<!--                            <div class="input-group form-group-no-border justify-content-center" >-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                    &lt;!&ndash;                                  <span class="input-group-text">&ndash;&gt;-->
-<!--                                    &lt;!&ndash;&lt;!&ndash;                                     <i class="fa fa-unlock-alt" aria-hidden="true"></i>&ndash;&gt;&ndash;&gt;-->
-<!--                                    &lt;!&ndash;                                  </span>&ndash;&gt;-->
-<!--                                </div>-->
-<!--                                <input type="number" class="form-control" [(ngModel)]="selectedProduitBio.quantity" placeholder="quantité">-->
-<!--                            </div>-->
-
-
-<!--                            <label>Description</label>-->
-<!--                            <div class="input-group">-->
-<!--                                <div class="input-group-prepend">-->
-<!--                                </div>-->
-<!--                                <textarea class="form-control" [(ngModel)]="selectedProduitBio.description" aria-label="With textarea" placeholder="Description"></textarea>-->
-<!--                            </div>-->
-
-
-<!--                            <label>images</label>-->
-<!--                            <div class="input-group form-group-no-border justify-content-center" [ngClass]="{'input-group-focus':focus1===true} ">-->
-<!--                                <div class="input-group-prepend">-->
-
-<!--                                </div>-->
-<!--                                <input type="file" name="filefield" multiple="multiple" [(ngModel)]="selectedProduitBio.photos"  placeholder="file" (focus)="focus1=true" (blur)="focus1=false" >-->
-<!--                            </div>-->
-
-
-<!--                            <div class="custom-control custom-switch">-->
-
-<!--                                <input type="checkbox" class="custom-control-input" [(ngModel)]="selectedProduitBio.promotion" id="customSwitches">-->
-<!--                                <label class="custom-control-label" for="customSwitches">Promotion</label>-->
-<!--                            </div>-->
-
-<!--                            <div class="custom-control custom-switch">-->
-<!--                                <input type="checkbox" class="custom-control-input" [(ngModel)]="selectedProduitBio.visible" id="customSwitch1" checked>-->
-<!--                                <label class="custom-control-label" for="customSwitch1">Visible</label>-->
-<!--                            </div>-->
 
 
 
-<!--                            <button class="btn  btn-block btn-round" (click)="submit()" style="background-color: deepskyblue ; color: black" >Ajouter l'article</button>-->
 
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
 
-<!--        </div>-->
-<!--    </div>-->
-<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <br><br><br><br>
@@ -213,8 +213,8 @@
     <prod>
         <div class="form first">
             <div class="details personal">
-                <!--                <span class="title">Personal Details</span>-->
-                <!--[ngModelOptions]="{standalone: true}"-->
+
+
                 <div class="fields">
                     <div class="input-field">
                         <label>Nom</label>
@@ -241,15 +241,15 @@
                         <input type="text" class="form-control" [(ngModel)]="selectedFormation.encadrantProf" [ngModelOptions]="{standalone: true}" placeholder="Encadrant" >
                     </div>
 
-                    <!--                    <div class="input-field">-->
-                    <!--                        <label>Gender</label>-->
-                    <!--                        <select required>-->
-                    <!--                            <option disabled selected>Select gender</option>-->
-                    <!--                            <option>Male</option>-->
-                    <!--                            <option>Female</option>-->
-                    <!--                            <option>Others</option>-->
-                    <!--                        </select>-->
-                    <!--                    </div>-->
+
+
+
+
+
+
+
+
+
 
                     <div class="input-field">
                         <label>Description</label>
@@ -258,10 +258,10 @@
 
 
 
-                    <!--                    <div class="input-field">-->
-                    <!--                        <label>Modifié le</label>-->
-                    <!--                        <input type="text" class="form-control" [(ngModel)]="selectedProduitBio.updatedAt" [ngModelOptions]="{standalone: true}" placeholder="promotion?" >-->
-                    <!--                    </div>-->
+
+
+
+
 
 
                 </div>
